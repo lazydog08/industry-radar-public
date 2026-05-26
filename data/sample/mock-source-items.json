@@ -1,0 +1,110 @@
+[
+  {
+    "reportTypes": ["noon"],
+    "source": "bilibili",
+    "title": "OPPO 影像旗舰发布会定档，AI 影像成核心卖点",
+    "url": "https://www.bilibili.com/video/mock-oppo-ai-camera",
+    "author": "数码观察样例",
+    "category": "digital",
+    "tags": ["数码", "发布会", "AI手机", "影像"],
+    "summaryRaw": "多位数码创作者开始预热 OPPO 新机发布会，重点讨论 AI 影像、长焦和影像旗舰定位。",
+    "heatScore": 82,
+    "publishedTime": "10:18:00"
+  },
+  {
+    "reportTypes": ["noon"],
+    "source": "ithome",
+    "title": "iOS 新版本首批 AI 功能曝光，或在 WWDC 前后公布",
+    "url": "https://www.ithome.com/mock/ios-ai-wwdc.html",
+    "author": "IT之家样例",
+    "category": "digital",
+    "tags": ["数码", "AI手机", "系统更新"],
+    "summaryRaw": "消息称苹果正在准备一批面向端侧体验的 AI 功能，涉及系统应用和隐私保护。",
+    "heatScore": 76,
+    "publishedTime": "10:42:00"
+  },
+  {
+    "reportTypes": ["noon"],
+    "source": "zhihu",
+    "title": "B站创作激励和流量规则变化，普通 UP 主应该怎么应对？",
+    "url": "https://www.zhihu.com/question/mock-bilibili-traffic",
+    "author": "知乎热榜样例",
+    "category": "media",
+    "tags": ["自媒体", "平台规则", "选题机会"],
+    "summaryRaw": "讨论集中在创作激励、推荐机制、起量难度和中腰部 UP 主内容策略。",
+    "heatScore": 68,
+    "publishedTime": "11:03:00"
+  },
+  {
+    "reportTypes": ["noon"],
+    "source": "bilibili",
+    "title": "小米汽车城市 NOA 体验热度升高，用户重点关注接管和车机协同",
+    "url": "https://www.bilibili.com/video/mock-xiaomi-noa",
+    "author": "汽车科技样例",
+    "category": "auto",
+    "tags": ["汽车", "智驾"],
+    "summaryRaw": "多条体验内容关注小米汽车城市 NOA、泊车、接管频率和座舱交互。",
+    "heatScore": 88,
+    "publishedTime": "11:28:00"
+  },
+  {
+    "reportTypes": ["night"],
+    "source": "ithome",
+    "title": "OPPO 影像旗舰发布会定档，AI 影像成核心卖点",
+    "url": "https://www.ithome.com/mock/oppo-ai-camera-launch.html",
+    "author": "IT之家样例",
+    "category": "digital",
+    "tags": ["数码", "发布会", "AI手机", "影像"],
+    "summaryRaw": "IT之家补充了该机影像参数、发布会时间和疑似 AI 修图功能信息。",
+    "heatScore": 74,
+    "publishedTime": "12:46:00"
+  },
+  {
+    "reportTypes": ["night"],
+    "source": "bilibili",
+    "title": "小米汽车智驾更新覆盖更多城市，车主最关心接管体验",
+    "url": "https://www.bilibili.com/video/mock-xiaomi-adas-update",
+    "author": "新能源观察样例",
+    "category": "auto",
+    "tags": ["汽车", "智驾", "系统更新"],
+    "summaryRaw": "小米汽车智驾更新开始覆盖更多城市，体验视频集中在路线覆盖、接管频率和车机交互。",
+    "heatScore": 91,
+    "publishedTime": "14:15:00"
+  },
+  {
+    "reportTypes": ["night"],
+    "source": "zhihu",
+    "title": "AI 手机会成为下半年换机核心卖点吗？",
+    "url": "https://www.zhihu.com/question/mock-ai-phone-cycle",
+    "author": "知乎热榜样例",
+    "category": "digital",
+    "tags": ["数码", "AI手机", "选题机会"],
+    "summaryRaw": "讨论集中在端侧 AI、隐私、续航、系统级入口和普通用户是否真的需要 AI 手机。",
+    "heatScore": 72,
+    "publishedTime": "16:20:00"
+  },
+  {
+    "reportTypes": ["night"],
+    "source": "weibo",
+    "title": "B站创作激励规则调整登上热议，创作者关注收益和流量稳定性",
+    "url": "https://s.weibo.com/weibo?q=B%E7%AB%99%E5%88%9B%E4%BD%9C%E6%BF%80%E5%8A%B1",
+    "author": "微博公开搜索样例",
+    "category": "media",
+    "tags": ["自媒体", "平台规则", "争议"],
+    "summaryRaw": "公开讨论围绕平台规则、收益变化、内容垂类分发和中腰部创作者生存空间。",
+    "heatScore": 79,
+    "publishedTime": "18:05:00"
+  },
+  {
+    "reportTypes": ["night"],
+    "source": "ithome",
+    "title": "华为 HarmonyOS 新版本推送，重点优化跨设备协同和系统流畅度",
+    "url": "https://www.ithome.com/mock/harmonyos-update.html",
+    "author": "IT之家样例",
+    "category": "digital",
+    "tags": ["数码", "系统更新"],
+    "summaryRaw": "新版本更新说明提到跨设备协同、流畅度、隐私权限和若干机型适配进度。",
+    "heatScore": 66,
+    "publishedTime": "20:30:00"
+  }
+]

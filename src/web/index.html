@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>行业情报雷达</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">行业情报雷达</p>
+        <h1>情报中心</h1>
+      </div>
+      <div id="updatedAt" class="muted"></div>
+    </header>
+
+    <section class="overview" aria-label="概览">
+      <div class="metric"><b id="metricRecent">0</b><span>7 天事件</span></div>
+      <div class="metric"><b id="metricImportant">0</b><span>今日必看</span></div>
+      <div class="metric"><b id="metricFollow">0</b><span>适合做视频</span></div>
+      <div class="metric"><b id="metricReports">0</b><span>报告归档</span></div>
+    </section>
+
+    <section class="radar-hero" aria-label="今日雷达">
+      <div id="infographic" class="infographic">
+        <div class="empty-state">正在生成一图读懂...</div>
+      </div>
+      <aside class="radar-brief">
+        <div>
+          <p class="eyebrow">分区摘要</p>
+          <h2>先看趋势，再做选题</h2>
+        </div>
+        <div id="sectionStats" class="section-stats"></div>
+        <p id="sourceStatus" class="muted"></p>
+      </aside>
+    </section>
+
+    <section class="filters compact" aria-label="筛选">
+      <input id="query" class="query" placeholder="OPPO 影像 / 小米汽车 智驾 / B站 流量规则" />
+      <select id="category">
+        <option value="">全部分类</option>
+        <option value="digital">数码</option>
+        <option value="media">自媒体</option>
+        <option value="auto">汽车</option>
+        <option value="mixed">跨行业</option>
+      </select>
+      <select id="source">
+        <option value="">全部来源</option>
+      </select>
+      <input id="entity" list="entityList" placeholder="品牌 / 平台 / 产品" />
+      <input id="tag" list="tagList" placeholder="标签" />
+      <button id="searchBtn">搜索</button>
+      <div class="toggles">
+        <label><input id="favorite" type="checkbox" /> 收藏</label>
+        <label><input id="follow" type="checkbox" /> 跟踪</label>
+        <label><input id="usedForVideo" type="checkbox" /> 已用</label>
+        <label><input id="ignored" type="checkbox" /> 不感兴趣</label>
+      </div>
+      <datalist id="entityList"></datalist>
+      <datalist id="tagList"></datalist>
+    </section>
+
+    <section class="workbench">
+      <div class="feed">
+        <div class="section-head">
+          <h2 id="resultTitle">今日情报分区</h2>
+          <span id="count" class="muted"></span>
+        </div>
+        <div id="sections" class="section-feed"></div>
+        <div id="results" class="results"></div>
+      </div>
+
+      <aside class="side">
+        <section id="detail" class="panel knowledge">
+          <h2>知识卡</h2>
+          <p class="muted">选择事件</p>
+        </section>
+
+        <section class="panel">
+          <div class="section-head">
+            <h2>知识库体检</h2>
+          </div>
+          <div id="knowledgeHealth" class="knowledge-health"></div>
+        </section>
+
+        <section class="panel">
+          <div class="section-head">
+            <h2>报告归档</h2>
+            <a href="/api/reports" target="_blank" rel="noreferrer">JSON</a>
+          </div>
+          <div id="reports" class="reports"></div>
+        </section>
+
+        <section class="panel">
+          <div class="section-head">
+            <h2>话题时间线</h2>
+          </div>
+          <div class="timeline-search">
+            <input id="timelineQuery" placeholder="例如：OPPO 影像" />
+            <button id="timelineBtn">查看</button>
+          </div>
+          <div id="timeline" class="timeline-list"></div>
+        </section>
+      </aside>
+    </section>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>

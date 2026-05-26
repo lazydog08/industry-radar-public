@@ -1,0 +1,797 @@
+const state = {
+  events: [],
+  selectedId: "",
+  detailRequestId: 0,
+  facets: {
+    sources: [],
+    tags: [],
+    entities: [],
+    categories: []
+  }
+};
+
+const els = {
+  updatedAt: requireElement("updatedAt"),
+  metricRecent: requireElement("metricRecent"),
+  metricImportant: requireElement("metricImportant"),
+  metricFollow: requireElement("metricFollow"),
+  metricReports: requireElement("metricReports"),
+  sectionStats: requireElement("sectionStats"),
+  sourceStatus: requireElement("sourceStatus"),
+  infographic: requireElement("infographic"),
+  query: requireElement("query"),
+  category: requireElement("category"),
+  source: requireElement("source"),
+  entity: requireElement("entity"),
+  tag: requireElement("tag"),
+  favorite: requireElement("favorite"),
+  follow: requireElement("follow"),
+  usedForVideo: requireElement("usedForVideo"),
+  ignored: requireElement("ignored"),
+  entityList: requireElement("entityList"),
+  tagList: requireElement("tagList"),
+  searchBtn: requireElement("searchBtn"),
+  resultTitle: requireElement("resultTitle"),
+  count: requireElement("count"),
+  sections: requireElement("sections"),
+  results: requireElement("results"),
+  detail: requireElement("detail"),
+  knowledgeHealth: requireElement("knowledgeHealth"),
+  reports: requireElement("reports"),
+  timelineQuery: requireElement("timelineQuery"),
+  timelineBtn: requireElement("timelineBtn"),
+  timeline: requireElement("timeline")
+};
+
+function requireElement(id) {
+  const element = document.getElementById(id);
+  if (!element) throw new Error(`Missing required DOM element: #${id}`);
+  return element;
+}
+
+async function fetchJson(url, options) {
+  const response = await fetch(url, options);
+  if (!response.ok) {
+    const message = await response.text().catch(() => "");
+    throw new Error(message || `HTTP ${response.status}`);
+  }
+  return response.json();
+}
+
+async function bootstrap() {
+  try {
+    setLoading("正在读取知识库...");
+    const data = await fetchJson("/api/overview");
+    state.facets = data.facets || state.facets;
+    renderOverview(data);
+    renderFacetControls(state.facets);
+    renderKnowledgeHealth(data.knowledgeHealth);
+    renderReports(data.reports || []);
+    renderHome(data.events || []);
+  } catch (error) {
+    renderError(error);
+  }
+}
+
+function enableRootScrollFallback() {
+  window.addEventListener(
+    "wheel",
+    (event) => {
+      const delta = normalizedWheelDelta(event);
+      if (event.defaultPrevented || event.ctrlKey || Math.abs(delta.y) <= Math.abs(delta.x)) return;
+      if (!isPageScrollable() || hasScrollableAncestor(event.target, delta.y)) return;
+
+      const previousY = window.scrollY;
+      window.requestAnimationFrame(() => {
+        if (window.scrollY === previousY) {
+          window.scrollBy({ top: delta.y, left: 0, behavior: "auto" });
+        }
+      });
+    },
+    { capture: true, passive: true }
+  );
+  window.addEventListener(
+    "keydown",
+    (event) => {
+      if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey) return;
+      if (!isPageScrollable() || isInteractiveTarget(event.target)) return;
+
+      const delta = keyScrollDelta(event);
+      if (!delta) return;
+
+      event.preventDefault();
+      if (delta === "home") {
+        window.scrollTo({ top: 0, behavior: "auto" });
+      } else if (delta === "end") {
+        const root = document.scrollingElement || document.documentElement;
+        window.scrollTo({ top: root.scrollHeight, behavior: "auto" });
+      } else {
+        window.scrollBy({ top: delta, left: 0, behavior: "auto" });
+      }
+    },
+    { capture: true }
+  );
+}
+
+function isPageScrollable() {
+  const root = document.scrollingElement || document.documentElement;
+  return root.scrollHeight > root.clientHeight + 1;
+}
+
+function hasScrollableAncestor(target, deltaY) {
+  for (let node = target instanceof Element ? target : target?.parentElement; node && node !== document.body; node = node.parentElement) {
+    const style = window.getComputedStyle(node);
+    if (!/(auto|scroll)/.test(style.overflowY)) continue;
+    const canScrollDown = deltaY > 0 && node.scrollTop + node.clientHeight < node.scrollHeight - 1;
+    const canScrollUp = deltaY < 0 && node.scrollTop > 1;
+    if (canScrollDown || canScrollUp) return true;
+  }
+  return false;
+}
+
+function isInteractiveTarget(target) {
+  return target instanceof Element && Boolean(target.closest("a, button, input, select, textarea, [contenteditable='true'], [tabindex]:not([tabindex='-1'])"));
+}
+
+function keyScrollDelta(event) {
+  const viewportStep = Math.max(240, Math.floor(window.innerHeight * 0.85));
+  if (event.key === " ") return event.shiftKey ? -viewportStep : viewportStep;
+  return {
+    ArrowDown: 80,
+    ArrowUp: -80,
+    PageDown: viewportStep,
+    PageUp: -viewportStep,
+    Home: "home",
+    End: "end"
+  }[event.key];
+}
+
+function normalizedWheelDelta(event) {
+  const unit = event.deltaMode === 1 ? 40 : event.deltaMode === 2 ? window.innerHeight : 1;
+  return {
+    x: event.deltaX * unit,
+    y: event.deltaY * unit
+  };
+}
+
+function renderOverview(data) {
+  const metrics = data.metrics || {};
+  const events = data.events || [];
+  const grouped = groupBySection(events);
+  els.metricRecent.textContent = String(metrics.recentEvents || 0);
+  els.metricImportant.textContent = String(metrics.mustRead ?? grouped.must_read.length);
+  els.metricFollow.textContent = String(metrics.videoReady ?? grouped.video_ready.length);
+  els.metricReports.textContent = String(metrics.reports || 0);
+  els.updatedAt.textContent = `本地更新时间 ${new Date().toLocaleString("zh-CN", { hour12: false })}`;
+  els.sourceStatus.textContent = `高置信 ${metrics.highConfidence ?? countBy(events, (event) => event.confidence === "high")} 条 · 旧闻/背景 ${metrics.background ?? grouped.background.length} 条 · 降级或示例数据会被封顶标注`;
+  els.sectionStats.innerHTML = [
+    ["今日必看", metrics.mustRead ?? grouped.must_read.length],
+    ["正在发酵", metrics.developing ?? grouped.developing.length],
+    ["适合做视频", metrics.videoReady ?? grouped.video_ready.length],
+    ["背景知识", metrics.background ?? grouped.background.length]
+  ]
+    .map(([label, value]) => `<div><b>${Number(value || 0)}</b><span>${escapeHtml(label)}</span></div>`)
+    .join("");
+}
+
+function renderFacetControls(facets) {
+  const currentSource = els.source.value;
+  els.source.innerHTML = `<option value="">全部来源</option>${(facets.sources || [])
+    .map((source) => `<option value="${escapeAttr(source)}">${escapeHtml(source)}</option>`)
+    .join("")}`;
+  els.source.value = currentSource;
+
+  els.entityList.innerHTML = (facets.entities || [])
+    .map((entity) => `<option value="${escapeAttr(entity.name)}"></option>`)
+    .join("");
+  els.tagList.innerHTML = (facets.tags || [])
+    .map((tag) => `<option value="${escapeAttr(tag)}"></option>`)
+    .join("");
+}
+
+function renderReports(reports) {
+  if (!reports.length) {
+    els.reports.innerHTML = `<p class="muted">暂无报告。先运行一次报告生成。</p>`;
+    return;
+  }
+  els.reports.innerHTML = reports
+    .slice(0, 8)
+    .map((report) => {
+      const label = reportLabel(report.report_type);
+      const date = formatDateTime(report.created_at);
+      return `<article class="report-row">
+        <div>
+          <strong>${escapeHtml(label)}</strong>
+          <span>${escapeHtml(date)} · ${Number(report.event_count || 0)} 条</span>
+        </div>
+        <nav>
+          <a href="${escapeAttr(safeUrl(report.html_url))}" target="_blank" rel="noreferrer">HTML</a>
+          <a href="${escapeAttr(safeUrl(report.markdown_url))}" target="_blank" rel="noreferrer">MD</a>
+        </nav>
+      </article>`;
+    })
+    .join("");
+}
+
+function renderResults(events, title) {
+  state.events = events;
+  els.resultTitle.textContent = title;
+  els.count.textContent = `${events.length} 条`;
+  els.sections.innerHTML = "";
+
+  if (!events.length) {
+    els.results.innerHTML = `<div class="empty-state">没有找到匹配事件。可以换一个关键词，或先用 Mock 数据生成报告。</div>`;
+    renderEmptyDetail();
+    return;
+  }
+
+  els.results.innerHTML = events.map(eventCard).join("");
+  for (const card of els.results.querySelectorAll("[data-event-id]")) {
+    card.addEventListener("click", () => selectEvent(card.dataset.eventId));
+  }
+  selectEvent(state.selectedId && events.some((event) => event.id === state.selectedId) ? state.selectedId : events[0].id);
+}
+
+function renderHome(events) {
+  state.events = events;
+  els.resultTitle.textContent = "今日情报分区";
+  els.count.textContent = `${events.length} 条`;
+  els.results.innerHTML = "";
+
+  if (!events.length) {
+    els.sections.innerHTML = `<div class="empty-state">暂无情报。先运行一次报告生成。</div>`;
+    els.infographic.innerHTML = `<div class="empty-state">暂无可生成的一图读懂。</div>`;
+    renderEmptyDetail();
+    return;
+  }
+
+  const grouped = groupBySection(events);
+  const first = grouped.must_read[0] || grouped.developing[0] || grouped.video_ready[0] || events[0];
+  renderInfographic(first);
+  els.sections.innerHTML = [
+    scoreLegend(),
+    sectionBlock("今日必看", "优先读，适合快速判断今天行业动向。", grouped.must_read),
+    sectionBlock("正在发酵", "趋势在扩散，但还需要继续交叉验证。", grouped.developing),
+    sectionBlock("适合做视频", "视频潜力更高，不一定都是最新热点。", grouped.video_ready),
+    sectionBlock("背景知识", "旧闻、时间不明或低分内容，只作为资料沉淀。", grouped.background)
+  ].join("");
+  for (const card of els.sections.querySelectorAll("[data-event-id]")) {
+    card.addEventListener("click", () => selectEvent(card.dataset.eventId));
+  }
+  selectEvent(state.selectedId && events.some((event) => event.id === state.selectedId) ? state.selectedId : first.id);
+}
+
+function sectionBlock(title, subtitle, events) {
+  const visible = events.slice(0, 4);
+  return `<section class="feed-section">
+    <div class="feed-section-head">
+      <div>
+        <h3>${escapeHtml(title)}</h3>
+        <p>${escapeHtml(subtitle)}</p>
+      </div>
+      <span>${events.length} 条</span>
+    </div>
+    <div class="section-cards">
+      ${visible.length ? visible.map(eventCard).join("") : `<div class="empty-state compact-empty">暂无。</div>`}
+    </div>
+  </section>`;
+}
+
+function eventCard(event) {
+  const selected = event.id === state.selectedId ? " selected" : "";
+  const tags = (event.tags || [])
+    .slice(0, 5)
+    .map((tag) => `<span class="pill">${escapeHtml(tag)}</span>`)
+    .join("");
+  const entities = (event.entities || [])
+    .slice(0, 3)
+      .map((entity) => `<span class="pill">${escapeHtml(entity.name)}</span>`)
+    .join("");
+
+  return `<article class="event-card${selected}" data-event-id="${escapeAttr(event.id)}">
+    <div class="card-top">
+      <h3>${escapeHtml(event.title)}</h3>
+      ${scorePill(event)}
+    </div>
+    <p>${escapeHtml(event.push_reason || event.summary)}</p>
+    <div class="meta">
+      <span class="pill strong">视频潜力 ${Number(event.video_potential || 1)}/5</span>
+      <span class="pill">${escapeHtml(freshnessLabel(event.freshness_label))}</span>
+      <span class="pill">${escapeHtml(confidenceLabel(event.confidence))}</span>
+      <span class="pill">${escapeHtml(categoryLabel(event.category))}</span>
+      ${tags}
+      ${entities}
+    </div>
+  </article>`;
+}
+
+function renderInfographic(event) {
+  if (!event) {
+    els.infographic.innerHTML = `<div class="empty-state">暂无可生成的一图读懂。</div>`;
+    return;
+  }
+  const parts = event.score_parts || {};
+  const score = scoreMeta(event);
+  const rows = [
+    ["相关度", parts.relevance || 0, 22],
+    ["趋势", parts.trend || 0, 20],
+    ["新鲜度", parts.freshness || 0, 18],
+    ["变化", parts.change || 0, 16],
+    ["可信度", parts.credibility || 0, 16],
+    ["稀缺性", parts.scarcity || 0, 8]
+  ];
+  els.infographic.innerHTML = `<div class="info-header">
+      <p class="eyebrow">一图读懂</p>
+      <div class="score-badge ${escapeAttr(score.className)}">
+        <span>${escapeHtml(score.level)} · ${escapeHtml(score.label)}</span>
+        <b>${scoreValue(event)}</b>
+        <em>${escapeHtml(score.short)}</em>
+      </div>
+    </div>
+    <h2>${escapeHtml(event.title)}</h2>
+    <p class="info-summary">${escapeHtml(event.push_reason || event.summary)}</p>
+    <div class="info-grid">
+      <div>
+        <span>发生了什么</span>
+        <p>${escapeHtml(event.summary)}</p>
+      </div>
+      <div>
+        <span>为什么重要</span>
+        <p>${escapeHtml(event.why_it_matters)}</p>
+      </div>
+      <div>
+        <span>视频切入</span>
+        <p>${escapeHtml(event.content_angle)}</p>
+      </div>
+    </div>
+    <div class="score-bars">
+      ${rows
+        .map(([label, value, max]) => {
+          const width = Math.round((Number(value) / Number(max)) * 100);
+          return `<div class="bar-row"><span>${escapeHtml(label)}</span><i><b style="width:${width}%"></b></i><em>${Number(value)}/${Number(max)}</em></div>`;
+        })
+        .join("")}
+    </div>
+    <div class="info-footer">
+      <span>${escapeHtml(freshnessLabel(event.freshness_label))}</span>
+      <span>${escapeHtml(confidenceLabel(event.confidence))}</span>
+      <span>更新 ${escapeHtml(formatDateTime(event.last_seen_at))}</span>
+    </div>
+    <div class="source-list compact-source-list">${renderCompactSourceLinks(event.sources, 3)}</div>`;
+}
+
+async function selectEvent(id) {
+  if (!id) return;
+  state.selectedId = id;
+  const requestId = ++state.detailRequestId;
+  for (const card of document.querySelectorAll("[data-event-id]")) {
+    card.classList.toggle("selected", card.dataset.eventId === id);
+  }
+  try {
+    const data = await fetchJson(`/api/events/${encodeURIComponent(id)}`);
+    if (requestId !== state.detailRequestId) return;
+    renderDetail(data.event);
+  } catch (error) {
+    if (requestId !== state.detailRequestId) return;
+    els.detail.innerHTML = `<h2>知识卡</h2><p class="muted">${escapeHtml(error.message)}</p>`;
+  }
+}
+
+function renderDetail(event) {
+  const feedback = new Set(event.feedback || []);
+  const tags = (event.tags || []).map((tag) => `<span class="pill">${escapeHtml(tag)}</span>`).join("");
+  const entities = (event.entities || []).map((entity) => `<span class="pill">${escapeHtml(entity.name)}</span>`).join("");
+  const parts = event.score_parts || {};
+  const score = scoreMeta(event);
+
+  els.detail.innerHTML = `<h2>知识卡</h2>
+    <h3>${escapeHtml(event.title)}</h3>
+    <div class="knowledge-score">
+      <div class="knowledge-score-card ${escapeAttr(score.className)}"><b>${escapeHtml(score.level)} ${score.score}</b><span>${escapeHtml(score.label)} · ${escapeHtml(score.description)}</span></div>
+      <div><b>${Number(event.video_potential || 1)}/5</b><span>视频潜力</span></div>
+      <div><b>${escapeHtml(confidenceLabel(event.confidence))}</b><span>置信度</span></div>
+    </div>
+    <dl class="knowledge-fields">
+      ${field("为什么推给你", event.push_reason)}
+      ${field("一句话总结", event.summary)}
+      ${field("发生了什么", event.what_happened)}
+      ${field("为什么重要", event.why_it_matters)}
+      ${field("创作影响", event.creator_impact)}
+      ${field("视频选题", event.content_angle)}
+      ${field("标题 / 封面", event.cover_angle)}
+      ${field("评级说明", `${score.level} = ${score.label}，${score.description}。数字是 0-100 综合分。`)}
+      ${field("评分拆解", `相关度 ${parts.relevance ?? 0}，趋势 ${parts.trend ?? 0}，新鲜度 ${parts.freshness ?? 0}，变化 ${parts.change ?? 0}，可信度 ${parts.credibility ?? 0}，稀缺性 ${parts.scarcity ?? 0}`)}
+      ${field("封顶规则", (event.caps || []).join("；") || "无")}
+    </dl>
+    <div class="stamp">首次发现 ${escapeHtml(formatDateTime(event.first_seen_at))} · 最近更新 ${escapeHtml(formatDateTime(event.last_seen_at))} · ${escapeHtml(freshnessLabel(event.freshness_label))}</div>
+    <div class="meta">${tags}${entities}</div>
+    <div class="actions">
+      ${feedbackButton("favorite", "收藏", feedback)}
+      ${feedbackButton("follow", "持续跟踪", feedback)}
+      ${feedbackButton("ignore", "不感兴趣", feedback)}
+      ${feedbackButton("used_for_video", "已用于视频", feedback)}
+    </div>
+    <div class="sources">
+      <h4>原始来源</h4>
+      <div class="source-list">${renderSourceLinks(event.sources, 8)}</div>
+    </div>`;
+
+  for (const button of els.detail.querySelectorAll("[data-feedback]")) {
+    button.addEventListener("click", () => toggleFeedback(event.id, button));
+  }
+}
+
+function field(label, value) {
+  return `<dt>${escapeHtml(label)}</dt><dd>${escapeHtml(value || "暂无")}</dd>`;
+}
+
+function feedbackButton(type, label, feedback) {
+  return `<button class="${feedback.has(type) ? "active" : ""}" data-feedback="${escapeAttr(type)}">${escapeHtml(label)}</button>`;
+}
+
+function scoreLegend() {
+  const items = [
+    ["A", "重点", "优先看"],
+    ["B", "观察", "继续跟"],
+    ["C", "背景", "可沉淀"],
+    ["D", "暂存", "低优先"]
+  ];
+  return `<div class="score-legend" aria-label="评分说明">
+    <span>评分：字母表示处理优先级，数字是 0-100 综合分</span>
+    ${items
+      .map(([level, label, hint]) => `<i class="radar-level-${level.toLowerCase()}"><b>${level}</b>${label}<em>${hint}</em></i>`)
+      .join("")}
+  </div>`;
+}
+
+function scorePill(event) {
+  const score = scoreMeta(event);
+  return `<span class="score-pill ${escapeAttr(score.className)}" title="${escapeAttr(`${score.level} = ${score.label}，${score.description}。数字是 0-100 综合分。`)}">
+    <b>${escapeHtml(score.level)}</b>
+    <span>${escapeHtml(score.label)}</span>
+    <em>${score.score}</em>
+  </span>`;
+}
+
+function scoreMeta(event) {
+  const level = String(event.radar_level || fallbackLevel(scoreValue(event))).toUpperCase();
+  const normalized = ["A", "B", "C", "D"].includes(level) ? level : fallbackLevel(scoreValue(event));
+  const labels = {
+    A: ["重点", "优先阅读，适合马上判断要不要做内容", "优先看"],
+    B: ["观察", "有信号但还需要继续验证", "继续跟"],
+    C: ["背景", "适合沉淀为资料或备选素材", "可沉淀"],
+    D: ["暂存", "优先级低，除非后续有新证据", "低优先"]
+  };
+  const [label, description, short] = labels[normalized];
+  return {
+    level: normalized,
+    label,
+    description,
+    short,
+    score: scoreValue(event),
+    className: `radar-level-${normalized.toLowerCase()}`
+  };
+}
+
+function fallbackLevel(score) {
+  if (score >= 75) return "A";
+  if (score >= 58) return "B";
+  if (score >= 40) return "C";
+  return "D";
+}
+
+async function toggleFeedback(eventId, button) {
+  const feedbackType = button.dataset.feedback;
+  const enabled = !button.classList.contains("active");
+  button.disabled = true;
+  try {
+    const data = await fetchJson(`/api/events/${encodeURIComponent(eventId)}/feedback`, {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ feedbackType, enabled })
+    });
+    renderDetail(data.event);
+    await refreshOverviewOnly().catch((refreshError) => {
+      console.warn("Overview refresh failed after feedback update", refreshError);
+    });
+  } catch (error) {
+    if (button.isConnected) button.disabled = false;
+    els.detail.insertAdjacentHTML("beforeend", `<p class="form-error">${escapeHtml(error.message)}</p>`);
+  }
+}
+
+async function refreshOverviewOnly() {
+  const data = await fetchJson("/api/overview");
+  renderOverview(data);
+  renderKnowledgeHealth(data.knowledgeHealth);
+  renderReports(data.reports || []);
+  renderInfographic((data.events || [])[0] || state.events[0]);
+}
+
+function renderKnowledgeHealth(health) {
+  if (!health) {
+    els.knowledgeHealth.innerHTML = `<p class="muted">暂无体检数据。</p>`;
+    return;
+  }
+  const metrics = health.metrics || {};
+  const queues = health.queues || {};
+  const queueCounts = health.queueCounts || {};
+  const needs = queues.needsEvidence || [];
+  const videos = queues.videoCandidates || [];
+  els.knowledgeHealth.innerHTML = `<div class="health-grid">
+      <div><b>${Number(metrics.total || 0)}</b><span>入库事件</span></div>
+      <div><b>${Number(metrics.lowConfidence || 0)}</b><span>低置信</span></div>
+      <div><b>${Number(metrics.singleSource || 0)}</b><span>单来源</span></div>
+      <div><b>${Number(metrics.capped || 0)}</b><span>封顶/示例</span></div>
+    </div>
+    ${healthQueue("优先补来源", needs, Number(queueCounts.needsEvidence ?? needs.length), "低置信且单来源，或存在封顶/示例标记。", "暂无优先补来源项。")}
+    ${healthQueue("可回收选题", videos, Number(queueCounts.videoCandidates ?? videos.length), "视频潜力高，且还没标记为已用于视频。", "暂无可回收选题。")}`;
+  for (const item of els.knowledgeHealth.querySelectorAll("[data-health-event-id]")) {
+    item.addEventListener("click", () => selectEvent(item.dataset.healthEventId));
+  }
+}
+
+function healthQueue(title, events, total, description, emptyText) {
+  const items = (events || []).slice(0, 3);
+  return `<div class="health-queue">
+    <div class="health-title"><strong>${escapeHtml(title)}</strong><span>${total} 条</span></div>
+    <p class="health-desc">${escapeHtml(description)}</p>
+    ${
+      items.length
+        ? items
+            .map(
+              (event) => `<button data-health-event-id="${escapeAttr(event.id)}">
+                <span>${escapeHtml(event.title)}</span>
+                <em>${escapeHtml(event.radar_level || "D")}${scoreValue(event)} · ${escapeHtml(confidenceLabel(event.confidence))}</em>
+              </button>`
+            )
+            .join("")
+        : `<p class="muted">${escapeHtml(emptyText)}</p>`
+    }
+  </div>`;
+}
+
+async function search() {
+  try {
+    setLoading("正在搜索...");
+    const params = new URLSearchParams();
+    const q = els.query.value.trim();
+    if (q) params.set("q", q);
+    for (const key of ["category", "source", "entity", "tag"]) {
+      const value = els[key].value.trim();
+      if (value) params.set(key, value);
+    }
+    if (els.favorite.checked) params.set("favorite", "true");
+    if (els.follow.checked) params.set("follow", "true");
+    if (els.usedForVideo.checked) params.set("usedForVideo", "true");
+    if (els.ignored.checked) params.set("ignored", "true");
+
+    const endpoint = params.toString() ? `/api/search?${params.toString()}` : "/api/events/recent?days=7";
+    const data = await fetchJson(endpoint);
+    renderResults(data.events || [], params.toString() ? "搜索结果" : "最近 7 天重要事件");
+  } catch (error) {
+    renderError(error);
+  }
+}
+
+async function loadTimeline() {
+  const q = els.timelineQuery.value.trim();
+  if (!q) {
+    els.timeline.innerHTML = `<p class="muted">输入一个品牌、平台或话题。</p>`;
+    return;
+  }
+  els.timeline.innerHTML = `<p class="muted">正在生成时间线...</p>`;
+  try {
+    const data = await fetchJson(`/api/timeline?q=${encodeURIComponent(q)}`);
+    const events = data.events || [];
+    els.timeline.innerHTML = events.length
+      ? events
+          .map(
+            (event) => `<article class="timeline-item">
+              <time>${escapeHtml(formatDateTime(event.first_seen_at))}</time>
+              <strong>${escapeHtml(event.title)}</strong>
+              <p>${escapeHtml(event.summary)}</p>
+            </article>`
+          )
+          .join("")
+      : `<p class="muted">暂无时间线。</p>`;
+  } catch (error) {
+    els.timeline.innerHTML = `<p class="muted">${escapeHtml(error.message)}</p>`;
+  }
+}
+
+function setLoading(message) {
+  els.count.textContent = "";
+  els.sections.innerHTML = "";
+  els.results.innerHTML = `<div class="empty-state">${escapeHtml(message)}</div>`;
+}
+
+function renderError(error) {
+  els.results.innerHTML = `<div class="empty-state">加载失败：${escapeHtml(error.message)}</div>`;
+  renderEmptyDetail();
+}
+
+function renderEmptyDetail() {
+  els.detail.innerHTML = `<h2>知识卡</h2><p class="muted">选择事件后显示详情。</p>`;
+}
+
+function categoryLabel(category) {
+  return {
+    digital: "数码",
+    media: "自媒体",
+    auto: "汽车",
+    mixed: "跨行业",
+    unknown: "其他"
+  }[category] || category || "其他";
+}
+
+function groupBySection(events) {
+  const grouped = {
+    must_read: [],
+    developing: [],
+    video_ready: [],
+    background: []
+  };
+  for (const event of events) {
+    const section = grouped[event.radar_section] ? event.radar_section : fallbackSection(event);
+    grouped[section].push(event);
+  }
+  return grouped;
+}
+
+function fallbackSection(event) {
+  const score = scoreValue(event);
+  if (score >= 75) return "must_read";
+  if (Number(event.video_potential || 0) >= 4) return "video_ready";
+  if (score >= 58) return "developing";
+  return "background";
+}
+
+function freshnessLabel(label) {
+  return {
+    new: "新信息",
+    recent: "近 7 天",
+    stale: "旧闻/背景",
+    unknown: "时间不明"
+  }[label] || "时间不明";
+}
+
+function confidenceLabel(label) {
+  return {
+    high: "高置信",
+    medium: "中置信",
+    low: "低置信"
+  }[label] || "低置信";
+}
+
+function renderSourceLinks(sources, limit = 8) {
+  const visible = (sources || []).slice(0, limit);
+  if (!visible.length) return `<p class="muted">暂无来源链接</p>`;
+  return visible
+    .map((source, index) => {
+      const url = safeUrl(source.url);
+      const label = sourceLabel(source, index, sources);
+      const title = source.title || "原始页面";
+      if (url === "#") {
+        return `<div class="source-card">
+          <strong>${escapeHtml(label)}</strong>
+          <span>${escapeHtml(title)}</span>
+          <code>${escapeHtml(source.url || "无可用地址")}</code>
+        </div>`;
+      }
+      return `<a class="source-card" href="${escapeAttr(url)}" target="_blank" rel="noreferrer">
+        <strong>${escapeHtml(label)}</strong>
+        <span>${escapeHtml(title)}</span>
+        <code>${escapeHtml(url)}</code>
+      </a>`;
+    })
+    .join("");
+}
+
+function renderCompactSourceLinks(sources, limit = 3) {
+  const visible = (sources || []).slice(0, limit);
+  if (!visible.length) return "";
+  return visible
+    .map((source, index) => {
+      const url = safeUrl(source.url);
+      const label = sourceLabel(source, index, sources);
+      const host = sourceHost(url);
+      const title = `${label}${source.title ? ` · ${source.title}` : ""}${url !== "#" ? ` · ${url}` : ""}`;
+      const inner = `<strong>${escapeHtml(label)}</strong><span>· ${escapeHtml(host)}</span>`;
+      if (url === "#") {
+        return `<div class="source-chip" title="${escapeAttr(title)}">${inner}</div>`;
+      }
+      return `<a class="source-chip" href="${escapeAttr(url)}" target="_blank" rel="noreferrer" title="${escapeAttr(title)}">${inner}</a>`;
+    })
+    .join("");
+}
+
+function sourceLabel(source, index, sources) {
+  const same = (sources || []).filter((item) => item.source === source.source).length;
+  if (same <= 1) return source.source || "来源";
+  const ordinal = (sources || []).slice(0, index + 1).filter((item) => item.source === source.source).length;
+  return `${source.source || "来源"} ${ordinal}`;
+}
+
+function sourceHost(url) {
+  if (!url || url === "#") return "无可用地址";
+  if (url.startsWith("/") && !url.startsWith("//")) return "本地报告";
+  try {
+    return new URL(url).hostname.replace(/^www\./, "");
+  } catch {
+    return "来源页面";
+  }
+}
+
+function countBy(items, predicate) {
+  return items.filter(predicate).length;
+}
+
+function scoreValue(event) {
+  return Number(event.radar_score ?? event.importance_score ?? 0);
+}
+
+function reportLabel(type) {
+  return {
+    noon: "中午报告",
+    night: "晚间报告",
+    weekly: "周报",
+    monthly: "月报"
+  }[type] || type || "报告";
+}
+
+function formatDateTime(value) {
+  if (!value) return "未知时间";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return String(value);
+  return date.toLocaleString("zh-CN", {
+    hour12: false,
+    month: "2-digit",
+    day: "2-digit",
+    hour: "2-digit",
+    minute: "2-digit"
+  });
+}
+
+function escapeHtml(value) {
+  return String(value ?? "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function escapeAttr(value) {
+  return escapeHtml(value).replace(/'/g, "&#39;");
+}
+
+function safeUrl(value) {
+  const raw = String(value ?? "").trim();
+  if (!raw) return "#";
+  if (raw.startsWith("/") && !raw.startsWith("//")) return raw;
+  try {
+    const url = new URL(raw);
+    return url.protocol === "http:" || url.protocol === "https:" ? url.href : "#";
+  } catch {
+    return "#";
+  }
+}
+
+els.searchBtn.addEventListener("click", search);
+els.timelineBtn.addEventListener("click", loadTimeline);
+enableRootScrollFallback();
+
+for (const input of [els.query, els.entity, els.tag, els.timelineQuery]) {
+  input.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      if (input === els.timelineQuery) loadTimeline();
+      else search();
+    }
+  });
+}
+
+for (const input of [els.category, els.source, els.favorite, els.follow, els.usedForVideo, els.ignored]) {
+  input.addEventListener("change", search);
+}
+
+bootstrap();

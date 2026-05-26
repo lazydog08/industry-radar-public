@@ -1,0 +1,17 @@
+.env
+.DS_Store
+node_modules/
+dist/
+logs/
+backups/
+.reviews/
+*.log
+data/*.sqlite
+data/*.sqlite-*
+data/reports/
+data/validation/
+data/real-runs/
+data/simulations/
+data/runtime/
+data/publish/
+coverage/
