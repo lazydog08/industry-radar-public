@@ -65,3 +65,27 @@
 - 决策：演示服务默认只监听 `127.0.0.1`，不暴露到局域网。
 - 原因：当前 API 没有鉴权，包含本地知识库和反馈状态；本地优先项目不应默认被同网设备访问。
 - 影响：浏览器使用 `http://localhost:3887/` 不受影响；如果未来需要局域网演示，需要显式设置 `HOST`。
+
+## Decision 012
+- 时间：2026-05-26 14:45:00 CST
+- 决策：NAS 日更脚本只预留 Bark 调用点，不直接实现 Bark HTTP 发送。
+- 原因：TASK-03 的负责范围明确把 Bark 细节留给 TASK-04；脚本只需要传递状态、消息和日志路径，避免在本任务中处理密钥和通知格式。
+- 影响：设置 `BARK_NOTIFY_URL` 或 `BARK_KEY` 后，当前脚本会记录“已配置但通知模块未实现”；待 TASK-04 增加 `notify:bark` 后即可接入。
+
+## Decision 013
+- 时间：2026-05-26 14:25:00 CST
+- 决策：TASK-02 前端启动时优先读取 `public-data/overview.json`，读取成功后进入线上只读模式；读取失败则回退原有 `/api/overview`。
+- 原因：线上网页应由 NAS 导出的静态数据驱动，不依赖 Express/SQLite；同时不能破坏当前 `localhost:3887` 本地演示。
+- 影响：静态模式下详情、搜索、筛选和时间线在浏览器本地完成，反馈按钮禁用且不调用写接口；本地服务可选暴露 `PUBLIC_DATA_DIR` / `EXPORT_SITE_DIR` 或 `public-data` 目录便于预览。
+
+## Decision 014
+- 时间：2026-05-26 14:27:20 CST
+- 决策：TASK-01 静态导出以 `public-data/` 为默认产物目录，核心 JSON 保持稳定文件名：`overview.json`、`events.json`、`knowledge.json`、`reports/index.json`、`meta.json`。
+- 原因：NAS 日更、线上只读页面和后续发布脚本需要固定入口；稳定文件名比按日期分散 JSON 更适合集成。
+- 影响：线上前端可以固定读取 `public-data/overview.json`；如果未来要做历史快照，可在此基础上额外增加日期目录，而不是替换这些入口文件。
+
+## Decision 015
+- 时间：2026-05-26 14:41:29 CST
+- 决策：`public-data/` 作为 NAS/导出生成物加入 `.gitignore`，代码仓库只提交导出器、静态读取逻辑、脚本和文档。
+- 原因：`public-data/` 会包含每日报告、情报 JSON 和运行期快照，应该由 NAS 定时生成并发布，不应作为源码版本的一部分。
+- 影响：本地预览仍可通过 `pnpm export:site` 生成 `public-data/`；上线时由 `PUBLISH_DIR` 或静态托管目录接收生成物。

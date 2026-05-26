@@ -2,6 +2,11 @@ const state = {
   events: [],
   selectedId: "",
   detailRequestId: 0,
+  dataMode: "unknown",
+  readOnly: false,
+  staticOverview: null,
+  staticOverviewUrl: "",
+  staticEventIndex: new Map(),
   facets: {
     sources: [],
     tags: [],
@@ -9,6 +14,8 @@ const state = {
     categories: []
   }
 };
+
+const STATIC_OVERVIEW_CANDIDATES = ["/public-data/overview.json", "./public-data/overview.json"];
 
 const els = {
   updatedAt: requireElement("updatedAt"),
@@ -38,6 +45,7 @@ const els = {
   detail: requireElement("detail"),
   knowledgeHealth: requireElement("knowledgeHealth"),
   reports: requireElement("reports"),
+  reportJsonLink: document.querySelector("a[href='/api/reports']"),
   timelineQuery: requireElement("timelineQuery"),
   timelineBtn: requireElement("timelineBtn"),
   timeline: requireElement("timeline")
@@ -61,7 +69,7 @@ async function fetchJson(url, options) {
 async function bootstrap() {
   try {
     setLoading("正在读取知识库...");
-    const data = await fetchJson("/api/overview");
+    const data = await loadOverview();
     state.facets = data.facets || state.facets;
     renderOverview(data);
     renderFacetControls(state.facets);
@@ -71,6 +79,99 @@ async function bootstrap() {
   } catch (error) {
     renderError(error);
   }
+}
+
+async function loadOverview() {
+  const staticError = state.dataMode === "api" ? undefined : await tryLoadStaticOverview();
+  if (state.staticOverview) return state.staticOverview;
+
+  try {
+    state.dataMode = "api";
+    state.readOnly = false;
+    const data = await fetchJson("/api/overview");
+    state.staticOverview = null;
+    state.staticOverviewUrl = "";
+    state.staticEventIndex = new Map();
+    return normalizeOverviewPayload(data);
+  } catch (apiError) {
+    const message = [
+      "没有找到线上静态数据，也无法连接本地 API。",
+      "请确认 public-data/overview.json 已发布，或本地服务正在运行。",
+      staticError ? `静态数据：${staticError.message}` : "",
+      apiError ? `本地 API：${apiError.message}` : ""
+    ]
+      .filter(Boolean)
+      .join(" ");
+    throw new Error(message);
+  }
+}
+
+async function tryLoadStaticOverview() {
+  let lastError;
+  for (const url of staticOverviewUrls()) {
+    try {
+      const data = normalizeOverviewPayload(await fetchJson(url, { cache: "no-store" }));
+      state.dataMode = "static";
+      state.readOnly = true;
+      state.staticOverview = data;
+      state.staticOverviewUrl = url;
+      state.staticEventIndex = indexStaticEvents(data);
+      return undefined;
+    } catch (error) {
+      lastError = error;
+    }
+  }
+  state.dataMode = "unknown";
+  state.readOnly = false;
+  state.staticOverview = null;
+  state.staticOverviewUrl = "";
+  state.staticEventIndex = new Map();
+  return lastError;
+}
+
+function staticOverviewUrls() {
+  const seen = new Set();
+  return STATIC_OVERVIEW_CANDIDATES.map((candidate) => new URL(candidate, window.location.href).href).filter((url) => {
+    if (seen.has(url)) return false;
+    seen.add(url);
+    return true;
+  });
+}
+
+function normalizeOverviewPayload(payload) {
+  const source = payload?.overview || payload || {};
+  const events = Array.isArray(source.events) ? source.events : Array.isArray(payload?.events) ? payload.events : [];
+  const reports = Array.isArray(source.reports) ? source.reports : Array.isArray(payload?.reports) ? payload.reports : [];
+  return {
+    ...source,
+    metrics: source.metrics || buildStaticMetrics(events, reports),
+    events,
+    reports,
+    facets: source.facets || buildStaticFacets(events),
+    knowledgeHealth: source.knowledgeHealth || source.knowledge_health || payload?.knowledgeHealth || buildStaticKnowledgeHealth(events),
+    meta: source.meta || payload?.meta || {}
+  };
+}
+
+function indexStaticEvents(data) {
+  const entries = new Map();
+  for (const event of data.events || []) {
+    if (event?.id) entries.set(String(event.id), event);
+  }
+  const detailCollections = [data.eventDetails, data.event_details, data.details];
+  for (const collection of detailCollections) {
+    if (!collection) continue;
+    if (Array.isArray(collection)) {
+      for (const event of collection) {
+        if (event?.id) entries.set(String(event.id), event);
+      }
+    } else {
+      for (const [id, event] of Object.entries(collection)) {
+        entries.set(String(event?.id || id), { id, ...event });
+      }
+    }
+  }
+  return entries;
 }
 
 function enableRootScrollFallback() {
@@ -158,12 +259,14 @@ function renderOverview(data) {
   const metrics = data.metrics || {};
   const events = data.events || [];
   const grouped = groupBySection(events);
+  const updatedAt = data.meta?.updated_at || data.meta?.updatedAt || data.updated_at || data.updatedAt || data.generated_at || data.generatedAt;
+  const modeLabel = state.readOnly ? "线上数据更新时间" : "本地更新时间";
   els.metricRecent.textContent = String(metrics.recentEvents || 0);
   els.metricImportant.textContent = String(metrics.mustRead ?? grouped.must_read.length);
   els.metricFollow.textContent = String(metrics.videoReady ?? grouped.video_ready.length);
   els.metricReports.textContent = String(metrics.reports || 0);
-  els.updatedAt.textContent = `本地更新时间 ${new Date().toLocaleString("zh-CN", { hour12: false })}`;
-  els.sourceStatus.textContent = `高置信 ${metrics.highConfidence ?? countBy(events, (event) => event.confidence === "high")} 条 · 旧闻/背景 ${metrics.background ?? grouped.background.length} 条 · 降级或示例数据会被封顶标注`;
+  els.updatedAt.textContent = `${modeLabel} ${formatFullDateTime(updatedAt || new Date())}`;
+  els.sourceStatus.textContent = `${state.readOnly ? "线上只读 · " : ""}高置信 ${metrics.highConfidence ?? countBy(events, (event) => event.confidence === "high")} 条 · 旧闻/背景 ${metrics.background ?? grouped.background.length} 条 · 降级或示例数据会被封顶标注`;
   els.sectionStats.innerHTML = [
     ["今日必看", metrics.mustRead ?? grouped.must_read.length],
     ["正在发酵", metrics.developing ?? grouped.developing.length],
@@ -190,6 +293,10 @@ function renderFacetControls(facets) {
 }
 
 function renderReports(reports) {
+  if (els.reportJsonLink) {
+    els.reportJsonLink.href = state.readOnly ? state.staticOverviewUrl || staticOverviewUrls()[0] : "/api/reports";
+    els.reportJsonLink.textContent = state.readOnly ? "数据" : "JSON";
+  }
   if (!reports.length) {
     els.reports.innerHTML = `<p class="muted">暂无报告。先运行一次报告生成。</p>`;
     return;
@@ -285,7 +392,7 @@ function eventCard(event) {
     .join("");
   const entities = (event.entities || [])
     .slice(0, 3)
-      .map((entity) => `<span class="pill">${escapeHtml(entity.name)}</span>`)
+    .map((entity) => `<span class="pill">${escapeHtml(entityName(entity))}</span>`)
     .join("");
 
   return `<article class="event-card${selected}" data-event-id="${escapeAttr(event.id)}">
@@ -314,9 +421,9 @@ function renderInfographic(event) {
   const score = scoreMeta(event);
   const rows = [
     ["相关度", parts.relevance || 0, 22],
-    ["趋势", parts.trend || 0, 20],
+    ["趋势", parts.trend || 0, 26],
     ["新鲜度", parts.freshness || 0, 18],
-    ["变化", parts.change || 0, 16],
+    ["变化", parts.change || 0, 10],
     ["可信度", parts.credibility || 0, 16],
     ["稀缺性", parts.scarcity || 0, 8]
   ];
@@ -367,6 +474,12 @@ async function selectEvent(id) {
   for (const card of document.querySelectorAll("[data-event-id]")) {
     card.classList.toggle("selected", card.dataset.eventId === id);
   }
+  if (state.readOnly) {
+    const event = getStaticEvent(id);
+    if (event) renderDetail(event);
+    else els.detail.innerHTML = `<h2>知识卡</h2><p class="muted">静态数据里没有找到这条详情。</p>`;
+    return;
+  }
   try {
     const data = await fetchJson(`/api/events/${encodeURIComponent(id)}`);
     if (requestId !== state.detailRequestId) return;
@@ -380,7 +493,7 @@ async function selectEvent(id) {
 function renderDetail(event) {
   const feedback = new Set(event.feedback || []);
   const tags = (event.tags || []).map((tag) => `<span class="pill">${escapeHtml(tag)}</span>`).join("");
-  const entities = (event.entities || []).map((entity) => `<span class="pill">${escapeHtml(entity.name)}</span>`).join("");
+  const entities = (event.entities || []).map((entity) => `<span class="pill">${escapeHtml(entityName(entity))}</span>`).join("");
   const parts = event.score_parts || {};
   const score = scoreMeta(event);
 
@@ -411,13 +524,16 @@ function renderDetail(event) {
       ${feedbackButton("ignore", "不感兴趣", feedback)}
       ${feedbackButton("used_for_video", "已用于视频", feedback)}
     </div>
+    ${state.readOnly ? `<p class="muted">线上只读模式：反馈标记不会写入，请回到本地库处理。</p>` : ""}
     <div class="sources">
       <h4>原始来源</h4>
       <div class="source-list">${renderSourceLinks(event.sources, 8)}</div>
     </div>`;
 
-  for (const button of els.detail.querySelectorAll("[data-feedback]")) {
-    button.addEventListener("click", () => toggleFeedback(event.id, button));
+  if (!state.readOnly) {
+    for (const button of els.detail.querySelectorAll("[data-feedback]")) {
+      button.addEventListener("click", () => toggleFeedback(event.id, button));
+    }
   }
 }
 
@@ -426,7 +542,8 @@ function field(label, value) {
 }
 
 function feedbackButton(type, label, feedback) {
-  return `<button class="${feedback.has(type) ? "active" : ""}" data-feedback="${escapeAttr(type)}">${escapeHtml(label)}</button>`;
+  const disabled = state.readOnly ? " disabled aria-disabled=\"true\" title=\"线上只读模式不写入反馈\"" : "";
+  return `<button class="${feedback.has(type) ? "active" : ""}" data-feedback="${escapeAttr(type)}"${disabled}>${escapeHtml(label)}</button>`;
 }
 
 function scoreLegend() {
@@ -437,7 +554,7 @@ function scoreLegend() {
     ["D", "暂存", "低优先"]
   ];
   return `<div class="score-legend" aria-label="评分说明">
-    <span>评分：字母表示处理优先级，数字是 0-100 综合分</span>
+    <span>评分：字母表示处理优先级，数字是 0-100 综合分；趋势权重最高</span>
     ${items
       .map(([level, label, hint]) => `<i class="radar-level-${level.toLowerCase()}"><b>${level}</b>${label}<em>${hint}</em></i>`)
       .join("")}
@@ -481,6 +598,10 @@ function fallbackLevel(score) {
 }
 
 async function toggleFeedback(eventId, button) {
+  if (state.readOnly) {
+    els.detail.insertAdjacentHTML("beforeend", `<p class="form-error">线上只读模式不会写入反馈。</p>`);
+    return;
+  }
   const feedbackType = button.dataset.feedback;
   const enabled = !button.classList.contains("active");
   button.disabled = true;
@@ -501,7 +622,7 @@ async function toggleFeedback(eventId, button) {
 }
 
 async function refreshOverviewOnly() {
-  const data = await fetchJson("/api/overview");
+  const data = state.readOnly && state.staticOverview ? state.staticOverview : await fetchJson("/api/overview");
   renderOverview(data);
   renderKnowledgeHealth(data.knowledgeHealth);
   renderReports(data.reports || []);
@@ -551,6 +672,127 @@ function healthQueue(title, events, total, description, emptyText) {
   </div>`;
 }
 
+function getStaticEvent(id) {
+  const key = String(id || "");
+  return state.staticEventIndex.get(key) || state.events.find((event) => event.id === key);
+}
+
+function filterStaticEvents(events, params) {
+  return (events || [])
+    .filter((event) => {
+      const q = String(params.get("q") || "").trim();
+      if (q && !eventMatchesQuery(event, q)) return false;
+      if (params.get("category") && event.category !== params.get("category")) return false;
+      if (params.get("source") && !(event.sources || []).some((source) => source.source === params.get("source"))) return false;
+      if (params.get("tag") && !(event.tags || []).some((tag) => includesText(tag, params.get("tag")))) return false;
+      if (params.get("entity") && !entityNames(event).some((name) => includesText(name, params.get("entity")))) return false;
+      if (params.get("favorite") === "true" && !hasFeedback(event, "favorite")) return false;
+      if (params.get("follow") === "true" && !hasFeedback(event, "follow")) return false;
+      if (params.get("usedForVideo") === "true" && !hasFeedback(event, "used_for_video")) return false;
+      if (params.get("ignored") === "true" && !hasFeedback(event, "ignore")) return false;
+      return true;
+    })
+    .slice(0, 80);
+}
+
+function timelineFromStatic(query) {
+  return filterStaticEvents(state.staticOverview?.events || [], new URLSearchParams({ q: query }))
+    .slice()
+    .sort((left, right) => new Date(left.first_seen_at || left.last_seen_at || 0) - new Date(right.first_seen_at || right.last_seen_at || 0))
+    .slice(-20);
+}
+
+function eventMatchesQuery(event, query) {
+  const haystack = [
+    event.title,
+    event.summary,
+    event.push_reason,
+    event.what_happened,
+    event.why_it_matters,
+    event.content_angle,
+    ...(event.tags || []),
+    ...entityNames(event),
+    ...(event.sources || []).flatMap((source) => [source.source, source.title, source.url])
+  ].join(" ");
+  return includesText(haystack, query);
+}
+
+function includesText(value, query) {
+  return String(value || "").toLowerCase().includes(String(query || "").toLowerCase());
+}
+
+function entityNames(event) {
+  return (event.entities || []).map(entityName).filter(Boolean);
+}
+
+function entityName(entity) {
+  return typeof entity === "string" ? entity : entity?.name;
+}
+
+function hasFeedback(event, type) {
+  return (event.feedback || []).includes(type);
+}
+
+function buildStaticMetrics(events, reports) {
+  const grouped = groupBySection(events);
+  return {
+    recentEvents: events.length,
+    important: events.filter((event) => scoreValue(event) >= 70).length,
+    following: events.filter((event) => hasFeedback(event, "follow")).length,
+    reports: reports.length,
+    mustRead: grouped.must_read.length,
+    developing: grouped.developing.length,
+    videoReady: grouped.video_ready.length,
+    background: grouped.background.length,
+    highConfidence: events.filter((event) => event.confidence === "high").length
+  };
+}
+
+function buildStaticFacets(events) {
+  const sources = new Set();
+  const tags = new Set();
+  const entities = new Map();
+  for (const event of events || []) {
+    for (const source of event.sources || []) {
+      if (source.source) sources.add(source.source);
+    }
+    for (const tag of event.tags || []) {
+      if (tag) tags.add(tag);
+    }
+    for (const entity of event.entities || []) {
+      const name = entityName(entity);
+      if (name) entities.set(name, entity && typeof entity === "object" ? entity : { name });
+    }
+  }
+  return {
+    sources: [...sources].sort(),
+    tags: [...tags].sort(),
+    entities: [...entities.values()].sort((left, right) => String(left.name).localeCompare(String(right.name), "zh-CN")),
+    categories: [...new Set((events || []).map((event) => event.category).filter(Boolean))].sort()
+  };
+}
+
+function buildStaticKnowledgeHealth(events) {
+  const needsEvidence = (events || []).filter((event) => event.confidence === "low" || (event.sources || []).length <= 1 || (event.caps || []).length);
+  const videoCandidates = (events || []).filter((event) => Number(event.video_potential || 0) >= 4 && !hasFeedback(event, "used_for_video"));
+  return {
+    metrics: {
+      total: events.length,
+      lowConfidence: events.filter((event) => event.confidence === "low").length,
+      singleSource: events.filter((event) => (event.sources || []).length <= 1).length,
+      capped: events.filter((event) => (event.caps || []).length).length
+    },
+    queueCounts: {
+      needsEvidence: needsEvidence.length,
+      videoCandidates: videoCandidates.length
+    },
+    queues: {
+      needsEvidence: needsEvidence.slice(0, 6),
+      videoCandidates: videoCandidates.slice(0, 6)
+    }
+  };
+}
+
 async function search() {
   try {
     setLoading("正在搜索...");
@@ -565,6 +807,12 @@ async function search() {
     if (els.follow.checked) params.set("follow", "true");
     if (els.usedForVideo.checked) params.set("usedForVideo", "true");
     if (els.ignored.checked) params.set("ignored", "true");
+
+    if (state.readOnly) {
+      const events = filterStaticEvents(state.staticOverview?.events || [], params);
+      renderResults(events, params.toString() ? "搜索结果" : "最近 7 天重要事件");
+      return;
+    }
 
     const endpoint = params.toString() ? `/api/search?${params.toString()}` : "/api/events/recent?days=7";
     const data = await fetchJson(endpoint);
@@ -582,7 +830,7 @@ async function loadTimeline() {
   }
   els.timeline.innerHTML = `<p class="muted">正在生成时间线...</p>`;
   try {
-    const data = await fetchJson(`/api/timeline?q=${encodeURIComponent(q)}`);
+    const data = state.readOnly ? { events: timelineFromStatic(q) } : await fetchJson(`/api/timeline?q=${encodeURIComponent(q)}`);
     const events = data.events || [];
     els.timeline.innerHTML = events.length
       ? events
@@ -641,8 +889,11 @@ function groupBySection(events) {
 
 function fallbackSection(event) {
   const score = scoreValue(event);
+  const confidence = event.confidence || "low";
+  const freshness = event.freshness_label || "unknown";
   if (score >= 75) return "must_read";
-  if (Number(event.video_potential || 0) >= 4) return "video_ready";
+  if ((freshness === "stale" || freshness === "unknown") && (score < 55 || confidence === "low")) return "background";
+  if (Number(event.video_potential || 0) >= 4 && score >= 55 && confidence !== "low") return "video_ready";
   if (score >= 58) return "developing";
   return "background";
 }
@@ -753,6 +1004,12 @@ function formatDateTime(value) {
   });
 }
 
+function formatFullDateTime(value) {
+  const date = value instanceof Date ? value : new Date(value);
+  if (Number.isNaN(date.getTime())) return String(value || "未知时间");
+  return date.toLocaleString("zh-CN", { hour12: false });
+}
+
 function escapeHtml(value) {
   return String(value ?? "")
     .replace(/&/g, "&amp;")
@@ -768,7 +1025,9 @@ function escapeAttr(value) {
 function safeUrl(value) {
   const raw = String(value ?? "").trim();
   if (!raw) return "#";
+  if (raw === "#") return "#";
   if (raw.startsWith("/") && !raw.startsWith("//")) return raw;
+  if (!/^[a-z][a-z0-9+.-]*:/i.test(raw) && !raw.startsWith("//")) return raw;
   try {
     const url = new URL(raw);
     return url.protocol === "http:" || url.protocol === "https:" ? url.href : "#";

@@ -13,8 +13,10 @@ const config = loadConfig();
 const app = express();
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const webDir = path.resolve(__dirname, "web");
+const publicDataDir = path.resolve(process.env.PUBLIC_DATA_DIR || process.env.EXPORT_SITE_DIR || "public-data");
 
 app.use(express.json());
+app.use("/public-data", express.static(publicDataDir, { fallthrough: true, index: false }));
 
 app.get("/", (_req, res) => {
   res.type("html").send(fs.readFileSync(path.join(webDir, "index.html"), "utf8"));

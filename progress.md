@@ -1,7 +1,7 @@
 # 行业情报收集系统进度
 
-- 最后更新时间：2026-05-26 14:15:05 CST
-- 当前阶段：项目源码已同步到本地 NAS Gitea 私有仓库 `lazydog/industry-radar-kb`
+- 最后更新时间：2026-05-26 14:41:29 CST
+- 当前阶段：第一批并行改动已完成集成验证，准备提交并推送本地 Gitea
 
 ## 项目总目标
 
@@ -43,6 +43,12 @@
 - [x] 已完成：按浏览器批注简化一图读懂底部来源展示，保留可点击链接但隐藏长标题和长 URL。
 - [x] 已完成：按浏览器批注优化评分系统展示，用颜色、等级含义和分数替代裸露的 `B58`。
 - [x] 已完成：初始化 Git 提交，创建本地 NAS Gitea 私有仓库并推送 `main` 分支。
+- [x] 已完成：并行任务 TASK-07，复查并优化 Radar Score 权重，提高热度趋势权重，降低变化强度和视频潜力对首页分区的影响。
+- [x] 已完成：并行任务 TASK-01，新增 `export:site`，可导出线上只读页面需要的静态 JSON、来源链接、今日分区和报告索引。
+- [x] 已完成：并行任务 TASK-03，新增 NAS 每日自动更新脚本、环境变量示例和定时任务文档，并在隔离目录跑通报告生成、静态导出、发布跳过和统计输出。
+- [x] 已完成：并行任务 TASK-02，前端支持优先读取静态 `public-data/overview.json`，失败后回退本地 Express API。
+- [x] 已完成：并行任务 TASK-06，优化 390px 移动端阅读、一图读懂、评分图例、来源标签和筛选区密度。
+- [x] 已完成：集成 TASK-01/TASK-02/TASK-03/TASK-06/TASK-07，修复静态报告相对链接、前端兜底分区和 `public-data/` 生成物忽略规则。
 
 ## 最近完成内容
 
@@ -84,6 +90,25 @@
 - 2026-05-26 13:58 CST 修改 `src/web/app.js`、`src/web/styles.css`：一图读懂底部来源改为 `来源 · 域名` 紧凑标签；知识卡详情仍保留完整标题和 URL。
 - 2026-05-26 14:03 CST 修改 `src/web/app.js`、`src/web/styles.css`：新增评分图例；事件卡片改为彩色 `A 重点 / B 观察 / C 背景 / D 暂存` 胶囊；一图读懂和知识卡同步显示等级含义。
 - 2026-05-26 14:15 CST 补充 `.gitignore`，排除 `.reviews`、运行数据库、报告、验证产物、日志、构建产物和发布产物；创建初始提交 `12efa70` 并推送到 `http://192.168.31.50:3000/lazydog/industry-radar-kb`。
+- 2026-05-26 14:24 CST 完成 TASK-07：修改 `src/scoring/radar.ts`，将评分权重调整为相关度 22、热度趋势 26、新鲜度 18、变化强度 10、可信度 16、稀缺性 8；保留 `radar_score`、`radar_level`、`score_parts`、`video_potential` 等兼容字段。
+- 2026-05-26 14:24 CST 完成 TASK-07：修改 `src/web/app.js` 评分条最大值和评分图例文案，让前端展示匹配新权重；新增 `docs/SCORING_REVIEW.md`，记录评分原则、封顶规则、10 条样例解释和集成说明。
+- 2026-05-26 14:25 CST 完成 TASK-01：新增 `src/export/site.ts` 和 `scripts/export-site.ts`，从 SQLite 导出最近事件、知识卡、知识库体检、报告索引、来源链接、评分字段和今日分区。
+- 2026-05-26 14:25 CST 完成 TASK-01：新增 `docs/STATIC_EXPORT.md`，说明 NAS 如何配置导出目录、事件窗口、报告复制和安全边界；`package.json` 只补充 `export:site` 脚本并保留其他并行任务新增的 `nas:daily`。
+- 2026-05-26 14:27 CST 完成 TASK-01：已用默认路径生成 `public-data/overview.json`、`events.json`、`knowledge.json`、`reports/index.json`、`meta.json`，供静态只读页面联调。
+- 2026-05-26 14:45 CST 新增 `scripts/nas-daily-update.sh`：支持 `morning/noon/night` 参数、读取 `.env.local`/`.env`、逐阶段日志、调用 `pnpm report:run`、检测并调用 `export:site`、安全发布到 `PUBLISH_DIR`、统计新增和高分条数，并给 TASK-04 预留 `notify:bark` 调用点。
+- 2026-05-26 14:45 CST 新增 `docs/NAS_DAILY_UPDATE.md`，说明 NAS 定时任务、环境变量、失败处理和验证方法。
+- 2026-05-26 14:45 CST 更新 `.env.example` 和 `package.json`，补充 NAS 日更所需变量与 `pnpm nas:daily` 脚本。
+- 2026-05-26 14:45 CST 使用隔离路径完成 TASK-03 联调：`DATABASE_URL=./data/runtime/task03-test.sqlite`、`REPORT_OUTPUT_DIR=./data/runtime/task03-reports`、`PUBLIC_DATA_DIR=./data/runtime/task03-public`，运行 `scripts/nas-daily-update.sh noon` 成功生成报告、导出静态数据、跳过未配置发布目录，并输出新增 26 条、高分 1 条。
+- 2026-05-26 14:25 CST 完成 TASK-02：修改 `src/web/app.js`，新增静态数据优先加载、静态事件详情、浏览器本地搜索/筛选/时间线、只读反馈禁用，以及静态数据缺失时的本地 API 回退。
+- 2026-05-26 14:25 CST 完成 TASK-02：修改 `src/server.ts`，可选暴露 `PUBLIC_DATA_DIR` / `EXPORT_SITE_DIR` 或项目根目录 `public-data`，方便本地预览 TASK-01/NAS 导出的线上数据。
+- 2026-05-26 14:25 CST 新增 `docs/STATIC_WEB_MODE.md`，记录静态 JSON 结构、只读行为、本地预览方式和给集成负责人的约定。
+- 2026-05-26 14:30 CST 完成 TASK-02：记录实际命中的静态 JSON 地址，报告区“数据”链接会指向成功加载的静态入口，兼容子路径部署。
+- 2026-05-26 14:46 CST 完成 TASK-06：修改 `src/web/styles.css`，移动端概览改为 2 列；一图读懂降低固定高度和内边距；评分图例手机端压缩为 2 列；筛选区改为关键词和搜索优先；来源标签与知识卡正文增强换行和阅读节奏。
+- 2026-05-26 14:46 CST 新增 `docs/MOBILE_UI_REVIEW.md`，记录移动端优化点、验证方法、集成注意和遗留风险。
+- 2026-05-26 14:46 CST 生成验证截图：`data/runtime/screenshots/task06-mobile-cdp.png` 和 `data/runtime/screenshots/task06-desktop-cdp.png`；确认 390px 与 1200px 下无横向溢出。
+- 2026-05-26 14:41 CST 集成第一批并行改动：保留静态导出、静态只读前端、NAS 日更脚本、移动端样式和新版评分权重。
+- 2026-05-26 14:41 CST 修复集成发现的问题：静态报告 `reports/*.html` 相对链接不再被前端误判为 `#`；前端 `fallbackSection` 与新评分规则对齐；`public-data/` 加入 `.gitignore`，避免提交 NAS 生成物。
+- 2026-05-26 14:41 CST 重启 `3887` 演示服务并验证静态预览：页面进入“线上只读”模式，报告链接、评分胶囊、来源标签和禁用反馈状态正常。
 
 ## 下一步动作
 
@@ -92,6 +117,9 @@
 3. 后续可优化数据库水合和搜索候选集，减少 Claude Review 提到的 N+1 查询性能风险。
 4. 后续可把“优先补来源”接成真实源二次检索，把 Mock/示例项替换为当日真实来源后再提升评分上限。
 5. 后续可进一步打磨“一图读懂”的视觉层级和真实来源状态。
+6. TASK-04 完成 `notify:bark` 后，确认 `BARK_NOTIFY_URL` / `BARK_KEY` 只从本地 `.env.local` 注入，不进入 Git。
+7. 把 `PUBLISH_DIR` 指向真实 NAS/线上网页数据目录后，再跑一次非隔离的 `pnpm nas:daily -- noon` 验证发布目录。
+8. 后续可把高级筛选收进折叠面板，让手机首屏更像纯阅读产品。
 
 ## 最终验证记录
 
@@ -137,3 +165,35 @@
 - 2026-05-26 13:58 CST 验证：`node --check src/web/app.js`、`pnpm typecheck` 通过；应用内浏览器中 `.compact-source-list .source-card` 为 0，`.source-chip` 正常显示并保留 href。
 - 2026-05-26 14:03 CST 验证：`node --check src/web/app.js`、`pnpm typecheck` 通过；应用内浏览器中裸 `B58` 已替换为 `B 观察 58`，评分图例和一图读懂彩色角标正常显示。
 - 2026-05-26 14:15 CST 验证：`git ls-remote origin main` 返回远端 `main` 指向 `12efa70`；本地 `main` 已跟踪 `origin/main`。
+- 2026-05-26 14:24 CST 验证：`node --check src/web/app.js` 通过。
+- 2026-05-26 14:24 CST 验证：`pnpm typecheck` 通过。
+- 2026-05-26 14:24 CST 验证：`pnpm build` 通过。
+- 2026-05-26 14:24 CST 验证：用 `buildRadarForItem` 抽样华为发布会类信息，输出 `radar_score: 85`、`radar_section: must_read`、`trend: 21/26`，新权重能把高热度、多源、新鲜信息推到高优先级。
+- 2026-05-26 14:24 CST 验证：用 `buildRadarForItem` 抽样 mock、30 天以上旧闻、单一微博争议源，分别触发示例封顶、旧闻封顶和单一弱来源封顶。
+- 2026-05-26 14:25 CST 验证：TASK-02 `node --check src/web/app.js` 通过。
+- 2026-05-26 14:25 CST 验证：TASK-02 `pnpm typecheck` 通过。
+- 2026-05-26 14:29 CST 验证：TASK-02 `DATABASE_URL=./data/runtime/demo.sqlite REPORT_OUTPUT_DIR=./data/runtime/reports pnpm export:site -- --out data/runtime/task02-public` 通过，生成 25 条事件、20 份 overview 报告摘要。
+- 2026-05-26 14:29 CST 验证：TASK-02 使用 `PUBLIC_DATA_DIR=./data/runtime/task02-public PORT=3891 pnpm serve` 临时预览，`/public-data/overview.json` 返回 25 条事件，`/api/overview` 回退接口仍返回 25 条事件。
+- 2026-05-26 14:29 CST 验证：TASK-02 `node --check src/web/app.js`、`pnpm typecheck`、`pnpm build` 通过。
+- 2026-05-26 14:30 CST 验证：TASK-02 静态入口链接修正后，`node --check src/web/app.js`、`pnpm typecheck`、`pnpm build` 通过。
+- 2026-05-26 14:45 CST 验证：`bash -n scripts/nas-daily-update.sh` 通过。
+- 2026-05-26 14:45 CST 验证：`shellcheck` 本机未安装，已记录为未运行。
+- 2026-05-26 14:45 CST 验证：`pnpm typecheck` 通过。
+- 2026-05-26 14:45 CST 验证：`pnpm build` 通过。
+- 2026-05-26 14:45 CST 验证：隔离环境运行 `scripts/nas-daily-update.sh noon` 完整通过，日志位于 `logs/nas-daily/2026-05-26-noon-20260526-142455.log`；未配置 `PUBLISH_DIR`，发布阶段按预期跳过；未配置 Bark，通知阶段按预期跳过。
+- 2026-05-26 14:25 CST 验证：TASK-01 `pnpm typecheck` 通过。
+- 2026-05-26 14:25 CST 验证：TASK-01 `pnpm build` 通过。
+- 2026-05-26 14:25 CST 验证：TASK-01 `pnpm export:site -- --out public-data-task01` 通过，导出 33 条事件、33 张知识卡、6 份报告索引，输出 5 个核心 JSON。
+- 2026-05-26 14:25 CST 验证：TASK-01 `jq` 检查 `overview.json` 和 `meta.json`，确认包含 `metrics`、`todaySections`、来源 URL、`empty: false`、计数字段，且不暴露本机绝对数据库路径。
+- 2026-05-26 14:27 CST 验证：TASK-01 `pnpm export:site` 默认路径通过，生成 `public-data/`，导出 33 条事件、33 张知识卡、6 份报告索引。
+- 2026-05-26 14:28 CST 验证：TASK-01 使用隔离空库运行 `pnpm export:site -- --out data/runtime/task01-empty-public` 通过，`meta.empty` 为 `true`，5 个核心 JSON 均生成。
+- 2026-05-26 14:46 CST 验证：TASK-06 `node --check src/web/app.js` 通过。
+- 2026-05-26 14:46 CST 验证：TASK-06 `pnpm typecheck` 通过。
+- 2026-05-26 14:46 CST 验证：TASK-06 `pnpm build` 通过。
+- 2026-05-26 14:46 CST 验证：TASK-06 使用本机浏览器无界面检查 `http://localhost:3887/`，390px 竖屏 `rootScrollWidth=390`、`bodyScrollWidth=390`、无溢出元素；1200px 桌面 `rootScrollWidth=1200`、`bodyScrollWidth=1200`、无溢出元素。
+- 2026-05-26 14:41 CST 集成验证：`node --check src/web/app.js`、`bash -n scripts/nas-daily-update.sh`、`git diff --check` 均通过。
+- 2026-05-26 14:41 CST 集成验证：`pnpm typecheck`、`pnpm build` 均通过。
+- 2026-05-26 14:41 CST 集成验证：`DATABASE_URL=./data/runtime/demo.sqlite REPORT_OUTPUT_DIR=./data/runtime/reports EXPORT_SITE_DIR=./data/runtime/integration-public pnpm export:site -- --out data/runtime/integration-public` 通过，导出 25 条事件、25 张知识卡、33 份报告索引。
+- 2026-05-26 14:41 CST 集成验证：隔离运行 `scripts/nas-daily-update.sh noon` 通过，生成报告、导出静态数据、跳过未配置发布目录和 Bark，统计新增 20 条、高分 1 条。
+- 2026-05-26 14:41 CST 集成验证：`http://localhost:3887/public-data/overview.json` 和 `http://localhost:3887/public-data/reports/2026-05-26-noon.html` 返回 200；`/api/overview` 仍返回 25 条事件。
+- 2026-05-26 14:41 CST 浏览器验证：`http://localhost:3887/` 无 console 错误，显示“线上只读”，报告链接样例为 `reports/2026-05-26-noon.html`，无 `#` 坏链接，反馈按钮禁用。

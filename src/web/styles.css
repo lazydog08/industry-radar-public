@@ -13,6 +13,8 @@
   --amber: #9a5b00;
   --amber-soft: #fff4df;
   --danger: #b42318;
+  --radius: 8px;
+  --tap: 44px;
 }
 
 * { box-sizing: border-box; }
@@ -103,6 +105,7 @@ h2 {
   margin-bottom: 12px;
   font-size: 20px;
   line-height: 1.25;
+  overflow-wrap: anywhere;
 }
 
 h3 {
@@ -172,6 +175,7 @@ h3 {
   justify-content: space-between;
   gap: 12px;
   align-items: flex-start;
+  min-width: 0;
 }
 
 .score-badge {
@@ -212,6 +216,7 @@ h3 {
   max-width: 860px;
   color: #303033;
   line-height: 1.7;
+  overflow-wrap: anywhere;
 }
 
 .info-grid {
@@ -238,6 +243,7 @@ h3 {
 
 .info-grid p {
   margin-top: 6px;
+  margin-bottom: 0;
   line-height: 1.55;
   color: var(--text);
 }
@@ -347,9 +353,9 @@ h3 {
 .timeline-search input,
 .timeline-search button {
   width: 100%;
-  height: 40px;
+  min-height: var(--tap);
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: var(--radius);
   background: var(--surface-soft);
   color: var(--text);
   padding: 0 11px;
@@ -489,6 +495,7 @@ h3 {
   padding: 15px;
   cursor: pointer;
   transition: border-color 0.15s ease, background 0.15s ease;
+  min-width: 0;
 }
 
 .event-card:hover,
@@ -651,7 +658,7 @@ h3 {
 
 .knowledge-fields {
   display: grid;
-  gap: 6px;
+  gap: 8px;
   margin: 0;
 }
 
@@ -663,6 +670,8 @@ h3 {
 
 .knowledge-fields dd {
   margin-left: 0;
+  overflow-wrap: anywhere;
+  line-height: 1.7;
 }
 
 .stamp {
@@ -719,7 +728,7 @@ h3 {
   align-items: center;
   gap: 6px;
   max-width: 100%;
-  min-height: 30px;
+  min-height: 32px;
   padding: 5px 9px;
   border: 1px solid var(--line);
   border-radius: 999px;
@@ -954,8 +963,7 @@ h3 {
   }
 
   .info-grid,
-  .section-cards,
-  .compact-source-list {
+  .section-cards {
     grid-template-columns: 1fr;
   }
 
@@ -973,28 +981,363 @@ h3 {
 }
 
 @media (max-width: 640px) {
+  :root {
+    --tap: 42px;
+  }
+
+  body {
+    background: #f6f6f8;
+    font-size: 15px;
+  }
+
   .shell {
-    width: min(100vw - 20px, 1220px);
-    padding-top: 18px;
+    width: min(100vw - 16px, 1220px);
+    padding: 14px 0 34px;
   }
 
   .topbar {
     align-items: flex-start;
     flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .eyebrow {
+    margin-bottom: 4px;
+    font-size: 12px;
+  }
+
+  h1 {
+    font-size: 30px;
+    line-height: 1.08;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 16px;
   }
 
   .overview,
-  .filters,
   .actions,
   .knowledge-score,
-  .section-stats,
   .health-grid {
     grid-template-columns: 1fr;
+  }
+
+  .overview {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .metric {
+    min-height: 66px;
+    padding: 11px 12px;
+  }
+
+  .metric b {
+    font-size: 23px;
+  }
+
+  .metric span {
+    font-size: 12px;
+  }
+
+  .radar-hero {
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .infographic,
+  .radar-brief,
+  .feed-section,
+  .panel,
+  .filters {
+    border-radius: 8px;
+  }
+
+  .infographic {
+    min-height: 0;
+    padding: 14px;
+    gap: 11px;
+  }
+
+  .info-header {
+    align-items: center;
+    gap: 8px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+  }
+
+  .infographic h2 {
+    margin-bottom: 0;
+    line-height: 1.34;
+  }
+
+  .score-badge {
+    min-width: 76px;
+    padding: 7px 8px;
+  }
+
+  .score-badge b {
+    font-size: 25px;
+  }
+
+  .info-summary {
+    line-height: 1.62;
+  }
+
+  .info-grid {
+    gap: 8px;
+  }
+
+  .info-grid div {
+    min-height: 0;
+    padding: 10px;
+  }
+
+  .score-bars {
+    gap: 7px;
+  }
+
+  .bar-row {
+    grid-template-columns: 48px minmax(0, 1fr) 42px;
+    gap: 7px;
+  }
+
+  .info-footer,
+  .compact-source-list {
+    gap: 6px;
+  }
+
+  .source-chip {
+    max-width: 100%;
+    min-height: 34px;
+  }
+
+  .source-chip span {
+    max-width: 132px;
+  }
+
+  .radar-brief {
+    padding: 14px;
+    gap: 10px;
+  }
+
+  .section-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+  }
+
+  .section-stats div {
+    min-height: 62px;
+    padding: 10px;
+  }
+
+  .filters {
+    position: relative;
+    grid-template-columns: minmax(0, 1fr) 76px;
+    gap: 8px;
+    padding: 10px;
+    margin-bottom: 14px;
+  }
+
+  .filters .query {
+    grid-column: 1 / 2;
+  }
+
+  .filters button {
+    grid-column: 2 / 3;
+    grid-row: 1;
+    padding: 0 8px;
+  }
+
+  .filters select,
+  .filters input[list] {
+    min-height: 36px;
+    font-size: 13px;
+  }
+
+  .filters select {
+    grid-column: span 1;
+  }
+
+  .filters input[list] {
+    grid-column: 1 / -1;
+  }
+
+  .toggles {
+    flex-wrap: nowrap;
+    gap: 7px;
+    overflow-x: auto;
+    padding-bottom: 1px;
+    scrollbar-width: none;
+  }
+
+  .toggles::-webkit-scrollbar {
+    display: none;
+  }
+
+  .toggles label {
+    flex: 0 0 auto;
+    min-height: 34px;
   }
 
   .section-head {
     align-items: flex-start;
     flex-direction: column;
+    gap: 4px;
+    margin-bottom: 10px;
+  }
+
+  .section-feed {
+    gap: 10px;
+  }
+
+  .feed-section {
+    padding: 12px;
+  }
+
+  .feed-section-head {
+    align-items: flex-start;
+    margin-bottom: 10px;
+  }
+
+  .section-cards {
+    gap: 8px;
+  }
+
+  .score-legend {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    margin-bottom: 8px;
+    padding: 10px;
+  }
+
+  .score-legend > span {
+    grid-column: 1 / -1;
+  }
+
+  .score-legend i {
+    justify-content: center;
+    min-height: 30px;
+    padding: 4px 7px;
+  }
+
+  .score-legend i em {
+    display: none;
+  }
+
+  .event-card {
+    padding: 12px;
+  }
+
+  .event-card.selected {
+    box-shadow: inset 3px 0 0 var(--accent);
+  }
+
+  .card-top {
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 8px;
+  }
+
+  .score-pill {
+    min-width: 64px;
+    padding: 5px 7px;
+  }
+
+  .score-pill span {
+    font-size: 11px;
+  }
+
+  .score-pill em {
+    font-size: 10px;
+  }
+
+  .event-card p,
+  .knowledge-fields dd,
+  .timeline-item p {
+    line-height: 1.68;
+  }
+
+  .meta {
+    gap: 6px;
+    margin-top: 9px;
+  }
+
+  .pill {
+    min-height: 24px;
+    padding: 3px 7px;
+    font-size: 11px;
+  }
+
+  .workbench {
+    gap: 12px;
+  }
+
+  .side {
+    gap: 10px;
+  }
+
+  .panel {
+    padding: 14px;
+  }
+
+  .knowledge h3 {
+    font-size: 17px;
+    line-height: 1.42;
+  }
+
+  .knowledge-score {
+    gap: 7px;
+    margin: 10px 0 12px;
+  }
+
+  .knowledge-score div {
+    padding: 9px 10px;
+  }
+
+  .knowledge-fields {
+    gap: 9px;
+  }
+
+  .knowledge-fields dt {
+    margin-top: 2px;
+  }
+
+  .actions {
+    gap: 7px;
+    margin: 12px 0;
+  }
+
+  .actions button {
+    min-height: 38px;
+  }
+
+  .source-list {
+    gap: 7px;
+  }
+
+  .source-card {
+    padding: 8px;
+  }
+
+  .source-card code {
+    display: block;
+    max-height: 3.1em;
+    overflow: hidden;
+  }
+
+  .health-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .timeline-search {
+    grid-template-columns: minmax(0, 1fr) 70px;
   }
 
   .report-row {

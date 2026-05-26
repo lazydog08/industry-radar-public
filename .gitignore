@@ -14,4 +14,5 @@ data/real-runs/
 data/simulations/
 data/runtime/
 data/publish/
+public-data/
 coverage/
