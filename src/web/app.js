@@ -30,7 +30,7 @@ const state = {
   }
 };
 
-const STATIC_OVERVIEW_CANDIDATES = ["/public-data/overview.json", "./public-data/overview.json"];
+const STATIC_OVERVIEW_CANDIDATES = ["./public-data/overview.json", "/public-data/overview.json"];
 
 const els = {
   updatedAt: requireElement("updatedAt"),
@@ -64,7 +64,7 @@ const els = {
   detail: requireElement("detail"),
   knowledgeHealth: requireElement("knowledgeHealth"),
   reports: requireElement("reports"),
-  reportJsonLink: document.querySelector("a[href='/api/reports']"),
+  reportJsonLink: document.getElementById("reportJsonLink"),
   timelineQuery: requireElement("timelineQuery"),
   timelineBtn: requireElement("timelineBtn"),
   timeline: requireElement("timeline")
@@ -411,7 +411,7 @@ function renderFacetControls(facets) {
 
 function renderReports(reports) {
   if (els.reportJsonLink) {
-    els.reportJsonLink.href = state.readOnly ? state.staticOverviewUrl || staticOverviewUrls()[0] : "/api/reports";
+    els.reportJsonLink.href = state.readOnly ? staticReportsIndexUrl() : "/api/reports";
     els.reportJsonLink.textContent = state.readOnly ? "数据" : "JSON";
   }
   if (!reports.length) {
@@ -435,8 +435,8 @@ function renderReports(reports) {
           <span>${escapeHtml(date)} · ${Number(report.event_count || 0)} 条</span>
         </div>
         <nav>
-          <a href="${escapeAttr(safeUrl(report.html_url))}" target="_blank" rel="noreferrer">HTML</a>
-          <a href="${escapeAttr(safeUrl(report.markdown_url))}" target="_blank" rel="noreferrer">MD</a>
+          <a href="${escapeAttr(reportAssetUrl(report.html_url))}" target="_blank" rel="noreferrer">HTML</a>
+          <a href="${escapeAttr(reportAssetUrl(report.markdown_url))}" target="_blank" rel="noreferrer">MD</a>
         </nav>
       </article>`;
     })
@@ -447,6 +447,58 @@ function renderReports(reports) {
       state.reportsExpanded = !state.reportsExpanded;
       renderReports(reports);
     });
+  }
+}
+
+function staticReportsIndexUrl() {
+  const configured = typeof state.staticOverview?.links?.reports === "string" ? state.staticOverview.links.reports : "reports/index.json";
+  return staticPublicDataUrl(configured, "#");
+}
+
+function reportAssetUrl(value) {
+  if (!state.readOnly) return safeUrl(value);
+  return staticPublicDataUrl(value, "#");
+}
+
+function staticPublicDataUrl(value, fallback) {
+  const safe = safeUrl(value);
+  if (!safe || safe === "#") return fallback;
+  const overviewUrl = absoluteStaticOverviewUrl();
+  if (!overviewUrl) return fallback;
+  if (safe.startsWith("//")) return fallback;
+  if (/^[a-z][a-z0-9+.-]*:/i.test(safe)) {
+    try {
+      const url = new URL(safe);
+      const overview = new URL(overviewUrl);
+      return (url.protocol === "http:" || url.protocol === "https:") && url.origin === overview.origin ? url.href : fallback;
+    } catch {
+      return fallback;
+    }
+  }
+  // Static exports store report links relative to public-data/overview.json.
+  let relativePublicDataPath = safe.replace(/^\/+/, "").replace(/^\.\//, "");
+  if (relativePublicDataPath.startsWith("public-data/")) {
+    relativePublicDataPath = relativePublicDataPath.slice("public-data/".length);
+  }
+  try {
+    if (decodeURIComponent(relativePublicDataPath).split("/").includes("..")) return fallback;
+  } catch {
+    return fallback;
+  }
+  try {
+    return new URL(relativePublicDataPath, overviewUrl).href;
+  } catch {
+    return fallback;
+  }
+}
+
+function absoluteStaticOverviewUrl() {
+  const overviewUrl = state.staticOverviewUrl || staticOverviewUrls()[0];
+  if (!overviewUrl) return "";
+  try {
+    return new URL(overviewUrl, window.location.href).href;
+  } catch {
+    return "";
   }
 }
 

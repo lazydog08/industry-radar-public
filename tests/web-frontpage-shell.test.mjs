@@ -6,6 +6,18 @@ const html = fs.readFileSync("src/web/index.html", "utf8");
 const appJs = fs.readFileSync("src/web/app.js", "utf8");
 const css = fs.readFileSync("src/web/styles.css", "utf8");
 
+test("uses project-page-safe relative urls in the static shell", () => {
+  assert.match(html, /<link[^>]+href="\.\/styles\.css"[^>]*>/);
+  assert.match(html, /<script type="module" src="\.\/app\.js"><\/script>/);
+  assert.doesNotMatch(html, /(?:href|src)="\/(?:styles\.css|app\.js)"/);
+  assert.doesNotMatch(html, /href="\/api\/reports"/);
+  assert.match(html, /id="reportJsonLink" href="#"/);
+  assert.match(appJs, /reportJsonLink:\s*document\.getElementById\("reportJsonLink"\)/);
+  assert.match(appJs, /STATIC_OVERVIEW_CANDIDATES\s*=\s*\[[\s\S]*"\.\/public-data\/overview\.json"[\s\S]*"\/public-data\/overview\.json"[\s\S]*\]/);
+  assert.match(appJs, /function staticPublicDataUrl\(value, fallback\)/);
+  assert.match(appJs, /const safe = safeUrl\(value\);/);
+});
+
 test("places the search controls in the frontpage briefing rail", () => {
   const frontpageBrief = html.match(/<aside class="frontpage-brief">([\s\S]*?)<\/aside>/)?.[1] || "";
   assert.match(frontpageBrief, /class="filters compact frontpage-search"/);
