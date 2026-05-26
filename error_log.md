@@ -118,3 +118,24 @@
 - 影响：如果直接信任超时或截断结果，会漏掉 NAS 运维脚本里的真实问题。
 - 处理：改用完整脚本内容做 focused Claude review；修复 REPO_URL 凭据日志脱敏、Bark dry-run 清空继承的 `BARK_NOTIFY_URL`、健康检查隔离 build、端口校验、cron 日志保留和日更日志清理；最终 Claude 复审确认剩余 cron 日志 P1 已解决。
 - 状态：[x] 已完成
+
+## Error 018
+- 时间：2026-05-26 17:00:30 CST
+- 现象：用户要求使用 `superpowers` 插件，但当前环境没有该插件，工具搜索和可安装插件列表都没有返回 `superpowers`。
+- 影响：不能按字面使用该插件执行项目收尾。
+- 处理：记录为插件不可用降级；继续使用现有 Codex 工具、终端、Claude Code review、Gitea、NAS 脚本和 Bark 完成最终验收。
+- 状态：[!] 阻塞但已降级
+
+## Error 019
+- 时间：2026-05-26 17:00:30 CST
+- 现象：NAS `192.168.31.50` 的 SSH 端口开放，但 `lazydog@192.168.31.50` 免密登录失败，返回 `Permission denied (publickey,password)`。
+- 影响：本机不能直接进入 NAS Shell 安装 cron 或写 Web 目录。
+- 处理：不继续猜测账号密码；以本地等价 NAS 流程完成日更、发布和健康检查，并把代码推送到 NAS Gitea。真实 NAS 安装由 NAS 本机运行已提交脚本完成。
+- 状态：[!] 阻塞但已降级
+
+## Error 020
+- 时间：2026-05-26 17:00:30 CST
+- 现象：一次 `kb:search` 在日更刷新后短暂返回 `database is locked`。
+- 影响：并发服务和命令行同时访问演示 SQLite 时，偶发读写锁可能影响单次搜索。
+- 处理：等待后重试成功，且数据库已启用 WAL 和 `busy_timeout`；本次不阻塞最终交付，后续若频繁出现再增加 CLI 重试或拆分只读连接。
+- 状态：[!] 阻塞但已降级

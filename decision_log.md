@@ -150,3 +150,15 @@
 - 决策：NAS cron 任务同时清理 cron 包装日志和 `nas-daily-update.sh` 自身生成的日更日志，默认保留 14 天。
 - 原因：只清理 cron 包装日志仍会让 `YYYY-MM-DD-type-STAMP.log` 在 NAS 上无限增长。
 - 影响：`CRON_LOG_RETENTION_DAYS` 可调整保留天数；清理范围限制在 `NAS_LOG_DIR` 下匹配本项目命名的日志文件。
+
+## Decision 026
+- 时间：2026-05-26 17:00:30 CST
+- 决策：`superpowers` 插件不可用时，最终验收仍继续使用现有工具完成，并把不可用状态记录为降级而不是阻塞。
+- 原因：当前可安装插件列表没有 `superpowers`；等待插件会中断“最终把项目目标跑完”的主目标。
+- 影响：本轮验收以 `pnpm sources:test`、`pnpm nas:daily -- night`、`pnpm nas:health`、静态 JSON 检查、Gitea 推送和 Bark 通知为准。
+
+## Decision 027
+- 时间：2026-05-26 17:00:30 CST
+- 决策：真实 NAS 远程执行不做凭据猜测；没有免密 SSH 时，只验证端口可达和 Gitea 同步，实际 NAS 上的 cron/Web 目录安装留给 NAS 本机运行脚本。
+- 原因：SSH 返回 `Permission denied (publickey,password)`，继续尝试用户名或密码不安全；仓库内已提供可重复运行的 NAS 安装与验收脚本。
+- 影响：可以确认代码、脚本、静态发布和本地等价 NAS 流程已经完成；不能虚假声称已在 NAS 系统 crontab 中安装任务。

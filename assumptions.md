@@ -99,3 +99,17 @@
 - 为什么这么假设：用户要求不要停下来等人工确认；历史经验显示 NAS 控制台显示开启不等于服务真实可达，因此脚本必须先做到本地可验证、参数可替换、失败不破坏旧发布。
 - 影响范围：本轮会完成 NAS 侧代码和运行手册，但不会把某个真实 NAS 路径硬编码进仓库，也不会提交任何账号、Token、Bark Key 或 Cookie。
 - 后续如何替换成真实方案：在 NAS 上拉取 Gitea 仓库后，填写 `.env.local` 的真实 `DATABASE_URL`、`REPORT_OUTPUT_DIR`、`PUBLIC_DATA_DIR`、`PUBLISH_DIR`、`BARK_KEY` 和 `BARK_PUBLIC_URL`，再运行健康检查脚本确认。
+
+## Assumption 015
+- 问题：用户要求使用 `superpowers` 插件继续完成项目，但当前 Codex 环境没有暴露该插件，且可安装插件列表中也没有 `superpowers`。
+- 我的假设：不等待不可用插件，改用当前可用的 Codex 工具、终端、Claude Code review、Gitea 和 NAS 脚本完成最终验收。
+- 为什么这么假设：项目要求最高优先级是不要中断、不要卡死、交付可运行可演示主流程；插件不可用不应阻塞项目目标。
+- 影响范围：最终验收不依赖 `superpowers` 插件；如果后续环境安装了该插件，可再用它做额外复查或自动化编排。
+- 后续如何替换成真实方案：在 Codex 插件市场或本地插件目录出现 `superpowers` 后，再按插件能力迁移部分检查/编排流程。
+
+## Assumption 016
+- 问题：NAS `192.168.31.50` 的 22 端口可达，但当前机器没有 `lazydog@192.168.31.50` 的免密 SSH 登录权限。
+- 我的假设：真实 NAS 执行暂不由本机直接远程落地，先以本地 NAS 等价路径完成日更、静态发布和健康检查验收，并把代码推到 NAS 上的 Gitea。
+- 为什么这么假设：没有 SSH 凭据时继续尝试会变成登录猜测，不符合安全边界；项目仓库已经提供 NAS 端可执行脚本，现场只需在 NAS 上运行。
+- 影响范围：本轮能证明 NAS 程序链路可跑，但不能声称已经在真实 NAS Shell 里安装 cron 或写入 Web Station 目录。
+- 后续如何替换成真实方案：配置 SSH key 或在 NAS 控制台打开任务计划后，在 NAS 上执行 `pnpm nas:bootstrap`、`pnpm nas:health`、`pnpm nas:schedule -- install`。

@@ -1,7 +1,7 @@
 # 行业情报收集系统进度
 
-- 最后更新时间：2026-05-26 16:49:43 CST
-- 当前阶段：NAS 专项拆分任务已集成验收，Claude Code 复审剩余 P1 已修复，准备提交推送
+- 最后更新时间：2026-05-26 17:00:30 CST
+- 当前阶段：最终项目目标验收完成，页面数据已刷新，NAS/Gitea/Bark/Claude review 闭环已验证，准备提交最终记录
 
 ## 项目总目标
 
@@ -61,6 +61,9 @@
 - [x] 已完成：NAS-TASK-03，补齐 NAS 线上静态发布和网页端部署说明，明确发布目录、回滚目录和手机/桌面访问路径。
 - [x] 已完成：NAS-TASK-04，补齐 NAS 健康检查和验收脚本，验证 Git、依赖、报告、静态 JSON、发布目录和 Bark dry-run。
 - [x] 已完成：NAS-TASK-05，补齐 Bark 告警与运行日志排障闭环，保证成功/失败通知、隐私边界和故障恢复说明可执行。
+- [!] 阻塞但已降级：`superpowers` 插件在当前环境不可用，已改用现有 Codex 工具完成最终验收。
+- [!] 阻塞但已降级：NAS SSH 端口可达但当前用户无免密登录权限，不能直接远程安装 cron；已以本地等价 NAS 流程和 Gitea 同步完成验证。
+- [x] 已完成：最终端到端验收，使用真实可用源加 mock 兜底生成 2026-05-26 晚报，刷新 `public-data`，并验证本地网页能读取 57 条事件和最新报告。
 
 ## 最近完成内容
 
@@ -273,3 +276,9 @@
 - 2026-05-26 16:49 CST 验收：`pnpm typecheck`、`pnpm build`、`git diff --check`、全部 NAS 脚本 `bash -n`、`pnpm nas:schedule -- print-cron`、`pnpm nas:bark -- failure`、`pnpm nas:daily -- morning`、`pnpm nas:health` 均通过。
 - 2026-05-26 16:49 CST 验收：`nas-web-preview` 用隔离静态数据启动到 `127.0.0.1:3899`，`/` 和 `/public-data/overview.json` 返回正常；随后已停止临时预览服务。
 - 2026-05-26 16:49 CST Claude Code 审查：完整 diff 版超时后改用脚本级审查；先发现 REPO_URL 脱敏、Bark dry-run 继承真实 URL、隔离 build、日志保留等 P1 风险，均已修复；最终复审确认剩余 cron 日志保留 P1 已解决。
+- 2026-05-26 17:00 CST 插件检查：`superpowers` 不在当前工具或可安装插件列表中，已记录为降级并继续推进。
+- 2026-05-26 17:00 CST NAS 连通性检查：`192.168.31.50:22` 端口开放，但 `lazydog@192.168.31.50` 免密 SSH 登录失败；`origin/main` 可通过 Git 访问并指向 `670ef4e`。
+- 2026-05-26 17:00 CST 真实源检查：`pnpm sources:test` 显示 IT之家 47 条、B站 100 条、官方源 40 条可用；知乎 401、微博 403/风控，按降级规则处理。
+- 2026-05-26 17:00 CST 最终日更：使用 `DATABASE_URL=./data/runtime/demo.sqlite`、`REPORT_OUTPUT_DIR=./data/runtime/reports`、`PUBLIC_DATA_DIR=./public-data` 运行 `pnpm nas:daily -- night` 成功，生成 2026-05-26 晚报，新增 41 条、持续更新 5 条、高分 4 条。
+- 2026-05-26 17:00 CST 页面数据验证：`http://localhost:3887/public-data/overview.json` 显示 57 条事件；`events.json` 无缺失来源和异常协议 URL；最新 Top 事件包含鸿蒙智行起诉自媒体、华为 FreeClip 2、传音 Infinix Hot 70。
+- 2026-05-26 17:00 CST 知识库验证：`kb:search` 命中“鸿蒙智行”和“支付宝 AI 钱包”；其中一次并发搜索短暂 `database is locked`，等待后重试成功，已记录到 `error_log.md`。
