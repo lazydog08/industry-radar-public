@@ -1,7 +1,7 @@
 # 行业情报收集系统进度
 
-- 最后更新时间：2026-05-26 17:12:50 CST
-- 当前阶段：继续推进无人值守开发 Agent，本轮前端高级筛选摘要和基础回归测试已完成并通过验证
+- 最后更新时间：2026-05-26 23:08:56 CST
+- 当前阶段：GitHub Pages 公网发布前置已推进，公开数据安全预检已补齐；NAS 远程安装因 SSH 免密未通仍需在 NAS 本机执行
 
 ## 项目总目标
 
@@ -65,6 +65,9 @@
 - [!] 阻塞但已降级：NAS SSH 端口可达但当前用户无免密登录权限，不能直接远程安装 cron；已以本地等价 NAS 流程和 Gitea 同步完成验证。
 - [x] 已完成：最终端到端验收，使用真实可用源加 mock 兜底生成 2026-05-26 晚报，刷新 `public-data`，并验证本地网页能读取 57 条事件和最新报告。
 - [x] 已完成：继续推进无人值守开发 Agent，给高级筛选折叠摘要增加“已启用 N 个筛选”，并新增 `pnpm test` / `pnpm test:web` 基础前端逻辑回归入口。
+- [x] 已完成：创建 GitHub 公共仓库 `lazydog08/industry-radar-public`，添加本地 `github` remote，并补齐 GitHub Pages 发布前公开数据预检。
+- [x] 已完成：修复 QNAP/UGREEN 文档 Bark Key 示例占位符和 `NAS_SCHEDULE.md` 旧路径/旧默认时间说明。
+- [!] 阻塞但已降级：NAS `192.168.31.50` 的 SSH/Gitea 端口可达，但 `lazydog`/`admin` 免密 SSH 登录失败，不能从本机远程安装 cron。
 
 ## 最近完成内容
 
@@ -299,3 +302,10 @@
 - 2026-05-26 18:47 CST 浏览器验证：静态模式 `http://127.0.0.1:3895/` 显示头版、搜索位于简报栏、头条 root 无 `data-event-id`/role/tabindex、390px 宽度无横向溢出、搜索按钮 44px、console 无 error/warning。
 - 2026-05-26 18:47 CST 浏览器验证：API 模式 `http://127.0.0.1:3896/` 搜索 OPPO 后点击收藏反馈，仍保持“搜索结果”视图且头版不恢复可点击首页内容，console 无 error/warning。
 - 2026-05-26 18:47 CST Review：子 agent 复审确认无 blocking/important 问题；Claude 聚焦 review 完成于 `.reviews/archive/20260526T103556Z.md`，指出头条重复、头条交互语义和 viewMode 字符串判断等问题，均已修复；后续两次当前版本 Claude rerun 因 CLI 超时写入 `.reviews/latest.md` 为基础设施失败。
+- 2026-05-26 23:08 CST 推进 GitHub Pages/NAS 落地：创建公开仓库 `https://github.com/lazydog08/industry-radar-public`，添加 `github` remote；由于仓库此前不存在，首次 `git ls-remote` 返回 `Repository not found`。
+- 2026-05-26 23:08 CST 修复公开发布阻塞：`scripts/publish-github-pages.sh` 增加 tracked 文件和 `public-data` 敏感信息预检、核心文件检查和文件类型白名单；`docs/QNAP_SETUP.md`、`docs/UGREEN_SETUP.md` 的 Bark 示例改为明确占位符。
+- 2026-05-26 23:08 CST 修复 NAS 文档漂移：`docs/NAS_SCHEDULE.md` 改为绿联默认路径 `/mnt/user-data/shares/industry-radar`，默认只安装 `noon/night`，早报需显式设置 `MORNING_TIME`。
+- 2026-05-26 23:08 CST 运行时检查：重启 `3887` 本机演示服务，`/editorial-frontpage.js` 与 `/filter-summary.js` 均返回 200；`/api/overview` 和 `/public-data/overview.json` 均显示 57 条事件。Codex in-app Browser 在服务重启后访问 localhost 返回 `ERR_BLOCKED_BY_CLIENT`，已用 HTTP/API/静态资源检查替代。
+- 2026-05-26 23:08 CST 验证：`pnpm test` 通过，14 个 Node 内置测试均通过，新增覆盖 GitHub Pages 发布预检和 NAS 文档默认值。
+- 2026-05-26 23:08 CST 验证：`pnpm test:web` 通过，11 个前端测试均通过。
+- 2026-05-26 23:08 CST 验证：`pnpm typecheck`、`pnpm build`、`bash -n` 相关脚本和 `git diff --check` 均通过。

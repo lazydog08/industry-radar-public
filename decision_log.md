@@ -180,3 +180,15 @@
 - 决策：头版头条不再重复进入“重点信号”，头条选择只通过显式“打开知识卡”按钮触发，搜索/list 刷新用显式 `viewMode` 控制头版状态。
 - 原因：Claude review 指出头条重复会造成视觉噪音，头条 article 和内部按钮双重交互会导致语义不清，靠中文标题判断搜索状态也脆弱。
 - 影响：`buildFrontpageModel` 的 `topSignals` 从头条之后开始；`frontpageLead` root 不再带 `data-event-id`、role 或 tabindex；搜索/API 反馈刷新不会把首页头版重新带回搜索结果视图。
+
+## Decision 031
+- 时间：2026-05-26 23:08:56 CST
+- 决策：GitHub Pages 发布脚本在提交 `public-data` 前必须先执行公开数据预检，并且只强制加入配置的 `PUBLIC_DATA_DIR`。
+- 原因：`public-data/` 被 `.gitignore` 排除但发布脚本会绕过忽略规则；没有预检时，真实运行报告、内网 URL、Key、Cookie 或非预期文件一旦混入会被直接推到公开仓库。
+- 影响：`scripts/publish-github-pages.sh` 会检查核心 JSON、允许的文件类型、tracked 文件和 public-data 的敏感模式；发现风险时直接中止发布。
+
+## Decision 032
+- 时间：2026-05-26 23:08:56 CST
+- 决策：绿联 NAS 文档以 `/mnt/user-data/shares/industry-radar` 为当前默认路径，`nas-schedule` 默认只安装午报和晚报，早报必须显式设置 `MORNING_TIME`。
+- 原因：旧文档混入 `/volume1/docker/industry-radar` 和早/午/晚三条默认任务，容易让绿联现场安装走错路径或装出过多 cron。
+- 影响：`docs/NAS_SCHEDULE.md` 与 `scripts/nas-schedule.sh` 的当前默认保持一致；QNAP 仍保留单独文档。

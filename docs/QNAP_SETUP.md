@@ -53,8 +53,8 @@ REPORT_OUTPUT_DIR=./data/reports
 PUBLIC_DATA_DIR=./public-data
 PUBLISH_DIR=/share/Web/industry-radar/public-data   # QNAP Web Station 静态目录
 
-BARK_KEY=你的BarkKey
-BARK_PUBLIC_URL=https://你的域名/industry-radar/
+BARK_KEY=<YOUR_BARK_KEY>
+BARK_PUBLIC_URL=https://<YOUR_DOMAIN>/industry-radar/
 ```
 
 启用 GitHub Pages 自动推送（可选）：

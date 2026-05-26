@@ -1,42 +1,41 @@
 # NAS 定时任务管理
 
-`scripts/nas-schedule.sh` 用来安装、查看、卸载 NAS 上的早报、午报、晚报 cron 任务。它只管理带 marker 的本项目任务块，不会删除用户 crontab 里的其他任务。
+`scripts/nas-schedule.sh` 用来安装、查看、卸载 NAS 上的行业情报日更 cron 任务。它只管理带 marker 的本项目任务块，不会删除用户 crontab 里的其他任务。
 
-默认时间按北京时间 `Asia/Shanghai`：
+当前默认只安装午报和晚报：
 
-- 早报：`08:10 morning`
-- 午报：`12:10 noon`
-- 晚报：`22:10 night`
+- 午报：`12:30 noon`
+- 晚报：`22:30 night`
 
-三条任务都会先进入项目目录，再调用现有入口：
+早报默认不启用；需要时显式设置 `MORNING_TIME=08:00`。
 
-```bash
-/bin/bash scripts/nas-daily-update.sh morning
-/bin/bash scripts/nas-daily-update.sh noon
-/bin/bash scripts/nas-daily-update.sh night
-```
-
-日志默认写入 `logs/nas-daily`，也可以用 `NAS_LOG_DIR` 指向 NAS 持久化目录。cron 包装日志会按天拆成 `cron-morning-YYYYMMDD.log`、`cron-noon-YYYYMMDD.log`、`cron-night-YYYYMMDD.log`，日更脚本自身日志形如 `YYYY-MM-DD-morning-时间戳.log`。定时任务默认清理 14 天以前的这两类日志。
+日志默认写入 `logs/nas-daily`，也可以用 `NAS_LOG_DIR` 指向 NAS 持久化目录。cron 包装日志会按天拆成 `cron-noon-YYYYMMDD.log`、`cron-night-YYYYMMDD.log`，日更脚本自身日志形如 `YYYY-MM-DD-noon-时间戳.log`。定时任务默认清理 14 天以前的这两类日志。
 
 ## 安装
 
-在 NAS 的项目目录执行：
+绿联 UGOS 推荐项目路径：
 
 ```bash
-cd /volume1/docker/industry-radar
+cd /mnt/user-data/shares/industry-radar
 /bin/bash scripts/nas-schedule.sh install
 ```
 
 如果项目不在当前脚本所在仓库路径，可以覆盖 `APP_DIR`：
 
 ```bash
-APP_DIR=/volume1/docker/industry-radar /bin/bash scripts/nas-schedule.sh install
+APP_DIR=/mnt/user-data/shares/industry-radar /bin/bash scripts/nas-schedule.sh install
 ```
 
 覆盖运行时间：
 
 ```bash
-MORNING_TIME=08:10 NOON_TIME=12:10 NIGHT_TIME=22:10 /bin/bash scripts/nas-schedule.sh install
+NOON_TIME=12:30 NIGHT_TIME=22:30 /bin/bash scripts/nas-schedule.sh install
+```
+
+如需加早报：
+
+```bash
+MORNING_TIME=08:00 NOON_TIME=12:30 NIGHT_TIME=22:30 /bin/bash scripts/nas-schedule.sh install
 ```
 
 延长 cron 包装日志保留时间：
@@ -80,23 +79,16 @@ CRON_LOG_RETENTION_DAYS=30 /bin/bash scripts/nas-schedule.sh install
 
 如果 `install` 发现 `crontab` 不可用，也会直接打印同一份 cron 内容，不会只给一个模糊失败。
 
-## NAS 面板计划任务路径
+## NAS 面板计划任务
 
-在群晖、绿联等 NAS 控制面板里，也可以不用系统 crontab，手动创建 3 个计划任务：
-
-```bash
-mkdir -p /volume1/docker/industry-radar/logs/nas-daily && find /volume1/docker/industry-radar/logs/nas-daily -maxdepth 1 -type f -name 'cron-morning-*.log' -mtime +14 -delete >/dev/null 2>&1 && find /volume1/docker/industry-radar/logs/nas-daily -maxdepth 1 -type f -name '????-??-??-morning-*.log' -mtime +14 -delete >/dev/null 2>&1 && cd /volume1/docker/industry-radar && NAS_LOG_DIR=/volume1/docker/industry-radar/logs/nas-daily /bin/bash scripts/nas-daily-update.sh morning >> /volume1/docker/industry-radar/logs/nas-daily/cron-morning-$(date +%Y%m%d).log 2>&1
-```
+在绿联等 NAS 控制面板里，也可以不用系统 crontab。做法是先执行：
 
 ```bash
-mkdir -p /volume1/docker/industry-radar/logs/nas-daily && find /volume1/docker/industry-radar/logs/nas-daily -maxdepth 1 -type f -name 'cron-noon-*.log' -mtime +14 -delete >/dev/null 2>&1 && find /volume1/docker/industry-radar/logs/nas-daily -maxdepth 1 -type f -name '????-??-??-noon-*.log' -mtime +14 -delete >/dev/null 2>&1 && cd /volume1/docker/industry-radar && NAS_LOG_DIR=/volume1/docker/industry-radar/logs/nas-daily /bin/bash scripts/nas-daily-update.sh noon >> /volume1/docker/industry-radar/logs/nas-daily/cron-noon-$(date +%Y%m%d).log 2>&1
+cd /mnt/user-data/shares/industry-radar
+/bin/bash scripts/nas-schedule.sh print-cron
 ```
 
-```bash
-mkdir -p /volume1/docker/industry-radar/logs/nas-daily && find /volume1/docker/industry-radar/logs/nas-daily -maxdepth 1 -type f -name 'cron-night-*.log' -mtime +14 -delete >/dev/null 2>&1 && find /volume1/docker/industry-radar/logs/nas-daily -maxdepth 1 -type f -name '????-??-??-night-*.log' -mtime +14 -delete >/dev/null 2>&1 && cd /volume1/docker/industry-radar && NAS_LOG_DIR=/volume1/docker/industry-radar/logs/nas-daily /bin/bash scripts/nas-daily-update.sh night >> /volume1/docker/industry-radar/logs/nas-daily/cron-night-$(date +%Y%m%d).log 2>&1
-```
-
-建议把 NAS 系统时区设置为 `Asia/Shanghai`。脚本生成的 cron block 会包含 `CRON_TZ=Asia/Shanghai`，但不同 NAS 的 cron 实现兼容性不完全一致，系统时区仍是最稳妥的基准。
+然后把输出中 `noon` 和 `night` 两条任务复制到 NAS 的计划任务面板。建议把 NAS 系统时区设置为 `Asia/Shanghai`。脚本生成的 cron block 会包含 `CRON_TZ=Asia/Shanghai`，但不同 NAS 的 cron 实现兼容性不完全一致，系统时区仍是最稳妥的基准。
 
 ## 手动测试
 
