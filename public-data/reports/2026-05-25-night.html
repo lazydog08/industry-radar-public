@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>行业情报雷达 - 晚间报告</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f5f7;
+      --surface: #ffffff;
+      --surface-soft: #fbfbfd;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --line: #e5e5ea;
+      --accent: #0066cc;
+      --good: #1f7a4d;
+      --bad: #b42318;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      letter-spacing: 0;
+    }
+    .page { width: min(1120px, calc(100vw - 28px)); margin: 0 auto; padding: 28px 0 56px; }
+    .masthead { display: grid; gap: 18px; padding: 10px 0 18px; }
+    .eyebrow { color: var(--muted); font-size: 14px; line-height: 1.5; }
+    h1 { margin: 0; font-size: clamp(30px, 4vw, 44px); line-height: 1.1; font-weight: 720; }
+    h2 { margin: 0 0 12px; font-size: 22px; line-height: 1.25; }
+    h3 { margin: 0; font-size: 18px; line-height: 1.38; overflow-wrap: anywhere; }
+    p { margin: 0; line-height: 1.65; }
+    a { color: var(--accent); text-decoration: none; overflow-wrap: anywhere; }
+    a:hover { text-decoration: underline; }
+    .summary-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+    .metric, .status-strip, .mainline, .event-card, .empty, .idea-list, .source-note {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .metric { padding: 13px 14px; min-width: 0; }
+    .metric b { display: block; font-size: 22px; line-height: 1.15; }
+    .metric span { display: block; margin-top: 3px; color: var(--muted); font-size: 12px; }
+    .status-strip { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      max-width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 8px;
+      color: var(--muted);
+      background: var(--surface-soft);
+      font-size: 12px;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+    .status-ok { color: var(--good); }
+    .status-bad { color: var(--bad); }
+    section { margin-top: 28px; }
+    .mainline { padding: 18px; }
+    .mainline ul, .idea-list ol { margin: 0; padding-left: 20px; line-height: 1.75; }
+    .event-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .top-list { grid-template-columns: 1fr; }
+    .event-card { padding: 16px; display: grid; gap: 10px; min-width: 0; }
+    .event-card.top { border-color: #d2d2d7; }
+    .card-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: start; min-width: 0; }
+    .card-head:has(.rank) { grid-template-columns: auto minmax(0, 1fr) auto; }
+    .card-head h3 { min-width: 0; }
+    .rank {
+      width: 28px;
+      height: 28px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #1d1d1f;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      flex: 0 0 auto;
+    }
+    .score { color: var(--accent); font-weight: 700; white-space: nowrap; justify-self: end; }
+    .summary { color: #303033; }
+    .why { color: var(--text); }
+    .creator { color: #3d3d40; }
+    .label { color: var(--muted); font-size: 12px; font-weight: 650; margin-right: 4px; }
+    .meta, .sources { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; }
+    .sources { padding-top: 2px; }
+    .empty { padding: 16px; color: var(--muted); }
+    .idea-list { padding: 16px 18px; }
+    .source-note { padding: 14px 16px; margin-bottom: 10px; }
+    @media (max-width: 860px) {
+      .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .event-list { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .page { width: min(100vw - 20px, 1120px); padding-top: 18px; }
+      .summary-grid { grid-template-columns: 1fr; }
+      .card-head, .card-head:has(.rank) { grid-template-columns: auto minmax(0, 1fr); }
+      .score { grid-column: 2; justify-self: start; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <div>
+        <div class="eyebrow">2026-05-25 · 晚间报告 · 2026-05-25 12:00:00 - 2026-05-25 22:00:00 UTC+8</div>
+        <h1>行业情报雷达</h1>
+      </div>
+      <div class="summary-grid">
+        <div class="metric"><b>2026-05-25</b><span>日期</span></div>
+        <div class="metric"><b>晚间报告</b><span>报告类型</span></div>
+        <div class="metric"><b>33</b><span>新增事件</span></div>
+        <div class="metric"><b>12</b><span>重要事件</span></div>
+        <div class="metric"><b>3/5</b><span>数据源可用</span></div>
+      </div>
+      <div class="status-strip" aria-label="数据源状态"><span class="pill status-ok">OK ithome 35</span><span class="pill status-ok">OK bilibili 8</span><span class="pill status-ok">OK official 0</span><span class="pill status-bad">异常 zhihu 0</span><span class="pill status-bad">异常 weibo 0</span></div>
+    </header>
+    <p class="eyebrow">晚间报告只展示中午后新增；中午已出现但新增来源的事件放入“持续发酵 / 有更新”。</p>
+    <section><h2>3 分钟必看 Top 5</h2><div class="event-list top-list"><article class="event-card top">
+    <div class="card-head">
+      <span class="rank">1</span>
+      <h3>荣耀平板 20 发布：12.1 英寸 3K 全彩类纸屏，国补到手价 1614.15-2804.15 元</h3>
+      <span class="score">100</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：荣耀平板 20 发布：12.1 英寸 3K 全彩类纸屏，国补到手价 1614.15-2804.15 元</p>
+    <p class="why"><span class="label">为什么重要</span>苹果、荣耀 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">发布会</span><span class="pill">影像</span><span class="pill">数码</span><span class="pill">系统更新</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/955/036.htm" target="_blank" rel="noreferrer">ithome 1</a> · <a href="https://www.ithome.com/0/955/011.htm" target="_blank" rel="noreferrer">ithome 2</a> · <a href="https://www.ithome.com/0/955/008.htm" target="_blank" rel="noreferrer">ithome 3</a> · <a href="https://www.ithome.com/0/954/992.htm" target="_blank" rel="noreferrer">ithome 4</a> · <a href="https://www.ithome.com/0/955/039.htm" target="_blank" rel="noreferrer">ithome 5</a></div>
+  </article><article class="event-card top">
+    <div class="card-head">
+      <span class="rank">2</span>
+      <h3>荣耀 600 元气版手机发布：第四代骁龙 7，售 2699 元起</h3>
+      <span class="score">100</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：荣耀 600 元气版手机发布：第四代骁龙 7，售 2699 元起</p>
+    <p class="why"><span class="label">为什么重要</span>荣耀 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">发布会</span><span class="pill">影像</span><span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/955/031.htm" target="_blank" rel="noreferrer">ithome 1</a> · <a href="https://www.ithome.com/0/955/023.htm" target="_blank" rel="noreferrer">ithome 2</a> · <a href="https://www.ithome.com/0/955/022.htm" target="_blank" rel="noreferrer">ithome 3</a></div>
+  </article><article class="event-card top">
+    <div class="card-head">
+      <span class="rank">3</span>
+      <h3>上海出台 AI 微短剧新政：支持企业租用智能算力，对优秀剧本给予奖励</h3>
+      <span class="score">89</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>自媒体/平台生态方向出现新动态：上海出台 AI 微短剧新政：支持企业租用智能算力，对优秀剧本给予奖励</p>
+    <p class="why"><span class="label">为什么重要</span>创作者生态变化会影响内容生产、分发和变现，需要转化成可执行的方法论。</p>
+    <p class="creator"><span class="label">内容关系</span>可以转化为创作者避坑、平台规则解读、流量变化观察和内容策略调整。</p>
+    <p><span class="label">可拍角度</span>争议拆解：上海出台 AI 微短剧新政：支持企业租用智能算力，对优秀剧本给予奖励，普通用户到底该怎么看？</p>
+    <p><span class="label">标题/封面</span>这条消息别只看标题：上海出台 AI 微短剧新政：支持企业租用智能算…</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">自媒体 / 平台生态</span>
+      <span class="pill">争议</span><span class="pill">自媒体</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/954/989.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article><article class="event-card top">
+    <div class="card-head">
+      <span class="rank">4</span>
+      <h3>逾 800 人调查显示，99% 企业高管预计 AI 两年内会引发裁员</h3>
+      <span class="score">81</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：逾 800 人调查显示，99% 企业高管预计 AI 两年内会引发裁员</p>
+    <p class="why"><span class="label">为什么重要</span>相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>争议拆解：逾 800 人调查显示，99% 企业高管预计 AI 两年内会引发裁员，普通用户到底该怎么看？</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">争议</span><span class="pill">发布会</span><span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/955/040.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article><article class="event-card top">
+    <div class="card-head">
+      <span class="rank">5</span>
+      <h3>国产芯片级主动散热方案曝光：MEMS 风扇紧贴处理器，几乎无噪音</h3>
+      <span class="score">81</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：国产芯片级主动散热方案曝光：MEMS 风扇紧贴处理器，几乎无噪音</p>
+    <p class="why"><span class="label">为什么重要</span>该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>这条消息别只看标题：国产芯片级主动散热方案曝光：MEMS 风扇紧贴…</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">影像</span><span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/954/988.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article></div></section>
+    <section>
+      <h2>今日主线判断</h2>
+      <div class="mainline"><ul><li>数码行业是本窗口的主要信号，集中在 三星、荣耀、小米、苹果，关键词是 数码、发布会、影像、汽车、自媒体。</li><li>Top 事件优先关注“为什么重要”和“内容创作影响”，它们比单条标题更适合直接转成选题。</li><li>本次有 2 个数据源异常，结论更适合当作雷达提示，而不是最终行业定论。</li></ul></div>
+    </section>
+    <section><h2>数码行业</h2><div class="event-list "><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>福特烈马亚马逊限量版 SUV 官图发布，5 月 26 日上市</h3>
+      <span class="score">79</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>跨行业方向出现新动态：福特烈马亚马逊限量版 SUV 官图发布，5 月 26 日上市</p>
+    <p class="why"><span class="label">为什么重要</span>相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">跨行业</span>
+      <span class="pill">发布会</span><span class="pill">数码</span><span class="pill">汽车</span><span class="pill">系统更新</span><span class="pill">自媒体</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/955/019.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>深光影像 AF 35mm F2.2 全画幅相机镜头银色版 L 卡口开售，739 元起</h3>
+      <span class="score">78</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：深光影像 AF 35mm F2.2 全画幅相机镜头银色版 L 卡口开售，739 元起</p>
+    <p class="why"><span class="label">为什么重要</span>相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">发布会</span><span class="pill">影像</span><span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/955/021.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>TRYX 将推处理器一体式水冷散热器新品 HOLO，支持全息视效</h3>
+      <span class="score">78</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：TRYX 将推处理器一体式水冷散热器新品 HOLO，支持全息视效</p>
+    <p class="why"><span class="label">为什么重要</span>该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>这条消息别只看标题：TRYX 将推处理器一体式水冷散热器新品 HO…</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">影像</span><span class="pill">数码</span><span class="pill">选题机会</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/955/015.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>松下 LUMIX L10 固定镜头相机国行首销，8998 元起</h3>
+      <span class="score">73</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：松下 LUMIX L10 固定镜头相机国行首销，8998 元起</p>
+    <p class="why"><span class="label">为什么重要</span>相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">发布会</span><span class="pill">影像</span><span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/955/010.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>华硕 ROG 魔盒 Pro Max 电竞路由器开售：BE12000、双万兆，最低到手 3199 元</h3>
+      <span class="score">71</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：华硕 ROG 魔盒 Pro Max 电竞路由器开售：BE12000、双万兆，最低到手 3199 元</p>
+    <p class="why"><span class="label">为什么重要</span>相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">发布会</span><span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/955/025.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>挑战100台转轴排线故障，第三台zflip4屏幕没有触摸。</h3>
+      <span class="score">68</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：挑战100台转轴排线故障，第三台zflip4屏幕没有触摸。</p>
+    <p class="why"><span class="label">为什么重要</span>该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>这条消息别只看标题：挑战100台转轴排线故障，第三台zflip4屏…</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.bilibili.com/video/BV1yKGZ6qENE" target="_blank" rel="noreferrer">bilibili</a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>发售八千，跳水到一开头还得是三星小折叠6代！</h3>
+      <span class="score">68</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：发售八千，跳水到一开头还得是三星小折叠6代！</p>
+    <p class="why"><span class="label">为什么重要</span>该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>这条消息别只看标题：发售八千，跳水到一开头还得是三星小折叠6代！</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.bilibili.com/video/BV12wGZ6gE8H" target="_blank" rel="noreferrer">bilibili</a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>Anthropic 联合创始人奥拉：人工智能的发展不能仅由科技公司主导</h3>
+      <span class="score">66</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：Anthropic 联合创始人奥拉：人工智能的发展不能仅由科技公司主导</p>
+    <p class="why"><span class="label">为什么重要</span>相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">发布会</span><span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/955/033.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>中国前首富钟睒睒杀入固态电池赛道，养生堂 5 亿元战略入股智邦锂电</h3>
+      <span class="score">66</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：中国前首富钟睒睒杀入固态电池赛道，养生堂 5 亿元战略入股智邦锂电</p>
+    <p class="why"><span class="label">为什么重要</span>相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">发布会</span><span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/955/017.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>荣耀手表 6 Plus 发布：长续航可达 35 天，首销 1199 元起</h3>
+      <span class="score">65</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：荣耀手表 6 Plus 发布：长续航可达 35 天，首销 1199 元起</p>
+    <p class="why"><span class="label">为什么重要</span>荣耀 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">发布会</span><span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/955/024.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>OPPO 推出 Bubble 潮玩自拍屏：499 元，自定义壁纸、10 米无线拍摄</h3>
+      <span class="score">65</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：OPPO 推出 Bubble 潮玩自拍屏：499 元，自定义壁纸、10 米无线拍摄</p>
+    <p class="why"><span class="label">为什么重要</span>OPPO 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">发布会</span><span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/955/012.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>GAMDIAS 推出 ATLAS P6 CG 机箱：三面侧透 + 手办展示台</h3>
+      <span class="score">64</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：GAMDIAS 推出 ATLAS P6 CG 机箱：三面侧透 + 手办展示台</p>
+    <p class="why"><span class="label">为什么重要</span>该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>这条消息别只看标题：GAMDIAS 推出 ATLAS P6 CG …</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/954/991.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article></div></section>
+    <section><h2>自媒体 / 平台生态</h2><div class="event-list "><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>Take-Two CEO 泽尔尼克：AI 未能降低游戏制作成本，反而会推高成本</h3>
+      <span class="score">76</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>自媒体/平台生态方向出现新动态：Take-Two CEO 泽尔尼克：AI 未能降低游戏制作成本，反而会推高成本</p>
+    <p class="why"><span class="label">为什么重要</span>创作者生态变化会影响内容生产、分发和变现，需要转化成可执行的方法论。</p>
+    <p class="creator"><span class="label">内容关系</span>可以转化为创作者避坑、平台规则解读、流量变化观察和内容策略调整。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>这条消息别只看标题：Take-Two CEO 泽尔尼克：AI 未能…</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">自媒体 / 平台生态</span>
+      <span class="pill">自媒体</span><span class="pill">选题机会</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/955/034.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article></div></section>
+    <section><h2>汽车行业</h2><div class="event-list "><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>方盒子 SUV 再添新玩家，吉利银河战舰 700 量产版实车曝光</h3>
+      <span class="score">75</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>汽车行业方向出现新动态：方盒子 SUV 再添新玩家，吉利银河战舰 700 量产版实车曝光</p>
+    <p class="why"><span class="label">为什么重要</span>智能驾驶相关变化容易引发用户安全感、体验差异和车企技术路线讨论，适合持续跟踪。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。</p>
+    <p><span class="label">可拍角度</span>智驾更新看起来很强，但普通车主真正关心哪 3 件事？</p>
+    <p><span class="label">标题/封面</span>智驾升级，不只看城市数量</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">汽车行业</span>
+      <span class="pill">智驾</span><span class="pill">汽车</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/955/013.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>长城哈弗猛龙 PLUS 开启全国交付：五座 / 七座可选，限时换新价 16.18 万起</h3>
+      <span class="score">69</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>汽车行业方向出现新动态：长城哈弗猛龙 PLUS 开启全国交付：五座 / 七座可选，限时换新价 16.18 万起</p>
+    <p class="why"><span class="label">为什么重要</span>汽车行业动作通常会持续发酵到价格、智驾、补能和用户口碑，具备多期内容延展空间。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。</p>
+    <p><span class="label">可拍角度</span>把车企动作翻译成消费者能听懂的购车/用车影响。</p>
+    <p><span class="label">标题/封面</span>车企新动作，谁最受影响</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">汽车行业</span>
+      <span class="pill">汽车</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/955/016.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>消息称现代集团组建专项团队，加速人形机器人落地应用</h3>
+      <span class="score">64</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>汽车行业方向出现新动态：消息称现代集团组建专项团队，加速人形机器人落地应用</p>
+    <p class="why"><span class="label">为什么重要</span>汽车行业动作通常会持续发酵到价格、智驾、补能和用户口碑，具备多期内容延展空间。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。</p>
+    <p><span class="label">可拍角度</span>把车企动作翻译成消费者能听懂的购车/用车影响。</p>
+    <p><span class="label">标题/封面</span>车企新动作，谁最受影响</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">汽车行业</span>
+      <span class="pill">汽车</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/955/048.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>“一箭 8 星”再启新程！中科宇航力箭一号遥十四运载火箭顺利出厂</h3>
+      <span class="score">64</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>汽车行业方向出现新动态：“一箭 8 星”再启新程！中科宇航力箭一号遥十四运载火箭顺利出厂</p>
+    <p class="why"><span class="label">为什么重要</span>汽车行业动作通常会持续发酵到价格、智驾、补能和用户口碑，具备多期内容延展空间。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。</p>
+    <p><span class="label">可拍角度</span>把车企动作翻译成消费者能听懂的购车/用车影响。</p>
+    <p><span class="label">标题/封面</span>车企新动作，谁最受影响</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">汽车行业</span>
+      <span class="pill">汽车</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/954/983.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article></div></section>
+    <section><h2>品牌 / 高管 / 博主动态</h2><div class="event-list "><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>模特难以置信 荣耀拍照这么好了？</h3>
+      <span class="score">77</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：模特难以置信 荣耀拍照这么好了？</p>
+    <p class="why"><span class="label">为什么重要</span>该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>这条消息别只看标题：模特难以置信 荣耀拍照这么好了？</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">影像</span><span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.bilibili.com/video/BV1MxG46WESr" target="_blank" rel="noreferrer">bilibili</a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>小米米家洗衣机 Pro 波轮 12kg 开售：首发价 1099 元，1.3 洗净比</h3>
+      <span class="score">75</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：小米米家洗衣机 Pro 波轮 12kg 开售：首发价 1099 元，1.3 洗净比</p>
+    <p class="why"><span class="label">为什么重要</span>小米 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">发布会</span><span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/955/032.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>非芯片部门员工怒了：三星第三大工会申请法院禁令叫停薪资协议投票</h3>
+      <span class="score">73</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：非芯片部门员工怒了：三星第三大工会申请法院禁令叫停薪资协议投票</p>
+    <p class="why"><span class="label">为什么重要</span>该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>这条消息别只看标题：非芯片部门员工怒了：三星第三大工会申请法院禁令…</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/955/038.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>“把我整得像 AI 脸一样帅”成英国新潮流，整形外科医生称几乎无法实现</h3>
+      <span class="score">73</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>汽车行业方向出现新动态：“把我整得像 AI 脸一样帅”成英国新潮流，整形外科医生称几乎无法实现</p>
+    <p class="why"><span class="label">为什么重要</span>汽车行业动作通常会持续发酵到价格、智驾、补能和用户口碑，具备多期内容延展空间。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。</p>
+    <p><span class="label">可拍角度</span>把车企动作翻译成消费者能听懂的购车/用车影响。</p>
+    <p><span class="label">标题/封面</span>车企新动作，谁最受影响</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">汽车行业</span>
+      <span class="pill">汽车</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/954/981.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>老粉置换苹果17por充新机，包透明隐形全包膜。#北京手机全包膜 #苹果二手手机充新机#苹果手机全包膜#北京折叠屏手机全包膜 #苹果手机背膜</h3>
+      <span class="score">73</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：老粉置换苹果17por充新机，包透明隐形全包膜。#北京手机全包膜 #苹果二手手机充新机#苹果手机全包膜#北京折叠屏手机全包膜 #苹果手机背膜</p>
+    <p class="why"><span class="label">为什么重要</span>该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>这条消息别只看标题：老粉置换苹果17por充新机，包透明隐形全包膜…</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.bilibili.com/video/BV1fvGo6ZECf" target="_blank" rel="noreferrer">bilibili</a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>折叠屏杀到4313！三星Z Fold7 超轻薄折叠屏手机，618暴降7686元！2亿像素+骁龙8至尊版，折叠机皇这价格绝了，速度冲！</h3>
+      <span class="score">72</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：折叠屏杀到4313！三星Z Fold7 超轻薄折叠屏手机，618暴降7686元！2亿像素+骁龙8至尊版，折叠机皇这价格绝了，速度冲！</p>
+    <p class="why"><span class="label">为什么重要</span>该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>这条消息别只看标题：折叠屏杀到4313！三星Z Fold7 超轻薄…</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.bilibili.com/video/BV1y4Go6NENr" target="_blank" rel="noreferrer">bilibili</a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>1999 元，小米推出米家即热饮水机 Max 制冰版</h3>
+      <span class="score">68</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：1999 元，小米推出米家即热饮水机 Max 制冰版</p>
+    <p class="why"><span class="label">为什么重要</span>该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>这条消息别只看标题：1999 元，小米推出米家即热饮水机 Max …</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/955/047.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>台积电否认削减员工分红：今年涨幅将超去年</h3>
+      <span class="score">68</span>
+    </div>
+    <p class="summary"><span class="label">一句话</span>数码行业方向出现新动态：台积电否认削减员工分红：今年涨幅将超去年</p>
+    <p class="why"><span class="label">为什么重要</span>该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。</p>
+    <p><span class="label">可拍角度</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>这条消息别只看标题：台积电否认削减员工分红：今年涨幅将超去年</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/955/026.htm" target="_blank" rel="noreferrer">ithome</a></div>
+  </article></div></section>
+    <section><h2>持续发酵 / 有更新</h2><div class="empty">暂无新增。</div></section>
+    <section>
+      <h2>可拍视频选题</h2>
+      <div class="idea-list"><ol><li>用一条短视频讲清楚：这件事为什么值得普通用户关注。<br /><span class="eyebrow">封面角度：发布会定档 + 最大悬念 + 你该等吗</span></li><li>用一条短视频讲清楚：这件事为什么值得普通用户关注。<br /><span class="eyebrow">封面角度：发布会定档 + 最大悬念 + 你该等吗</span></li><li>争议拆解：上海出台 AI 微短剧新政：支持企业租用智能算力，对优秀剧本给予奖励，普通用户到底该怎么看？<br /><span class="eyebrow">封面角度：这条消息别只看标题：上海出台 AI 微短剧新政：支持企业租用智能算…</span></li><li>争议拆解：逾 800 人调查显示，99% 企业高管预计 AI 两年内会引发裁员，普通用户到底该怎么看？<br /><span class="eyebrow">封面角度：发布会定档 + 最大悬念 + 你该等吗</span></li><li>用一条短视频讲清楚：这件事为什么值得普通用户关注。<br /><span class="eyebrow">封面角度：这条消息别只看标题：国产芯片级主动散热方案曝光：MEMS 风扇紧贴…</span></li><li>用一条短视频讲清楚：这件事为什么值得普通用户关注。<br /><span class="eyebrow">封面角度：发布会定档 + 最大悬念 + 你该等吗</span></li><li>用一条短视频讲清楚：这件事为什么值得普通用户关注。<br /><span class="eyebrow">封面角度：发布会定档 + 最大悬念 + 你该等吗</span></li><li>用一条短视频讲清楚：这件事为什么值得普通用户关注。<br /><span class="eyebrow">封面角度：这条消息别只看标题：TRYX 将推处理器一体式水冷散热器新品 HO…</span></li></ol></div>
+    </section>
+    <section>
+      <h2>数据源异常与限制</h2>
+      <div class="source-note"><strong>ithome</strong><p>13 条不在报告时间窗口内，已排除</p></div><div class="source-note"><strong>bilibili</strong><p>搜索 OPPO 影像: HTTP 412 Precondition Failed；搜索 AI 手机 发布会: HTTP 412 Precondition Failed；搜索 HarmonyOS 更新: HTTP 412 Precondition Failed；搜索 iPhone: HTTP 412 Precondition Failed；92 条不在报告时间窗口内，已排除</p></div><div class="source-note"><strong>official</strong><p>40 条不在报告时间窗口内，已排除</p></div><div class="source-note"><strong>zhihu</strong><p>公开热榜访问失败：HTTP 401 Authorization Required</p></div><div class="source-note"><strong>weibo</strong><p>微博源暂不可用；未使用登录、Cookie 或验证码绕过。</p></div>
+    </section>
+  </main>
+</body>
+</html>
