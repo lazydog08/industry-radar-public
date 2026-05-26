@@ -30,13 +30,14 @@ BARK_PUBLIC_URL=https://example.com/industry-radar/
 - `BARK_NOTIFY_URL`：完整 Bark base URL。设置后优先于 `BARK_KEY`。
 - `BARK_PUBLIC_URL`：点开通知时打开的线上情报页面。
 - `BARK_SITE_URL`：和 `BARK_PUBLIC_URL` 作用相同，优先级更高，适合定时任务临时覆盖。
-- `BARK_SOUND`：Bark 声音，例如 `done`。为空则使用 Bark 默认声音。
+- `BARK_SOUND`：Bark 声音，例如 `done`。为空时脚本按报告类型自动选择默认声音（见「声音策略」）。
+- `BARK_INCLUDE_TOP`：是否在成功通知中附加「今日必看 Top」，默认 `true`。设为 `false` 时退回原简报格式。
 - `BARK_DRY_RUN=true`：只打印将发送的标题和正文，不发网络请求。
 - `BARK_TIMEOUT_MS`：Bark 请求超时时间，默认 `10000` 毫秒。
 
 ## 推送内容
 
-推送正文只包含：
+推送正文包含固定五行：
 
 ```text
 状态
@@ -47,6 +48,33 @@ BARK_PUBLIC_URL=https://example.com/industry-radar/
 ```
 
 即使 `nas-daily-update.sh` 传入了日志文件位置或本机路径，通知正文也不会发送这些内容。
+
+### 今日必看 Top
+
+成功通知在五行之后，会从 `PUBLIC_DATA_DIR/overview.json` 读取 `events` 数组，自动附加最多 3 条「今日必看」标题：
+
+```text
+今日必看：
+• 【A】鸿蒙智行起诉自媒体"圈内人 Xm_"，索赔 200 万元
+• 【B】OPPO 影像旗舰新机发布会定档，最大悬念曝光
+• 【B】抖音平台创作者分成规则调整，头部账号影响最大
+```
+
+挑选逻辑：优先取 `radar_section === "must_read"` 的条目，不足 3 条时按 `radar_score` 降序补齐。标题超过 30 个字符时截断。若当日无强信号，附加一行「今日无强信号，可休息一日」。
+
+文件不存在或解析失败时**静默降级**——仍发送原有五行简报，仅在 stderr 输出一行 warning，不影响通知送达。
+
+设置 `BARK_INCLUDE_TOP=false` 可完全关闭此功能，退回原简报格式。失败通知不会附加 Top 内容。
+
+## 声音策略
+
+脚本按以下优先级决定推送声音：
+
+1. **失败状态**：强制使用 `alarm`，无论用户如何配置 `BARK_SOUND`，让失败更醒目。
+2. **用户显式设置 `BARK_SOUND`**：尊重用户配置（失败除外）。
+3. **未设置 `BARK_SOUND` 时按报告类型自动选择**：
+   - `BARK_RUN_TYPE=noon`（午报）→ `birdsong`（轻柔，不打扰午间）
+   - `BARK_RUN_TYPE=night`（晚报）→ `bell`（清晰提示感）
 
 ## 手动验证
 

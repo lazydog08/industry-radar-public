@@ -86,6 +86,8 @@ pnpm nas:daily -- night
 
 ## NAS 部署最短闭环
 
+QNAP 用户详见 `docs/QNAP_SETUP.md`，绿联用户详见 `docs/UGREEN_SETUP.md`。
+
 NAS 上推荐只负责采集、入库、评分、生成报告和更新静态数据；线上网页只读取 `public-data`，不直连 SQLite，也不提供写入能力。
 
 1. 从本地 Gitea 拉取或升级仓库：
@@ -132,9 +134,15 @@ pnpm nas:schedule -- print-cron
 pnpm nas:schedule -- install
 ```
 
+QNAP 用户改用 `bash scripts/qnap-install-cron.sh`（或 `pnpm nas:qnap-install`）才能让 cron 在重启后保留。
+
 NAS 安装、定时、验收、静态发布和告警排障分别见 `docs/NAS_INSTALL.md`、`docs/NAS_SCHEDULE.md`、`docs/NAS_ACCEPTANCE.md`、`docs/NAS_WEB_PUBLISH.md`、`docs/NAS_OBSERVABILITY.md`。Bark 配置详见 `docs/BARK_SETUP.md`，静态导出和只读网页细节详见 `docs/STATIC_EXPORT.md`、`docs/STATIC_WEB_MODE.md`。
 
 不要提交 `.env.local`、SQLite 数据库、`logs/`、`public-data/`、`data/runtime/` 或任何 Bark Key / Cookie / Token。
+
+## 6. GitHub Pages 公网托管
+
+把静态前端发布到 `https://lazydog08.github.io/industry-radar-public/`，无需服务器，手机和电脑均可访问。在 NAS 的 `.env.local` 中设置 `ENABLE_GITHUB_PAGES_PUSH=true`，日更成功后会自动把 `public-data/` 推送到 GitHub 并触发重新部署。详见 [`docs/GITHUB_PAGES.md`](docs/GITHUB_PAGES.md)。
 
 `ENABLE_INTERNAL_SCHEDULER=true` 适合本地或容器常驻演示：服务进程会在北京时间 12:00 运行中午报告、22:00 运行晚间报告，并在报告成功后自动执行静态导出。静态导出失败只会写入错误日志，不会让调度器退出。生产环境仍优先使用 NAS cron，因为它更容易查看日志、重跑和接入 Bark 通知。
 
