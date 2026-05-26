@@ -104,3 +104,10 @@
 - 影响：只影响临时 DOM 验证方式，不影响静态搜索实现。
 - 处理：改用页面级 DevTools WebSocket 重新验证，隔离静态目录中 `overview.events=1`、`events.json=33` 时，搜索 overview 之外事件成功命中。
 - 状态：[x] 已完成
+
+## Error 016
+- 时间：2026-05-26 16:06:52 CST
+- 现象：提交推送后的 Bark 完成通知第一次 shell 参数拼接失败，第二次 Python HTTPS 请求握手超时。
+- 影响：只影响人工完成通知，不影响已推送的代码、NAS 自动化或页面运行。
+- 处理：改用 `curl -4 --max-time 20` 重试，Bark 完成通知发送成功；后续 NAS 正式流程使用 `scripts/notify-bark.ts`，已通过 dry-run 和协议校验。
+- 状态：[x] 已完成
