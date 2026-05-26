@@ -1,7 +1,7 @@
 # 行业情报收集系统进度
 
-- 最后更新时间：2026-05-26 17:00:30 CST
-- 当前阶段：最终项目目标验收完成，页面数据已刷新，NAS/Gitea/Bark/Claude review 闭环已验证，准备提交最终记录
+- 最后更新时间：2026-05-26 17:12:50 CST
+- 当前阶段：继续推进无人值守开发 Agent，本轮前端高级筛选摘要和基础回归测试已完成并通过验证
 
 ## 项目总目标
 
@@ -64,6 +64,7 @@
 - [!] 阻塞但已降级：`superpowers` 插件在当前环境不可用，已改用现有 Codex 工具完成最终验收。
 - [!] 阻塞但已降级：NAS SSH 端口可达但当前用户无免密登录权限，不能直接远程安装 cron；已以本地等价 NAS 流程和 Gitea 同步完成验证。
 - [x] 已完成：最终端到端验收，使用真实可用源加 mock 兜底生成 2026-05-26 晚报，刷新 `public-data`，并验证本地网页能读取 57 条事件和最新报告。
+- [x] 已完成：继续推进无人值守开发 Agent，给高级筛选折叠摘要增加“已启用 N 个筛选”，并新增 `pnpm test` / `pnpm test:web` 基础前端逻辑回归入口。
 
 ## 最近完成内容
 
@@ -138,6 +139,9 @@
 - 2026-05-26 15:45 CST 完成 TASK-11：修改 `src/web/app.js`，新增分区展开状态、报告归档展开状态，并将线上只读反馈提示移动到反馈按钮旁边。
 - 2026-05-26 15:45 CST 完成 TASK-11：修改 `src/web/styles.css`，补充折叠筛选、展开按钮、只读提示和移动端适配样式；更新 `docs/MOBILE_UI_REVIEW.md` 和 `decision_log.md`。
 - 2026-05-26 15:45 CST 完成 TASK-11：未改导出器、NAS 脚本、Bark、API 或静态 `events.json` 懒加载逻辑。
+- 2026-05-26 17:11 CST 继续推进无人值守开发 Agent：新增 `src/web/filter-summary.js`，用纯函数生成高级筛选折叠摘要，默认显示“分类、来源、标签、反馈”，启用分类、来源、实体、标签和反馈项后显示“已启用 N 个筛选”。
+- 2026-05-26 17:11 CST 新增 `tests/filter-summary.test.mjs`、`pnpm test` 和 `pnpm test:web`，用 Node 内置测试跑前端核心纯逻辑，不引入新的浏览器测试依赖。
+- 2026-05-26 17:11 CST 修改 `src/web/app.js`、`src/web/index.html`、`src/server.ts`、`scripts/nas-web-preview.sh`、`docs/NAS_WEB_PUBLISH.md`、`docs/STATIC_WEB_MODE.md`，确保本地 Express、NAS 静态预览和线上静态部署都会带上新增前端模块。
 
 ## 下一步动作
 
@@ -148,7 +152,7 @@
 5. 后续可进一步打磨“一图读懂”的视觉层级和真实来源状态。
 6. 正式打开 Bark 推送前，确认 `BARK_NOTIFY_URL` / `BARK_KEY` 只从 NAS 本地 `.env.local` 注入，不进入 Git；先用 `BARK_DRY_RUN=true` 验证文案。
 7. 把 `PUBLISH_DIR` 指向真实 NAS/线上网页数据目录后，再跑一次非隔离的 `pnpm nas:daily -- noon` 验证发布目录。
-8. 后续可给高级筛选摘要增加“已启用筛选数量”，让用户收起后仍能看出当前过滤状态。
+8. 后续可把前端纯逻辑测试继续扩展到静态搜索、时间线和只读反馈禁用逻辑。
 
 ## 最终验证记录
 
@@ -258,6 +262,11 @@
 - 2026-05-26 15:45 CST TASK-10 验证：构造 `data/runtime/task10-public` 和 `data/runtime/task10-publish`，调用实际 `publish_public_data` 函数后，`overview.json`、`events.json`、`meta.json`、`reports/test.html` 同时发布成功，旧目录保留为 `data/runtime/task10-publish.previous`。
 - 2026-05-26 15:45 CST TASK-10 验证：构造缺失 `PUBLIC_DATA_DIR` 的失败路径，函数返回 13，旧 `data/runtime/task10-fail-publish/overview.json` 和 `events.json` 未被删除或改写。
 - 2026-05-26 15:45 CST TASK-10 验证：`git diff --check` 通过。
+- 2026-05-26 17:12 CST 验证：`pnpm test` 通过，2 个 Node 内置测试均通过，覆盖高级筛选默认摘要和启用计数。
+- 2026-05-26 17:12 CST 验证：`node --check src/web/app.js`、`node --check src/web/filter-summary.js`、`bash -n scripts/nas-web-preview.sh`、`git diff --check` 均通过。
+- 2026-05-26 17:12 CST 验证：`pnpm typecheck`、`pnpm build` 均通过。
+- 2026-05-26 17:12 CST 验证：使用隔离静态目录 `data/runtime/filter-summary-public` 导出 57 条事件、57 张知识卡、34 份报告；本地服务 `http://127.0.0.1:3894/filter-summary.js` 和 `/public-data/overview.json` 均返回 200。
+- 2026-05-26 17:12 CST 浏览器验证：打开 `http://127.0.0.1:3894/` 无 console error；展开高级筛选后选择分类、填写实体、勾选收藏，摘要显示“已启用 3 个筛选”；点击搜索后摘要仍保持该状态。
 - 2026-05-26 15:44 CST TASK-12 验证：已自查 `package.json` 中存在 `nas:daily`、`export:site`、`notify:bark`、`serve`、`report:morning/noon/night`；`git diff --check` 通过。
 - 2026-05-26 15:45 CST TASK-11 验证：`node --check src/web/app.js`、`pnpm typecheck`、`pnpm build`、`git diff --check` 均通过。
 - 2026-05-26 15:45 CST TASK-11 验证：应用内浏览器控制通道返回无活动面板，已改用本机 Chrome 无头验证。
@@ -282,3 +291,11 @@
 - 2026-05-26 17:00 CST 最终日更：使用 `DATABASE_URL=./data/runtime/demo.sqlite`、`REPORT_OUTPUT_DIR=./data/runtime/reports`、`PUBLIC_DATA_DIR=./public-data` 运行 `pnpm nas:daily -- night` 成功，生成 2026-05-26 晚报，新增 41 条、持续更新 5 条、高分 4 条。
 - 2026-05-26 17:00 CST 页面数据验证：`http://localhost:3887/public-data/overview.json` 显示 57 条事件；`events.json` 无缺失来源和异常协议 URL；最新 Top 事件包含鸿蒙智行起诉自媒体、华为 FreeClip 2、传音 Infinix Hot 70。
 - 2026-05-26 17:00 CST 知识库验证：`kb:search` 命中“鸿蒙智行”和“支付宝 AI 钱包”；其中一次并发搜索短暂 `database is locked`，等待后重试成功，已记录到 `error_log.md`。
+- 2026-05-26 18:47 CST 完成 E 风格前端推进：按用户选定的「报纸头版 / 情报日报」方向，把首页改为 `RADAR DAILY / 情报日报` masthead、头版头条、头版简报栏、编辑精选三栏和下方工作台；搜索/高级筛选已进入头版右侧简报栏。
+- 2026-05-26 18:47 CST 完成 E 风格交互修复：新增 `src/web/editorial-frontpage.js`，头条不再重复进入“重点信号”；非首页刷新通过显式 `viewMode` 保持头版空状态；头条来源链接不再处于 button-like 容器内，普通事件卡补齐键盘选择语义；服务端补 `/editorial-frontpage.js` 路由避免 ESM 404。
+- 2026-05-26 18:47 CST E 风格验证：`pnpm test` 通过，11 个 Node 内置测试均通过；`pnpm test:web` 覆盖筛选摘要、头版模型、静态模块路由、头版 DOM/语义回归。
+- 2026-05-26 18:47 CST E 风格验证：`node --check src/web/app.js && node --check src/web/filter-summary.js && node --check src/web/editorial-frontpage.js`、`pnpm typecheck`、`pnpm build`、`git diff --check` 均通过。
+- 2026-05-26 18:47 CST E 风格验证：使用隔离 demo 数据导出 `data/runtime/frontpage-e-public` 成功，导出 57 条事件、57 张知识卡、34 份报告索引。
+- 2026-05-26 18:47 CST 浏览器验证：静态模式 `http://127.0.0.1:3895/` 显示头版、搜索位于简报栏、头条 root 无 `data-event-id`/role/tabindex、390px 宽度无横向溢出、搜索按钮 44px、console 无 error/warning。
+- 2026-05-26 18:47 CST 浏览器验证：API 模式 `http://127.0.0.1:3896/` 搜索 OPPO 后点击收藏反馈，仍保持“搜索结果”视图且头版不恢复可点击首页内容，console 无 error/warning。
+- 2026-05-26 18:47 CST Review：子 agent 复审确认无 blocking/important 问题；Claude 聚焦 review 完成于 `.reviews/archive/20260526T103556Z.md`，指出头条重复、头条交互语义和 viewMode 字符串判断等问题，均已修复；后续两次当前版本 Claude rerun 因 CLI 超时写入 `.reviews/latest.md` 为基础设施失败。

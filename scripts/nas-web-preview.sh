@@ -58,6 +58,7 @@ validate_port
 require_file "${WEB_SOURCE_DIR}/index.html"
 require_file "${WEB_SOURCE_DIR}/styles.css"
 require_file "${WEB_SOURCE_DIR}/app.js"
+require_file "${WEB_SOURCE_DIR}/filter-summary.js"
 
 [[ -d "$PUBLIC_DATA_SOURCE" ]] || fail "public data directory does not exist: ${PUBLIC_DATA_SOURCE}. Set PUBLIC_DATA_DIR=/path/to/public-data after running the static export."
 require_file "${PUBLIC_DATA_SOURCE}/overview.json"
@@ -75,7 +76,9 @@ esac
 
 cp "${WEB_SOURCE_DIR}/index.html" "$PREVIEW_DIR/index.html"
 cp "${WEB_SOURCE_DIR}/styles.css" "$PREVIEW_DIR/styles.css"
-cp "${WEB_SOURCE_DIR}/app.js" "$PREVIEW_DIR/app.js"
+for js_file in "${WEB_SOURCE_DIR}"/*.js; do
+  cp "$js_file" "$PREVIEW_DIR/$(basename "$js_file")"
+done
 
 rm -rf -- "$PREVIEW_PUBLIC_DIR"
 mkdir -p "$PREVIEW_PUBLIC_DIR"

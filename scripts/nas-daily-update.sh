@@ -253,6 +253,19 @@ log "PUBLIC_DATA_DIR=${PUBLIC_DATA_DIR}"
 run_stage "generate report" run_report
 run_stage "export static data" run_export_site
 run_stage "publish static data" publish_public_data
+
+# ── push to github pages ──────────────────────────────────────
+# 仅当 ENABLE_GITHUB_PAGES_PUSH=true 时才执行；默认 false，不影响现有用户
+if [[ "${ENABLE_GITHUB_PAGES_PUSH:-false}" == "true" ]]; then
+  CURRENT_STAGE="push to github pages"
+  log "START push to github pages"
+  bash scripts/publish-github-pages.sh \
+    || log "GitHub Pages push failed; NAS local result is kept."
+  log "DONE push to github pages"
+else
+  log "SKIP push to github pages (ENABLE_GITHUB_PAGES_PUSH is not true)"
+fi
+
 run_stage "collect stats" collect_stats
 
 UPDATED_AT="$(date '+%F %T %Z')"

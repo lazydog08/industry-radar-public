@@ -8,9 +8,9 @@ NAS_LOG_DIR="${NAS_LOG_DIR:-${APP_DIR}/logs/nas-daily}"
 TIMEZONE="${TIMEZONE:-Asia/Shanghai}"
 CRON_LOG_RETENTION_DAYS="${CRON_LOG_RETENTION_DAYS:-14}"
 
-MORNING_TIME="${MORNING_TIME:-08:10}"
-NOON_TIME="${NOON_TIME:-12:10}"
-NIGHT_TIME="${NIGHT_TIME:-22:10}"
+MORNING_TIME="${MORNING_TIME:-}"
+NOON_TIME="${NOON_TIME:-12:30}"
+NIGHT_TIME="${NIGHT_TIME:-22:30}"
 
 MARKER_BEGIN="# >>> industry-radar nas-schedule managed block"
 MARKER_END="# <<< industry-radar nas-schedule managed block"
@@ -23,10 +23,13 @@ Environment:
   APP_DIR       Project directory. Defaults to this repository path.
   NAS_LOG_DIR   Log directory. Defaults to APP_DIR/logs/nas-daily.
   TIMEZONE      Cron timezone note. Defaults to Asia/Shanghai.
-  MORNING_TIME  Morning run time, HH:MM. Defaults to 08:10.
-  NOON_TIME     Noon run time, HH:MM. Defaults to 12:10.
-  NIGHT_TIME    Night run time, HH:MM. Defaults to 22:10.
+  MORNING_TIME  Morning run time, HH:MM. Empty string (default) means no morning cron.
+  NOON_TIME     Noon run time, HH:MM. Defaults to 12:30.
+  NIGHT_TIME    Night run time, HH:MM. Defaults to 22:30.
   CRON_LOG_RETENTION_DAYS  Delete cron wrapper logs older than this. Defaults to 14.
+
+Note: MORNING_TIME defaults to empty (no morning cron). Only NOON (12:30) and NIGHT (22:30)
+      are installed by default. Set MORNING_TIME=HH:MM to also install a morning cron.
 USAGE
 }
 
@@ -85,7 +88,9 @@ cron_line() {
 }
 
 print_cron_block() {
-  validate_time MORNING_TIME "$MORNING_TIME"
+  if [[ -n "$MORNING_TIME" ]]; then
+    validate_time MORNING_TIME "$MORNING_TIME"
+  fi
   validate_time NOON_TIME "$NOON_TIME"
   validate_time NIGHT_TIME "$NIGHT_TIME"
   validate_positive_integer CRON_LOG_RETENTION_DAYS "$CRON_LOG_RETENTION_DAYS"
@@ -95,7 +100,9 @@ print_cron_block() {
   printf '# Timezone: %s. Ensure the NAS system timezone is Asia/Shanghai if CRON_TZ is unsupported.\n' "$TIMEZONE"
   printf '# Cron wrapper logs are split by day and older than %s days are deleted.\n' "$CRON_LOG_RETENTION_DAYS"
   printf 'CRON_TZ=%s\n' "$TIMEZONE"
-  cron_line morning "$MORNING_TIME"
+  if [[ -n "$MORNING_TIME" ]]; then
+    cron_line morning "$MORNING_TIME"
+  fi
   cron_line noon "$NOON_TIME"
   cron_line night "$NIGHT_TIME"
   printf '%s\n' "$MARKER_END"

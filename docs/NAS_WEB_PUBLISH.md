@@ -19,6 +19,7 @@
   index.html
   styles.css
   app.js
+  filter-summary.js
   public-data/
     overview.json
     events.json
@@ -42,11 +43,11 @@ PUBLIC_DATA_DIR=/volume1/docker/industry-radar/data/public
 PUBLISH_DIR=/volume1/web/industry-radar/public-data
 ```
 
-`index.html`、`styles.css`、`app.js` 是页面壳，通常只在代码更新时手动同步一次：
+`index.html`、`styles.css` 和 `src/web/*.js` 是页面壳，通常只在代码更新时手动同步一次：
 
 ```bash
 mkdir -p /volume1/web/industry-radar
-cp src/web/index.html src/web/styles.css src/web/app.js /volume1/web/industry-radar/
+cp src/web/index.html src/web/styles.css src/web/*.js /volume1/web/industry-radar/
 ```
 
 之后 NAS 每日任务只需要刷新 `PUBLISH_DIR`。页面会优先读取 `/public-data/overview.json`，前端代码不需要重新构建。
@@ -80,7 +81,7 @@ Caddy 示例：
 }
 ```
 
-任意静态目录也可以使用同样结构：站点根目录放三个网页文件，站点根目录下的 `public-data/` 放 JSON 和报告文件。
+任意静态目录也可以使用同样结构：站点根目录放网页壳文件和 `src/web/*.js`，站点根目录下的 `public-data/` 放 JSON 和报告文件。
 
 ## 手机访问
 
@@ -95,7 +96,7 @@ http://NAS局域网IP:端口/public-data/overview.json
 
 ## 避免泄露 SQLite / logs / secrets
 
-- Web 根目录只放 `index.html`、`styles.css`、`app.js` 和 `public-data/`。
+- Web 根目录只放 `index.html`、`styles.css`、`src/web/*.js` 对应的前端脚本和 `public-data/`。
 - 不要把 `/volume1/docker/industry-radar`、仓库根目录、`data/runtime`、`logs`、`backups`、`.env.local` 设为 Web 根目录。
 - `DATABASE_URL`、`REPORT_OUTPUT_DIR`、`PUBLIC_DATA_DIR` 可以放在项目运行目录；只有 `PUBLISH_DIR` 指向 Web 公开目录下的 `public-data`。
 - `public-data` 里只应包含前端可公开展示的 JSON、报告索引和报告静态文件。上线前可直接打开 `/public-data/overview.json` 检查是否包含本地路径、Cookie、Token、密码或私人备注。
@@ -122,7 +123,7 @@ mv public-data.previous public-data
 
 ## 本地预览
 
-预览脚本会组装一个临时静态站点，只复制 `src/web/index.html`、`src/web/styles.css`、`src/web/app.js` 和公开数据目录到 `public-data/`，不会复制 `data/runtime`、`logs` 或 SQLite。
+预览脚本会组装一个临时静态站点，只复制 `src/web/index.html`、`src/web/styles.css`、`src/web/*.js` 和公开数据目录到 `public-data/`，不会复制 `data/runtime`、`logs` 或 SQLite。
 
 默认读取项目根目录的 `public-data`：
 

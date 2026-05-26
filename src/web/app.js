@@ -1,3 +1,6 @@
+import { buildFrontpageModel, frontpageStateForView } from "./editorial-frontpage.js";
+import { summarizeActiveFilters } from "./filter-summary.js";
+
 const SECTION_PREVIEW_LIMIT = 4;
 const REPORT_PREVIEW_LIMIT = 8;
 
@@ -6,6 +9,7 @@ const state = {
   selectedId: "",
   detailRequestId: 0,
   dataMode: "unknown",
+  viewMode: "home",
   readOnly: false,
   expandedSections: new Set(),
   reportsExpanded: false,
@@ -17,6 +21,7 @@ const state = {
   staticEventsError: null,
   staticNoticeShown: false,
   staticEventIndex: new Map(),
+  knowledgeHealth: null,
   facets: {
     sources: [],
     tags: [],
@@ -33,10 +38,14 @@ const els = {
   metricImportant: requireElement("metricImportant"),
   metricFollow: requireElement("metricFollow"),
   metricReports: requireElement("metricReports"),
+  frontpageLead: requireElement("frontpageLead"),
+  frontpageStats: requireElement("frontpageStats"),
+  editorialStrips: requireElement("editorialStrips"),
   sectionStats: requireElement("sectionStats"),
   sourceStatus: requireElement("sourceStatus"),
   infographic: requireElement("infographic"),
   query: requireElement("query"),
+  filterSummary: requireElement("filterSummary"),
   category: requireElement("category"),
   source: requireElement("source"),
   entity: requireElement("entity"),
@@ -397,6 +406,7 @@ function renderFacetControls(facets) {
   els.tagList.innerHTML = (facets.tags || [])
     .map((tag) => `<option value="${escapeAttr(tag)}"></option>`)
     .join("");
+  updateFilterSummary();
 }
 
 function renderReports(reports) {
@@ -440,11 +450,13 @@ function renderReports(reports) {
   }
 }
 
-function renderResults(events, title) {
+function renderResults(events, title, viewMode = "list") {
+  state.viewMode = viewMode;
   state.events = events;
   els.resultTitle.textContent = title;
   els.count.textContent = `${events.length} 条`;
   els.sections.innerHTML = "";
+  renderEmptyFrontpage(frontpageStateForView(state.viewMode).emptyMessage);
 
   if (!events.length) {
     els.results.innerHTML = `<div class="empty-state">没有找到匹配事件。可以换一个关键词，或先用 Mock 数据生成报告。</div>`;
@@ -453,19 +465,19 @@ function renderResults(events, title) {
   }
 
   els.results.innerHTML = events.map(eventCard).join("");
-  for (const card of els.results.querySelectorAll("[data-event-id]")) {
-    card.addEventListener("click", () => selectEvent(card.dataset.eventId));
-  }
+  bindEventSelection(els.results);
   selectEvent(state.selectedId && events.some((event) => event.id === state.selectedId) ? state.selectedId : events[0].id);
 }
 
 function renderHome(events) {
+  state.viewMode = "home";
   state.events = events;
   els.resultTitle.textContent = "今日情报分区";
   els.count.textContent = `${events.length} 条`;
   els.results.innerHTML = "";
 
   if (!events.length) {
+    renderEmptyFrontpage("暂无情报头版。先运行一次报告生成。");
     els.sections.innerHTML = `<div class="empty-state">暂无情报。先运行一次报告生成。</div>`;
     els.infographic.innerHTML = `<div class="empty-state">暂无可生成的一图读懂。</div>`;
     renderEmptyDetail();
@@ -473,7 +485,9 @@ function renderHome(events) {
   }
 
   const grouped = groupBySection(events);
-  const first = grouped.must_read[0] || grouped.developing[0] || grouped.video_ready[0] || events[0];
+  const frontpage = buildFrontpageModel(events, state.knowledgeHealth);
+  const first = frontpage.lead || grouped.must_read[0] || grouped.developing[0] || grouped.video_ready[0] || events[0];
+  renderFrontpage(frontpage, events, grouped);
   renderInfographic(first);
   els.sections.innerHTML = [
     scoreLegend(),
@@ -482,9 +496,7 @@ function renderHome(events) {
     sectionBlock("video_ready", "适合做视频", "视频潜力更高，不一定都是最新热点。", grouped.video_ready),
     sectionBlock("background", "背景知识", "旧闻、时间不明或低分内容，只作为资料沉淀。", grouped.background)
   ].join("");
-  for (const card of els.sections.querySelectorAll("[data-event-id]")) {
-    card.addEventListener("click", () => selectEvent(card.dataset.eventId));
-  }
+  bindEventSelection(els.sections);
   for (const button of els.sections.querySelectorAll("[data-section-toggle]")) {
     button.addEventListener("click", () => {
       const key = button.dataset.sectionToggle;
@@ -495,6 +507,132 @@ function renderHome(events) {
     });
   }
   selectEvent(state.selectedId && events.some((event) => event.id === state.selectedId) ? state.selectedId : first.id);
+}
+
+function renderFrontpage(model, events, grouped) {
+  if (!model.lead?.id) {
+    renderEmptyFrontpage("暂无可置顶的头版情报。");
+    return;
+  }
+
+  renderLeadStory(model.lead);
+  renderFrontpageStats(events, grouped);
+  renderEditorialStrips(model);
+  bindEventSelection(els.frontpageLead);
+  bindEventSelection(els.editorialStrips);
+}
+
+function renderLeadStory(event) {
+  delete els.frontpageLead.dataset.eventId;
+  els.frontpageLead.removeAttribute("role");
+  els.frontpageLead.removeAttribute("tabindex");
+  els.frontpageLead.innerHTML = `<div class="frontpage-kicker">头版头条</div>
+    <div class="frontpage-lead-head">
+      <h2>${escapeHtml(event.title || "未命名情报")}</h2>
+      ${scorePill(event)}
+    </div>
+    <p class="frontpage-summary">${escapeHtml(event.push_reason || event.summary || "暂无摘要。")}</p>
+    <dl class="frontpage-angles">
+      <dt>为什么重要</dt>
+      <dd>${escapeHtml(event.why_it_matters || "暂无明确影响说明。")}</dd>
+      <dt>内容切入</dt>
+      <dd>${escapeHtml(event.content_angle || "暂无可用选题角度。")}</dd>
+    </dl>
+    <button type="button" class="event-select-button" data-event-id="${escapeAttr(event.id)}">打开知识卡</button>
+    <div class="source-list compact-source-list">${renderCompactSourceLinks(event.sources, 4) || `<p class="muted">暂无来源链接</p>`}</div>`;
+}
+
+function renderFrontpageStats(events, grouped) {
+  const rows = [
+    ["今日必看", grouped.must_read.length],
+    ["正在发酵", grouped.developing.length],
+    ["适合做视频", grouped.video_ready.length],
+    ["背景知识", grouped.background.length]
+  ];
+  els.frontpageStats.innerHTML = `<div class="frontpage-stat-grid">
+      ${rows.map(([label, value]) => `<div><b>${Number(value || 0)}</b><span>${escapeHtml(label)}</span></div>`).join("")}
+    </div>
+    <p class="muted">${escapeHtml(frontpageSourceStatus(events, grouped))}</p>`;
+}
+
+function frontpageSourceStatus(events, grouped) {
+  return `${state.readOnly ? "线上只读 · " : ""}高置信 ${countBy(events, (event) => event.confidence === "high")} 条 · 旧闻/背景 ${
+    grouped.background.length
+  } 条 · 降级或示例数据会被封顶标注`;
+}
+
+function renderEditorialStrips(model) {
+  els.editorialStrips.innerHTML = [
+    editorialStrip("top-signals", "重点信号", "按 Radar Score 排序，先判断今天真正该看的变化。", model.topSignals),
+    editorialStrip("video-candidates", "可拍选题", "视频潜力更高，适合继续拆角度、找素材。", model.videoCandidates),
+    editorialStrip("needs-evidence", "待补证据", "低置信、单来源或存在封顶标记，需要继续交叉验证。", model.needsEvidence)
+  ].join("");
+}
+
+function editorialStrip(key, title, subtitle, events) {
+  const items = (events || []).filter((event) => event?.id);
+  return `<section class="editorial-strip" data-strip="${escapeAttr(key)}">
+    <div class="editorial-strip-head">
+      <div>
+        <h3>${escapeHtml(title)}</h3>
+        <p>${escapeHtml(subtitle)}</p>
+      </div>
+      <span>${items.length} 条</span>
+    </div>
+    <div class="editorial-strip-items">
+      ${items.length ? items.map(editorialStripItem).join("") : `<div class="empty-state compact-empty">暂无。</div>`}
+    </div>
+  </section>`;
+}
+
+function editorialStripItem(event) {
+  const score = scoreMeta(event);
+  return `<article class="editorial-strip-item" data-event-id="${escapeAttr(event.id)}" role="button" tabindex="0">
+    <div>
+      <strong>${escapeHtml(event.title || "未命名情报")}</strong>
+      <span class="${escapeAttr(score.className)}">${escapeHtml(score.level)}${score.score}</span>
+    </div>
+    <p>${escapeHtml(briefEventSummary(event))}</p>
+    <small>${escapeHtml(categoryLabel(event.category))} · ${escapeHtml(confidenceLabel(event.confidence))} · 视频潜力 ${Number(event.video_potential || 1)}/5</small>
+  </article>`;
+}
+
+function briefEventSummary(event) {
+  return event.push_reason || event.summary || event.why_it_matters || "暂无摘要。";
+}
+
+function renderEmptyFrontpage(message) {
+  delete els.frontpageLead.dataset.eventId;
+  els.frontpageLead.removeAttribute("role");
+  els.frontpageLead.removeAttribute("tabindex");
+  els.frontpageLead.classList.remove("selected");
+  els.frontpageLead.innerHTML = `<div class="empty-state">${escapeHtml(message)}</div>`;
+  els.frontpageStats.innerHTML = `<div class="empty-state compact-empty">暂无分区简报。</div>`;
+  els.editorialStrips.innerHTML = `<div class="empty-state compact-empty">暂无编辑精选。</div>`;
+}
+
+function bindEventSelection(root) {
+  if (root.dataset.eventSelectionBound === "true") return;
+  root.dataset.eventSelectionBound = "true";
+  root.addEventListener("click", (event) => {
+    const target = eventSelectionTarget(event);
+    if (target) selectEvent(target.dataset.eventId);
+  });
+  root.addEventListener("keydown", (event) => {
+    if (event.key !== "Enter" && event.key !== " ") return;
+    const target = eventSelectionTarget(event);
+    if (!target) return;
+    event.preventDefault();
+    selectEvent(target.dataset.eventId);
+  });
+}
+
+function eventSelectionTarget(event) {
+  if (!(event.target instanceof Element) || !(event.currentTarget instanceof Element)) return null;
+  if (event.target.closest("a")) return null;
+  const target = event.target.closest("[data-event-id]");
+  if (!target || !event.currentTarget.contains(target)) return null;
+  return target;
 }
 
 function sectionBlock(key, title, subtitle, events) {
@@ -533,7 +671,7 @@ function eventCard(event) {
     .map((entity) => `<span class="pill">${escapeHtml(entityName(entity))}</span>`)
     .join("");
 
-  return `<article class="event-card${selected}" data-event-id="${escapeAttr(event.id)}">
+  return `<article class="event-card${selected}" data-event-id="${escapeAttr(event.id)}" role="button" tabindex="0">
     <div class="card-top">
       <h3>${escapeHtml(event.title)}</h3>
       ${scorePill(event)}
@@ -767,10 +905,20 @@ async function refreshOverviewOnly() {
   renderOverview(data);
   renderKnowledgeHealth(data.knowledgeHealth);
   renderReports(data.reports || []);
-  renderInfographic((data.events || [])[0] || state.events[0]);
+  const events = data.events || state.events || [];
+  const grouped = groupBySection(events);
+  const frontpage = buildFrontpageModel(events, state.knowledgeHealth);
+  const frontpageState = frontpageStateForView(state.viewMode);
+  if (frontpageState.shouldRenderFrontpage) {
+    renderFrontpage(frontpage, events, grouped);
+    renderInfographic(frontpage.lead || events[0]);
+  } else {
+    renderEmptyFrontpage(frontpageState.emptyMessage);
+  }
 }
 
 function renderKnowledgeHealth(health) {
+  state.knowledgeHealth = health || null;
   if (!health) {
     els.knowledgeHealth.innerHTML = `<p class="muted">暂无体检数据。</p>`;
     return;
@@ -940,6 +1088,7 @@ function buildStaticKnowledgeHealth(events) {
 
 async function search() {
   try {
+    updateFilterSummary();
     setLoading("正在搜索...");
     const params = new URLSearchParams();
     const q = els.query.value.trim();
@@ -955,16 +1104,29 @@ async function search() {
 
     if (state.readOnly) {
       const events = filterStaticEvents(await ensureStaticAllEvents(), params);
-      renderResults(events, params.toString() ? "搜索结果" : "最近 7 天重要事件");
+      renderResults(events, params.toString() ? "搜索结果" : "最近 7 天重要事件", params.toString() ? "search" : "list");
       return;
     }
 
     const endpoint = params.toString() ? `/api/search?${params.toString()}` : "/api/events/recent?days=7";
     const data = await fetchJson(endpoint);
-    renderResults(data.events || [], params.toString() ? "搜索结果" : "最近 7 天重要事件");
+    renderResults(data.events || [], params.toString() ? "搜索结果" : "最近 7 天重要事件", params.toString() ? "search" : "list");
   } catch (error) {
     renderError(error);
   }
+}
+
+function updateFilterSummary() {
+  els.filterSummary.textContent = summarizeActiveFilters({
+    category: els.category.value,
+    source: els.source.value,
+    entity: els.entity.value,
+    tag: els.tag.value,
+    favorite: els.favorite.checked,
+    follow: els.follow.checked,
+    usedForVideo: els.usedForVideo.checked,
+    ignored: els.ignored.checked
+  });
 }
 
 async function loadTimeline() {
@@ -1000,6 +1162,7 @@ function setLoading(message) {
 }
 
 function renderError(error) {
+  renderEmptyFrontpage("情报头版暂不可用。请确认数据已发布或本地服务正在运行。");
   els.results.innerHTML = `<div class="empty-state">加载失败：${escapeHtml(error.message)}</div>`;
   renderEmptyDetail();
 }
@@ -1197,6 +1360,10 @@ for (const input of [els.query, els.entity, els.tag, els.timelineQuery]) {
 
 for (const input of [els.category, els.source, els.favorite, els.follow, els.usedForVideo, els.ignored]) {
   input.addEventListener("change", search);
+}
+
+for (const input of [els.category, els.source, els.entity, els.tag, els.favorite, els.follow, els.usedForVideo, els.ignored]) {
+  input.addEventListener("input", updateFilterSummary);
 }
 
 bootstrap();

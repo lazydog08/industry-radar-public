@@ -35,6 +35,24 @@ app.get("/app.js", (_req, res) => {
   res.type("application/javascript").send(fs.readFileSync(jsPath, "utf8"));
 });
 
+app.get("/filter-summary.js", (_req, res) => {
+  const jsPath = path.join(webDir, "filter-summary.js");
+  if (!fs.existsSync(jsPath)) {
+    res.status(404).type("text/plain").send("filter-summary.js not found");
+    return;
+  }
+  res.type("application/javascript").send(fs.readFileSync(jsPath, "utf8"));
+});
+
+app.get("/editorial-frontpage.js", (_req, res) => {
+  const jsPath = path.join(webDir, "editorial-frontpage.js");
+  if (!fs.existsSync(jsPath)) {
+    res.status(404).type("text/plain").send("editorial-frontpage.js not found");
+    return;
+  }
+  res.type("application/javascript").send(fs.readFileSync(jsPath, "utf8"));
+});
+
 function withStore<T>(fn: (store: Store) => T): T {
   const store = new Store(config);
   try {

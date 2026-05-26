@@ -124,7 +124,7 @@ http://localhost:3877/public-data/overview.json
 ## 给集成负责人的约定
 
 - TASK-01 导出的 `overview.json` 应尽量包含完整事件详情，避免线上详情页字段不足。
-- 在线静态部署时，确保 `index.html`、`app.js`、`styles.css` 和 `public-data/overview.json` 在同一个站点根路径下。
+- 在线静态部署时，确保 `index.html`、`styles.css`、`src/web/*.js` 对应的前端脚本和 `public-data/overview.json` 在同一个站点根路径下。
 - NAS 更新数据时需要一起替换 `public-data/overview.json`、`public-data/events.json` 和报告文件；前端无需重新构建。
 - Bark 推送里的线上地址应指向静态网页入口，而不是本地 Express API。
 - NAS 部署闭环见 [NAS_DAILY_UPDATE.md](NAS_DAILY_UPDATE.md)，静态导出结构见 [STATIC_EXPORT.md](STATIC_EXPORT.md)，Bark 配置见 [BARK_SETUP.md](BARK_SETUP.md)。

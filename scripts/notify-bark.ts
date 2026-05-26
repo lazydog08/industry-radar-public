@@ -12,6 +12,13 @@ interface NotificationPayload {
   title: string;
 }
 
+interface OverviewEvent {
+  title?: string;
+  radar_score?: number;
+  radar_section?: string;
+  radar_level?: string;
+}
+
 const env = loadEnv();
 const payload = buildPayload(env);
 
@@ -79,6 +86,15 @@ function buildPayload(values: EnvMap): NotificationPayload {
     `网页地址：${siteUrl || "未配置"}`
   ];
 
+  // 成功时尝试附加「今日必看 Top」
+  if (status === "success" && isTruthy(values.BARK_INCLUDE_TOP ?? "true")) {
+    const topLines = loadTopItems(values);
+    if (topLines.length > 0) {
+      lines.push("", "今日必看：");
+      lines.push(...topLines);
+    }
+  }
+
   return {
     body: lines.join("\n"),
     dryRun: isTruthy(values.BARK_DRY_RUN),
@@ -86,6 +102,50 @@ function buildPayload(values: EnvMap): NotificationPayload {
     targetLabel: values.BARK_NOTIFY_URL ? "BARK_NOTIFY_URL" : "BARK_KEY",
     title
   };
+}
+
+/** 读取 overview.json，返回最多 3 条「今日必看」格式行；失败时静默降级返回空数组 */
+function loadTopItems(values: EnvMap): string[] {
+  const publicDataDir = values.PUBLIC_DATA_DIR?.trim() || "./public-data";
+  const overviewPath = resolve(process.cwd(), publicDataDir, "overview.json");
+
+  let events: OverviewEvent[] = [];
+  try {
+    if (!existsSync(overviewPath)) {
+      console.error(`[notify-bark] warning: overview.json not found at ${publicDataDir}/overview.json, skipping Top`);
+      return [];
+    }
+    const raw = readFileSync(overviewPath, "utf-8");
+    const parsed = JSON.parse(raw) as { events?: unknown };
+    if (!Array.isArray(parsed.events)) {
+      console.error("[notify-bark] warning: overview.json has no events array, skipping Top");
+      return [];
+    }
+    events = parsed.events as OverviewEvent[];
+  } catch {
+    console.error("[notify-bark] warning: failed to parse overview.json, skipping Top");
+    return [];
+  }
+
+  // 先取 must_read，再按 radar_score 降序补足
+  const mustRead = events.filter(e => e.radar_section === "must_read");
+  const others = events
+    .filter(e => e.radar_section !== "must_read")
+    .sort((a, b) => (b.radar_score ?? 0) - (a.radar_score ?? 0));
+
+  const combined = [...mustRead, ...others].slice(0, 3);
+
+  if (combined.length === 0) {
+    return ["今日无强信号，可休息一日"];
+  }
+
+  return combined.map(e => {
+    const level = e.radar_level || "B";
+    const rawTitle = (e.title || "").trim();
+    // 截断到 30 个字符（中英文均计一位）
+    const truncated = rawTitle.length > 30 ? rawTitle.slice(0, 30) + "…" : rawTitle;
+    return `• 【${level}】${truncated}`;
+  });
 }
 
 function buildBarkUrl(values: EnvMap, payload: NotificationPayload): URL {
@@ -99,7 +159,7 @@ function buildBarkUrl(values: EnvMap, payload: NotificationPayload): URL {
   const basePath = url.pathname.replace(/\/+$/, "");
   url.pathname = `${basePath}/${encodeURIComponent(payload.title)}/${encodeURIComponent(payload.body)}`;
 
-  const sound = sanitizeQueryValue(values.BARK_SOUND);
+  const sound = resolveSound(values);
   if (sound) url.searchParams.set("sound", sound);
 
   const group = sanitizeQueryValue(values.BARK_GROUP || "行业情报");
@@ -108,6 +168,19 @@ function buildBarkUrl(values: EnvMap, payload: NotificationPayload): URL {
   if (payload.siteUrl) url.searchParams.set("url", payload.siteUrl);
 
   return url;
+}
+
+/** 按优先级决定推送声音：失败强制 alarm；用户显式设置时尊重；否则按 run type 给默认值 */
+function resolveSound(values: EnvMap): string {
+  const status = normalizeStatus(values.BARK_STATUS);
+  if (status === "failed") {
+    return "alarm";
+  }
+  const userSound = sanitizeQueryValue(values.BARK_SOUND);
+  if (userSound) return userSound;
+  const runType = (values.BARK_RUN_TYPE || values.NAS_RUN_TYPE || "noon").trim().toLowerCase();
+  if (runType === "night") return "bell";
+  return "birdsong";
 }
 
 function assertBarkResponse(httpStatus: number, responseText: string): void {
