@@ -111,3 +111,10 @@
 - 影响：只影响人工完成通知，不影响已推送的代码、NAS 自动化或页面运行。
 - 处理：改用 `curl -4 --max-time 20` 重试，Bark 完成通知发送成功；后续 NAS 正式流程使用 `scripts/notify-bark.ts`，已通过 dry-run 和协议校验。
 - 状态：[x] 已完成
+
+## Error 017
+- 时间：2026-05-26 16:49:43 CST
+- 现象：NAS 专项完整 diff 版 Claude Code 审查两次超时；首次脚本级审查返回 P1 风险，最终复审又因输入截断无法确认部分文件。
+- 影响：如果直接信任超时或截断结果，会漏掉 NAS 运维脚本里的真实问题。
+- 处理：改用完整脚本内容做 focused Claude review；修复 REPO_URL 凭据日志脱敏、Bark dry-run 清空继承的 `BARK_NOTIFY_URL`、健康检查隔离 build、端口校验、cron 日志保留和日更日志清理；最终 Claude 复审确认剩余 cron 日志 P1 已解决。
+- 状态：[x] 已完成

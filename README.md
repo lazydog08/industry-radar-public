@@ -88,12 +88,12 @@ pnpm nas:daily -- night
 
 NAS 上推荐只负责采集、入库、评分、生成报告和更新静态数据；线上网页只读取 `public-data`，不直连 SQLite，也不提供写入能力。
 
-1. 从本地 Gitea 拉取仓库：
+1. 从本地 Gitea 拉取或升级仓库：
 
 ```bash
-git clone http://192.168.31.50:3000/lazydog/industry-radar-kb.git
-cd industry-radar-kb
-pnpm install
+REPO_URL=http://192.168.31.50:3000/lazydog/industry-radar-kb.git \
+APP_DIR=/volume1/docker/industry-radar \
+bash scripts/nas-bootstrap.sh
 ```
 
 2. 创建 NAS 本地配置，不提交进 Git：
@@ -119,7 +119,20 @@ BARK_PUBLIC_URL=https://example.com/industry-radar/
 pnpm nas:daily -- noon
 ```
 
-4. 确认网页目录能访问 `public-data/overview.json` 和 `public-data/events.json` 后，再配置 NAS 定时任务。Bark 配置详见 `docs/BARK_SETUP.md`，静态导出和只读网页细节详见 `docs/STATIC_EXPORT.md`、`docs/STATIC_WEB_MODE.md`。
+4. 跑 NAS 健康检查：
+
+```bash
+pnpm nas:health
+```
+
+5. 确认网页目录能访问 `public-data/overview.json` 和 `public-data/events.json` 后，再配置 NAS 定时任务：
+
+```bash
+pnpm nas:schedule -- print-cron
+pnpm nas:schedule -- install
+```
+
+NAS 安装、定时、验收、静态发布和告警排障分别见 `docs/NAS_INSTALL.md`、`docs/NAS_SCHEDULE.md`、`docs/NAS_ACCEPTANCE.md`、`docs/NAS_WEB_PUBLISH.md`、`docs/NAS_OBSERVABILITY.md`。Bark 配置详见 `docs/BARK_SETUP.md`，静态导出和只读网页细节详见 `docs/STATIC_EXPORT.md`、`docs/STATIC_WEB_MODE.md`。
 
 不要提交 `.env.local`、SQLite 数据库、`logs/`、`public-data/`、`data/runtime/` 或任何 Bark Key / Cookie / Token。
 

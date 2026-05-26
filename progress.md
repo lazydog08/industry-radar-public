@@ -1,7 +1,7 @@
 # 行业情报收集系统进度
 
-- 最后更新时间：2026-05-26 16:06:52 CST
-- 当前阶段：集成改动已提交并推送本地 Gitea，Bark 完成通知已发送，准备交付审查结果
+- 最后更新时间：2026-05-26 16:49:43 CST
+- 当前阶段：NAS 专项拆分任务已集成验收，Claude Code 复审剩余 P1 已修复，准备提交推送
 
 ## 项目总目标
 
@@ -56,6 +56,11 @@
 - [x] 已完成：并行任务 TASK-10，NAS 发布改为先构建 `.next-时间戳` 候选目录，再切换到 `PUBLISH_DIR`，并保留 `${PUBLISH_DIR}.previous`。
 - [x] 已完成：并行任务 TASK-12，统一 README/静态网页文档里的默认端口说明，并收口 NAS 定时抓取、静态发布和 Bark 通知部署闭环。
 - [x] 已完成：并行任务 TASK-11，优化前端 UX：高级筛选默认折叠、情报分区和报告归档可展开、线上只读反馈提示贴近按钮区。
+- [x] 已完成：NAS-TASK-01，补齐 NAS 一键安装/升级入口，覆盖 Gitea 拉取、依赖安装、目录创建和 `.env.local` 安全配置。
+- [x] 已完成：NAS-TASK-02，补齐 NAS 定时任务安装/卸载/状态检查入口，支持早/午/晚三次运行并避免重复安装。
+- [x] 已完成：NAS-TASK-03，补齐 NAS 线上静态发布和网页端部署说明，明确发布目录、回滚目录和手机/桌面访问路径。
+- [x] 已完成：NAS-TASK-04，补齐 NAS 健康检查和验收脚本，验证 Git、依赖、报告、静态 JSON、发布目录和 Bark dry-run。
+- [x] 已完成：NAS-TASK-05，补齐 Bark 告警与运行日志排障闭环，保证成功/失败通知、隐私边界和故障恢复说明可执行。
 
 ## 最近完成内容
 
@@ -263,3 +268,8 @@
 - 2026-05-26 16:03 CST 集成复验：重新导出 `public-data` 后，浏览器打开 `http://localhost:3887/` 显示线上只读模式，高级筛选默认收起，报告链接无 `#` 坏链接，反馈按钮旁显示只读提示。
 - 2026-05-26 16:04 CST 提交前检查：`node --check src/web/app.js`、`bash -n scripts/nas-daily-update.sh`、`pnpm typecheck`、`pnpm build`、`git diff --check` 和 Bark dry-run 均通过；运行时目录、公开导出目录、日志和 `.reviews` 均保持未跟踪忽略状态。
 - 2026-05-26 16:06 CST 提交 `15799c8 Complete NAS automation and Bark notifications` 已推送到本地 Gitea `origin/main`；随后 Bark 完成通知发送成功，中途通知重试问题已记录到 `error_log.md`。
+- 2026-05-26 16:08 CST 按用户要求进入 NAS 专项拆分：目标是把 NAS 端需要实现的安装、定时、发布、验收、Bark 告警拆给多 agent 并行执行，由主 agent 集成验收并让 Claude Code 做最终 review。
+- 2026-05-26 16:49 CST 完成 NAS-TASK-01 至 NAS-TASK-05 集成：新增 `nas-bootstrap`、`nas-schedule`、`nas-web-preview`、`nas-healthcheck`、`nas-bark-test` 五个 NAS 脚本和对应文档，并在 `package.json` 增加 `pnpm nas:bootstrap`、`pnpm nas:schedule`、`pnpm nas:health`、`pnpm nas:bark`、`pnpm nas:web-preview` 快捷入口。
+- 2026-05-26 16:49 CST 验收：`pnpm typecheck`、`pnpm build`、`git diff --check`、全部 NAS 脚本 `bash -n`、`pnpm nas:schedule -- print-cron`、`pnpm nas:bark -- failure`、`pnpm nas:daily -- morning`、`pnpm nas:health` 均通过。
+- 2026-05-26 16:49 CST 验收：`nas-web-preview` 用隔离静态数据启动到 `127.0.0.1:3899`，`/` 和 `/public-data/overview.json` 返回正常；随后已停止临时预览服务。
+- 2026-05-26 16:49 CST Claude Code 审查：完整 diff 版超时后改用脚本级审查；先发现 REPO_URL 脱敏、Bark dry-run 继承真实 URL、隔离 build、日志保留等 P1 风险，均已修复；最终复审确认剩余 cron 日志保留 P1 已解决。

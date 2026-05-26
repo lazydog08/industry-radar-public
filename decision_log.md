@@ -132,3 +132,21 @@
 - 决策：文档统一以 `3877` 作为本地默认端口，`3887` 只描述为当前开发机 launchctl 演示服务；NAS 正式更新以 `pnpm nas:daily -- morning|noon|night` 为主闭环。
 - 原因：新部署用户应按默认 `pnpm serve` 端口访问；当前 `3887` 是为了不中断本机演示单独托管的服务。NAS 定时任务比内部调度器更适合发布静态目录、查看日志和发送 Bark。
 - 影响：README 和静态网页文档会避免把新用户引到 `3887`；部署说明统一为“Gitea 拉取 -> `.env.local` -> `pnpm nas:daily -- noon` -> 发布 `public-data` -> Bark 通知”。
+
+## Decision 023
+- 时间：2026-05-26 16:08:59 CST
+- 决策：NAS 专项继续采用多 agent 并行拆分，但每个 agent 只负责互不重叠的文件范围：安装升级、定时任务、静态发布、健康验收、Bark/日志闭环。
+- 原因：NAS 端上线需要多个脚本和文档同时补齐；拆成独立文件能减少冲突，主 agent 负责最终集成、验收和 Claude Code 复审。
+- 影响：本轮不会把真实 Bark Key、NAS 账号、Cookie 或私有路径写入仓库；所有真实 NAS 参数继续通过 `.env.local` 或用户现场配置注入。
+
+## Decision 024
+- 时间：2026-05-26 16:49:43 CST
+- 决策：NAS 健康检查默认使用隔离目录并在成功后清理；真实路径写入必须同时设置 `HEALTHCHECK_USE_REAL_PATHS=true` 和 `HEALTHCHECK_ALLOW_REAL_WRITES=true`。
+- 原因：健康检查会跑 mock 报告和静态导出，默认不应污染生产 SQLite 或长期堆积运行产物。
+- 影响：常规验收使用 `pnpm nas:health` 即可；需要排查时可用 `HEALTHCHECK_KEEP_RUN_DIR=true` 保留隔离目录，真实路径验收必须显式确认。
+
+## Decision 025
+- 时间：2026-05-26 16:49:43 CST
+- 决策：NAS cron 任务同时清理 cron 包装日志和 `nas-daily-update.sh` 自身生成的日更日志，默认保留 14 天。
+- 原因：只清理 cron 包装日志仍会让 `YYYY-MM-DD-type-STAMP.log` 在 NAS 上无限增长。
+- 影响：`CRON_LOG_RETENTION_DAYS` 可调整保留天数；清理范围限制在 `NAS_LOG_DIR` 下匹配本项目命名的日志文件。

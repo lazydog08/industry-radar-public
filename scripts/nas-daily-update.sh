@@ -4,6 +4,10 @@ set -Eeuo pipefail
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$ROOT_DIR"
 
+if [[ "${1:-}" == "--" ]]; then
+  shift
+fi
+
 RUN_TYPE="${1:-${NAS_RUN_TYPE:-noon}}"
 case "$RUN_TYPE" in
   morning)

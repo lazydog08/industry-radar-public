@@ -92,3 +92,10 @@
 - 为什么这么假设：这能解决 Claude Review 指出的静态搜索盲区，同时不把首页 JSON 强行膨胀。
 - 影响范围：线上发布时必须同时发布 `overview.json` 和 `events.json`；如果缺少 `events.json`，前端会降级为只搜索首页预览。
 - 后续如何替换成真实方案：数据量继续增大后，可以把 `events.json` 再拆成分页索引或搜索索引文件，但应保留当前入口兼容。
+
+## Assumption 014
+- 问题：当前会话无法确认 NAS 的真实 Shell、SSH、Web 服务根目录、Task Scheduler 或容器运行环境是否全部可用。
+- 我的假设：先在仓库内交付 NAS 可执行脚本、定时任务模板、健康检查和发布验收工具；真实 NAS 只需要配置 `.env.local`、项目目录和发布目录即可落地。
+- 为什么这么假设：用户要求不要停下来等人工确认；历史经验显示 NAS 控制台显示开启不等于服务真实可达，因此脚本必须先做到本地可验证、参数可替换、失败不破坏旧发布。
+- 影响范围：本轮会完成 NAS 侧代码和运行手册，但不会把某个真实 NAS 路径硬编码进仓库，也不会提交任何账号、Token、Bark Key 或 Cookie。
+- 后续如何替换成真实方案：在 NAS 上拉取 Gitea 仓库后，填写 `.env.local` 的真实 `DATABASE_URL`、`REPORT_OUTPUT_DIR`、`PUBLIC_DATA_DIR`、`PUBLISH_DIR`、`BARK_KEY` 和 `BARK_PUBLIC_URL`，再运行健康检查脚本确认。
