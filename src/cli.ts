@@ -5,8 +5,14 @@ import { generatePeriodReport, runReport } from "./report/generate.js";
 import { reportWindow } from "./utils/time.js";
 import { getSourceAdapters } from "./sources/index.js";
 import { logger } from "./utils/logger.js";
+import type { DailyReportType } from "./types.js";
 
 const program = new Command();
+const dailyReportTypes = new Set<string>(["morning", "noon", "night"]);
+
+function isDailyReportType(value: string): value is DailyReportType {
+  return dailyReportTypes.has(value);
+}
 
 program
   .name("industry-radar")
@@ -25,14 +31,14 @@ program
 
 program
   .command("report:run")
-  .description("生成中午或晚间报告")
-  .option("--type <type>", "报告类型：noon 或 night", "noon")
+  .description("生成早间、中午或晚间报告")
+  .option("--type <type>", "报告类型：morning、noon 或 night", "noon")
   .option("--date <date>", "报告日期，格式 YYYY-MM-DD")
   .option("--mock", "只使用 sample/mock 数据")
   .option("--mock-fallback", "真实采集没有任何条目时使用 mock 数据兜底")
   .action(async (options: { type: string; date?: string; mock?: boolean; mockFallback?: boolean }) => {
-    if (options.type !== "noon" && options.type !== "night") {
-      throw new Error("--type 只能是 noon 或 night");
+    if (!isDailyReportType(options.type)) {
+      throw new Error("--type 只能是 morning、noon 或 night");
     }
     const config = loadConfig();
     await runReport(config, {
@@ -108,8 +114,11 @@ program
 program
   .command("sources:test")
   .description("测试真实数据源公开访问状态")
-  .option("--type <type>", "窗口类型 noon/night", "noon")
-  .action(async (options: { type: "noon" | "night" }) => {
+  .option("--type <type>", "窗口类型 morning/noon/night", "noon")
+  .action(async (options: { type: string }) => {
+    if (!isDailyReportType(options.type)) {
+      throw new Error("--type 只能是 morning、noon 或 night");
+    }
     const window = reportWindow(options.type || "noon");
     const adapters = getSourceAdapters(false);
     for (const adapter of adapters) {

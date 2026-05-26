@@ -37,7 +37,7 @@ public-data/
     *.md
 ```
 
-- `overview.json`：首页所需数据，包含指标、最近事件、分区、今日分区、报告摘要、筛选项和知识库体检。
+- `overview.json`：首页所需数据，包含指标、最近事件预览、分区、今日分区、报告摘要、筛选项和知识库体检。为保证首屏轻量，事件列表只保留前 80 条，并通过 `links.events` 指向全量事件文件。
 - `events.json`：最近事件完整列表，包含评分、标签、实体、来源链接和推荐理由。
 - `knowledge.json`：知识卡列表，以及“优先补来源 / 适合回收成视频 / 需要跟进”等队列。
 - `reports/index.json`：报告归档索引，只保留报告文件名和相对 URL，不暴露本机绝对路径。
@@ -64,11 +64,14 @@ EXPORT_COPY_REPORTS=false pnpm export:site
 NAS 每天执行顺序建议如下：
 
 ```bash
-pnpm report:run -- --type noon --mock-fallback
-pnpm export:site
+pnpm nas:daily -- noon
 ```
 
-之后把 `public-data/` 同步到线上网页目录。线上网页只需要读取 JSON 和报告静态文件，不需要访问 SQLite。
+`pnpm nas:daily` 会先生成报告，再调用 `export:site`，最后把 `public-data/` 发布到线上网页目录并触发 Bark 通知。线上网页只需要读取 JSON 和报告静态文件，不需要访问 SQLite。完整 NAS 流程见 [NAS_DAILY_UPDATE.md](NAS_DAILY_UPDATE.md)，Bark 配置见 [BARK_SETUP.md](BARK_SETUP.md)。
+
+静态网页启动时先读取 `overview.json` 渲染首屏；当用户搜索、筛选、查看时间线，或需要打开不在首页预览里的事件详情时，再懒加载同目录下的 `events.json`。因此不要只发布 `overview.json`，否则线上搜索会自动降级到前 80 条预览数据。
+
+线上只读页面的加载和回退规则见 [STATIC_WEB_MODE.md](STATIC_WEB_MODE.md)。
 
 ## 安全边界
 

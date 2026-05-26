@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import type { AppConfig } from "../config.js";
-import type { GeneratedReport, ReportType, SourceFetchResult, SourceStatus } from "../types.js";
+import type { DailyReportType, GeneratedReport, PeriodReportType, SourceFetchResult, SourceStatus } from "../types.js";
 import { Store } from "../store/db.js";
 import { makeId } from "../utils/ids.js";
 import { filenameDate, isBetween, reportWindow } from "../utils/time.js";
@@ -12,7 +12,7 @@ import { pushLocalReport } from "../push/local.js";
 import { pushWebhook } from "../push/webhook.js";
 
 export interface RunReportOptions {
-  type: "noon" | "night";
+  type: DailyReportType;
   date?: string;
   useMock?: boolean;
   mockFallback?: boolean;
@@ -93,7 +93,7 @@ export async function runReport(config: AppConfig, options: RunReportOptions): P
   }
 }
 
-export function generatePeriodReport(config: AppConfig, type: Extract<ReportType, "weekly" | "monthly">): GeneratedReport {
+export function generatePeriodReport(config: AppConfig, type: PeriodReportType): GeneratedReport {
   const store = new Store(config);
   const window = reportWindow(type);
   const days = type === "weekly" ? 7 : 30;

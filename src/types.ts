@@ -1,4 +1,6 @@
-export type ReportType = "noon" | "night" | "weekly" | "monthly";
+export type DailyReportType = "morning" | "noon" | "night";
+export type PeriodReportType = "weekly" | "monthly";
+export type ReportType = DailyReportType | PeriodReportType;
 
 export type IndustryCategory = "digital" | "media" | "auto" | "mixed" | "unknown";
 

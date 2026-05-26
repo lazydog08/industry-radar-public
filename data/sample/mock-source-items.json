@@ -1,5 +1,29 @@
 [
   {
+    "reportTypes": ["morning"],
+    "source": "ithome",
+    "title": "华为开发者大会早间议程曝光，端侧 AI 和系统体验成重点",
+    "url": "https://www.ithome.com/mock/morning-huawei-ai-agenda.html",
+    "author": "IT之家样例",
+    "category": "digital",
+    "tags": ["数码", "AI手机", "系统更新", "发布会"],
+    "summaryRaw": "早间消息显示，华为开发者大会将把端侧 AI、系统体验和多设备协同作为核心议题。",
+    "heatScore": 72,
+    "publishedTime": "08:16:00"
+  },
+  {
+    "reportTypes": ["morning"],
+    "source": "bilibili",
+    "title": "B站早间热议：手机影像评测内容开始转向真实场景对比",
+    "url": "https://www.bilibili.com/video/mock-morning-phone-camera-review",
+    "author": "数码观察样例",
+    "category": "media",
+    "tags": ["自媒体", "数码", "影像", "选题机会"],
+    "summaryRaw": "多位创作者早间讨论手机影像评测从参数复述转向夜景、人像、视频防抖等真实场景对比。",
+    "heatScore": 66,
+    "publishedTime": "09:05:00"
+  },
+  {
     "reportTypes": ["noon"],
     "source": "bilibili",
     "title": "OPPO 影像旗舰发布会定档，AI 影像成核心卖点",

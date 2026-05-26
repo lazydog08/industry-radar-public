@@ -71,6 +71,7 @@
 - 决策：NAS 日更脚本只预留 Bark 调用点，不直接实现 Bark HTTP 发送。
 - 原因：TASK-03 的负责范围明确把 Bark 细节留给 TASK-04；脚本只需要传递状态、消息和日志路径，避免在本任务中处理密钥和通知格式。
 - 影响：设置 `BARK_NOTIFY_URL` 或 `BARK_KEY` 后，当前脚本会记录“已配置但通知模块未实现”；待 TASK-04 增加 `notify:bark` 后即可接入。
+- 当前状态：已过期。2026-05-26 TASK-04 已新增 `pnpm notify:bark`，NAS 日更脚本会调用该脚本发送成功/失败通知，通知正文不会包含日志路径或数据库路径。
 
 ## Decision 013
 - 时间：2026-05-26 14:25:00 CST
@@ -89,3 +90,45 @@
 - 决策：`public-data/` 作为 NAS/导出生成物加入 `.gitignore`，代码仓库只提交导出器、静态读取逻辑、脚本和文档。
 - 原因：`public-data/` 会包含每日报告、情报 JSON 和运行期快照，应该由 NAS 定时生成并发布，不应作为源码版本的一部分。
 - 影响：本地预览仍可通过 `pnpm export:site` 生成 `public-data/`；上线时由 `PUBLISH_DIR` 或静态托管目录接收生成物。
+
+## Decision 016
+- 时间：2026-05-26 15:32:51 CST
+- 决策：内部调度器采用方案 A，报告成功后调用 `exportStaticSiteData(config)` 刷新静态 JSON。
+- 原因：前端线上只读模式依赖静态 JSON；如果 `ENABLE_INTERNAL_SCHEDULER` 只生成报告，会造成网页数据滞后。
+- 影响：内部调度器也能更新 `PUBLIC_DATA_DIR` / `EXPORT_SITE_DIR` / 默认 `public-data`；静态导出失败只记录错误，不让服务退出。正式线上更新仍推荐 NAS cron，便于日志、重跑、发布和 Bark 通知。
+
+## Decision 017
+- 时间：2026-05-26 15:34:06 CST
+- 决策：Bark 推送正文只发送状态、日期/类型、新增条数、高分条数和网页地址，不发送日志路径、数据库路径、发布目录或原始 `BARK_MESSAGE`。
+- 原因：`nas-daily-update.sh` 的失败消息可能包含本机日志路径；推送到 iPhone 的内容应该可读且不泄露本地目录结构。
+- 影响：失败通知会提示更新失败，但详细排障仍回到 NAS 本地日志；集成时可继续从脚本日志查看 `BARK_LOG_FILE`，但不会通过 Bark 发出。
+
+## Decision 018
+- 时间：2026-05-26 15:34:03 CST
+- 决策：将 `morning` 独立为日报类型，文件名使用 `YYYY-MM-DD-morning.html/md`，窗口使用当天 `00:00-09:59:59`。
+- 原因：Claude 流程 review 指出早报映射到午报会覆盖同一天 `YYYY-MM-DD-noon` 产物；独立类型能让 NAS 早报、午报、晚报三次运行各自保留。
+- 影响：`pnpm report:run -- --type morning`、`pnpm report:morning` 和 `scripts/nas-daily-update.sh morning` 会生成独立早报；原有 noon/night 命令、窗口和文件名不变。
+
+## Decision 019
+- 时间：2026-05-26 15:39:25 CST
+- 决策：静态模式搜索、筛选、时间线和预览外详情统一懒加载 `events.json`，并缓存到 `state.staticAllEvents`。
+- 原因：`overview.json` 只截取前 80 条会让线上只读搜索存在盲区；懒加载能兼顾首屏速度和完整搜索覆盖。
+- 影响：`overview.json` 新增 `eventTotal`、`eventPreviewCount` 和 `links.events` 作为发布约定；若 `events.json` 加载失败，前端显示轻量降级提示并回退到 `overview.events`。
+
+## Decision 020
+- 时间：2026-05-26 15:45:24 CST
+- 决策：NAS 发布静态数据时优先采用 `${PUBLISH_DIR}.next-${STAMP}` 候选目录加 `${PUBLISH_DIR}.previous` 备份的目录切换策略。
+- 原因：逐个复制 JSON 会让 HTTP 服务可能读到新 `overview.json` 和旧 `events.json` 的混合状态；先构建完整候选目录再切换可以避免线上读到半成品。
+- 影响：成功发布后上一个版本保留在 `${PUBLISH_DIR}.previous`；如果 NAS 文件系统不允许整体移动发布目录，脚本降级为 `rsync --delete`，但文档明确该 fallback 不是严格原子。
+
+## Decision 021
+- 时间：2026-05-26 15:45:20 CST
+- 决策：TASK-11 前端 UX 采用原生 `details/summary` 折叠高级筛选，并在分区和报告归档内使用本地“显示全部/收起”状态。
+- 原因：手机端首屏应以阅读和搜索为主，不应被完整筛选表单占用；分区和报告默认截断可以保持页面轻，但必须给用户继续展开的路径。
+- 影响：默认界面只展示关键词输入和搜索按钮；静态模式 `events.json` 懒加载逻辑不变，分区展开只影响当前首页预览事件；报告归档仍默认 8 份但可展开全部。
+
+## Decision 022
+- 时间：2026-05-26 15:44:09 CST
+- 决策：文档统一以 `3877` 作为本地默认端口，`3887` 只描述为当前开发机 launchctl 演示服务；NAS 正式更新以 `pnpm nas:daily -- morning|noon|night` 为主闭环。
+- 原因：新部署用户应按默认 `pnpm serve` 端口访问；当前 `3887` 是为了不中断本机演示单独托管的服务。NAS 定时任务比内部调度器更适合发布静态目录、查看日志和发送 Bark。
+- 影响：README 和静态网页文档会避免把新用户引到 `3887`；部署说明统一为“Gitea 拉取 -> `.env.local` -> `pnpm nas:daily -- noon` -> 发布 `public-data` -> Bark 通知”。

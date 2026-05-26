@@ -1,11 +1,21 @@
+const SECTION_PREVIEW_LIMIT = 4;
+const REPORT_PREVIEW_LIMIT = 8;
+
 const state = {
   events: [],
   selectedId: "",
   detailRequestId: 0,
   dataMode: "unknown",
   readOnly: false,
+  expandedSections: new Set(),
+  reportsExpanded: false,
   staticOverview: null,
   staticOverviewUrl: "",
+  staticAllEvents: null,
+  staticEventsUrl: "",
+  staticEventsLoadPromise: null,
+  staticEventsError: null,
+  staticNoticeShown: false,
   staticEventIndex: new Map(),
   facets: {
     sources: [],
@@ -91,6 +101,7 @@ async function loadOverview() {
     const data = await fetchJson("/api/overview");
     state.staticOverview = null;
     state.staticOverviewUrl = "";
+    resetStaticAllEvents();
     state.staticEventIndex = new Map();
     return normalizeOverviewPayload(data);
   } catch (apiError) {
@@ -115,6 +126,7 @@ async function tryLoadStaticOverview() {
       state.readOnly = true;
       state.staticOverview = data;
       state.staticOverviewUrl = url;
+      resetStaticAllEvents();
       state.staticEventIndex = indexStaticEvents(data);
       return undefined;
     } catch (error) {
@@ -125,6 +137,7 @@ async function tryLoadStaticOverview() {
   state.readOnly = false;
   state.staticOverview = null;
   state.staticOverviewUrl = "";
+  resetStaticAllEvents();
   state.staticEventIndex = new Map();
   return lastError;
 }
@@ -136,6 +149,30 @@ function staticOverviewUrls() {
     seen.add(url);
     return true;
   });
+}
+
+function staticEventsUrls() {
+  const candidates = [];
+  const configured = state.staticOverview?.links?.events || state.staticOverview?.events_url || state.staticOverview?.eventsUrl;
+  if (configured && state.staticOverviewUrl) candidates.push(new URL(configured, state.staticOverviewUrl).href);
+  if (state.staticOverviewUrl) candidates.push(new URL("events.json", state.staticOverviewUrl).href);
+  for (const overviewUrl of staticOverviewUrls()) {
+    candidates.push(new URL("events.json", overviewUrl).href);
+  }
+  const seen = new Set();
+  return candidates.filter((url) => {
+    if (seen.has(url)) return false;
+    seen.add(url);
+    return true;
+  });
+}
+
+function resetStaticAllEvents() {
+  state.staticAllEvents = null;
+  state.staticEventsUrl = "";
+  state.staticEventsLoadPromise = null;
+  state.staticEventsError = null;
+  state.staticNoticeShown = false;
 }
 
 function normalizeOverviewPayload(payload) {
@@ -172,6 +209,76 @@ function indexStaticEvents(data) {
     }
   }
   return entries;
+}
+
+async function ensureStaticAllEvents() {
+  if (!state.readOnly) return state.events || [];
+  if (Array.isArray(state.staticAllEvents)) return state.staticAllEvents;
+  if (!state.staticEventsLoadPromise) {
+    state.staticEventsLoadPromise = loadStaticAllEvents().finally(() => {
+      state.staticEventsLoadPromise = null;
+    });
+  }
+  return state.staticEventsLoadPromise;
+}
+
+async function loadStaticAllEvents() {
+  let lastError;
+  for (const url of staticEventsUrls()) {
+    try {
+      const payload = await fetchJson(url, { cache: "no-store" });
+      const exportedEvents = normalizeStaticEventsPayload(payload);
+      const events = mergeStaticEvents(state.staticOverview?.events || [], exportedEvents);
+      state.staticAllEvents = events;
+      state.staticEventsUrl = url;
+      state.staticEventsError = null;
+      addStaticEventsToIndex(events);
+      return events;
+    } catch (error) {
+      lastError = error;
+    }
+  }
+
+  const fallbackEvents = state.staticOverview?.events || [];
+  state.staticAllEvents = fallbackEvents;
+  state.staticEventsUrl = "";
+  state.staticEventsError = lastError || new Error("events.json 未找到");
+  addStaticEventsToIndex(fallbackEvents);
+  showStaticDataNotice("全量事件加载失败，搜索范围已降级为首页预览数据。");
+  console.warn("Static events fallback to overview preview", state.staticEventsError);
+  return fallbackEvents;
+}
+
+function normalizeStaticEventsPayload(payload) {
+  if (Array.isArray(payload)) return payload;
+  const source = payload?.events ? payload : payload?.data || payload || {};
+  return Array.isArray(source.events) ? source.events : [];
+}
+
+function mergeStaticEvents(...collections) {
+  const events = new Map();
+  for (const collection of collections) {
+    for (const event of collection || []) {
+      if (!event?.id) continue;
+      events.set(String(event.id), event);
+    }
+  }
+  return [...events.values()];
+}
+
+function addStaticEventsToIndex(events) {
+  for (const event of events || []) {
+    if (event?.id) state.staticEventIndex.set(String(event.id), event);
+  }
+}
+
+function showStaticDataNotice(message) {
+  if (state.staticNoticeShown) return;
+  state.staticNoticeShown = true;
+  if (els.sourceStatus) {
+    const current = els.sourceStatus.textContent || "";
+    els.sourceStatus.textContent = current ? `${current} · ${message}` : message;
+  }
 }
 
 function enableRootScrollFallback() {
@@ -301,8 +408,14 @@ function renderReports(reports) {
     els.reports.innerHTML = `<p class="muted">暂无报告。先运行一次报告生成。</p>`;
     return;
   }
-  els.reports.innerHTML = reports
-    .slice(0, 8)
+  const visible = state.reportsExpanded ? reports : reports.slice(0, REPORT_PREVIEW_LIMIT);
+  const toggle =
+    reports.length > REPORT_PREVIEW_LIMIT
+      ? `<button type="button" class="list-toggle" data-reports-toggle aria-expanded="${state.reportsExpanded ? "true" : "false"}">${
+          state.reportsExpanded ? "收起" : `显示全部 ${reports.length} 份`
+        }</button>`
+      : "";
+  els.reports.innerHTML = visible
     .map((report) => {
       const label = reportLabel(report.report_type);
       const date = formatDateTime(report.created_at);
@@ -317,7 +430,14 @@ function renderReports(reports) {
         </nav>
       </article>`;
     })
-    .join("");
+    .join("") + toggle;
+  const toggleButton = els.reports.querySelector("[data-reports-toggle]");
+  if (toggleButton) {
+    toggleButton.addEventListener("click", () => {
+      state.reportsExpanded = !state.reportsExpanded;
+      renderReports(reports);
+    });
+  }
 }
 
 function renderResults(events, title) {
@@ -357,19 +477,36 @@ function renderHome(events) {
   renderInfographic(first);
   els.sections.innerHTML = [
     scoreLegend(),
-    sectionBlock("今日必看", "优先读，适合快速判断今天行业动向。", grouped.must_read),
-    sectionBlock("正在发酵", "趋势在扩散，但还需要继续交叉验证。", grouped.developing),
-    sectionBlock("适合做视频", "视频潜力更高，不一定都是最新热点。", grouped.video_ready),
-    sectionBlock("背景知识", "旧闻、时间不明或低分内容，只作为资料沉淀。", grouped.background)
+    sectionBlock("must_read", "今日必看", "优先读，适合快速判断今天行业动向。", grouped.must_read),
+    sectionBlock("developing", "正在发酵", "趋势在扩散，但还需要继续交叉验证。", grouped.developing),
+    sectionBlock("video_ready", "适合做视频", "视频潜力更高，不一定都是最新热点。", grouped.video_ready),
+    sectionBlock("background", "背景知识", "旧闻、时间不明或低分内容，只作为资料沉淀。", grouped.background)
   ].join("");
   for (const card of els.sections.querySelectorAll("[data-event-id]")) {
     card.addEventListener("click", () => selectEvent(card.dataset.eventId));
   }
+  for (const button of els.sections.querySelectorAll("[data-section-toggle]")) {
+    button.addEventListener("click", () => {
+      const key = button.dataset.sectionToggle;
+      if (!key) return;
+      if (state.expandedSections.has(key)) state.expandedSections.delete(key);
+      else state.expandedSections.add(key);
+      renderHome(state.events);
+    });
+  }
   selectEvent(state.selectedId && events.some((event) => event.id === state.selectedId) ? state.selectedId : first.id);
 }
 
-function sectionBlock(title, subtitle, events) {
-  const visible = events.slice(0, 4);
+function sectionBlock(key, title, subtitle, events) {
+  const expanded = state.expandedSections.has(key);
+  const visible = expanded ? events : events.slice(0, SECTION_PREVIEW_LIMIT);
+  const hiddenCount = Math.max(0, events.length - SECTION_PREVIEW_LIMIT);
+  const toggle =
+    hiddenCount > 0
+      ? `<button type="button" class="list-toggle section-toggle" data-section-toggle="${escapeAttr(key)}" aria-expanded="${expanded ? "true" : "false"}">${
+          expanded ? "收起" : `显示剩余 ${hiddenCount} 条`
+        }</button>`
+      : "";
   return `<section class="feed-section">
     <div class="feed-section-head">
       <div>
@@ -381,6 +518,7 @@ function sectionBlock(title, subtitle, events) {
     <div class="section-cards">
       ${visible.length ? visible.map(eventCard).join("") : `<div class="empty-state compact-empty">暂无。</div>`}
     </div>
+    ${toggle}
   </section>`;
 }
 
@@ -475,7 +613,8 @@ async function selectEvent(id) {
     card.classList.toggle("selected", card.dataset.eventId === id);
   }
   if (state.readOnly) {
-    const event = getStaticEvent(id);
+    const event = await getStaticEvent(id);
+    if (requestId !== state.detailRequestId) return;
     if (event) renderDetail(event);
     else els.detail.innerHTML = `<h2>知识卡</h2><p class="muted">静态数据里没有找到这条详情。</p>`;
     return;
@@ -518,13 +657,15 @@ function renderDetail(event) {
     </dl>
     <div class="stamp">首次发现 ${escapeHtml(formatDateTime(event.first_seen_at))} · 最近更新 ${escapeHtml(formatDateTime(event.last_seen_at))} · ${escapeHtml(freshnessLabel(event.freshness_label))}</div>
     <div class="meta">${tags}${entities}</div>
-    <div class="actions">
-      ${feedbackButton("favorite", "收藏", feedback)}
-      ${feedbackButton("follow", "持续跟踪", feedback)}
-      ${feedbackButton("ignore", "不感兴趣", feedback)}
-      ${feedbackButton("used_for_video", "已用于视频", feedback)}
+    <div class="feedback-area">
+      <div class="actions">
+        ${feedbackButton("favorite", "收藏", feedback)}
+        ${feedbackButton("follow", "持续跟踪", feedback)}
+        ${feedbackButton("ignore", "不感兴趣", feedback)}
+        ${feedbackButton("used_for_video", "已用于视频", feedback)}
+      </div>
+      ${state.readOnly ? `<p class="readonly-note">线上只读模式：反馈按钮只展示状态，不会写入；请回到本地库处理。</p>` : ""}
     </div>
-    ${state.readOnly ? `<p class="muted">线上只读模式：反馈标记不会写入，请回到本地库处理。</p>` : ""}
     <div class="sources">
       <h4>原始来源</h4>
       <div class="source-list">${renderSourceLinks(event.sources, 8)}</div>
@@ -672,31 +813,35 @@ function healthQueue(title, events, total, description, emptyText) {
   </div>`;
 }
 
-function getStaticEvent(id) {
+async function getStaticEvent(id) {
   const key = String(id || "");
-  return state.staticEventIndex.get(key) || state.events.find((event) => event.id === key);
+  const indexed = state.staticEventIndex.get(key) || state.events.find((event) => event.id === key);
+  if (indexed) return indexed;
+  const events = await ensureStaticAllEvents();
+  return state.staticEventIndex.get(key) || events.find((event) => event.id === key);
 }
 
-function filterStaticEvents(events, params) {
-  return (events || [])
-    .filter((event) => {
-      const q = String(params.get("q") || "").trim();
-      if (q && !eventMatchesQuery(event, q)) return false;
-      if (params.get("category") && event.category !== params.get("category")) return false;
-      if (params.get("source") && !(event.sources || []).some((source) => source.source === params.get("source"))) return false;
-      if (params.get("tag") && !(event.tags || []).some((tag) => includesText(tag, params.get("tag")))) return false;
-      if (params.get("entity") && !entityNames(event).some((name) => includesText(name, params.get("entity")))) return false;
-      if (params.get("favorite") === "true" && !hasFeedback(event, "favorite")) return false;
-      if (params.get("follow") === "true" && !hasFeedback(event, "follow")) return false;
-      if (params.get("usedForVideo") === "true" && !hasFeedback(event, "used_for_video")) return false;
-      if (params.get("ignored") === "true" && !hasFeedback(event, "ignore")) return false;
-      return true;
-    })
-    .slice(0, 80);
+function filterStaticEvents(events, params, options = {}) {
+  const limit = options.limit === undefined ? 80 : options.limit;
+  const filtered = (events || []).filter((event) => {
+    const q = String(params.get("q") || "").trim();
+    if (q && !eventMatchesQuery(event, q)) return false;
+    if (params.get("category") && event.category !== params.get("category")) return false;
+    if (params.get("source") && !(event.sources || []).some((source) => source.source === params.get("source"))) return false;
+    if (params.get("tag") && !(event.tags || []).some((tag) => includesText(tag, params.get("tag")))) return false;
+    if (params.get("entity") && !entityNames(event).some((name) => includesText(name, params.get("entity")))) return false;
+    if (params.get("favorite") === "true" && !hasFeedback(event, "favorite")) return false;
+    if (params.get("follow") === "true" && !hasFeedback(event, "follow")) return false;
+    if (params.get("usedForVideo") === "true" && !hasFeedback(event, "used_for_video")) return false;
+    if (params.get("ignored") === "true" && !hasFeedback(event, "ignore")) return false;
+    return true;
+  });
+  return limit === null ? filtered : filtered.slice(0, limit);
 }
 
-function timelineFromStatic(query) {
-  return filterStaticEvents(state.staticOverview?.events || [], new URLSearchParams({ q: query }))
+async function timelineFromStatic(query) {
+  const events = await ensureStaticAllEvents();
+  return filterStaticEvents(events, new URLSearchParams({ q: query }), { limit: null })
     .slice()
     .sort((left, right) => new Date(left.first_seen_at || left.last_seen_at || 0) - new Date(right.first_seen_at || right.last_seen_at || 0))
     .slice(-20);
@@ -809,7 +954,7 @@ async function search() {
     if (els.ignored.checked) params.set("ignored", "true");
 
     if (state.readOnly) {
-      const events = filterStaticEvents(state.staticOverview?.events || [], params);
+      const events = filterStaticEvents(await ensureStaticAllEvents(), params);
       renderResults(events, params.toString() ? "搜索结果" : "最近 7 天重要事件");
       return;
     }
@@ -830,7 +975,7 @@ async function loadTimeline() {
   }
   els.timeline.innerHTML = `<p class="muted">正在生成时间线...</p>`;
   try {
-    const data = state.readOnly ? { events: timelineFromStatic(q) } : await fetchJson(`/api/timeline?q=${encodeURIComponent(q)}`);
+    const data = state.readOnly ? { events: await timelineFromStatic(q) } : await fetchJson(`/api/timeline?q=${encodeURIComponent(q)}`);
     const events = data.events || [];
     els.timeline.innerHTML = events.length
       ? events
@@ -984,6 +1129,7 @@ function scoreValue(event) {
 
 function reportLabel(type) {
   return {
+    morning: "早间报告",
     noon: "中午报告",
     night: "晚间报告",
     weekly: "周报",

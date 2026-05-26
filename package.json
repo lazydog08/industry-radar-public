@@ -12,6 +12,7 @@
     "typecheck": "tsc --noEmit -p tsconfig.json",
     "lint": "tsc --noEmit -p tsconfig.json",
     "report:run": "NODE_OPTIONS=--no-warnings=ExperimentalWarning tsx src/cli.ts report:run",
+    "report:morning": "NODE_OPTIONS=--no-warnings=ExperimentalWarning tsx src/cli.ts report:run --type morning",
     "report:noon": "NODE_OPTIONS=--no-warnings=ExperimentalWarning tsx src/cli.ts report:run --type noon",
     "report:night": "NODE_OPTIONS=--no-warnings=ExperimentalWarning tsx src/cli.ts report:run --type night",
     "report:weekly": "NODE_OPTIONS=--no-warnings=ExperimentalWarning tsx src/cli.ts report:weekly",
@@ -21,7 +22,8 @@
     "nas:daily": "bash scripts/nas-daily-update.sh",
     "serve": "NODE_OPTIONS=--no-warnings=ExperimentalWarning tsx src/server.ts",
     "sources:test": "NODE_OPTIONS=--no-warnings=ExperimentalWarning tsx src/cli.ts sources:test",
-    "export:site": "NODE_OPTIONS=--no-warnings=ExperimentalWarning tsx scripts/export-site.ts"
+    "export:site": "NODE_OPTIONS=--no-warnings=ExperimentalWarning tsx scripts/export-site.ts",
+    "notify:bark": "NODE_OPTIONS=--no-warnings=ExperimentalWarning tsx scripts/notify-bark.ts"
   },
   "dependencies": {
     "commander": "^14.0.2",

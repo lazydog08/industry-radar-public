@@ -7,7 +7,7 @@ cd "$ROOT_DIR"
 RUN_TYPE="${1:-${NAS_RUN_TYPE:-noon}}"
 case "$RUN_TYPE" in
   morning)
-    CLI_REPORT_TYPE="noon"
+    CLI_REPORT_TYPE="morning"
     ;;
   noon)
     CLI_REPORT_TYPE="noon"
@@ -73,7 +73,7 @@ notify_bark() {
   fi
 
   if [[ -n "${BARK_NOTIFY_URL:-}" || -n "${BARK_KEY:-}" ]]; then
-    log "Bark is configured, but notify:bark is not implemented yet. TASK-04 should consume BARK_NOTIFY_URL/BARK_KEY."
+    log "Bark is configured, but package script notify:bark is missing. Notification was skipped."
   else
     log "Bark notify skipped: BARK_NOTIFY_URL/BARK_KEY is not configured."
   fi
@@ -124,14 +124,92 @@ publish_public_data() {
     return 13
   fi
 
-  mkdir -p "$PUBLISH_DIR"
-  local tmp_dir="${PUBLISH_DIR%/}/.industry-radar-publish-${STAMP}"
-  rm -rf "$tmp_dir"
-  mkdir -p "$tmp_dir"
-  cp -R "${PUBLIC_DATA_DIR%/}/." "$tmp_dir/"
-  find "$tmp_dir" -mindepth 1 -maxdepth 1 -exec cp -R {} "$PUBLISH_DIR/" \;
-  rm -rf "$tmp_dir"
-  log "Published static data to ${PUBLISH_DIR}. Existing files outside this export were kept."
+  local source_dir publish_dir publish_parent publish_base next_dir previous_dir
+  source_dir="${PUBLIC_DATA_DIR%/}"
+  publish_dir="${PUBLISH_DIR%/}"
+  publish_parent="$(dirname -- "$publish_dir")"
+  publish_base="$(basename -- "$publish_dir")"
+
+  if [[ -z "$publish_base" || "$publish_base" == "." || "$publish_dir" == "/" ]]; then
+    log "Refusing unsafe PUBLISH_DIR: ${PUBLISH_DIR}"
+    return 14
+  fi
+
+  mkdir -p "$publish_parent"
+  next_dir="${publish_parent}/${publish_base}.next-${STAMP}"
+  previous_dir="${publish_parent}/${publish_base}.previous"
+
+  remove_publish_sibling() {
+    local target="$1"
+    local target_parent target_base
+    target_parent="$(dirname -- "$target")"
+    target_base="$(basename -- "$target")"
+    if [[ "$target_parent" != "$publish_parent" ]]; then
+      log "Refusing to remove path outside PUBLISH_DIR parent: ${target}"
+      return 17
+    fi
+    case "$target_base" in
+      "${publish_base}.next-"*|"${publish_base}.previous")
+        rm -rf -- "$target"
+        ;;
+      *)
+        log "Refusing to remove unrelated publish path: ${target}"
+        return 17
+        ;;
+    esac
+  }
+
+  if [[ -e "$next_dir" ]]; then
+    log "Removing stale publish candidate: ${next_dir}"
+    remove_publish_sibling "$next_dir" || return 18
+  fi
+
+  log "Preparing publish candidate: ${next_dir}"
+  mkdir -p "$next_dir"
+  cp -R "${source_dir}/." "$next_dir/" || {
+    log "Failed to copy public data into publish candidate; old published data was left untouched."
+    remove_publish_sibling "$next_dir" || true
+    return 18
+  }
+
+  if [[ ! -e "$publish_dir" ]]; then
+    mv "$next_dir" "$publish_dir"
+    PUBLISHED_TO="$publish_dir"
+    log "Published static data to ${publish_dir} with directory move. No previous publish directory existed."
+    return 0
+  fi
+
+  if [[ -e "$previous_dir" ]]; then
+    log "Removing previous backup before switch: ${previous_dir}"
+    remove_publish_sibling "$previous_dir" || return 18
+  fi
+
+  if mv "$publish_dir" "$previous_dir"; then
+    if mv "$next_dir" "$publish_dir"; then
+      PUBLISHED_TO="$publish_dir"
+      log "Published static data to ${publish_dir} by directory switch. Previous version kept at ${previous_dir}."
+      return 0
+    fi
+
+    log "Directory switch failed after preserving previous data; restoring ${publish_dir}."
+    if [[ ! -e "$publish_dir" && -e "$previous_dir" ]]; then
+      mv "$previous_dir" "$publish_dir" || true
+    fi
+    remove_publish_sibling "$next_dir"
+    return 15
+  fi
+
+  log "Directory switch is not available for ${publish_dir}; falling back to rsync --delete."
+  if ! command -v rsync >/dev/null 2>&1; then
+    remove_publish_sibling "$next_dir"
+    log "rsync is unavailable; old published data was left untouched."
+    return 16
+  fi
+
+  rsync -a --delete "${next_dir}/" "${publish_dir}/"
+  remove_publish_sibling "$next_dir"
+  PUBLISHED_TO="$publish_dir"
+  log "Published static data to ${publish_dir} with rsync fallback. This fallback is not strictly atomic."
 }
 
 collect_stats() {

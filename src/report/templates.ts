@@ -1,10 +1,10 @@
 import path from "node:path";
-import type { EventRecord, GeneratedReport, ReportWindow, SourceStatus } from "../types.js";
+import type { EventRecord, GeneratedReport, ReportType, ReportWindow, SourceStatus } from "../types.js";
 import { displayRange } from "../utils/time.js";
 
 export interface ReportTemplateInput {
   id: string;
-  type: "noon" | "night" | "weekly" | "monthly";
+  type: ReportType;
   window: ReportWindow;
   newEvents: EventRecord[];
   updatedEvents: EventRecord[];
@@ -24,7 +24,8 @@ interface SectionModel {
   importantCount: number;
 }
 
-const typeLabel = {
+const typeLabel: Record<ReportType, string> = {
+  morning: "早间报告",
   noon: "中午报告",
   night: "晚间报告",
   weekly: "周报",

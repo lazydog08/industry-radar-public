@@ -153,6 +153,14 @@ export async function exportStaticSiteData(
         sections,
         today,
         todaySections,
+        eventTotal: events.length,
+        eventPreviewCount: Math.min(events.length, 80),
+        links: {
+          events: "events.json",
+          knowledge: "knowledge.json",
+          reports: "reports/index.json",
+          meta: "meta.json"
+        },
         events: events.slice(0, 80),
         reports: reports.slice(0, 20),
         facets,

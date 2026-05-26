@@ -1,7 +1,7 @@
 # 行业情报收集系统进度
 
-- 最后更新时间：2026-05-26 14:41:29 CST
-- 当前阶段：第一批并行改动已完成集成验证，准备提交并推送本地 Gitea
+- 最后更新时间：2026-05-26 16:04:57 CST
+- 当前阶段：TASK-04/TASK-05/TASK-08/TASK-09/TASK-10/TASK-11/TASK-12 已完成集成复验和提交前检查，准备提交并推送本地 Gitea
 
 ## 项目总目标
 
@@ -49,6 +49,13 @@
 - [x] 已完成：并行任务 TASK-02，前端支持优先读取静态 `public-data/overview.json`，失败后回退本地 Express API。
 - [x] 已完成：并行任务 TASK-06，优化 390px 移动端阅读、一图读懂、评分图例、来源标签和筛选区密度。
 - [x] 已完成：集成 TASK-01/TASK-02/TASK-03/TASK-06/TASK-07，修复静态报告相对链接、前端兜底分区和 `public-data/` 生成物忽略规则。
+- [x] 已完成：并行任务 TASK-04，新增 `notify:bark`，支持 Bark dry-run、成功/失败通知、线上网页地址和隐私过滤。
+- [x] 已完成：并行任务 TASK-09，内部调度器在报告成功后自动刷新静态 JSON，并明确 NAS cron 仍是正式线上方案。
+- [x] 已完成：并行任务 TASK-05，`morning` 独立为报告类型，NAS 早报不再映射或覆盖 `noon`。
+- [x] 已完成：并行任务 TASK-08，静态搜索/筛选/时间线改为懒加载 `events.json`，覆盖 `overview.json` 预览之外的全量事件。
+- [x] 已完成：并行任务 TASK-10，NAS 发布改为先构建 `.next-时间戳` 候选目录，再切换到 `PUBLISH_DIR`，并保留 `${PUBLISH_DIR}.previous`。
+- [x] 已完成：并行任务 TASK-12，统一 README/静态网页文档里的默认端口说明，并收口 NAS 定时抓取、静态发布和 Bark 通知部署闭环。
+- [x] 已完成：并行任务 TASK-11，优化前端 UX：高级筛选默认折叠、情报分区和报告归档可展开、线上只读反馈提示贴近按钮区。
 
 ## 最近完成内容
 
@@ -109,6 +116,20 @@
 - 2026-05-26 14:41 CST 集成第一批并行改动：保留静态导出、静态只读前端、NAS 日更脚本、移动端样式和新版评分权重。
 - 2026-05-26 14:41 CST 修复集成发现的问题：静态报告 `reports/*.html` 相对链接不再被前端误判为 `#`；前端 `fallbackSection` 与新评分规则对齐；`public-data/` 加入 `.gitignore`，避免提交 NAS 生成物。
 - 2026-05-26 14:41 CST 重启 `3887` 演示服务并验证静态预览：页面进入“线上只读”模式，报告链接、评分胶囊、来源标签和禁用反馈状态正常。
+- 2026-05-26 15:34 CST 完成 TASK-04：新增 `scripts/notify-bark.ts` 和 `pnpm notify:bark`，支持 `BARK_NOTIFY_URL` 或 `BARK_KEY`、`BARK_PUBLIC_URL`/`BARK_SITE_URL`、`BARK_SOUND`、`BARK_DRY_RUN`，并正确处理中文 URL 编码。
+- 2026-05-26 15:34 CST 新增 `docs/BARK_SETUP.md`，说明 NAS 上 `.env.local` 配置、dry-run 验证、成功/失败通知和敏感信息边界；更新 `.env.example` 的非敏感 Bark 示例变量。
+- 2026-05-26 15:34 CST 验证 TASK-04 dry-run：成功和失败通知正文只包含状态、日期/类型、新增条数、高分条数、网页地址，没有发送本机日志路径、发布路径、数据库路径或真实 Key。
+- 2026-05-26 15:34 CST 完成 TASK-09：修改 `src/scheduler.ts`，将内部调度器从“只跑报告”改为“报告成功后继续调用 `exportStaticSiteData(config)`”；报告失败不导出，导出失败只记录错误不退出服务。
+- 2026-05-26 15:34 CST 更新 `README.md` 和 `docs/NAS_DAILY_UPDATE.md`：明确 `ENABLE_INTERNAL_SCHEDULER=true` 适合本地/容器常驻兜底，正式 NAS/线上更新推荐 `scripts/nas-daily-update.sh` 或 `pnpm nas:daily -- noon`。
+- 2026-05-26 15:37 CST 完成 TASK-05：修改 `src/types.ts`、`src/utils/time.ts`、`src/cli.ts`、`src/report/generate.ts`、`src/report/templates.ts`，新增 `morning` 日报类型，窗口为当天 `00:00-09:59:59`，输出 `YYYY-MM-DD-morning.html/md`。
+- 2026-05-26 15:37 CST 完成 TASK-05：修改 `scripts/nas-daily-update.sh`，`morning` 不再映射到 `noon`；`collect_stats` 会读取 `YYYY-MM-DD-morning.md`；新增 `pnpm report:morning`。
+- 2026-05-26 15:37 CST 完成 TASK-05：更新 `README.md`、`docs/NAS_DAILY_UPDATE.md`、`assumptions.md`、`decision_log.md`，记录早报窗口、文件名、NAS 定时方式和原 TASK-03 假设过期。
+- 2026-05-26 15:37 CST 完成 TASK-05：补充 `src/web/app.js` 报告归档标签，线上页面会把 `morning` 显示为“早间报告”。
+- 2026-05-26 15:38 CST 完成 TASK-05：补充 `data/sample/mock-source-items.json` 的 morning 样例，确保真实源无数据时早报 mock/兜底链路也能演示。
+- 2026-05-26 15:45 CST 完成 TASK-11：修改 `src/web/index.html`，把筛选区改为默认只展示关键词输入和搜索按钮，高级筛选用原生 `details/summary` 收起。
+- 2026-05-26 15:45 CST 完成 TASK-11：修改 `src/web/app.js`，新增分区展开状态、报告归档展开状态，并将线上只读反馈提示移动到反馈按钮旁边。
+- 2026-05-26 15:45 CST 完成 TASK-11：修改 `src/web/styles.css`，补充折叠筛选、展开按钮、只读提示和移动端适配样式；更新 `docs/MOBILE_UI_REVIEW.md` 和 `decision_log.md`。
+- 2026-05-26 15:45 CST 完成 TASK-11：未改导出器、NAS 脚本、Bark、API 或静态 `events.json` 懒加载逻辑。
 
 ## 下一步动作
 
@@ -117,9 +138,9 @@
 3. 后续可优化数据库水合和搜索候选集，减少 Claude Review 提到的 N+1 查询性能风险。
 4. 后续可把“优先补来源”接成真实源二次检索，把 Mock/示例项替换为当日真实来源后再提升评分上限。
 5. 后续可进一步打磨“一图读懂”的视觉层级和真实来源状态。
-6. TASK-04 完成 `notify:bark` 后，确认 `BARK_NOTIFY_URL` / `BARK_KEY` 只从本地 `.env.local` 注入，不进入 Git。
+6. 正式打开 Bark 推送前，确认 `BARK_NOTIFY_URL` / `BARK_KEY` 只从 NAS 本地 `.env.local` 注入，不进入 Git；先用 `BARK_DRY_RUN=true` 验证文案。
 7. 把 `PUBLISH_DIR` 指向真实 NAS/线上网页数据目录后，再跑一次非隔离的 `pnpm nas:daily -- noon` 验证发布目录。
-8. 后续可把高级筛选收进折叠面板，让手机首屏更像纯阅读产品。
+8. 后续可给高级筛选摘要增加“已启用筛选数量”，让用户收起后仍能看出当前过滤状态。
 
 ## 最终验证记录
 
@@ -197,3 +218,47 @@
 - 2026-05-26 14:41 CST 集成验证：隔离运行 `scripts/nas-daily-update.sh noon` 通过，生成报告、导出静态数据、跳过未配置发布目录和 Bark，统计新增 20 条、高分 1 条。
 - 2026-05-26 14:41 CST 集成验证：`http://localhost:3887/public-data/overview.json` 和 `http://localhost:3887/public-data/reports/2026-05-26-noon.html` 返回 200；`/api/overview` 仍返回 25 条事件。
 - 2026-05-26 14:41 CST 浏览器验证：`http://localhost:3887/` 无 console 错误，显示“线上只读”，报告链接样例为 `reports/2026-05-26-noon.html`，无 `#` 坏链接，反馈按钮禁用。
+- 2026-05-26 15:34 CST 验证：`pnpm typecheck` 通过。
+- 2026-05-26 15:34 CST 验证：`pnpm build` 通过。
+- 2026-05-26 15:34 CST 验证：`pnpm exec tsc --noEmit --module NodeNext --moduleResolution NodeNext --target ES2022 --lib ES2022,DOM --types node --esModuleInterop --strict --skipLibCheck scripts/notify-bark.ts` 通过。
+- 2026-05-26 15:34 CST 验证：`BARK_DRY_RUN=true BARK_KEY=example pnpm notify:bark` 通过，未发网络请求，输出默认成功通知预览。
+- 2026-05-26 15:34 CST 验证：带 `BARK_MESSAGE` 的成功 dry-run 能解析 `type/date/new/high`，输出线上网页地址，且不输出本机发布路径。
+- 2026-05-26 15:34 CST 验证：失败 dry-run 不输出 `BARK_LOG_FILE` 或消息中的本机日志路径。
+- 2026-05-26 15:34 CST 验证：未配置 `BARK_NOTIFY_URL` / `BARK_KEY` 时，`pnpm notify:bark` 安全跳过并返回 0。
+- 2026-05-26 15:34 CST TASK-09 验证：`pnpm typecheck` 通过。
+- 2026-05-26 15:34 CST TASK-09 验证：`pnpm build` 通过。
+- 2026-05-26 15:34 CST TASK-09 验证：使用隔离环境 `DATABASE_URL=./data/runtime/task09-scheduler.sqlite`、`REPORT_OUTPUT_DIR=./data/runtime/task09-reports`、`EXPORT_SITE_DIR=./data/runtime/task09-public` 调用 `runScheduledReportOnce(config, "noon", "2026-05-26")`，成功生成报告并导出 `overview.json`、`events.json`、`knowledge.json`、`reports/index.json`、`meta.json`。
+- 2026-05-26 15:34 CST TASK-09 验证：`git check-ignore` 确认 `public-data/`、`data/runtime/task09-public`、隔离 SQLite 和隔离报告均被忽略，不会进入 Git。
+- 2026-05-26 15:37 CST TASK-05 验证：`bash -n scripts/nas-daily-update.sh` 通过。
+- 2026-05-26 15:37 CST TASK-05 验证：`node --check src/web/app.js`、`pnpm typecheck`、`pnpm build` 通过。
+- 2026-05-26 15:37 CST TASK-05 验证：`DATABASE_URL=./data/runtime/task05.sqlite REPORT_OUTPUT_DIR=./data/runtime/task05-reports pnpm report:run -- --type morning --date 2026-05-26 --mock-fallback` 通过，生成 `2026-05-26-morning.html/md`。
+- 2026-05-26 15:37 CST TASK-05 验证：同一隔离目录再运行 `--type noon --mock` 后，`2026-05-26-morning.html/md` 和 `2026-05-26-noon.html/md` 同时存在，确认不会覆盖。
+- 2026-05-26 15:37 CST TASK-05 验证：隔离运行 `scripts/nas-daily-update.sh morning` 通过，日志显示 `type=morning, cli_type=morning`，导出静态数据并从早报 Markdown 统计 `new=13, high=0`。
+- 2026-05-26 15:38 CST TASK-05 验证：`DATABASE_URL=./data/runtime/task05-mock.sqlite REPORT_OUTPUT_DIR=./data/runtime/task05-mock-reports pnpm report:run -- --type morning --date 2026-05-26 --mock` 通过，生成 2 条早报 mock 事件。
+- 2026-05-26 15:38 CST TASK-05 验证：补充 morning mock 后重新运行 `pnpm typecheck` 和 `git diff --check`，均通过。
+- 2026-05-26 15:39 CST 完成 TASK-08：修改 `src/export/site.ts`，在 `overview.json` 中增加 `eventTotal`、`eventPreviewCount` 和 `links.events`，明确首页事件只是轻量预览。
+- 2026-05-26 15:39 CST 完成 TASK-08：修改 `src/web/app.js`，静态模式启动仍优先读取 `overview.json`；搜索、筛选、时间线和找不到详情时按需读取同目录 `events.json`，缓存到 `state.staticAllEvents` 并合并进静态详情索引。
+- 2026-05-26 15:39 CST 完成 TASK-08：更新 `docs/STATIC_EXPORT.md` 和 `docs/STATIC_WEB_MODE.md`，说明线上部署必须同步发布 `overview.json` 与 `events.json`，否则搜索会降级到首页预览数据。
+- 2026-05-26 15:39 CST TASK-08 验证：`node --check src/web/app.js`、`pnpm typecheck`、`pnpm build`、`pnpm export:site -- --out data/runtime/task08-public` 均通过。
+- 2026-05-26 15:39 CST TASK-08 验证：用隔离目录 `data/runtime/task08-probe-public` 将 `overview.events` 缩到 1 条、`events.json` 保留 33 条；本机无界面浏览器搜索 overview 之外的“小米米家冰箱对开 5”成功命中对应事件，证明静态搜索覆盖 `events.json`。
+- 2026-05-26 15:44 CST 完成 TASK-12：更新 `README.md`，明确本地默认端口为 `3877`，`3887` 只是当前开发机 launchctl 演示服务；新增 NAS 部署最短闭环，覆盖 Gitea 拉取、安装依赖、`.env.local`、`pnpm nas:daily -- noon`、定时任务、静态发布和 Bark 配置。
+- 2026-05-26 15:44 CST 完成 TASK-12：更新 `docs/NAS_DAILY_UPDATE.md`，移除 Bark “预留/未实现”的过期表述，明确 `notify:bark` 已接入，并补充 Git/发布边界。
+- 2026-05-26 15:44 CST 完成 TASK-12：更新 `docs/STATIC_EXPORT.md`、`docs/STATIC_WEB_MODE.md`、`docs/BARK_SETUP.md` 的交叉引用，明确线上页面只读、NAS 更新 `public-data`、Bark Key 只保存在 NAS 本地 `.env.local`。
+- 2026-05-26 15:45 CST 完成 TASK-10：修改 `scripts/nas-daily-update.sh`，`publish_public_data` 先复制到同父目录 `${PUBLISH_DIR}.next-${STAMP}`，成功后用目录切换发布，旧版本保留为 `${PUBLISH_DIR}.previous`；如果整体切换不可用，才降级 `rsync --delete` 并在日志标注非严格原子。
+- 2026-05-26 15:45 CST 完成 TASK-10：更新 `docs/NAS_DAILY_UPDATE.md`，补充发布目录切换策略、fallback 风险、失败保护和只删除同父目录候选/previous 的安全边界。
+- 2026-05-26 15:45 CST TASK-10 验证：`bash -n scripts/nas-daily-update.sh` 通过。
+- 2026-05-26 15:45 CST TASK-10 验证：构造 `data/runtime/task10-public` 和 `data/runtime/task10-publish`，调用实际 `publish_public_data` 函数后，`overview.json`、`events.json`、`meta.json`、`reports/test.html` 同时发布成功，旧目录保留为 `data/runtime/task10-publish.previous`。
+- 2026-05-26 15:45 CST TASK-10 验证：构造缺失 `PUBLIC_DATA_DIR` 的失败路径，函数返回 13，旧 `data/runtime/task10-fail-publish/overview.json` 和 `events.json` 未被删除或改写。
+- 2026-05-26 15:45 CST TASK-10 验证：`git diff --check` 通过。
+- 2026-05-26 15:44 CST TASK-12 验证：已自查 `package.json` 中存在 `nas:daily`、`export:site`、`notify:bark`、`serve`、`report:morning/noon/night`；`git diff --check` 通过。
+- 2026-05-26 15:45 CST TASK-11 验证：`node --check src/web/app.js`、`pnpm typecheck`、`pnpm build`、`git diff --check` 均通过。
+- 2026-05-26 15:45 CST TASK-11 验证：应用内浏览器控制通道返回无活动面板，已改用本机 Chrome 无头验证。
+- 2026-05-26 15:45 CST TASK-11 验证：390px 竖屏 `rootScrollWidth=390`、`bodyScrollWidth=390`、无横向溢出；高级筛选默认收起，筛选区高度约 114px。
+- 2026-05-26 15:45 CST TASK-11 验证：1200px 桌面 `rootScrollWidth=1185`、`bodyScrollWidth=1185`、无横向溢出；报告归档默认 8 份，可展开到 20 份。
+- 2026-05-26 15:45 CST TASK-11 验证：情报分区“正在发酵”从默认 4 条展开到 15 条，按钮文案变为“收起”；线上只读反馈提示显示在按钮区旁边，页面无 `.form-error`。
+- 2026-05-26 16:03 CST 集成复验：Claude Code 对当前 diff 复审，指出 `events.json` 合并优先级、发布复制失败保护、Bark URL 协议校验、调度器类型和 Bark 超时文档问题；已全部修复。
+- 2026-05-26 16:03 CST 集成复验：`node --check src/web/app.js`、`bash -n scripts/nas-daily-update.sh`、`pnpm typecheck`、`pnpm build`、`git diff --check` 均通过。
+- 2026-05-26 16:03 CST 集成复验：Bark 成功 dry-run 正常；失败 dry-run 不发送日志路径；非法 `BARK_NOTIFY_URL=file://...` 会友好失败。
+- 2026-05-26 16:03 CST 集成复验：隔离运行 `scripts/nas-daily-update.sh morning` 成功完成报告、静态导出、目录发布和 Bark dry-run；`PUBLISH_DIR` 目录切换成功。
+- 2026-05-26 16:03 CST 集成复验：重新导出 `public-data` 后，浏览器打开 `http://localhost:3887/` 显示线上只读模式，高级筛选默认收起，报告链接无 `#` 坏链接，反馈按钮旁显示只读提示。
+- 2026-05-26 16:04 CST 提交前检查：`node --check src/web/app.js`、`bash -n scripts/nas-daily-update.sh`、`pnpm typecheck`、`pnpm build`、`git diff --check` 和 Bark dry-run 均通过；运行时目录、公开导出目录、日志和 `.reviews` 均保持未跟踪忽略状态。

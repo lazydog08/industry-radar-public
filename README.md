@@ -28,8 +28,10 @@ npm install -g pnpm@10.12.1
 ## 手动运行
 
 ```bash
+pnpm report:morning
 pnpm report:noon
 pnpm report:night
+pnpm report:run -- --type morning
 pnpm report:run -- --type noon
 pnpm report:run -- --type night
 pnpm sources:test
@@ -38,6 +40,7 @@ pnpm sources:test
 使用 mock 数据跑通完整链路：
 
 ```bash
+pnpm report:run -- --type morning --mock
 pnpm report:run -- --type noon --mock
 pnpm report:run -- --type night --mock
 ```
@@ -61,6 +64,67 @@ scripts/simulate-week.sh 2026-05-19 5 data/simulations/week-2026-05-19_to_2026-0
 pnpm report:run -- --type noon --mock-fallback
 ```
 
+导出线上只读网页需要的静态数据：
+
+```bash
+pnpm export:site
+```
+
+默认会生成 `public-data/overview.json`、`events.json`、`knowledge.json`、`reports/index.json`、`meta.json`，这些文件是 NAS 发布到网页目录的主要产物，不应提交进 Git。
+
+## 自动更新
+
+正式线上更新推荐使用 NAS cron 调用：
+
+```bash
+pnpm nas:daily -- morning
+pnpm nas:daily -- noon
+pnpm nas:daily -- night
+```
+
+该流程会执行“抓取公开数据 -> 入库和评分 -> 生成报告 -> 导出线上 JSON -> 发布到网页目录 -> 通知模块”。详见 `docs/NAS_DAILY_UPDATE.md`。
+
+## NAS 部署最短闭环
+
+NAS 上推荐只负责采集、入库、评分、生成报告和更新静态数据；线上网页只读取 `public-data`，不直连 SQLite，也不提供写入能力。
+
+1. 从本地 Gitea 拉取仓库：
+
+```bash
+git clone http://192.168.31.50:3000/lazydog/industry-radar-kb.git
+cd industry-radar-kb
+pnpm install
+```
+
+2. 创建 NAS 本地配置，不提交进 Git：
+
+```bash
+cp .env.example .env.local
+```
+
+至少确认这些变量：
+
+```bash
+DATABASE_URL=./data/industry-radar.sqlite
+REPORT_OUTPUT_DIR=./data/reports
+PUBLIC_DATA_DIR=./public-data
+PUBLISH_DIR=/path/to/static-site/public-data
+BARK_KEY=your_bark_key
+BARK_PUBLIC_URL=https://example.com/industry-radar/
+```
+
+3. 手动跑一次完整链路：
+
+```bash
+pnpm nas:daily -- noon
+```
+
+4. 确认网页目录能访问 `public-data/overview.json` 和 `public-data/events.json` 后，再配置 NAS 定时任务。Bark 配置详见 `docs/BARK_SETUP.md`，静态导出和只读网页细节详见 `docs/STATIC_EXPORT.md`、`docs/STATIC_WEB_MODE.md`。
+
+不要提交 `.env.local`、SQLite 数据库、`logs/`、`public-data/`、`data/runtime/` 或任何 Bark Key / Cookie / Token。
+
+`ENABLE_INTERNAL_SCHEDULER=true` 适合本地或容器常驻演示：服务进程会在北京时间 12:00 运行中午报告、22:00 运行晚间报告，并在报告成功后自动执行静态导出。静态导出失败只会写入错误日志，不会让调度器退出。生产环境仍优先使用 NAS cron，因为它更容易查看日志、重跑和接入 Bark 通知。
+
 ## 搜索知识库
 
 ```bash
@@ -82,10 +146,12 @@ pnpm serve
 http://localhost:3877
 ```
 
+本地默认端口是 `3877`。当前这台机器上如果还能访问 `http://localhost:3887/`，那是本机 `launchctl` 托管的演示服务，不是新部署时应默认使用的端口。
+
 ## 数据位置
 
 - SQLite：`data/industry-radar.sqlite`
-- 报告：`data/reports/YYYY-MM-DD-noon.html`、`data/reports/YYYY-MM-DD-night.html`
+- 报告：`data/reports/YYYY-MM-DD-morning.html`、`data/reports/YYYY-MM-DD-noon.html`、`data/reports/YYYY-MM-DD-night.html`
 - mock 数据：`data/sample/mock-source-items.json`
 - 账号/关键词配置：`config/accounts.json`
 

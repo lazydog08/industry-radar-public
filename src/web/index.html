@@ -38,26 +38,33 @@
     </section>
 
     <section class="filters compact" aria-label="筛选">
-      <input id="query" class="query" placeholder="OPPO 影像 / 小米汽车 智驾 / B站 流量规则" />
-      <select id="category">
-        <option value="">全部分类</option>
-        <option value="digital">数码</option>
-        <option value="media">自媒体</option>
-        <option value="auto">汽车</option>
-        <option value="mixed">跨行业</option>
-      </select>
-      <select id="source">
-        <option value="">全部来源</option>
-      </select>
-      <input id="entity" list="entityList" placeholder="品牌 / 平台 / 产品" />
-      <input id="tag" list="tagList" placeholder="标签" />
-      <button id="searchBtn">搜索</button>
-      <div class="toggles">
-        <label><input id="favorite" type="checkbox" /> 收藏</label>
-        <label><input id="follow" type="checkbox" /> 跟踪</label>
-        <label><input id="usedForVideo" type="checkbox" /> 已用</label>
-        <label><input id="ignored" type="checkbox" /> 不感兴趣</label>
+      <div class="filter-primary">
+        <input id="query" class="query" placeholder="OPPO 影像 / 小米汽车 智驾 / B站 流量规则" />
+        <button id="searchBtn">搜索</button>
       </div>
+      <details id="advancedFilters" class="advanced-filters">
+        <summary><span>高级筛选</span><small>分类、来源、标签、反馈</small></summary>
+        <div class="filter-controls">
+          <select id="category">
+            <option value="">全部分类</option>
+            <option value="digital">数码</option>
+            <option value="media">自媒体</option>
+            <option value="auto">汽车</option>
+            <option value="mixed">跨行业</option>
+          </select>
+          <select id="source">
+            <option value="">全部来源</option>
+          </select>
+          <input id="entity" list="entityList" placeholder="品牌 / 平台 / 产品" />
+          <input id="tag" list="tagList" placeholder="标签" />
+          <div class="toggles">
+            <label><input id="favorite" type="checkbox" /> 收藏</label>
+            <label><input id="follow" type="checkbox" /> 跟踪</label>
+            <label><input id="usedForVideo" type="checkbox" /> 已用</label>
+            <label><input id="ignored" type="checkbox" /> 不感兴趣</label>
+          </div>
+        </div>
+      </details>
       <datalist id="entityList"></datalist>
       <datalist id="tagList"></datalist>
     </section>

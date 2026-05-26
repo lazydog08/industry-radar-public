@@ -35,6 +35,16 @@ export function makeShanghaiIso(date: string, time: string): string {
 }
 
 export function reportWindow(type: ReportType, date = dateOnly()): ReportWindow {
+  if (type === "morning") {
+    return {
+      type,
+      date,
+      start: makeShanghaiIso(date, "00:00:00"),
+      end: makeShanghaiIso(date, "09:59:59"),
+      label: "当天 00:00-09:59"
+    };
+  }
+
   if (type === "noon") {
     return {
       type,
