@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-27T16:26:11+08:00",
+  "generatedAt": "2026-05-27T16:29:46+08:00",
   "timezone": "Asia/Shanghai",
-  "total": 88,
+  "total": 83,
   "metrics": {
     "total": 90,
     "highConfidence": 1,
@@ -34,11 +34,11 @@
         "importance_score": 91,
         "worth_following": 0,
         "first_seen_at": "2026-05-26T17:25:31+08:00",
-        "last_seen_at": "2026-05-27T16:26:00+08:00",
+        "last_seen_at": "2026-05-27T16:29:35+08:00",
         "status": "active",
         "source_count": 1,
         "created_at": "2026-05-27T15:50:12+08:00",
-        "updated_at": "2026-05-27T16:26:10+08:00",
+        "updated_at": "2026-05-27T16:29:45+08:00",
         "tags": [
           "半导体突破",
           "数码"
@@ -137,7 +137,7 @@
         "video_potential": 5,
         "confidence": "low",
         "freshness_label": "new",
-        "freshness_days": 0.9,
+        "freshness_days": 1,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
         "score_parts": {
           "relevance": 19,
@@ -753,11 +753,11 @@
         "importance_score": 91,
         "worth_following": 0,
         "first_seen_at": "2026-05-26T17:25:31+08:00",
-        "last_seen_at": "2026-05-27T16:26:00+08:00",
+        "last_seen_at": "2026-05-27T16:29:35+08:00",
         "status": "active",
         "source_count": 1,
         "created_at": "2026-05-27T15:50:12+08:00",
-        "updated_at": "2026-05-27T16:26:10+08:00",
+        "updated_at": "2026-05-27T16:29:45+08:00",
         "tags": [
           "半导体突破",
           "数码"
@@ -856,7 +856,7 @@
         "video_potential": 5,
         "confidence": "low",
         "freshness_label": "new",
-        "freshness_days": 0.9,
+        "freshness_days": 1,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
         "score_parts": {
           "relevance": 19,
@@ -1502,7 +1502,7 @@
         "video_potential": 5,
         "confidence": "low",
         "freshness_label": "new",
-        "freshness_days": 0.9,
+        "freshness_days": 1,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
         "score_parts": {
           "relevance": 19,
@@ -2170,11 +2170,11 @@
       "importance_score": 91,
       "worth_following": 0,
       "first_seen_at": "2026-05-26T17:25:31+08:00",
-      "last_seen_at": "2026-05-27T16:26:00+08:00",
+      "last_seen_at": "2026-05-27T16:29:35+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:50:12+08:00",
-      "updated_at": "2026-05-27T16:26:10+08:00",
+      "updated_at": "2026-05-27T16:29:45+08:00",
       "tags": [
         "半导体突破",
         "数码"
@@ -2273,7 +2273,7 @@
       "video_potential": 5,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.9,
+      "freshness_days": 1,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
       "score_parts": {
         "relevance": 19,
@@ -2438,11 +2438,11 @@
       "importance_score": 67,
       "worth_following": 1,
       "first_seen_at": "2026-05-25T10:13:03+08:00",
-      "last_seen_at": "2026-05-27T16:26:00+08:00",
+      "last_seen_at": "2026-05-27T16:29:35+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:50:12+08:00",
-      "updated_at": "2026-05-27T16:26:10+08:00",
+      "updated_at": "2026-05-27T16:29:45+08:00",
       "tags": [
         "发布会",
         "数码"
@@ -3679,6 +3679,794 @@
       "caps": []
     },
     {
+      "id": "evt_64303f91510cee32ef4a",
+      "title": "华为“韬定律”到底牛在哪？用一个“城市交通”的例子，来讲清楚#华为 #韬定律 #时间缩微 #逻辑折叠 #麒麟2026 #中国芯片突破",
+      "summary": "数码行业出现值得入库的信号：华为“韬定律”到底牛在哪？用一个“城市交通”的例子，来讲清楚#华为 #韬定律 #时间缩微 #逻辑折叠 #麒麟2026 #中国芯片突破。它涉及 半导体突破、华为，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/26 20:28。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 半导体突破、华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：华为“韬定律”到底牛在哪？用一个“城市交通”的…",
+      "category": "digital",
+      "importance_score": 60,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-26T20:28:22+08:00",
+      "last_seen_at": "2026-05-27T16:29:35+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T16:15:59+08:00",
+      "updated_at": "2026-05-27T16:29:45+08:00",
+      "tags": [
+        "半导体突破",
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "半导体突破",
+          "type": "technology",
+          "aliases": [
+            "半导体",
+            "晶体管",
+            "韬定律",
+            "τ定律",
+            "逻辑折叠",
+            "先进制程"
+          ]
+        },
+        {
+          "name": "华为",
+          "type": "brand",
+          "aliases": [
+            "Huawei",
+            "HarmonyOS",
+            "问界",
+            "智界"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1NrVN6oEbT",
+          "title": "华为“韬定律”到底牛在哪？用一个“城市交通”的例子，来讲清楚#华为 #韬定律 #时间缩微 #逻辑折叠 #麒麟2026 #中国芯片突破",
+          "author": "财经渔情"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.8,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
+      "score_parts": {
+        "relevance": 22,
+        "trend": 19,
+        "freshness": 18,
+        "change": 5,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
+      "id": "evt_4536778eeb0a4f5d350d",
+      "title": "Mate90麒麟2026性能可以全面与其他产品竞争，性能提升41%，最大频率3.1Ghz；我们一步提升到每平毫米2.38亿晶体管！「何庭波讲韬定律」",
+      "summary": "数码行业出现值得入库的信号：Mate90麒麟2026性能可以全面与其他产品竞争，性能提升41%，最大频率3.1Ghz；我们一步提升到每平毫米2.38亿晶体管！「何庭波讲韬…。它涉及 半导体突破、华为，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：素材引自纯正英语 \n剪辑了一下移动端韬定律\n华为半导体何庭波讲解韬定律，Mate90麒麟2026首次实现逻辑折叠，Soc性能提升41%，最大频率3.1Ghz：新芯片性能可以全面与其他产品竞争；别人每平方毫米1.26亿到1.55亿晶体管花了三年，我们一步提升每平方毫米到2.38亿… 来源为 bilibili，发布时间标记为 05/26 21:32。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 半导体突破、华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：Mate90麒麟2026性能可以全面与其他产品…",
+      "category": "digital",
+      "importance_score": 60,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-26T21:32:12+08:00",
+      "last_seen_at": "2026-05-27T16:29:35+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T16:15:59+08:00",
+      "updated_at": "2026-05-27T16:29:45+08:00",
+      "tags": [
+        "半导体突破",
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "半导体突破",
+          "type": "technology",
+          "aliases": [
+            "半导体",
+            "晶体管",
+            "韬定律",
+            "τ定律",
+            "逻辑折叠",
+            "先进制程"
+          ]
+        },
+        {
+          "name": "华为",
+          "type": "brand",
+          "aliases": [
+            "Huawei",
+            "HarmonyOS",
+            "问界",
+            "智界"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1nDVN6DErC",
+          "title": "Mate90麒麟2026性能可以全面与其他产品竞争，性能提升41%，最大频率3.1Ghz；我们一步提升到每平毫米2.38亿晶体管！「何庭波讲韬定律」",
+          "author": "晓得鲁"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.8,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
+      "score_parts": {
+        "relevance": 22,
+        "trend": 21,
+        "freshness": 18,
+        "change": 5,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
+      "id": "evt_6940f7ddb99703083ed1",
+      "title": "华为音悦家真的雅！",
+      "summary": "数码行业出现值得入库的信号：华为音悦家真的雅！。它涉及 华为，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/26 22:19。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：华为音悦家真的雅！",
+      "category": "digital",
+      "importance_score": 60,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-26T22:19:11+08:00",
+      "last_seen_at": "2026-05-27T16:29:35+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T16:15:59+08:00",
+      "updated_at": "2026-05-27T16:29:45+08:00",
+      "tags": [
+        "半导体突破",
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "华为",
+          "type": "brand",
+          "aliases": [
+            "Huawei",
+            "HarmonyOS",
+            "问界",
+            "智界"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1UYVN6AEcd",
+          "title": "华为音悦家真的雅！",
+          "author": "小祺万事屋"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.8,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
+      "score_parts": {
+        "relevance": 21,
+        "trend": 19,
+        "freshness": 18,
+        "change": 4,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
+      "id": "evt_cf60196088b6f05e6383",
+      "title": "【中配】国外观察家犀利点评：美国制裁倒逼中国芯片创新，华为麒麟芯片新架构颠覆传统设计思路",
+      "summary": "数码行业出现值得入库的信号：【中配】国外观察家犀利点评：美国制裁倒逼中国芯片创新，华为麒麟芯片新架构颠覆传统设计思路。它涉及 半导体突破、华为，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：国外科技博主深度评论华为最新的芯片技术突破。面对美国制裁无法获取先进光刻机，华为另辟蹊径，通过&quot;逻辑折叠&quot;架构创新和τ缩放定律，在现有制程上实现相当于1.4纳米芯片的性能。博主以IPv4迟迟未被IPv6取代为例，指出西方技术受困于50年积累的历史包袱，而中国… 来源为 bilibili，发布时间标记为 05/26 22:24。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 半导体突破、华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：【中配】国外观察家犀利点评：美国制裁倒逼中国芯…",
+      "category": "digital",
+      "importance_score": 60,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-26T22:24:53+08:00",
+      "last_seen_at": "2026-05-27T16:29:35+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T16:15:59+08:00",
+      "updated_at": "2026-05-27T16:29:45+08:00",
+      "tags": [
+        "半导体突破",
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "半导体突破",
+          "type": "technology",
+          "aliases": [
+            "半导体",
+            "晶体管",
+            "韬定律",
+            "τ定律",
+            "逻辑折叠",
+            "先进制程"
+          ]
+        },
+        {
+          "name": "华为",
+          "type": "brand",
+          "aliases": [
+            "Huawei",
+            "HarmonyOS",
+            "问界",
+            "智界"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1VsVN6BEWm",
+          "title": "【中配】国外观察家犀利点评：美国制裁倒逼中国芯片创新，华为麒麟芯片新架构颠覆传统设计思路",
+          "author": "无语向东流"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.8,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
+      "score_parts": {
+        "relevance": 22,
+        "trend": 20,
+        "freshness": 18,
+        "change": 5,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
+      "id": "evt_315f0d46a2107de0e939",
+      "title": "高通苹果要慌了！新麒麟芯片性能直接旱地拔葱！",
+      "summary": "数码行业出现值得入库的信号：高通苹果要慌了！新麒麟芯片性能直接旱地拔葱！。它涉及 华为、苹果，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/26 23:07。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为、苹果 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：高通苹果要慌了！新麒麟芯片性能直接旱地拔葱！",
+      "category": "digital",
+      "importance_score": 60,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-26T23:07:52+08:00",
+      "last_seen_at": "2026-05-27T16:29:35+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T16:15:59+08:00",
+      "updated_at": "2026-05-27T16:29:45+08:00",
+      "tags": [
+        "半导体突破",
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "华为",
+          "type": "brand",
+          "aliases": [
+            "Huawei",
+            "HarmonyOS",
+            "问界",
+            "智界"
+          ]
+        },
+        {
+          "name": "苹果",
+          "type": "brand",
+          "aliases": [
+            "Apple",
+            "iPhone",
+            "iOS",
+            "WWDC"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV18SVP6aEyc",
+          "title": "高通苹果要慌了！新麒麟芯片性能直接旱地拔葱！",
+          "author": "数码王者"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.7,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
+      "score_parts": {
+        "relevance": 22,
+        "trend": 19,
+        "freshness": 18,
+        "change": 4,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
+      "id": "evt_0f86ef69399a6131217f",
+      "title": "[半导体芯片杂谈咕科技版] 英短在本站内开播，与B站观众连麦继续聊一聊华为发表的“韬定律”(纯技术讨论向)中",
+      "summary": "数码行业出现值得入库的信号：[半导体芯片杂谈咕科技版] 英短在本站内开播，与B站观众连麦继续聊一聊华为发表的“韬定律”(纯技术讨论向)上。它涉及 B站、半导体突破、华为，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/27 06:30。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 B站、半导体突破、华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：[半导体芯片杂谈咕科技版] 英短在本站内开播，…",
+      "category": "digital",
+      "importance_score": 60,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-27T06:30:00+08:00",
+      "last_seen_at": "2026-05-27T16:29:35+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T16:15:59+08:00",
+      "updated_at": "2026-05-27T16:29:45+08:00",
+      "tags": [
+        "半导体突破",
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "B站",
+          "type": "platform",
+          "aliases": [
+            "哔哩哔哩",
+            "Bilibili",
+            "UP主"
+          ]
+        },
+        {
+          "name": "半导体突破",
+          "type": "technology",
+          "aliases": [
+            "半导体",
+            "晶体管",
+            "韬定律",
+            "τ定律",
+            "逻辑折叠",
+            "先进制程"
+          ]
+        },
+        {
+          "name": "华为",
+          "type": "brand",
+          "aliases": [
+            "Huawei",
+            "HarmonyOS",
+            "问界",
+            "智界"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1umGr6vEiC",
+          "title": "[半导体芯片杂谈咕科技版] 英短在本站内开播，与B站观众连麦继续聊一聊华为发表的“韬定律”(纯技术讨论向)中",
+          "author": "SUPER_BUS的十香香"
+        },
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1StGk6TEQD",
+          "title": "[半导体芯片杂谈咕科技版] 英短在本站内开播，与B站观众连麦继续聊一聊华为发表的“韬定律”(纯技术讨论向)上",
+          "author": "SUPER_BUS的十香香"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.4,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
+      "score_parts": {
+        "relevance": 22,
+        "trend": 21,
+        "freshness": 18,
+        "change": 6,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
+      "id": "evt_752501a1f0a4cb73d673",
+      "title": "华为表示，“我们有加速度了”。展望未来，“我们不会（离一流）越来越远，只会越来越好”",
+      "summary": "数码行业出现值得入库的信号：华为表示，“我们有加速度了”。展望未来，“我们不会（离一流）越来越远，只会越来越好”。它涉及 华为，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/27 06:32。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：华为表示，“我们有加速度了”。展望未来，“我们…",
+      "category": "digital",
+      "importance_score": 60,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-27T06:32:46+08:00",
+      "last_seen_at": "2026-05-27T16:29:35+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T16:15:59+08:00",
+      "updated_at": "2026-05-27T16:29:45+08:00",
+      "tags": [
+        "半导体突破",
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "华为",
+          "type": "brand",
+          "aliases": [
+            "Huawei",
+            "HarmonyOS",
+            "问界",
+            "智界"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1KoGr6bEm3",
+          "title": "华为表示，“我们有加速度了”。展望未来，“我们不会（离一流）越来越远，只会越来越好”",
+          "author": "剁烂的土豆丫"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.4,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
+      "score_parts": {
+        "relevance": 21,
+        "trend": 19,
+        "freshness": 18,
+        "change": 4,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
+      "id": "evt_16575f71216bc1147895",
+      "title": "今年只期待两款芯片：华为麒麟2026小米玄戒Soc",
+      "summary": "数码行业出现值得入库的信号：今年只期待两款芯片：华为麒麟2026小米玄戒Soc。它涉及 华为、小米，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/27 06:42。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为、小米 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：今年只期待两款芯片：华为麒麟2026小米玄戒S…",
+      "category": "digital",
+      "importance_score": 60,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-27T06:42:14+08:00",
+      "last_seen_at": "2026-05-27T16:29:35+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T16:15:59+08:00",
+      "updated_at": "2026-05-27T16:29:45+08:00",
+      "tags": [
+        "半导体突破",
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "华为",
+          "type": "brand",
+          "aliases": [
+            "Huawei",
+            "HarmonyOS",
+            "问界",
+            "智界"
+          ]
+        },
+        {
+          "name": "小米",
+          "type": "brand",
+          "aliases": [
+            "Xiaomi",
+            "小米汽车",
+            "SU7",
+            "HyperOS"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1ppGr6QEAu",
+          "title": "今年只期待两款芯片：华为麒麟2026小米玄戒Soc",
+          "author": "剁烂的土豆丫"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.4,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
+      "score_parts": {
+        "relevance": 22,
+        "trend": 19,
+        "freshness": 18,
+        "change": 4,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
+      "id": "evt_a479fecf242db204a37b",
+      "title": "羊驼：我从不评价一个我完全不懂的技术，不然会显得傻傻的，讨论可以🤣",
+      "summary": "数码行业出现值得入库的信号：羊驼：我从不评价一个我完全不懂的技术，不然会显得傻傻的，讨论可以🤣。它涉及 相关主体，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/27 06:53。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：羊驼：我从不评价一个我完全不懂的技术，不然会显…",
+      "category": "digital",
+      "importance_score": 60,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-27T06:53:54+08:00",
+      "last_seen_at": "2026-05-27T16:29:35+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T16:15:59+08:00",
+      "updated_at": "2026-05-27T16:29:45+08:00",
+      "tags": [
+        "半导体突破",
+        "数码"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1sEGr6sE9Q",
+          "title": "羊驼：我从不评价一个我完全不懂的技术，不然会显得傻傻的，讨论可以🤣",
+          "author": "剁烂的土豆丫"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.4,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
+      "score_parts": {
+        "relevance": 19,
+        "trend": 19,
+        "freshness": 18,
+        "change": 4,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
+      "id": "evt_321a00f82133a90690d7",
+      "title": "高端机这一块果然还是华为苹果啊🤣",
+      "summary": "数码行业出现值得入库的信号：高端机这一块果然还是华为苹果啊🤣。它涉及 华为、苹果，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/27 07:12。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为、苹果 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：高端机这一块果然还是华为苹果啊🤣",
+      "category": "digital",
+      "importance_score": 60,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-27T07:12:02+08:00",
+      "last_seen_at": "2026-05-27T16:29:35+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T16:15:59+08:00",
+      "updated_at": "2026-05-27T16:29:45+08:00",
+      "tags": [
+        "半导体突破",
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "华为",
+          "type": "brand",
+          "aliases": [
+            "Huawei",
+            "HarmonyOS",
+            "问界",
+            "智界"
+          ]
+        },
+        {
+          "name": "苹果",
+          "type": "brand",
+          "aliases": [
+            "Apple",
+            "iPhone",
+            "iOS",
+            "WWDC"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1jqGr6GE5f",
+          "title": "高端机这一块果然还是华为苹果啊🤣",
+          "author": "剁烂的土豆丫"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.4,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
+      "score_parts": {
+        "relevance": 22,
+        "trend": 19,
+        "freshness": 18,
+        "change": 4,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
+      "id": "evt_d573f89f3764d8a1b401",
+      "title": "【ISCAS 2026】华为何庭波详解 Tau(τ) Scaling Law：逻辑折叠、麒麟 2026 与后摩尔芯片路线 [中英字幕]",
+      "summary": "数码行业出现值得入库的信号：【ISCAS 2026】华为何庭波详解 Tau(τ) Scaling Law：逻辑折叠、麒麟 2026 与后摩尔芯片路线 [中英字幕]。它涉及 半导体突破、华为，系统识别到 半导体突破、数码、选题机会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：ISCAS 2026 开幕演讲，华为何庭波围绕 Tau(τ) Scaling Law 展开系统说明：从摩尔定律放缓后的时间尺度缩放逻辑出发，延伸到器件 RC、逻辑折叠、混合键合、麒麟 2026、昇腾演进，以及 2031 年先进芯片晶体管密度目标等关键路线。这期内容适合关注后摩尔… 来源为 bilibili，发布时间标记为 05/27 08:30。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 半导体突破、华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：【ISCAS 2026】华为何庭波详解 Tau…",
+      "category": "digital",
+      "importance_score": 60,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-27T08:30:00+08:00",
+      "last_seen_at": "2026-05-27T16:29:35+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T16:15:59+08:00",
+      "updated_at": "2026-05-27T16:29:45+08:00",
+      "tags": [
+        "半导体突破",
+        "数码",
+        "选题机会"
+      ],
+      "entities": [
+        {
+          "name": "半导体突破",
+          "type": "technology",
+          "aliases": [
+            "半导体",
+            "晶体管",
+            "韬定律",
+            "τ定律",
+            "逻辑折叠",
+            "先进制程"
+          ]
+        },
+        {
+          "name": "华为",
+          "type": "brand",
+          "aliases": [
+            "Huawei",
+            "HarmonyOS",
+            "问界",
+            "智界"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1FgGk6SE8T",
+          "title": "【ISCAS 2026】华为何庭波详解 Tau(τ) Scaling Law：逻辑折叠、麒麟 2026 与后摩尔芯片路线 [中英字幕]",
+          "author": "葬送的模数师"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.3,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
+      "score_parts": {
+        "relevance": 22,
+        "trend": 20,
+        "freshness": 18,
+        "change": 5,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
       "id": "evt_9b9312edc31d2af9a395",
       "title": "华天科技四天三板！单日成交破百亿，华为韬定律引爆先进封装#资本像素 #华天科技 #先进封装 #华为韬定律 #半导体",
       "summary": "数码行业出现值得入库的信号：华天科技四天三板！单日成交破百亿，华为韬定律引爆先进封装#资本像素 #华天科技 #先进封装 #华为韬定律 #半导体。它涉及 半导体突破、华为，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
@@ -3691,11 +4479,11 @@
       "importance_score": 60,
       "worth_following": 0,
       "first_seen_at": "2026-05-27T10:30:57+08:00",
-      "last_seen_at": "2026-05-27T16:26:00+08:00",
+      "last_seen_at": "2026-05-27T16:29:35+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:41:18+08:00",
-      "updated_at": "2026-05-27T16:26:10+08:00",
+      "updated_at": "2026-05-27T16:29:45+08:00",
       "tags": [
         "半导体突破",
         "数码"
@@ -3766,11 +4554,11 @@
       "importance_score": 60,
       "worth_following": 1,
       "first_seen_at": "2026-05-27T10:51:42+08:00",
-      "last_seen_at": "2026-05-27T16:26:00+08:00",
+      "last_seen_at": "2026-05-27T16:29:35+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:41:18+08:00",
-      "updated_at": "2026-05-27T16:26:10+08:00",
+      "updated_at": "2026-05-27T16:29:45+08:00",
       "tags": [
         "半导体突破",
         "数码"
@@ -3841,11 +4629,11 @@
       "importance_score": 60,
       "worth_following": 0,
       "first_seen_at": "2026-05-27T11:54:42+08:00",
-      "last_seen_at": "2026-05-27T16:26:00+08:00",
+      "last_seen_at": "2026-05-27T16:29:35+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:41:17+08:00",
-      "updated_at": "2026-05-27T16:26:10+08:00",
+      "updated_at": "2026-05-27T16:29:45+08:00",
       "tags": [
         "半导体突破",
         "数码"
@@ -3922,11 +4710,11 @@
       "importance_score": 60,
       "worth_following": 0,
       "first_seen_at": "2026-05-27T11:59:15+08:00",
-      "last_seen_at": "2026-05-27T16:26:00+08:00",
+      "last_seen_at": "2026-05-27T16:29:35+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:41:17+08:00",
-      "updated_at": "2026-05-27T16:26:10+08:00",
+      "updated_at": "2026-05-27T16:29:45+08:00",
       "tags": [
         "半导体突破",
         "数码"
@@ -3997,11 +4785,11 @@
       "importance_score": 60,
       "worth_following": 0,
       "first_seen_at": "2026-05-27T11:09:04+08:00",
-      "last_seen_at": "2026-05-27T16:26:00+08:00",
+      "last_seen_at": "2026-05-27T16:29:35+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:36:08+08:00",
-      "updated_at": "2026-05-27T16:26:10+08:00",
+      "updated_at": "2026-05-27T16:29:45+08:00",
       "tags": [
         "半导体突破",
         "数码"
@@ -4037,794 +4825,6 @@
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
-        "trend": 20,
-        "freshness": 18,
-        "change": 5,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
-      "id": "evt_64303f91510cee32ef4a",
-      "title": "华为“韬定律”到底牛在哪？用一个“城市交通”的例子，来讲清楚#华为 #韬定律 #时间缩微 #逻辑折叠 #麒麟2026 #中国芯片突破",
-      "summary": "数码行业出现值得入库的信号：华为“韬定律”到底牛在哪？用一个“城市交通”的例子，来讲清楚#华为 #韬定律 #时间缩微 #逻辑折叠 #麒麟2026 #中国芯片突破。它涉及 华为、半导体突破，系统识别到 数码、半导体突破 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/26 20:28。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为、半导体突破 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：华为“韬定律”到底牛在哪？用一个“城市交通”的…",
-      "category": "digital",
-      "importance_score": 60,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-26T20:28:22+08:00",
-      "last_seen_at": "2026-05-27T16:15:46+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T16:15:59+08:00",
-      "updated_at": "2026-05-27T16:15:59+08:00",
-      "tags": [
-        "半导体突破",
-        "数码"
-      ],
-      "entities": [
-        {
-          "name": "半导体突破",
-          "type": "technology",
-          "aliases": [
-            "半导体",
-            "晶体管",
-            "韬定律",
-            "τ定律",
-            "逻辑折叠",
-            "先进制程"
-          ]
-        },
-        {
-          "name": "华为",
-          "type": "brand",
-          "aliases": [
-            "Huawei",
-            "HarmonyOS",
-            "问界",
-            "智界"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1NrVN6oEbT",
-          "title": "华为“韬定律”到底牛在哪？用一个“城市交通”的例子，来讲清楚#华为 #韬定律 #时间缩微 #逻辑折叠 #麒麟2026 #中国芯片突破",
-          "author": "财经渔情"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 60,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 5,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.8,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
-      "score_parts": {
-        "relevance": 22,
-        "trend": 19,
-        "freshness": 18,
-        "change": 5,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
-      "id": "evt_4536778eeb0a4f5d350d",
-      "title": "Mate90麒麟2026性能可以全面与其他产品竞争，性能提升41%，最大频率3.1Ghz；我们一步提升到每平毫米2.38亿晶体管！「何庭波讲韬定律」",
-      "summary": "数码行业出现值得入库的信号：Mate90麒麟2026性能可以全面与其他产品竞争，性能提升41%，最大频率3.1Ghz；我们一步提升到每平毫米2.38亿晶体管！「何庭波讲韬…。它涉及 华为、半导体突破，系统识别到 数码、半导体突破 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：素材引自纯正英语 \n剪辑了一下移动端韬定律\n华为半导体何庭波讲解韬定律，Mate90麒麟2026首次实现逻辑折叠，Soc性能提升41%，最大频率3.1Ghz：新芯片性能可以全面与其他产品竞争；别人每平方毫米1.26亿到1.55亿晶体管花了三年，我们一步提升每平方毫米到2.38亿… 来源为 bilibili，发布时间标记为 05/26 21:32。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为、半导体突破 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：Mate90麒麟2026性能可以全面与其他产品…",
-      "category": "digital",
-      "importance_score": 60,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-26T21:32:12+08:00",
-      "last_seen_at": "2026-05-27T16:15:46+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T16:15:59+08:00",
-      "updated_at": "2026-05-27T16:15:59+08:00",
-      "tags": [
-        "半导体突破",
-        "数码"
-      ],
-      "entities": [
-        {
-          "name": "半导体突破",
-          "type": "technology",
-          "aliases": [
-            "半导体",
-            "晶体管",
-            "韬定律",
-            "τ定律",
-            "逻辑折叠",
-            "先进制程"
-          ]
-        },
-        {
-          "name": "华为",
-          "type": "brand",
-          "aliases": [
-            "Huawei",
-            "HarmonyOS",
-            "问界",
-            "智界"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1nDVN6DErC",
-          "title": "Mate90麒麟2026性能可以全面与其他产品竞争，性能提升41%，最大频率3.1Ghz；我们一步提升到每平毫米2.38亿晶体管！「何庭波讲韬定律」",
-          "author": "晓得鲁"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 60,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 5,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.8,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
-      "score_parts": {
-        "relevance": 22,
-        "trend": 21,
-        "freshness": 18,
-        "change": 5,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
-      "id": "evt_6940f7ddb99703083ed1",
-      "title": "华为音悦家真的雅！",
-      "summary": "数码行业出现值得入库的信号：华为音悦家真的雅！。它涉及 华为，系统识别到 数码、半导体突破 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/26 22:19。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：华为音悦家真的雅！",
-      "category": "digital",
-      "importance_score": 60,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-26T22:19:11+08:00",
-      "last_seen_at": "2026-05-27T16:15:46+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T16:15:59+08:00",
-      "updated_at": "2026-05-27T16:15:59+08:00",
-      "tags": [
-        "半导体突破",
-        "数码"
-      ],
-      "entities": [
-        {
-          "name": "华为",
-          "type": "brand",
-          "aliases": [
-            "Huawei",
-            "HarmonyOS",
-            "问界",
-            "智界"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1UYVN6AEcd",
-          "title": "华为音悦家真的雅！",
-          "author": "小祺万事屋"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 60,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 5,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.8,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
-      "score_parts": {
-        "relevance": 21,
-        "trend": 19,
-        "freshness": 18,
-        "change": 4,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
-      "id": "evt_cf60196088b6f05e6383",
-      "title": "【中配】国外观察家犀利点评：美国制裁倒逼中国芯片创新，华为麒麟芯片新架构颠覆传统设计思路",
-      "summary": "数码行业出现值得入库的信号：【中配】国外观察家犀利点评：美国制裁倒逼中国芯片创新，华为麒麟芯片新架构颠覆传统设计思路。它涉及 华为、半导体突破，系统识别到 数码、半导体突破 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：国外科技博主深度评论华为最新的芯片技术突破。面对美国制裁无法获取先进光刻机，华为另辟蹊径，通过&quot;逻辑折叠&quot;架构创新和τ缩放定律，在现有制程上实现相当于1.4纳米芯片的性能。博主以IPv4迟迟未被IPv6取代为例，指出西方技术受困于50年积累的历史包袱，而中国… 来源为 bilibili，发布时间标记为 05/26 22:24。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为、半导体突破 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：【中配】国外观察家犀利点评：美国制裁倒逼中国芯…",
-      "category": "digital",
-      "importance_score": 60,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-26T22:24:53+08:00",
-      "last_seen_at": "2026-05-27T16:15:46+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T16:15:59+08:00",
-      "updated_at": "2026-05-27T16:15:59+08:00",
-      "tags": [
-        "半导体突破",
-        "数码"
-      ],
-      "entities": [
-        {
-          "name": "半导体突破",
-          "type": "technology",
-          "aliases": [
-            "半导体",
-            "晶体管",
-            "韬定律",
-            "τ定律",
-            "逻辑折叠",
-            "先进制程"
-          ]
-        },
-        {
-          "name": "华为",
-          "type": "brand",
-          "aliases": [
-            "Huawei",
-            "HarmonyOS",
-            "问界",
-            "智界"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1VsVN6BEWm",
-          "title": "【中配】国外观察家犀利点评：美国制裁倒逼中国芯片创新，华为麒麟芯片新架构颠覆传统设计思路",
-          "author": "无语向东流"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 60,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 5,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.8,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
-      "score_parts": {
-        "relevance": 22,
-        "trend": 20,
-        "freshness": 18,
-        "change": 5,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
-      "id": "evt_315f0d46a2107de0e939",
-      "title": "高通苹果要慌了！新麒麟芯片性能直接旱地拔葱！",
-      "summary": "数码行业出现值得入库的信号：高通苹果要慌了！新麒麟芯片性能直接旱地拔葱！。它涉及 苹果、华为，系统识别到 数码、半导体突破 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/26 23:07。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 苹果、华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：高通苹果要慌了！新麒麟芯片性能直接旱地拔葱！",
-      "category": "digital",
-      "importance_score": 60,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-26T23:07:52+08:00",
-      "last_seen_at": "2026-05-27T16:15:46+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T16:15:59+08:00",
-      "updated_at": "2026-05-27T16:15:59+08:00",
-      "tags": [
-        "半导体突破",
-        "数码"
-      ],
-      "entities": [
-        {
-          "name": "华为",
-          "type": "brand",
-          "aliases": [
-            "Huawei",
-            "HarmonyOS",
-            "问界",
-            "智界"
-          ]
-        },
-        {
-          "name": "苹果",
-          "type": "brand",
-          "aliases": [
-            "Apple",
-            "iPhone",
-            "iOS",
-            "WWDC"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV18SVP6aEyc",
-          "title": "高通苹果要慌了！新麒麟芯片性能直接旱地拔葱！",
-          "author": "数码王者"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 60,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 5,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.7,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
-      "score_parts": {
-        "relevance": 22,
-        "trend": 19,
-        "freshness": 18,
-        "change": 4,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
-      "id": "evt_0f86ef69399a6131217f",
-      "title": "[半导体芯片杂谈咕科技版] 英短在本站内开播，与B站观众连麦继续聊一聊华为发表的“韬定律”(纯技术讨论向)中",
-      "summary": "数码行业出现值得入库的信号：[半导体芯片杂谈咕科技版] 英短在本站内开播，与B站观众连麦继续聊一聊华为发表的“韬定律”(纯技术讨论向)上。它涉及 B站、半导体突破、华为，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/27 06:30。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 B站、半导体突破、华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：[半导体芯片杂谈咕科技版] 英短在本站内开播，…",
-      "category": "digital",
-      "importance_score": 60,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-27T06:30:00+08:00",
-      "last_seen_at": "2026-05-27T16:15:46+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T16:15:59+08:00",
-      "updated_at": "2026-05-27T16:15:59+08:00",
-      "tags": [
-        "半导体突破",
-        "数码"
-      ],
-      "entities": [
-        {
-          "name": "B站",
-          "type": "platform",
-          "aliases": [
-            "哔哩哔哩",
-            "Bilibili",
-            "UP主"
-          ]
-        },
-        {
-          "name": "半导体突破",
-          "type": "technology",
-          "aliases": [
-            "半导体",
-            "晶体管",
-            "韬定律",
-            "τ定律",
-            "逻辑折叠",
-            "先进制程"
-          ]
-        },
-        {
-          "name": "华为",
-          "type": "brand",
-          "aliases": [
-            "Huawei",
-            "HarmonyOS",
-            "问界",
-            "智界"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1umGr6vEiC",
-          "title": "[半导体芯片杂谈咕科技版] 英短在本站内开播，与B站观众连麦继续聊一聊华为发表的“韬定律”(纯技术讨论向)中",
-          "author": "SUPER_BUS的十香香"
-        },
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1StGk6TEQD",
-          "title": "[半导体芯片杂谈咕科技版] 英短在本站内开播，与B站观众连麦继续聊一聊华为发表的“韬定律”(纯技术讨论向)上",
-          "author": "SUPER_BUS的十香香"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 60,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 5,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.4,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
-      "score_parts": {
-        "relevance": 22,
-        "trend": 21,
-        "freshness": 18,
-        "change": 6,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
-      "id": "evt_752501a1f0a4cb73d673",
-      "title": "华为表示，“我们有加速度了”。展望未来，“我们不会（离一流）越来越远，只会越来越好”",
-      "summary": "数码行业出现值得入库的信号：华为表示，“我们有加速度了”。展望未来，“我们不会（离一流）越来越远，只会越来越好”。它涉及 华为，系统识别到 数码、半导体突破 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/27 06:32。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：华为表示，“我们有加速度了”。展望未来，“我们…",
-      "category": "digital",
-      "importance_score": 60,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-27T06:32:46+08:00",
-      "last_seen_at": "2026-05-27T16:15:46+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T16:15:59+08:00",
-      "updated_at": "2026-05-27T16:15:59+08:00",
-      "tags": [
-        "半导体突破",
-        "数码"
-      ],
-      "entities": [
-        {
-          "name": "华为",
-          "type": "brand",
-          "aliases": [
-            "Huawei",
-            "HarmonyOS",
-            "问界",
-            "智界"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1KoGr6bEm3",
-          "title": "华为表示，“我们有加速度了”。展望未来，“我们不会（离一流）越来越远，只会越来越好”",
-          "author": "剁烂的土豆丫"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 60,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 5,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.4,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
-      "score_parts": {
-        "relevance": 21,
-        "trend": 19,
-        "freshness": 18,
-        "change": 4,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
-      "id": "evt_16575f71216bc1147895",
-      "title": "今年只期待两款芯片：华为麒麟2026小米玄戒Soc",
-      "summary": "数码行业出现值得入库的信号：今年只期待两款芯片：华为麒麟2026小米玄戒Soc。它涉及 小米、华为，系统识别到 数码、半导体突破 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/27 06:42。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 小米、华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：今年只期待两款芯片：华为麒麟2026小米玄戒S…",
-      "category": "digital",
-      "importance_score": 60,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-27T06:42:14+08:00",
-      "last_seen_at": "2026-05-27T16:15:46+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T16:15:59+08:00",
-      "updated_at": "2026-05-27T16:15:59+08:00",
-      "tags": [
-        "半导体突破",
-        "数码"
-      ],
-      "entities": [
-        {
-          "name": "华为",
-          "type": "brand",
-          "aliases": [
-            "Huawei",
-            "HarmonyOS",
-            "问界",
-            "智界"
-          ]
-        },
-        {
-          "name": "小米",
-          "type": "brand",
-          "aliases": [
-            "Xiaomi",
-            "小米汽车",
-            "SU7",
-            "HyperOS"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1ppGr6QEAu",
-          "title": "今年只期待两款芯片：华为麒麟2026小米玄戒Soc",
-          "author": "剁烂的土豆丫"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 60,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 5,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.4,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
-      "score_parts": {
-        "relevance": 22,
-        "trend": 19,
-        "freshness": 18,
-        "change": 4,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
-      "id": "evt_a479fecf242db204a37b",
-      "title": "羊驼：我从不评价一个我完全不懂的技术，不然会显得傻傻的，讨论可以🤣",
-      "summary": "数码行业出现值得入库的信号：羊驼：我从不评价一个我完全不懂的技术，不然会显得傻傻的，讨论可以🤣。它涉及 相关主体，系统识别到 数码、半导体突破 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/27 06:53。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：羊驼：我从不评价一个我完全不懂的技术，不然会显…",
-      "category": "digital",
-      "importance_score": 60,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-27T06:53:54+08:00",
-      "last_seen_at": "2026-05-27T16:15:46+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T16:15:59+08:00",
-      "updated_at": "2026-05-27T16:15:59+08:00",
-      "tags": [
-        "半导体突破",
-        "数码"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1sEGr6sE9Q",
-          "title": "羊驼：我从不评价一个我完全不懂的技术，不然会显得傻傻的，讨论可以🤣",
-          "author": "剁烂的土豆丫"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 60,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 5,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.4,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
-      "score_parts": {
-        "relevance": 19,
-        "trend": 19,
-        "freshness": 18,
-        "change": 4,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
-      "id": "evt_321a00f82133a90690d7",
-      "title": "高端机这一块果然还是华为苹果啊🤣",
-      "summary": "数码行业出现值得入库的信号：高端机这一块果然还是华为苹果啊🤣。它涉及 苹果、华为，系统识别到 数码、半导体突破 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/27 07:12。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 苹果、华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：高端机这一块果然还是华为苹果啊🤣",
-      "category": "digital",
-      "importance_score": 60,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-27T07:12:02+08:00",
-      "last_seen_at": "2026-05-27T16:15:46+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T16:15:59+08:00",
-      "updated_at": "2026-05-27T16:15:59+08:00",
-      "tags": [
-        "半导体突破",
-        "数码"
-      ],
-      "entities": [
-        {
-          "name": "华为",
-          "type": "brand",
-          "aliases": [
-            "Huawei",
-            "HarmonyOS",
-            "问界",
-            "智界"
-          ]
-        },
-        {
-          "name": "苹果",
-          "type": "brand",
-          "aliases": [
-            "Apple",
-            "iPhone",
-            "iOS",
-            "WWDC"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1jqGr6GE5f",
-          "title": "高端机这一块果然还是华为苹果啊🤣",
-          "author": "剁烂的土豆丫"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 60,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 5,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.4,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
-      "score_parts": {
-        "relevance": 22,
-        "trend": 19,
-        "freshness": 18,
-        "change": 4,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
-      "id": "evt_d573f89f3764d8a1b401",
-      "title": "【ISCAS 2026】华为何庭波详解 Tau(τ) Scaling Law：逻辑折叠、麒麟 2026 与后摩尔芯片路线 [中英字幕]",
-      "summary": "数码行业出现值得入库的信号：【ISCAS 2026】华为何庭波详解 Tau(τ) Scaling Law：逻辑折叠、麒麟 2026 与后摩尔芯片路线 [中英字幕]。它涉及 华为、半导体突破，系统识别到 数码、半导体突破、选题机会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：ISCAS 2026 开幕演讲，华为何庭波围绕 Tau(τ) Scaling Law 展开系统说明：从摩尔定律放缓后的时间尺度缩放逻辑出发，延伸到器件 RC、逻辑折叠、混合键合、麒麟 2026、昇腾演进，以及 2031 年先进芯片晶体管密度目标等关键路线。这期内容适合关注后摩尔… 来源为 bilibili，发布时间标记为 05/27 08:30。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为、半导体突破 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：【ISCAS 2026】华为何庭波详解 Tau…",
-      "category": "digital",
-      "importance_score": 60,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-27T08:30:00+08:00",
-      "last_seen_at": "2026-05-27T16:15:46+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T16:15:59+08:00",
-      "updated_at": "2026-05-27T16:15:59+08:00",
-      "tags": [
-        "半导体突破",
-        "数码",
-        "选题机会"
-      ],
-      "entities": [
-        {
-          "name": "半导体突破",
-          "type": "technology",
-          "aliases": [
-            "半导体",
-            "晶体管",
-            "韬定律",
-            "τ定律",
-            "逻辑折叠",
-            "先进制程"
-          ]
-        },
-        {
-          "name": "华为",
-          "type": "brand",
-          "aliases": [
-            "Huawei",
-            "HarmonyOS",
-            "问界",
-            "智界"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1FgGk6SE8T",
-          "title": "【ISCAS 2026】华为何庭波详解 Tau(τ) Scaling Law：逻辑折叠、麒麟 2026 与后摩尔芯片路线 [中英字幕]",
-          "author": "葬送的模数师"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 60,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 5,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.3,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
-      "score_parts": {
-        "relevance": 22,
         "trend": 20,
         "freshness": 18,
         "change": 5,
@@ -5077,58 +5077,6 @@
       ]
     },
     {
-      "id": "evt_29824ef9852b52433231",
-      "title": "《二重螺旋》银星奔流版本PV | 雪国列车启行",
-      "summary": "数码行业出现值得入库的信号：《二重螺旋》银星奔流版本PV | 雪国列车启行。它涉及 相关主体，系统识别到 数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：《二重螺旋》银星奔流版本PV | 雪国列车启行\n\n冰原之上，沉睡着铁的骨骼；\n冻雾之中，汽笛凝结成霜。\n这是驶向故乡的专列，\n还是不断疾驰的囚笼？\n\n当蒸汽的轰鸣撕破冰湖城的寂静，\n命运的铁轨在冻土与新芽之间延伸——\n雪国列车，已然启程。\n\n全新版本「银星奔流」6月2日重磅上线… 来源为 bilibili，发布时间标记为 05/26 19:10。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "更新后最该试的 3 个功能",
-      "category": "digital",
-      "importance_score": 60,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-26T19:10:00+08:00",
-      "last_seen_at": "2026-05-27T00:20:55+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T00:21:06+08:00",
-      "updated_at": "2026-05-27T00:21:06+08:00",
-      "tags": [
-        "数码",
-        "系统更新"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1fYGR6HE7e",
-          "title": "《二重螺旋》银星奔流版本PV | 雪国列车启行",
-          "author": "二重螺旋"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 60,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 5,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.9,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现；具备视频选题潜力",
-      "score_parts": {
-        "relevance": 17,
-        "trend": 13,
-        "freshness": 18,
-        "change": 4,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
       "id": "evt_fc037418b778817d1751",
       "title": "100位UP在B站大楼躲猫猫！谁能获胜？",
       "summary": "自媒体/平台生态出现值得入库的信号：100位UP在B站大楼躲猫猫！谁能获胜？。它涉及 B站，系统识别到 自媒体 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
@@ -5234,67 +5182,6 @@
         "trend": 14,
         "freshness": 15,
         "change": 4,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
-      "id": "evt_7fc79932733eb2616b91",
-      "title": "《原神》角色逸闻——「故事的每一笔」",
-      "summary": "数码行业出现值得入库的信号：《原神》角色逸闻——「故事的每一笔」。它涉及 B站，系统识别到 数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：只存在于幻想中的故事，大多宏大且瑰丽。而关于「自我」的故事，则往往要从「向前迈出一步」开始书写。\n\n《原神》bilibili服下载地址： https://www.biligame.com/detail/?id=103496 来源为 bilibili，发布时间标记为 05/27 12:00。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 B站 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：《原神》角色逸闻——「故事的每一笔」",
-      "category": "digital",
-      "importance_score": 58,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-27T12:00:00+08:00",
-      "last_seen_at": "2026-05-27T16:04:37+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T15:36:08+08:00",
-      "updated_at": "2026-05-27T16:04:47+08:00",
-      "tags": [
-        "数码"
-      ],
-      "entities": [
-        {
-          "name": "B站",
-          "type": "platform",
-          "aliases": [
-            "哔哩哔哩",
-            "Bilibili",
-            "UP主"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1MGVP6ZExE",
-          "title": "《原神》角色逸闻——「故事的每一笔」",
-          "author": "原神"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 59,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 4,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.2,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现；具备视频选题潜力",
-      "score_parts": {
-        "relevance": 18,
-        "trend": 9,
-        "freshness": 18,
-        "change": 1,
         "credibility": 6,
         "scarcity": 7
       },
@@ -5543,7 +5430,7 @@
       "video_potential": 4,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "近期新出现；具备视频选题潜力",
       "score_parts": {
         "relevance": 16,
@@ -6394,108 +6281,6 @@
       ]
     },
     {
-      "id": "evt_fc1e07d87a7d6392719f",
-      "title": "【战双帕弥什】「长路归航」新增涂装",
-      "summary": "数码行业出现值得入库的信号：【战双帕弥什】「长路归航」新增涂装。它涉及 相关主体，系统识别到 数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：血月升空，她踏进雾中，用手中的孤刃斩破旧时代的桎梏；长夜漫漫，她展开双翼，任何事物都躲不过她寻猎的骑枪；执手相携，她舞步轻巧，以永恒之心邀命定之人共赴一舞。\n\n露西亚·逆冕 新增特效涂装【雾夜赤冕】、维罗妮卡·铮骨 新增特效涂装【冥契妖翎】、丽芙·霁梦 新增特效涂装【悠羽倾舞】… 来源为 bilibili，发布时间标记为 05/27 11:00。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：【战双帕弥什】「长路归航」新增涂装",
-      "category": "digital",
-      "importance_score": 52,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-27T11:00:00+08:00",
-      "last_seen_at": "2026-05-27T16:04:37+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T15:36:08+08:00",
-      "updated_at": "2026-05-27T16:04:47+08:00",
-      "tags": [
-        "数码"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1VKVK66Eb2",
-          "title": "【战双帕弥什】「长路归航」新增涂装",
-          "author": "战双帕弥什"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 53,
-      "radar_level": "C",
-      "radar_section": "background",
-      "video_potential": 4,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.2,
-      "push_reason": "近期新出现",
-      "score_parts": {
-        "relevance": 14,
-        "trend": 7,
-        "freshness": 18,
-        "change": 1,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
-      "id": "evt_0bbe5018eb21371724df",
-      "title": "《二重螺旋》芙罗拉PV | 燃烬成昼",
-      "summary": "数码行业出现值得入库的信号：《二重螺旋》芙罗拉PV | 燃烬成昼。它涉及 相关主体，系统识别到 数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：《二重螺旋》芙罗拉PV | 燃烬成昼\n\n一点暗焰，自她的心口破茧，\n于是丝线崩断，高塔倾覆，\n月光倾落之处，再无囚笼——\n而是她即将踏足的、整片大地。\n\n▷芙罗拉\n中文CV——刘雯\n日文CV——原由实\n英文CV——Rachel Hurd-Wood\n韩文CV——김가령 来源为 bilibili，发布时间标记为 05/27 10:00。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：《二重螺旋》芙罗拉PV | 燃烬成昼",
-      "category": "digital",
-      "importance_score": 52,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-27T10:00:00+08:00",
-      "last_seen_at": "2026-05-27T16:04:37+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T15:36:08+08:00",
-      "updated_at": "2026-05-27T16:04:47+08:00",
-      "tags": [
-        "数码"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1T8VA64EvQ",
-          "title": "《二重螺旋》芙罗拉PV | 燃烬成昼",
-          "author": "二重螺旋"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 53,
-      "radar_level": "C",
-      "radar_section": "background",
-      "video_potential": 4,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.3,
-      "push_reason": "近期新出现",
-      "score_parts": {
-        "relevance": 14,
-        "trend": 7,
-        "freshness": 18,
-        "change": 1,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
       "id": "evt_010970590e5cb8d42807",
       "title": "九号、百度地图行业首发两轮车车道级导航功能，5 月 30 日开启内测招募",
       "summary": "数码行业出现值得入库的信号：九号、百度地图行业首发两轮车车道级导航功能，5 月 30 日开启内测招募。它涉及 相关主体，系统识别到 数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
@@ -6994,66 +6779,6 @@
         "单一弱来源封顶",
         "评测/体验稿默认不做头条"
       ]
-    },
-    {
-      "id": "evt_2b9f1c39783aa1ded2ae",
-      "title": "苹果 Vision Pro 黑色版本头带组件曝光，相应配色有望后续上市",
-      "summary": "数码行业出现值得入库的信号：苹果 Vision Pro 黑色版本头带组件曝光，相应配色有望后续上市。它涉及 苹果，系统识别到 数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，博主 LusiRoy8 在 X 平台发文，展示了苹果“Vision Pro 2”（注：预计为 M5 版本 Vision Pro）黑色版本头带组件，并暗示该配色版本有望后续上市。 事实上，去年 9 月彭博社的马克・古尔曼（Mark Gurman）便… 来源为 ithome，发布时间标记为 05/26 21:23。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 ithome，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 苹果 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：苹果 Vision Pro 黑色版本头带组件曝…",
-      "category": "digital",
-      "importance_score": 45,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-26T21:23:30+08:00",
-      "last_seen_at": "2026-05-27T00:20:55+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T00:21:05+08:00",
-      "updated_at": "2026-05-27T00:21:05+08:00",
-      "tags": [
-        "数码"
-      ],
-      "entities": [
-        {
-          "name": "苹果",
-          "type": "brand",
-          "aliases": [
-            "Apple",
-            "iPhone",
-            "iOS",
-            "WWDC"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/955/601.htm",
-          "title": "苹果 Vision Pro 黑色版本头带组件曝光，相应配色有望后续上市",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 44,
-      "radar_level": "C",
-      "radar_section": "background",
-      "video_potential": 4,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.8,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
-      "score_parts": {
-        "relevance": 18,
-        "trend": 0,
-        "freshness": 18,
-        "change": 1,
-        "credibility": 10,
-        "scarcity": 7
-      },
-      "caps": []
     },
     {
       "id": "evt_6f5bbe933477a3970e9b",
