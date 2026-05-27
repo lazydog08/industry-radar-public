@@ -56,6 +56,15 @@ test("does not render the video-candidate frontpage surface", () => {
   assert.doesNotMatch(html, /适合做视频/);
 });
 
+test("balances editorial strips as a two-column desktop grid", () => {
+  const editorialStripCss = css.match(/\.editorial-strips \{[\s\S]*?\}/)?.[0] || "";
+  assert.match(editorialStripCss, /grid-template-columns:\s*repeat\(2,\s*minmax\(0,\s*1fr\)\)/);
+  assert.doesNotMatch(editorialStripCss, /repeat\(3,\s*minmax\(0,\s*1fr\)\)/);
+  assert.match(appJs, /editorialStrip\("top-signals"/);
+  assert.match(appJs, /editorialStrip\("needs-evidence"/);
+  assert.doesNotMatch(appJs, /editorialStrip\("video/);
+});
+
 test("uses versioned root assets so stale video sections cannot survive browser cache", () => {
   assert.match(html, /<link[^>]+href="\.\/styles\.css\?v=\d{8}-\d{4}"[^>]*>/);
   assert.match(html, /<script type="module" src="\.\/app\.js\?v=\d{8}-\d{4}"><\/script>/);
