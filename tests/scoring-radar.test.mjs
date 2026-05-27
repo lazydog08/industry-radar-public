@@ -92,6 +92,14 @@ test("does not treat repeated same-source review links as cross-platform validat
   assert.ok(duplicateReview.radar_score < 70, `duplicate review scored ${duplicateReview.radar_score}`);
 });
 
+test("does not create video-potential sections or push reasons", () => {
+  const fixture = runRadarFixture();
+  const breakdowns = Object.values(fixture);
+
+  assert.equal(breakdowns.some((breakdown) => breakdown.radar_section === "video_ready"), false);
+  assert.doesNotMatch(JSON.stringify(breakdowns), /视频选题潜力|视频潜力/);
+});
+
 test("official feeds include Huawei news", () => {
   const officialSource = fs.readFileSync("src/sources/official.ts", "utf8");
 

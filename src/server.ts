@@ -219,6 +219,7 @@ function countSections(events: EventRecord[]): Record<"must_read" | "developing"
 }
 
 function normalizeSection(value: unknown): keyof ReturnType<typeof countSections> | undefined {
+  if (value === "video_ready") return "developing";
   if (value === "must_read" || value === "developing" || value === "video_ready" || value === "background") {
     return value;
   }
@@ -247,7 +248,6 @@ function parseDays(value: unknown): number {
 function fallbackSection(event: EventRecord): keyof ReturnType<typeof countSections> {
   const score = event.radar_score || event.importance_score || 0;
   if (score >= 75) return "must_read";
-  if ((event.video_potential || 0) >= 4) return "video_ready";
   if (score >= 58) return "developing";
   return "background";
 }

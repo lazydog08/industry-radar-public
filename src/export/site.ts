@@ -245,12 +245,12 @@ function toPublicEvent(event: EventRecord): PublicEvent {
   return {
     id: event.id,
     title: event.title,
-    summary: event.summary,
-    what_happened: event.what_happened,
-    why_it_matters: event.why_it_matters,
-    creator_impact: event.creator_impact,
-    content_angle: event.content_angle,
-    cover_angle: event.cover_angle,
+    summary: cleanPublicCopy(event.summary),
+    what_happened: cleanPublicCopy(event.what_happened),
+    why_it_matters: cleanPublicCopy(event.why_it_matters),
+    creator_impact: cleanPublicCopy(event.creator_impact),
+    content_angle: cleanPublicCopy(event.content_angle),
+    cover_angle: cleanPublicCopy(event.cover_angle),
     category: event.category,
     importance_score: event.importance_score,
     worth_following: event.worth_following,
@@ -271,7 +271,7 @@ function toPublicEvent(event: EventRecord): PublicEvent {
     confidence: event.confidence ?? null,
     freshness_label: event.freshness_label ?? null,
     freshness_days: event.freshness_days ?? null,
-    push_reason: event.push_reason || "",
+    push_reason: cleanPublicCopy(event.push_reason),
     score_parts: event.score_parts || null,
     caps: event.caps || []
   };
@@ -370,6 +370,20 @@ function isPublicEventAllowed(event: PublicEvent): boolean {
   return !isNoiseContent(event.title);
 }
 
+function cleanPublicCopy(value: string | undefined | null): string {
+  return String(value || "")
+    .replace(/；?具备视频选题潜力/g, "")
+    .replace(/、可信度和视频潜力决定是否推到首页/g, "和可信度决定是否推到首页")
+    .replace(/可信度和视频潜力决定是否推到首页/g, "可信度决定是否推到首页")
+    .replace(/视频潜力决定是否推到首页/g, "内容价值决定是否推到首页")
+    .replace(/、可信度和视频潜力/g, "和可信度")
+    .replace(/、视频潜力/g, "")
+    .replace(/视频潜力/g, "内容价值")
+    .replace(/；{2,}/g, "；")
+    .replace(/^；|；$/g, "")
+    .trim();
+}
+
 function groupBySection(events: PublicEvent[]): Record<PublicRadarSection, PublicEvent[]> {
   return {
     must_read: events.filter((event) => event.radar_section === "must_read"),
@@ -400,12 +414,12 @@ function buildMetrics(
 function fallbackSection(event: EventRecord): PublicRadarSection {
   const score = event.radar_score || event.importance_score || 0;
   if (score >= 75) return "must_read";
-  if ((event.video_potential || 0) >= 4) return "video_ready";
   if (score >= 58) return "developing";
   return "background";
 }
 
 function normalizeSection(value: unknown): PublicRadarSection | undefined {
+  if (value === "video_ready") return "developing";
   if (value === "must_read" || value === "developing" || value === "video_ready" || value === "background") {
     return value;
   }

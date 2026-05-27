@@ -587,11 +587,9 @@ export class Store {
       const isSingleSource = (event.sources || []).length <= 1;
       return isCapped || (isLowConfidence && isSingleSource);
     });
-    const videoCandidates = events.filter(
-      (event) => (event.video_potential || 0) >= 4 && !event.feedback?.includes("used_for_video") && !event.feedback?.includes("ignore")
-    );
+    const videoCandidates: EventRecord[] = [];
     const followUp = events.filter((event) => event.feedback?.includes("follow") || event.radar_section === "developing" || event.worth_following);
-    const staleButUseful = events.filter((event) => event.freshness_label === "stale" && (event.video_potential || 0) >= 4);
+    const staleButUseful = events.filter((event) => event.freshness_label === "stale" && (event.radar_score || event.importance_score || 0) >= 58);
     return {
       metrics: {
         total: events.length,
@@ -599,7 +597,7 @@ export class Store {
         lowConfidence: events.filter((event) => event.confidence === "low").length,
         singleSource: events.filter((event) => (event.sources || []).length <= 1).length,
         capped: events.filter((event) => (event.caps || []).length > 0).length,
-        videoReady: events.filter((event) => (event.video_potential || 0) >= 4).length,
+        videoReady: 0,
         followed: events.filter((event) => event.feedback?.includes("follow")).length,
         usedForVideo: events.filter((event) => event.feedback?.includes("used_for_video")).length
       },

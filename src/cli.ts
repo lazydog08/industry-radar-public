@@ -85,7 +85,7 @@ program
         const tags = event.tags?.join("、") || "无标签";
         const sources = event.sources?.map((source) => `${source.source}: ${source.url}`).join("、") || "无来源";
         console.log(`${index + 1}. ${event.title}`);
-        console.log(`   Radar：${event.radar_level || "D"} ${event.radar_score ?? event.importance_score}｜视频潜力：${event.video_potential || 1}/5｜置信度：${event.confidence || "low"}｜分类：${event.category}`);
+        console.log(`   Radar：${event.radar_level || "D"} ${event.radar_score ?? event.importance_score}｜置信度：${event.confidence || "low"}｜分类：${event.category}`);
         console.log(`   标签：${tags}｜来源：${sources}`);
         console.log(`   推荐理由：${event.push_reason || "适合进入观察池。"}`);
         console.log(`   一句话：${event.summary}`);

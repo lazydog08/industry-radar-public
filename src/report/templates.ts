@@ -19,7 +19,6 @@ interface SectionModel {
   auto: EventRecord[];
   brand: EventRecord[];
   updated: EventRecord[];
-  ideas: EventRecord[];
   failed: SourceStatus[];
   importantCount: number;
 }
@@ -81,9 +80,6 @@ export function renderMarkdown(input: ReportTemplateInput): string {
     "## 持续发酵 / 有更新",
     sections.updated.length ? renderEventList(sections.updated) : "- 暂无中午已出现后的新增来源或持续更新。",
     "",
-    "## 可拍视频选题",
-    sections.ideas.length ? renderIdeas(sections.ideas) : "- 暂无。",
-    "",
     "## 数据源异常与限制",
     sections.failed.length
       ? sections.failed.map((status) => `- ${status.source}：${status.error || status.warnings?.join("；") || "部分接口异常"}`).join("\n")
@@ -101,24 +97,18 @@ function renderEventList(events: EventRecord[], ranked = false): string {
       const prefix = ranked ? `Top ${index + 1}` : `${index + 1}.`;
       return [
         `${prefix} **${event.title}**`,
-        `   - Radar：${event.radar_level || "D"} ${event.radar_score ?? event.importance_score}；视频潜力：${event.video_potential || 1}/5；置信度：${confidenceLabel(event.confidence)}`,
+        `   - Radar：${event.radar_level || "D"} ${event.radar_score ?? event.importance_score}；置信度：${confidenceLabel(event.confidence)}`,
         `   - 推荐理由：${event.push_reason || "适合进入观察池。"}`,
         `   - 一句话：${event.summary}`,
         `   - 为什么重要：${event.why_it_matters}`,
         `   - 跟我做内容的关系：${event.creator_impact}`,
-        `   - 可拍角度：${event.content_angle}`,
+        `   - 内容切入：${event.content_angle}`,
         `   - 标题/封面角度：${event.cover_angle}`,
         `   - 标签：${tags}`,
         `   - 来源：${sources || "暂无"}`,
         `   - 评分拆解：相关度 ${event.score_parts?.relevance ?? 0}，趋势 ${event.score_parts?.trend ?? 0}，新鲜度 ${event.score_parts?.freshness ?? 0}，变化 ${event.score_parts?.change ?? 0}，可信度 ${event.score_parts?.credibility ?? 0}，稀缺性 ${event.score_parts?.scarcity ?? 0}`
       ].join("\n");
     })
-    .join("\n");
-}
-
-function renderIdeas(events: EventRecord[]): string {
-  return events
-    .map((event, index) => `${index + 1}. ${event.content_angle}；封面可用：${event.cover_angle}`)
     .join("\n");
 }
 
@@ -284,16 +274,6 @@ export function renderHtml(input: ReportTemplateInput): string {
     ${renderSection("品牌 / 高管 / 博主动态", sections.brand)}
     ${renderSection("持续发酵 / 有更新", sections.updated)}
     <section>
-      <h2>可拍视频选题</h2>
-      ${
-        sections.ideas.length
-          ? `<div class="idea-list"><ol>${sections.ideas
-              .map((event) => `<li>${escapeHtml(event.content_angle)}<br /><span class="eyebrow">封面角度：${escapeHtml(event.cover_angle)}</span></li>`)
-              .join("")}</ol></div>`
-          : `<div class="empty">暂无。</div>`
-      }
-    </section>
-    <section>
       <h2>数据源异常与限制</h2>
       ${
         sections.failed.length
@@ -399,7 +379,6 @@ function buildSections(input: ReportTemplateInput): SectionModel {
     12
   );
   const updated = sortEvents(input.updatedEvents).slice(0, 10);
-  const ideas = sortEvents([...top, ...brand, ...digital, ...media, ...auto, ...updated]).slice(0, 8);
   return {
     top,
     mainline: buildMainline(input, [...top, ...brand, ...digital, ...media, ...auto], updated),
@@ -408,7 +387,6 @@ function buildSections(input: ReportTemplateInput): SectionModel {
     auto,
     brand,
     updated,
-    ideas,
     failed: input.sourceStatuses.filter((status) => !status.ok || status.warnings?.length),
     importantCount: input.newEvents.filter((event) => scoreOf(event) >= 70).length
   };
@@ -483,11 +461,10 @@ function renderCard(event: EventRecord, rank?: number, top = false): string {
     <p class="summary"><span class="label">一句话</span>${escapeHtml(event.summary)}</p>
     <p class="why"><span class="label">为什么重要</span>${escapeHtml(event.why_it_matters)}</p>
     <p class="creator"><span class="label">内容关系</span>${escapeHtml(event.creator_impact)}</p>
-    <p><span class="label">可拍角度</span>${escapeHtml(event.content_angle)}</p>
+    <p><span class="label">内容切入</span>${escapeHtml(event.content_angle)}</p>
     <p><span class="label">标题/封面</span>${escapeHtml(event.cover_angle)}</p>
     <div class="meta">
       <span class="pill">已入库</span>
-      <span class="pill">视频潜力 ${escapeHtml(event.video_potential || 1)}/5</span>
       <span class="pill">${escapeHtml(confidenceLabel(event.confidence))}</span>
       <span class="pill">${escapeHtml(categoryLabels[event.category] || event.category)}</span>
       ${tags.map((tag) => `<span class="pill">${escapeHtml(tag)}</span>`).join("")}

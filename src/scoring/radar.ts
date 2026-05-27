@@ -43,7 +43,6 @@ const reliableSources = new Set(["official", "ithome", "apple-newsroom", "androi
 const publicSocialSources = new Set(["bilibili", "zhihu", "weibo"]);
 const weakSources = new Set(["mock"]);
 const hardTechTags = new Set(["半导体突破"]);
-const actionTags = new Set(["平台规则", "发布会", "系统更新", "智驾", "AI手机", "争议", ...hardTechTags]);
 export const SCORE_WEIGHTS = {
   relevance: 22,
   trend: 26,
@@ -164,12 +163,12 @@ function calculateRadar(input: {
   }
 
   const radar_score = clampScore(score);
-  const video_potential = videoPotential(input.category, input.tags, input.entities, lower, distinctSourceCount, ageDays);
+  const video_potential = 1;
   const confidence = confidenceLevel(sourceNames, distinctSourceCount, hasUnknownTime);
   const freshness_label = freshnessLabel(ageDays);
   const radar_level = levelForScore(radar_score);
-  const radar_section = sectionForScore(radar_score, video_potential, freshness_label, input.tags, confidence);
-  const push_reason = pushReason({ radar_score, score_parts, input, freshness_label, video_potential, confidence });
+  const radar_section = sectionForScore(radar_score, freshness_label, input.tags);
+  const push_reason = pushReason({ radar_score, score_parts, input, freshness_label, confidence });
 
   return {
     radar_score,
@@ -245,23 +244,6 @@ function scarcityScore(sourceCount: number, signals: RadarSignal[], tags: string
   return clampPart(score, SCORE_WEIGHTS.scarcity);
 }
 
-function videoPotential(
-  category: IndustryCategory,
-  tags: string[],
-  entities: EntityHit[],
-  lower: string,
-  sourceCount: number,
-  ageDays: number | null
-): number {
-  let score = 2;
-  if (["digital", "media", "auto", "mixed"].includes(category)) score += 1;
-  if (tags.some((tag) => actionTags.has(tag))) score += 1;
-  if (tags.includes("争议") || tags.includes("半导体突破") || lower.includes("怎么") || lower.includes("为什么") || lower.includes("普通用户")) score += 1;
-  if (entities.length > 0 && sourceCount >= 2) score += 1;
-  if (ageDays !== null && ageDays > 30) score -= 1;
-  return Math.max(1, Math.min(5, score));
-}
-
 function confidenceLevel(sources: string[], sourceCount: number, hasUnknownTime: boolean): ConfidenceLevel {
   if (hasUnknownTime) return "low";
   if (sources.some((source) => reliableSources.has(source)) && sourceCount >= 2) return "high";
@@ -269,18 +251,9 @@ function confidenceLevel(sources: string[], sourceCount: number, hasUnknownTime:
   return "low";
 }
 
-function sectionForScore(
-  score: number,
-  videoPotentialScore: number,
-  freshness: FreshnessLabel,
-  tags: string[],
-  confidence: ConfidenceLevel
-): RadarSection {
-  if (freshness === "stale" || freshness === "unknown") {
-    return score >= 55 && videoPotentialScore >= 4 && confidence !== "low" ? "video_ready" : "background";
-  }
+function sectionForScore(score: number, freshness: FreshnessLabel, tags: string[]): RadarSection {
+  if (freshness === "stale" || freshness === "unknown") return "background";
   if (score >= 75) return "must_read";
-  if (videoPotentialScore >= 4 && score >= 55 && confidence !== "low") return "video_ready";
   if (score >= 58 || tags.some((tag) => ["争议", "平台规则", "发布会", "系统更新", "半导体突破"].includes(tag))) return "developing";
   return "background";
 }
@@ -290,7 +263,6 @@ function pushReason(input: {
   score_parts: RadarBreakdown["score_parts"];
   input: { tags: string[]; sourceCount: number; entities: EntityHit[] };
   freshness_label: FreshnessLabel;
-  video_potential: number;
   confidence: ConfidenceLevel;
 }): string {
   const reasons: string[] = [];
@@ -300,7 +272,6 @@ function pushReason(input: {
   if (parts.change >= 7) reasons.push("包含明确变化信号");
   if (input.input.tags.includes("半导体突破")) reasons.push("属于硬科技/产业级突破信号");
   if (input.freshness_label === "new") reasons.push("近期新出现");
-  if (input.video_potential >= 4 && input.radar_score >= 55) reasons.push("具备视频选题潜力");
   if (input.confidence === "high") reasons.push("来源交叉验证较强");
   if (!reasons.length) reasons.push(input.radar_score >= 55 ? "适合进入观察池" : "仅适合沉淀为背景知识");
   return reasons.slice(0, 3).join("；");

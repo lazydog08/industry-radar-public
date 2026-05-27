@@ -18,7 +18,7 @@ export function buildKnowledgeDraft(item: SourceItem, tags: string[], entities: 
   const sourceNote = `来源为 ${item.source}，发布时间标记为 ${formatDate(item.publishedAt)}。`;
 
   return {
-    summary: `${categoryLabel}出现值得入库的信号：${clip(item.title, 72)}。它涉及 ${entityText}，${keywordHint}这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。`,
+    summary: `${categoryLabel}出现值得入库的信号：${clip(item.title, 72)}。它涉及 ${entityText}，${keywordHint}这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。`,
     whatHappened: `${raw} ${sourceNote} 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。`,
     whyItMatters: whyItMatters(item.category, tags, entityText, item.source),
     creatorImpact: creatorImpact(item.category, tags, entityText),
