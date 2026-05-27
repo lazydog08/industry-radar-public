@@ -1,9 +1,33 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-27T16:29:46+08:00",
+  "generatedAt": "2026-05-27T16:51:54+08:00",
   "timezone": "Asia/Shanghai",
-  "total": 13,
+  "total": 14,
   "reports": [
+    {
+      "id": "report_92e50985e2808819807e",
+      "report_type": "noon",
+      "window_start": "2026-05-27T10:00:00+08:00",
+      "window_end": "2026-05-27T12:00:00+08:00",
+      "event_count": 9,
+      "created_at": "2026-05-27T16:51:54+08:00",
+      "html_url": "reports/2026-05-27-noon.html",
+      "markdown_url": "reports/2026-05-27-noon.md",
+      "files": {
+        "html": {
+          "name": "2026-05-27-noon.html",
+          "url": "reports/2026-05-27-noon.html",
+          "copied": true,
+          "available": true
+        },
+        "markdown": {
+          "name": "2026-05-27-noon.md",
+          "url": "reports/2026-05-27-noon.md",
+          "copied": true,
+          "available": true
+        }
+      }
+    },
     {
       "id": "report_415f9322e7359340ceca",
       "report_type": "noon",
