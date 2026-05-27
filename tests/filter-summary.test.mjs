@@ -27,7 +27,6 @@ test("counts active text, select, and feedback filters", () => {
       tag: "影像",
       favorite: true,
       follow: false,
-      usedForVideo: true,
       ignored: false
     }),
     "已启用 5 个筛选"

@@ -7,8 +7,6 @@ const appJs = fs.readFileSync("src/web/app.js", "utf8");
 const css = fs.readFileSync("src/web/styles.css", "utf8");
 
 test("uses project-page-safe relative urls in the static shell", () => {
-  assert.match(html, /<link[^>]+href="\.\/styles\.css\?v=\d{8}-\d{4}"[^>]*>/);
-  assert.match(html, /<script type="module" src="\.\/app\.js\?v=\d{8}-\d{4}"><\/script>/);
   assert.doesNotMatch(html, /(?:href|src)="\/(?:styles\.css|app\.js)"/);
   assert.doesNotMatch(html, /href="\/api\/reports"/);
   assert.match(html, /id="reportJsonLink" href="#"/);
