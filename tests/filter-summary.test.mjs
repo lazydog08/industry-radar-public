@@ -12,7 +12,6 @@ test("shows the default advanced filter hint when no filters are active", () => 
       tag: undefined,
       favorite: false,
       follow: false,
-      usedForVideo: false,
       ignored: false
     }),
     DEFAULT_FILTER_SUMMARY
@@ -31,6 +30,6 @@ test("counts active text, select, and feedback filters", () => {
       usedForVideo: true,
       ignored: false
     }),
-    "已启用 6 个筛选"
+    "已启用 5 个筛选"
   );
 });

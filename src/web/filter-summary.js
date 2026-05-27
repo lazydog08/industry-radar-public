@@ -1,6 +1,6 @@
 export const DEFAULT_FILTER_SUMMARY = "分类、来源、标签、反馈";
 
-const FILTER_KEYS = ["category", "source", "entity", "tag", "favorite", "follow", "usedForVideo", "ignored"];
+const FILTER_KEYS = ["category", "source", "entity", "tag", "favorite", "follow", "ignored"];
 
 export function summarizeActiveFilters(filters = {}) {
   const count = FILTER_KEYS.reduce((total, key) => (isActiveFilterValue(filters[key]) ? total + 1 : total), 0);

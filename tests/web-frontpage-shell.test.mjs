@@ -7,8 +7,8 @@ const appJs = fs.readFileSync("src/web/app.js", "utf8");
 const css = fs.readFileSync("src/web/styles.css", "utf8");
 
 test("uses project-page-safe relative urls in the static shell", () => {
-  assert.match(html, /<link[^>]+href="\.\/styles\.css"[^>]*>/);
-  assert.match(html, /<script type="module" src="\.\/app\.js"><\/script>/);
+  assert.match(html, /<link[^>]+href="\.\/styles\.css\?v=\d{8}-\d{4}"[^>]*>/);
+  assert.match(html, /<script type="module" src="\.\/app\.js\?v=\d{8}-\d{4}"><\/script>/);
   assert.doesNotMatch(html, /(?:href|src)="\/(?:styles\.css|app\.js)"/);
   assert.doesNotMatch(html, /href="\/api\/reports"/);
   assert.match(html, /id="reportJsonLink" href="#"/);
@@ -56,4 +56,18 @@ test("does not render the video-candidate frontpage surface", () => {
   assert.doesNotMatch(appJs, /model\.videoCandidates/);
   assert.doesNotMatch(appJs, /视频潜力/);
   assert.doesNotMatch(html, /适合做视频/);
+});
+
+test("uses versioned root assets so stale video sections cannot survive browser cache", () => {
+  assert.match(html, /<link[^>]+href="\.\/styles\.css\?v=\d{8}-\d{4}"[^>]*>/);
+  assert.match(html, /<script type="module" src="\.\/app\.js\?v=\d{8}-\d{4}"><\/script>/);
+});
+
+test("does not expose video workflow controls in the public UI", () => {
+  assert.doesNotMatch(html, /usedForVideo/);
+  assert.doesNotMatch(html, />\s*已用\s*</);
+  assert.doesNotMatch(appJs, /usedForVideo/);
+  assert.doesNotMatch(appJs, /used_for_video/);
+  assert.doesNotMatch(appJs, /已用于视频/);
+  assert.doesNotMatch(appJs, /视频切入/);
 });

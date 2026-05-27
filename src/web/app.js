@@ -52,7 +52,6 @@ const els = {
   tag: requireElement("tag"),
   favorite: requireElement("favorite"),
   follow: requireElement("follow"),
-  usedForVideo: requireElement("usedForVideo"),
   ignored: requireElement("ignored"),
   entityList: requireElement("entityList"),
   tagList: requireElement("tagList"),
@@ -782,7 +781,7 @@ function renderInfographic(event) {
         <p>${escapeHtml(event.why_it_matters)}</p>
       </div>
       <div>
-        <span>视频切入</span>
+        <span>内容切入</span>
         <p>${escapeHtml(event.content_angle)}</p>
       </div>
     </div>
@@ -868,7 +867,6 @@ function renderDetail(event) {
         ${feedbackButton("favorite", "收藏", feedback)}
         ${feedbackButton("follow", "持续跟踪", feedback)}
         ${feedbackButton("ignore", "不感兴趣", feedback)}
-        ${feedbackButton("used_for_video", "已用于视频", feedback)}
       </div>
       ${state.readOnly ? `<p class="readonly-note">线上只读模式：反馈按钮只展示状态，不会写入；请回到本地库处理。</p>` : ""}
     </div>
@@ -1046,7 +1044,6 @@ function filterStaticEvents(events, params, options = {}) {
     if (params.get("entity") && !entityNames(event).some((name) => includesText(name, params.get("entity")))) return false;
     if (params.get("favorite") === "true" && !hasFeedback(event, "favorite")) return false;
     if (params.get("follow") === "true" && !hasFeedback(event, "follow")) return false;
-    if (params.get("usedForVideo") === "true" && !hasFeedback(event, "used_for_video")) return false;
     if (params.get("ignored") === "true" && !hasFeedback(event, "ignore")) return false;
     return true;
   });
@@ -1161,7 +1158,6 @@ async function search() {
     }
     if (els.favorite.checked) params.set("favorite", "true");
     if (els.follow.checked) params.set("follow", "true");
-    if (els.usedForVideo.checked) params.set("usedForVideo", "true");
     if (els.ignored.checked) params.set("ignored", "true");
 
     if (state.readOnly) {
@@ -1186,7 +1182,6 @@ function updateFilterSummary() {
     tag: els.tag.value,
     favorite: els.favorite.checked,
     follow: els.follow.checked,
-    usedForVideo: els.usedForVideo.checked,
     ignored: els.ignored.checked
   });
 }
@@ -1423,11 +1418,11 @@ for (const input of [els.query, els.entity, els.tag, els.timelineQuery]) {
   });
 }
 
-for (const input of [els.category, els.source, els.favorite, els.follow, els.usedForVideo, els.ignored]) {
+for (const input of [els.category, els.source, els.favorite, els.follow, els.ignored]) {
   input.addEventListener("change", search);
 }
 
-for (const input of [els.category, els.source, els.entity, els.tag, els.favorite, els.follow, els.usedForVideo, els.ignored]) {
+for (const input of [els.category, els.source, els.entity, els.tag, els.favorite, els.follow, els.ignored]) {
   input.addEventListener("input", updateFilterSummary);
 }
 
