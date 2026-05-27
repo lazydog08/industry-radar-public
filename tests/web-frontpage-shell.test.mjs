@@ -32,6 +32,13 @@ test("keeps lead story source links out of a button-like container", () => {
   assert.doesNotMatch(css.match(/\.frontpage-lead \{[\s\S]*?\}/)?.[0] || "", /cursor:\s*pointer/);
 });
 
+test("opens the frontpage knowledge card by revealing the detail panel", () => {
+  assert.match(appJs, /data-reveal-detail="true"/);
+  assert.match(appJs, /selectEvent\(target\.dataset\.eventId,\s*\{\s*revealDetail:\s*shouldRevealDetail\(target\)\s*\}\)/);
+  assert.match(appJs, /function revealDetailPanel\(\)/);
+  assert.match(appJs, /els\.detail\.scrollIntoView\(/);
+});
+
 test("makes regular event cards keyboard selectable", () => {
   assert.match(appJs, /<article class="event-card\$\{selected\}" data-event-id="\$\{escapeAttr\(event\.id\)\}" role="button" tabindex="0">/);
 });

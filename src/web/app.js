@@ -590,7 +590,7 @@ function renderLeadStory(event) {
       <dt>内容切入</dt>
       <dd>${escapeHtml(event.content_angle || "暂无可用选题角度。")}</dd>
     </dl>
-    <button type="button" class="event-select-button" data-event-id="${escapeAttr(event.id)}">打开知识卡</button>
+    <button type="button" class="event-select-button" data-event-id="${escapeAttr(event.id)}" data-reveal-detail="true">打开知识卡</button>
     <div class="source-list compact-source-list">${renderCompactSourceLinks(event.sources, 4) || `<p class="muted">暂无来源链接</p>`}</div>`;
 }
 
@@ -668,14 +668,14 @@ function bindEventSelection(root) {
   root.dataset.eventSelectionBound = "true";
   root.addEventListener("click", (event) => {
     const target = eventSelectionTarget(event);
-    if (target) selectEvent(target.dataset.eventId);
+    if (target) selectEvent(target.dataset.eventId, { revealDetail: shouldRevealDetail(target) });
   });
   root.addEventListener("keydown", (event) => {
     if (event.key !== "Enter" && event.key !== " ") return;
     const target = eventSelectionTarget(event);
     if (!target) return;
     event.preventDefault();
-    selectEvent(target.dataset.eventId);
+    selectEvent(target.dataset.eventId, { revealDetail: shouldRevealDetail(target) });
   });
 }
 
@@ -685,6 +685,10 @@ function eventSelectionTarget(event) {
   const target = event.target.closest("[data-event-id]");
   if (!target || !event.currentTarget.contains(target)) return null;
   return target;
+}
+
+function shouldRevealDetail(target) {
+  return target.dataset.revealDetail === "true";
 }
 
 function sectionBlock(key, title, subtitle, events) {
@@ -795,7 +799,7 @@ function renderInfographic(event) {
     <div class="source-list compact-source-list">${renderCompactSourceLinks(event.sources, 3)}</div>`;
 }
 
-async function selectEvent(id) {
+async function selectEvent(id, options = {}) {
   if (!id) return;
   state.selectedId = id;
   const requestId = ++state.detailRequestId;
@@ -807,16 +811,26 @@ async function selectEvent(id) {
     if (requestId !== state.detailRequestId) return;
     if (event) renderDetail(event);
     else els.detail.innerHTML = `<h2>知识卡</h2><p class="muted">静态数据里没有找到这条详情。</p>`;
+    if (options.revealDetail) revealDetailPanel();
     return;
   }
   try {
     const data = await fetchJson(`/api/events/${encodeURIComponent(id)}`);
     if (requestId !== state.detailRequestId) return;
     renderDetail(data.event);
+    if (options.revealDetail) revealDetailPanel();
   } catch (error) {
     if (requestId !== state.detailRequestId) return;
     els.detail.innerHTML = `<h2>知识卡</h2><p class="muted">${escapeHtml(error.message)}</p>`;
+    if (options.revealDetail) revealDetailPanel();
   }
+}
+
+function revealDetailPanel() {
+  const prefersReducedMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)")?.matches;
+  if (!els.detail.hasAttribute("tabindex")) els.detail.setAttribute("tabindex", "-1");
+  els.detail.scrollIntoView({ behavior: prefersReducedMotion ? "auto" : "smooth", block: "start" });
+  els.detail.focus({ preventScroll: true });
 }
 
 function renderDetail(event) {
