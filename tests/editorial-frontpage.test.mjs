@@ -51,7 +51,7 @@ test("keeps review and experience stories out of the lead slot", () => {
   assert.deepEqual(model.topSignals.map((event) => event.id), ["review"]);
 });
 
-test("extracts video candidates and evidence queue separately", () => {
+test("does not build a video-candidate queue for the frontpage", () => {
   const model = buildFrontpageModel([
     { ...baseEvent, id: "video", title: "可拍", radar_score: 70, video_potential: 5, confidence: "high" },
     { ...baseEvent, id: "evidence", title: "需补证", confidence: "low", sources: [] }
@@ -61,7 +61,7 @@ test("extracts video candidates and evidence queue separately", () => {
       videoCandidates: []
     }
   });
-  assert.equal(model.videoCandidates[0].id, "video");
+  assert.equal("videoCandidates" in model, false);
   assert.equal(model.needsEvidence[0].id, "evidence");
 });
 
@@ -93,13 +93,11 @@ test("falls back to importance score and derives empty-state queues safely", () 
   ], { queues: {} });
 
   assert.equal(model.lead.id, "fallback");
-  assert.equal(model.videoCandidates[0].id, "fallback");
   assert.deepEqual(model.needsEvidence.map((event) => event.id), ["capped"]);
 
   assert.deepEqual(buildFrontpageModel(null, null), {
     lead: null,
     topSignals: [],
-    videoCandidates: [],
     needsEvidence: []
   });
 });

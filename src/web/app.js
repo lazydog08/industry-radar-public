@@ -379,14 +379,14 @@ function renderOverview(data) {
   const modeLabel = state.readOnly ? "线上数据更新时间" : "本地更新时间";
   els.metricRecent.textContent = String(metrics.recentEvents || 0);
   els.metricImportant.textContent = String(metrics.mustRead ?? grouped.must_read.length);
-  els.metricFollow.textContent = String(metrics.videoReady ?? grouped.video_ready.length);
+  els.metricFollow.textContent = String(metrics.developing ?? grouped.developing.length);
   els.metricReports.textContent = String(metrics.reports || 0);
   els.updatedAt.textContent = `${modeLabel} ${formatFullDateTime(updatedAt || new Date())}`;
   els.sourceStatus.textContent = `${state.readOnly ? "线上只读 · " : ""}高置信 ${metrics.highConfidence ?? countBy(events, (event) => event.confidence === "high")} 条 · 旧闻/背景 ${metrics.background ?? grouped.background.length} 条 · 降级或示例数据会被封顶标注`;
   els.sectionStats.innerHTML = [
     ["今日必看", metrics.mustRead ?? grouped.must_read.length],
     ["正在发酵", metrics.developing ?? grouped.developing.length],
-    ["适合做视频", metrics.videoReady ?? grouped.video_ready.length],
+    ["待补证据", evidenceCount(events, data.knowledgeHealth)],
     ["背景知识", metrics.background ?? grouped.background.length]
   ]
     .map(([label, value]) => `<div><b>${Number(value || 0)}</b><span>${escapeHtml(label)}</span></div>`)
@@ -538,14 +538,13 @@ function renderHome(events) {
 
   const grouped = groupBySection(events);
   const frontpage = buildFrontpageModel(events, state.knowledgeHealth);
-  const first = frontpage.lead || grouped.must_read[0] || grouped.developing[0] || grouped.video_ready[0] || events[0];
+  const first = frontpage.lead || grouped.must_read[0] || grouped.developing[0] || events[0];
   renderFrontpage(frontpage, events, grouped);
   renderInfographic(first);
   els.sections.innerHTML = [
     scoreLegend(),
     sectionBlock("must_read", "今日必看", "优先读，适合快速判断今天行业动向。", grouped.must_read),
     sectionBlock("developing", "正在发酵", "趋势在扩散，但还需要继续交叉验证。", grouped.developing),
-    sectionBlock("video_ready", "适合做视频", "视频潜力更高，不一定都是最新热点。", grouped.video_ready),
     sectionBlock("background", "背景知识", "旧闻、时间不明或低分内容，只作为资料沉淀。", grouped.background)
   ].join("");
   bindEventSelection(els.sections);
@@ -598,7 +597,7 @@ function renderFrontpageStats(events, grouped) {
   const rows = [
     ["今日必看", grouped.must_read.length],
     ["正在发酵", grouped.developing.length],
-    ["适合做视频", grouped.video_ready.length],
+    ["待补证据", evidenceCount(events)],
     ["背景知识", grouped.background.length]
   ];
   els.frontpageStats.innerHTML = `<div class="frontpage-stat-grid">
@@ -613,10 +612,15 @@ function frontpageSourceStatus(events, grouped) {
   } 条 · 降级或示例数据会被封顶标注`;
 }
 
+function evidenceCount(events, knowledgeHealth = null) {
+  const queued = knowledgeHealth?.queueCounts?.needsEvidence;
+  if (Number.isFinite(Number(queued))) return Number(queued);
+  return (events || []).filter((event) => event.confidence === "low" || (event.sources || []).length <= 1 || (event.caps || []).length).length;
+}
+
 function renderEditorialStrips(model) {
   els.editorialStrips.innerHTML = [
     editorialStrip("top-signals", "重点信号", "按 Radar Score 排序，先判断今天真正该看的变化。", model.topSignals),
-    editorialStrip("video-candidates", "可拍选题", "视频潜力更高，适合继续拆角度、找素材。", model.videoCandidates),
     editorialStrip("needs-evidence", "待补证据", "低置信、单来源或存在封顶标记，需要继续交叉验证。", model.needsEvidence)
   ].join("");
 }
@@ -645,7 +649,7 @@ function editorialStripItem(event) {
       <span class="${escapeAttr(score.className)}">${escapeHtml(score.level)}${score.score}</span>
     </div>
     <p>${escapeHtml(briefEventSummary(event))}</p>
-    <small>${escapeHtml(categoryLabel(event.category))} · ${escapeHtml(confidenceLabel(event.confidence))} · 视频潜力 ${Number(event.video_potential || 1)}/5</small>
+    <small>${escapeHtml(categoryLabel(event.category))} · ${escapeHtml(confidenceLabel(event.confidence))}</small>
   </article>`;
 }
 
@@ -734,7 +738,6 @@ function eventCard(event) {
     </div>
     <p>${escapeHtml(event.push_reason || event.summary)}</p>
     <div class="meta">
-      <span class="pill strong">视频潜力 ${Number(event.video_potential || 1)}/5</span>
       <span class="pill">${escapeHtml(freshnessLabel(event.freshness_label))}</span>
       <span class="pill">${escapeHtml(confidenceLabel(event.confidence))}</span>
       <span class="pill">${escapeHtml(categoryLabel(event.category))}</span>
@@ -844,7 +847,6 @@ function renderDetail(event) {
     <h3>${escapeHtml(event.title)}</h3>
     <div class="knowledge-score">
       <div class="knowledge-score-card ${escapeAttr(score.className)}"><b>${escapeHtml(score.level)} ${score.score}</b><span>${escapeHtml(score.label)} · ${escapeHtml(score.description)}</span></div>
-      <div><b>${Number(event.video_potential || 1)}/5</b><span>视频潜力</span></div>
       <div><b>${escapeHtml(confidenceLabel(event.confidence))}</b><span>置信度</span></div>
     </div>
     <dl class="knowledge-fields">
@@ -853,7 +855,7 @@ function renderDetail(event) {
       ${field("发生了什么", event.what_happened)}
       ${field("为什么重要", event.why_it_matters)}
       ${field("创作影响", event.creator_impact)}
-      ${field("视频选题", event.content_angle)}
+      ${field("内容切入", event.content_angle)}
       ${field("标题 / 封面", event.cover_angle)}
       ${field("评级说明", `${score.level} = ${score.label}，${score.description}。数字是 0-100 综合分。`)}
       ${field("评分拆解", `相关度 ${parts.relevance ?? 0}，趋势 ${parts.trend ?? 0}，新鲜度 ${parts.freshness ?? 0}，变化 ${parts.change ?? 0}，可信度 ${parts.credibility ?? 0}，稀缺性 ${parts.scarcity ?? 0}`)}
@@ -993,15 +995,13 @@ function renderKnowledgeHealth(health) {
   const queues = health.queues || {};
   const queueCounts = health.queueCounts || {};
   const needs = queues.needsEvidence || [];
-  const videos = queues.videoCandidates || [];
   els.knowledgeHealth.innerHTML = `<div class="health-grid">
       <div><b>${Number(metrics.total || 0)}</b><span>入库事件</span></div>
       <div><b>${Number(metrics.lowConfidence || 0)}</b><span>低置信</span></div>
       <div><b>${Number(metrics.singleSource || 0)}</b><span>单来源</span></div>
       <div><b>${Number(metrics.capped || 0)}</b><span>封顶/示例</span></div>
     </div>
-    ${healthQueue("优先补来源", needs, Number(queueCounts.needsEvidence ?? needs.length), "低置信且单来源，或存在封顶/示例标记。", "暂无优先补来源项。")}
-    ${healthQueue("可回收选题", videos, Number(queueCounts.videoCandidates ?? videos.length), "视频潜力高，且还没标记为已用于视频。", "暂无可回收选题。")}`;
+    ${healthQueue("优先补来源", needs, Number(queueCounts.needsEvidence ?? needs.length), "低置信且单来源，或存在封顶/示例标记。", "暂无优先补来源项。")}`;
   for (const item of els.knowledgeHealth.querySelectorAll("[data-health-event-id]")) {
     item.addEventListener("click", () => selectEvent(item.dataset.healthEventId));
   }
@@ -1101,7 +1101,6 @@ function buildStaticMetrics(events, reports) {
     reports: reports.length,
     mustRead: grouped.must_read.length,
     developing: grouped.developing.length,
-    videoReady: grouped.video_ready.length,
     background: grouped.background.length,
     highConfidence: events.filter((event) => event.confidence === "high").length
   };
@@ -1133,7 +1132,6 @@ function buildStaticFacets(events) {
 
 function buildStaticKnowledgeHealth(events) {
   const needsEvidence = (events || []).filter((event) => event.confidence === "low" || (event.sources || []).length <= 1 || (event.caps || []).length);
-  const videoCandidates = (events || []).filter((event) => Number(event.video_potential || 0) >= 4 && !hasFeedback(event, "used_for_video"));
   return {
     metrics: {
       total: events.length,
@@ -1142,12 +1140,10 @@ function buildStaticKnowledgeHealth(events) {
       capped: events.filter((event) => (event.caps || []).length).length
     },
     queueCounts: {
-      needsEvidence: needsEvidence.length,
-      videoCandidates: videoCandidates.length
+      needsEvidence: needsEvidence.length
     },
     queues: {
-      needsEvidence: needsEvidence.slice(0, 6),
-      videoCandidates: videoCandidates.slice(0, 6)
+      needsEvidence: needsEvidence.slice(0, 6)
     }
   };
 }
@@ -1256,6 +1252,10 @@ function groupBySection(events) {
   };
   for (const event of events) {
     const section = grouped[event.radar_section] ? event.radar_section : fallbackSection(event);
+    if (section === "video_ready") {
+      grouped.developing.push(event);
+      continue;
+    }
     grouped[section].push(event);
   }
   return grouped;
@@ -1267,7 +1267,6 @@ function fallbackSection(event) {
   const freshness = event.freshness_label || "unknown";
   if (score >= 75) return "must_read";
   if ((freshness === "stale" || freshness === "unknown") && (score < 55 || confidence === "low")) return "background";
-  if (Number(event.video_potential || 0) >= 4 && score >= 55 && confidence !== "low") return "video_ready";
   if (score >= 58) return "developing";
   return "background";
 }

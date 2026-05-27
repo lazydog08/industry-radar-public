@@ -49,3 +49,11 @@ test("uses explicit frontpage modes instead of result-title text", () => {
   assert.match(appJs, /renderResults\(events, params\.toString\(\) \? "搜索结果" : "最近 7 天重要事件", params\.toString\(\) \? "search" : "list"\)/);
   assert.match(appJs, /renderResults\(data\.events \|\| \[\], params\.toString\(\) \? "搜索结果" : "最近 7 天重要事件", params\.toString\(\) \? "search" : "list"\)/);
 });
+
+test("does not render the video-candidate frontpage surface", () => {
+  assert.doesNotMatch(appJs, /可拍选题/);
+  assert.doesNotMatch(appJs, /video-candidates/);
+  assert.doesNotMatch(appJs, /model\.videoCandidates/);
+  assert.doesNotMatch(appJs, /视频潜力/);
+  assert.doesNotMatch(html, /适合做视频/);
+});

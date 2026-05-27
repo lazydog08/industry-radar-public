@@ -22,10 +22,6 @@ export function buildFrontpageModel(events = [], knowledgeHealth = null) {
   return {
     lead,
     topSignals: priorityEvents.filter((event) => event !== lead).slice(0, FRONTPAGE_LIMIT),
-    videoCandidates: eventList
-      .filter((event) => videoPotential(event) >= 4)
-      .sort(compareByPriority)
-      .slice(0, FRONTPAGE_LIMIT),
     needsEvidence: selectNeedsEvidence(eventList, knowledgeHealth)
   };
 }
@@ -58,15 +54,11 @@ function needsEvidence(event) {
 }
 
 function compareByPriority(a, b) {
-  return score(b) - score(a) || videoPotential(b) - videoPotential(a);
+  return score(b) - score(a);
 }
 
 function score(event) {
   return numericScore(event?.radar_score) ?? numericScore(event?.importance_score) ?? 0;
-}
-
-function videoPotential(event) {
-  return numericScore(event?.video_potential) ?? 0;
 }
 
 function sourceCount(event) {
