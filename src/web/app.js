@@ -3,6 +3,8 @@ import { summarizeActiveFilters } from "./filter-summary.js";
 
 const SECTION_PREVIEW_LIMIT = 4;
 const REPORT_PREVIEW_LIMIT = 8;
+const STATIC_FEEDBACK_STORAGE_KEY = "industry-radar.staticFeedback.v1";
+const STATIC_FEEDBACK_TYPES = ["favorite", "follow", "ignore"];
 
 const state = {
   events: [],
@@ -21,6 +23,7 @@ const state = {
   staticEventsError: null,
   staticNoticeShown: false,
   staticEventIndex: new Map(),
+  staticFeedback: loadStaticFeedback(),
   knowledgeHealth: null,
   facets: {
     sources: [],
@@ -82,6 +85,37 @@ async function fetchJson(url, options) {
     throw new Error(message || `HTTP ${response.status}`);
   }
   return response.json();
+}
+
+function loadStaticFeedback() {
+  try {
+    const raw = localStorage.getItem(STATIC_FEEDBACK_STORAGE_KEY);
+    if (!raw) return {};
+    const parsed = JSON.parse(raw);
+    if (!parsed || typeof parsed !== "object" || Array.isArray(parsed)) return {};
+    const normalized = {};
+    for (const [eventId, feedback] of Object.entries(parsed)) {
+      if (!eventId || !feedback || typeof feedback !== "object" || Array.isArray(feedback)) continue;
+      const entry = {};
+      for (const type of STATIC_FEEDBACK_TYPES) {
+        if (feedback[type] === true) entry[type] = true;
+        if (feedback[type] === false) entry[type] = false;
+      }
+      if (Object.keys(entry).length) normalized[eventId] = entry;
+    }
+    return normalized;
+  } catch {
+    return {};
+  }
+}
+
+function saveStaticFeedback() {
+  try {
+    localStorage.setItem(STATIC_FEEDBACK_STORAGE_KEY, JSON.stringify(state.staticFeedback));
+    return true;
+  } catch {
+    return false;
+  }
 }
 
 async function bootstrap() {
@@ -381,7 +415,7 @@ function renderOverview(data) {
   els.metricFollow.textContent = String(metrics.developing ?? grouped.developing.length);
   els.metricReports.textContent = String(metrics.reports || 0);
   els.updatedAt.textContent = `${modeLabel} ${formatFullDateTime(updatedAt || new Date())}`;
-  els.sourceStatus.textContent = `${state.readOnly ? "线上只读 · " : ""}高置信 ${metrics.highConfidence ?? countBy(events, (event) => event.confidence === "high")} 条 · 旧闻/背景 ${metrics.background ?? grouped.background.length} 条 · 降级或示例数据会被封顶标注`;
+  els.sourceStatus.textContent = `${state.readOnly ? "线上静态 · " : ""}高置信 ${metrics.highConfidence ?? countBy(events, (event) => event.confidence === "high")} 条 · 旧闻/背景 ${metrics.background ?? grouped.background.length} 条 · 降级或示例数据会被封顶标注`;
   els.sectionStats.innerHTML = [
     ["今日必看", metrics.mustRead ?? grouped.must_read.length],
     ["正在发酵", metrics.developing ?? grouped.developing.length],
@@ -606,7 +640,7 @@ function renderFrontpageStats(events, grouped) {
 }
 
 function frontpageSourceStatus(events, grouped) {
-  return `${state.readOnly ? "线上只读 · " : ""}高置信 ${countBy(events, (event) => event.confidence === "high")} 条 · 旧闻/背景 ${
+  return `${state.readOnly ? "线上静态 · " : ""}高置信 ${countBy(events, (event) => event.confidence === "high")} 条 · 旧闻/背景 ${
     grouped.background.length
   } 条 · 降级或示例数据会被封顶标注`;
 }
@@ -836,7 +870,7 @@ function revealDetailPanel() {
 }
 
 function renderDetail(event) {
-  const feedback = new Set(event.feedback || []);
+  const feedback = feedbackSet(event);
   const tags = (event.tags || []).map((tag) => `<span class="pill">${escapeHtml(tag)}</span>`).join("");
   const entities = (event.entities || []).map((entity) => `<span class="pill">${escapeHtml(entityName(entity))}</span>`).join("");
   const parts = event.score_parts || {};
@@ -868,17 +902,15 @@ function renderDetail(event) {
         ${feedbackButton("follow", "持续跟踪", feedback)}
         ${feedbackButton("ignore", "不感兴趣", feedback)}
       </div>
-      ${state.readOnly ? `<p class="readonly-note">线上只读模式：反馈按钮只展示状态，不会写入；请回到本地库处理。</p>` : ""}
+      ${state.readOnly ? `<p class="readonly-note">线上反馈已保存在当前浏览器；刷新后仍保留，不会直接写入 NAS 数据库。</p>` : ""}
     </div>
     <div class="sources">
       <h4>原始来源</h4>
       <div class="source-list">${renderSourceLinks(event.sources, 8)}</div>
     </div>`;
 
-  if (!state.readOnly) {
-    for (const button of els.detail.querySelectorAll("[data-feedback]")) {
-      button.addEventListener("click", () => toggleFeedback(event.id, button));
-    }
+  for (const button of els.detail.querySelectorAll("[data-feedback]")) {
+    button.addEventListener("click", () => toggleFeedback(event.id, button));
   }
 }
 
@@ -887,8 +919,8 @@ function field(label, value) {
 }
 
 function feedbackButton(type, label, feedback) {
-  const disabled = state.readOnly ? " disabled aria-disabled=\"true\" title=\"线上只读模式不写入反馈\"" : "";
-  return `<button class="${feedback.has(type) ? "active" : ""}" data-feedback="${escapeAttr(type)}"${disabled}>${escapeHtml(label)}</button>`;
+  const title = state.readOnly ? " title=\"线上反馈会保存在当前浏览器\"" : "";
+  return `<button class="${feedback.has(type) ? "active" : ""}" data-feedback="${escapeAttr(type)}"${title}>${escapeHtml(label)}</button>`;
 }
 
 function scoreLegend() {
@@ -943,13 +975,19 @@ function fallbackLevel(score) {
 }
 
 async function toggleFeedback(eventId, button) {
-  if (state.readOnly) {
-    els.detail.insertAdjacentHTML("beforeend", `<p class="form-error">线上只读模式不会写入反馈。</p>`);
-    return;
-  }
   const feedbackType = button.dataset.feedback;
+  if (!feedbackType) return;
   const enabled = !button.classList.contains("active");
   button.disabled = true;
+  if (state.readOnly) {
+    try {
+      await toggleStaticFeedback(eventId, feedbackType, enabled);
+    } catch (error) {
+      if (button.isConnected) button.disabled = false;
+      els.detail.insertAdjacentHTML("beforeend", `<p class="form-error">${escapeHtml(error.message)}</p>`);
+    }
+    return;
+  }
   try {
     const data = await fetchJson(`/api/events/${encodeURIComponent(eventId)}/feedback`, {
       method: "POST",
@@ -964,6 +1002,34 @@ async function toggleFeedback(eventId, button) {
     if (button.isConnected) button.disabled = false;
     els.detail.insertAdjacentHTML("beforeend", `<p class="form-error">${escapeHtml(error.message)}</p>`);
   }
+}
+
+async function toggleStaticFeedback(eventId, feedbackType, enabled) {
+  if (!STATIC_FEEDBACK_TYPES.includes(feedbackType)) {
+    throw new Error("不支持的反馈类型。");
+  }
+  const id = String(eventId || "");
+  if (!id) throw new Error("缺少事件 ID，无法保存反馈。");
+  state.staticFeedback = {
+    ...state.staticFeedback,
+    [id]: {
+      ...(state.staticFeedback[id] || {}),
+      [feedbackType]: Boolean(enabled)
+    }
+  };
+  if (!saveStaticFeedback()) {
+    throw new Error("浏览器拒绝保存反馈，请检查隐私模式或存储权限。");
+  }
+  const event = await getStaticEvent(id);
+  if (els.favorite.checked || els.follow.checked || els.ignored.checked) {
+    await search();
+    return;
+  }
+  if (state.viewMode === "home") {
+    renderHome(state.events);
+    return;
+  }
+  if (event) renderDetail(event);
 }
 
 async function refreshOverviewOnly() {
@@ -1086,7 +1152,19 @@ function entityName(entity) {
 }
 
 function hasFeedback(event, type) {
-  return (event.feedback || []).includes(type);
+  return feedbackSet(event).has(type);
+}
+
+function feedbackSet(event) {
+  const feedback = new Set(event?.feedback || []);
+  if (state.readOnly && event?.id) {
+    const overrides = state.staticFeedback[String(event.id)] || {};
+    for (const type of STATIC_FEEDBACK_TYPES) {
+      if (overrides[type] === true) feedback.add(type);
+      if (overrides[type] === false) feedback.delete(type);
+    }
+  }
+  return feedback;
 }
 
 function buildStaticMetrics(events, reports) {

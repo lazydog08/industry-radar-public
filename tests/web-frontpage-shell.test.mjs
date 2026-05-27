@@ -78,3 +78,12 @@ test("does not expose video workflow controls in the public UI", () => {
   assert.doesNotMatch(appJs, /已用于视频/);
   assert.doesNotMatch(appJs, /视频切入/);
 });
+
+test("allows browser-local feedback in the public static UI", () => {
+  assert.match(appJs, /STATIC_FEEDBACK_STORAGE_KEY/);
+  assert.match(appJs, /toggleStaticFeedback/);
+  assert.match(appJs, /localStorage\.setItem\(STATIC_FEEDBACK_STORAGE_KEY/);
+  assert.match(appJs, /线上反馈已保存在当前浏览器/);
+  assert.doesNotMatch(appJs, /线上只读模式：反馈按钮只展示状态，不会写入/);
+  assert.doesNotMatch(appJs, /disabled aria-disabled="true" title="线上只读模式不写入反馈"/);
+});
