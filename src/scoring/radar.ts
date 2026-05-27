@@ -39,10 +39,11 @@ export interface ScoreContext {
   sourceCount?: number;
 }
 
-const reliableSources = new Set(["official", "ithome", "apple-newsroom", "android-blog"]);
+const reliableSources = new Set(["official", "ithome", "apple-newsroom", "android-blog", "huawei-news", "people-tech", "sina-tech", "zol-tech"]);
 const publicSocialSources = new Set(["bilibili", "zhihu", "weibo"]);
 const weakSources = new Set(["mock"]);
-const actionTags = new Set(["平台规则", "发布会", "系统更新", "智驾", "AI手机", "争议"]);
+const hardTechTags = new Set(["半导体突破"]);
+const actionTags = new Set(["平台规则", "发布会", "系统更新", "智驾", "AI手机", "争议", ...hardTechTags]);
 export const SCORE_WEIGHTS = {
   relevance: 22,
   trend: 26,
@@ -137,6 +138,8 @@ function calculateRadar(input: {
 
   if (lowValueKeywords.some((keyword) => lower.includes(keyword.toLowerCase()))) score -= 10;
   if (input.tags.includes("争议")) score += 2;
+  if (hasHardTechSignal(input.tags, lower)) score += 7;
+  if (isReviewLike(lower) && !hasHardTechSignal(input.tags, lower)) score -= 8;
 
   const caps: string[] = [];
   if (ageDays !== null && ageDays > 30) {
@@ -154,6 +157,10 @@ function calculateRadar(input: {
   if (sourceCount <= 1 && sourceNames.some((source) => weakSources.has(source) || publicSocialSources.has(source))) {
     score = Math.min(score, 60);
     caps.push("单一弱来源封顶");
+  }
+  if (isReviewLike(lower) && !hasHardTechSignal(input.tags, lower) && sourceCount <= 2) {
+    score = Math.min(score, 69);
+    caps.push("评测/体验稿默认不做头条");
   }
 
   const radar_score = clampScore(score);
@@ -182,8 +189,8 @@ function relevanceScore(category: IndustryCategory, tags: string[], entities: En
   let score = 0;
   if (["digital", "media", "auto", "mixed"].includes(category)) score += category === "mixed" ? 16 : 14;
   score += Math.min(5, entities.length * 1.5);
-  if (tags.some((tag) => ["AI手机", "智驾", "平台规则", "发布会", "系统更新"].includes(tag))) score += 3;
-  if (["oppo", "小米", "华为", "苹果", "b站", "创作者", "ai", "智驾", "影像"].some((term) => lower.includes(term.toLowerCase()))) score += 2;
+  if (tags.some((tag) => ["AI手机", "智驾", "平台规则", "发布会", "系统更新", "半导体突破"].includes(tag))) score += 3;
+  if (["oppo", "小米", "华为", "苹果", "b站", "创作者", "ai", "智驾", "影像", "半导体", "芯片", "晶体管"].some((term) => lower.includes(term.toLowerCase()))) score += 2;
   return clampPart(score, SCORE_WEIGHTS.relevance);
 }
 
@@ -192,10 +199,11 @@ function trendScore(signals: RadarSignal[], sourceCount: number, tags: string[],
   const heat = maxHeat > 0 ? Math.min(12, Math.log10(maxHeat + 10) * 3.1) : 0;
   const sourceSpread = Math.min(7, Math.max(0, sourceCount - 1) * 2.2);
   const crossSource = unique(signals.map((signal) => signal.source)).length >= 2 ? 3 : 0;
-  const developingTags = tags.some((tag) => ["争议", "平台规则", "发布会", "系统更新", "智驾"].includes(tag)) ? 4 : 0;
-  const hotTerms = ["热议", "刷屏", "爆料", "首发", "开放", "调整", "定档"].filter((term) => lower.includes(term)).length;
+  const developingTags = tags.some((tag) => ["争议", "平台规则", "发布会", "系统更新", "智驾", "半导体突破"].includes(tag)) ? 4 : 0;
+  const hardTechMomentum = hasHardTechSignal(tags, lower) ? 6 : 0;
+  const hotTerms = ["热议", "刷屏", "爆料", "首发", "开放", "调整", "定档", "首次", "突破", "发表", "提出", "定律"].filter((term) => lower.includes(term)).length;
   const creatorMomentum = highValueKeywords.some((keyword) => lower.includes(keyword.toLowerCase())) ? 2 : 0;
-  return clampPart(heat + sourceSpread + crossSource + developingTags + Math.min(2, hotTerms) + creatorMomentum, SCORE_WEIGHTS.trend);
+  return clampPart(heat + sourceSpread + crossSource + developingTags + hardTechMomentum + Math.min(4, hotTerms) + creatorMomentum, SCORE_WEIGHTS.trend);
 }
 
 function freshnessScore(ageDays: number | null): number {
@@ -211,9 +219,9 @@ function freshnessScore(ageDays: number | null): number {
 function changeScore(tags: string[], lower: string): number {
   let score = 0;
   for (const tag of tags) {
-    if (["平台规则", "发布会", "系统更新", "智驾", "AI手机", "争议"].includes(tag)) score += 2;
+    if (["平台规则", "发布会", "系统更新", "智驾", "AI手机", "争议", "半导体突破"].includes(tag)) score += 2;
   }
-  const changeTerms = ["规则", "调整", "发布", "更新", "推送", "定档", "召回", "涨价", "降价", "开售", "开放", "关闭", "限制", "补贴"];
+  const changeTerms = ["规则", "调整", "发布", "更新", "推送", "定档", "召回", "涨价", "降价", "开售", "开放", "关闭", "限制", "补贴", "突破", "提出", "发表", "新原则", "新路径", "定律", "量产"];
   score += changeTerms.filter((term) => lower.includes(term)).length;
   return clampPart(score, SCORE_WEIGHTS.change);
 }
@@ -248,7 +256,7 @@ function videoPotential(
   let score = 2;
   if (["digital", "media", "auto", "mixed"].includes(category)) score += 1;
   if (tags.some((tag) => actionTags.has(tag))) score += 1;
-  if (tags.includes("争议") || lower.includes("怎么") || lower.includes("为什么") || lower.includes("普通用户")) score += 1;
+  if (tags.includes("争议") || tags.includes("半导体突破") || lower.includes("怎么") || lower.includes("为什么") || lower.includes("普通用户")) score += 1;
   if (entities.length > 0 && sourceCount >= 2) score += 1;
   if (ageDays !== null && ageDays > 30) score -= 1;
   return Math.max(1, Math.min(5, score));
@@ -273,7 +281,7 @@ function sectionForScore(
   }
   if (score >= 75) return "must_read";
   if (videoPotentialScore >= 4 && score >= 55 && confidence !== "low") return "video_ready";
-  if (score >= 58 || tags.some((tag) => ["争议", "平台规则", "发布会", "系统更新"].includes(tag))) return "developing";
+  if (score >= 58 || tags.some((tag) => ["争议", "平台规则", "发布会", "系统更新", "半导体突破"].includes(tag))) return "developing";
   return "background";
 }
 
@@ -290,6 +298,7 @@ function pushReason(input: {
   if (parts.relevance >= 17) reasons.push("与你关注的数码/AI/汽车/平台生态高度相关");
   if (parts.trend >= 18) reasons.push(input.confidence === "low" ? "有热度迹象，但需要先补强来源" : "热度和扩散信号较强，适合优先判断是否跟进");
   if (parts.change >= 7) reasons.push("包含明确变化信号");
+  if (input.input.tags.includes("半导体突破")) reasons.push("属于硬科技/产业级突破信号");
   if (input.freshness_label === "new") reasons.push("近期新出现");
   if (input.video_potential >= 4 && input.radar_score >= 55) reasons.push("具备视频选题潜力");
   if (input.confidence === "high") reasons.push("来源交叉验证较强");
@@ -310,6 +319,14 @@ function levelForScore(score: number): RadarLevel {
   if (score >= 55) return "B";
   if (score >= 40) return "C";
   return "D";
+}
+
+function hasHardTechSignal(tags: string[], lower: string): boolean {
+  return tags.some((tag) => hardTechTags.has(tag)) || ["韬定律", "τ定律", "半导体", "晶体管", "逻辑折叠"].some((term) => lower.includes(term.toLowerCase()));
+}
+
+function isReviewLike(lower: string): boolean {
+  return ["评测", "体验", "上手", "开箱"].some((term) => lower.includes(term));
 }
 
 function ageInDays(value: string | undefined, now: Date): number | null {

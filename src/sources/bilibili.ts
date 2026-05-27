@@ -180,7 +180,17 @@ function stripBiliHighlight(input: string): string {
 }
 
 function loadSearchKeywords(): string[] {
-  const defaults = ["OPPO 影像", "小米汽车 智驾", "B站 流量 规则", "AI 手机 发布会", "HarmonyOS 更新", "折叠屏"];
+  const defaults = [
+    "OPPO 影像",
+    "小米汽车 智驾",
+    "B站 流量 规则",
+    "AI 手机 发布会",
+    "HarmonyOS 更新",
+    "华为 半导体",
+    "华为 韬定律",
+    "麒麟 芯片",
+    "折叠屏"
+  ];
   try {
     const accountConfig = JSON.parse(fs.readFileSync(path.resolve(process.cwd(), "config/accounts.json"), "utf8")) as {
       keywords?: Record<string, string[]>;

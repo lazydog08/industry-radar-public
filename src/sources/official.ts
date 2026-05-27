@@ -26,6 +26,12 @@ const officialFeeds: OfficialFeed[] = [
     label: "Android Blog",
     url: "https://blog.google/products-and-platforms/platforms/android/rss/",
     categoryHint: "digital"
+  },
+  {
+    source: "huawei-news",
+    label: "华为新闻动态",
+    url: "https://www.huawei.com/cn/rss-feeds/huawei-updates/rss",
+    categoryHint: "digital"
   }
 ];
 
@@ -43,7 +49,7 @@ export const officialSource: SourceAdapter = {
         const parsed = new XMLParser({ ignoreAttributes: false }).parse(xml) as XmlNode;
         for (const entry of extractEntries(parsed)) {
           const title = cleanText(readFirst(entry.title));
-          const url = readLink(entry) || readFirst(entry.guid) || readFirst(entry.id);
+          const url = normalizeFeedUrl(readLink(entry) || readFirst(entry.guid) || readFirst(entry.id));
           if (!title || !url) continue;
           const summary = cleanText(readFirst(entry.description) || readFirst(entry.content) || readFirst(entry["content:encoded"]));
           const categories = readCategories(entry.category).join(" ");
@@ -75,7 +81,7 @@ export const officialSource: SourceAdapter = {
     return {
       source: "official",
       ok: items.length > 0,
-      items: items.slice(0, 60),
+      items: items.slice(0, 100),
       startedAt,
       endedAt: nowIso(),
       error: items.length === 0 && warnings.length ? warnings.join("; ") : undefined,
@@ -138,4 +144,13 @@ function asNode(input: unknown): XmlNode | null {
 
 function cleanText(input: string): string {
   return stripHtml(input).replace(/\s+/g, " ").trim();
+}
+
+function normalizeFeedUrl(input: string): string {
+  const value = cleanText(input);
+  if (!value) return "";
+  if (/^https?:\/\//i.test(value)) return value;
+  if (value.startsWith("//")) return `https:${value}`;
+  if (value.startsWith("www.")) return `https://${value}`;
+  return value;
 }
