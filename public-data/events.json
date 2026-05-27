@@ -1,10 +1,83 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-27T15:41:18+08:00",
+  "generatedAt": "2026-05-27T15:50:13+08:00",
   "timezone": "Asia/Shanghai",
   "recentDays": 7,
-  "total": 76,
+  "total": 77,
   "events": [
+    {
+      "id": "evt_f170f2cd2fe5e5db90ee",
+      "title": "华为发表韬(τ)定律，实现晶体管密度与系统性能突破",
+      "summary": "数码行业出现值得入库的信号：华为发表韬(τ)定律，实现晶体管密度与系统性能突破。它涉及 华为、半导体突破，系统识别到 数码、半导体突破 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：今日，在电气电子工程师学会（IEEE）举办的国际电路系统研讨会ISCAS 2026上，华为何庭波发表题为“半导体新路径探索与实践”的主旨演讲，发表了指导半导体产业发展的新原则——韬(τ)定律。 来源为 huawei-news，发布时间标记为 05/26 17:25。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 huawei-news，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为、半导体突破 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：华为发表韬(τ)定律，实现晶体管密度与系统性能…",
+      "category": "digital",
+      "importance_score": 91,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-26T17:25:31+08:00",
+      "last_seen_at": "2026-05-27T15:50:01+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T15:50:12+08:00",
+      "updated_at": "2026-05-27T15:50:12+08:00",
+      "tags": [
+        "半导体突破",
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "半导体突破",
+          "type": "technology",
+          "aliases": [
+            "半导体",
+            "晶体管",
+            "韬定律",
+            "τ定律",
+            "逻辑折叠",
+            "先进制程"
+          ]
+        },
+        {
+          "name": "华为",
+          "type": "brand",
+          "aliases": [
+            "Huawei",
+            "HarmonyOS",
+            "问界",
+            "智界"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "huawei-news",
+          "url": "https://www.huawei.com/cn/news/2026/5/ieee-iscas-tau-scaling",
+          "title": "华为发表韬(τ)定律，实现晶体管密度与系统性能突破",
+          "author": "华为新闻动态"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 92,
+      "radar_level": "S",
+      "radar_section": "must_read",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.9,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；包含明确变化信号",
+      "score_parts": {
+        "relevance": 22,
+        "trend": 20,
+        "freshness": 18,
+        "change": 8,
+        "credibility": 10,
+        "scarcity": 7
+      },
+      "caps": []
+    },
     {
       "id": "evt_ea06357865ee41c9af8a",
       "title": "工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施",
@@ -201,6 +274,67 @@
       "caps": []
     },
     {
+      "id": "evt_88cebdfbca609f2cb8b1",
+      "title": "华为发布AI DC数据基础设施全栈方案，加速行业智能化跃升",
+      "summary": "数码行业出现值得入库的信号：华为发布AI DC数据基础设施全栈方案，加速行业智能化跃升。它涉及 华为，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：5月21日，以“数据觉醒，存力跃迁”为主题的2026华为创新数据基础设施论坛在巴黎举行。 来源为 huawei-news，发布时间标记为 05/25 10:13。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "华为 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+      "category": "digital",
+      "importance_score": 67,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-25T10:13:03+08:00",
+      "last_seen_at": "2026-05-27T15:50:01+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T15:50:12+08:00",
+      "updated_at": "2026-05-27T15:50:12+08:00",
+      "tags": [
+        "发布会",
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "华为",
+          "type": "brand",
+          "aliases": [
+            "Huawei",
+            "HarmonyOS",
+            "问界",
+            "智界"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "huawei-news",
+          "url": "https://www.huawei.com/cn/news/2026/5/idi-forum-data",
+          "title": "华为发布AI DC数据基础设施全栈方案，加速行业智能化跃升",
+          "author": "华为新闻动态"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 69,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 2.2,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；具备视频选题潜力",
+      "score_parts": {
+        "relevance": 21,
+        "trend": 12,
+        "freshness": 15,
+        "change": 4,
+        "credibility": 10,
+        "scarcity": 7
+      },
+      "caps": []
+    },
+    {
       "id": "evt_fe93a50c31b02bf94647",
       "title": "【IT之家评测室】OPPO Reno16 Pro 体验：把实况照片玩出新高度",
       "summary": "数码行业出现值得入库的信号：OPPO Reno 16 系列手机全新毕业季影像故事片定档 5 月 29 日首映。它涉及 Google、OPPO、荣耀，系统识别到 发布会、影像、数码、系统更新、选题机会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
@@ -285,7 +419,7 @@
       "video_potential": 5,
       "confidence": "high",
       "freshness_label": "new",
-      "freshness_days": 0.7,
+      "freshness_days": 0.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
       "score_parts": {
         "relevance": 22,
@@ -298,67 +432,6 @@
       "caps": [
         "评测/体验稿默认不做头条"
       ]
-    },
-    {
-      "id": "evt_c9db159ff0f2886d584c",
-      "title": "安全可靠等级 I 级：华为昇腾 310 / 910 人工智能训练推理芯片通过中国信息安全测评中心认证",
-      "summary": "数码行业出现值得入库的信号：安全可靠等级 I 级：华为昇腾 310 / 910 人工智能训练推理芯片通过中国信息安全测评中心认证。它涉及 华为，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 27 日消息，中国信息安全测评中心昨晚发布了安全可靠测评结果公告（2026 年第 2 号），其中华为昇腾 310 和昇腾 910 人工智能训练推理芯片通过了认证， 安全可靠等级达到 I 级 。 另外，还有一批芯片也通过了该认证。 序号 产品名称 送测单位 安全… 来源为 ithome，发布时间标记为 05/27 10:49。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "华为 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-      "category": "digital",
-      "importance_score": 65,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-27T10:49:13+08:00",
-      "last_seen_at": "2026-05-27T12:30:01+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T12:30:12+08:00",
-      "updated_at": "2026-05-27T12:30:12+08:00",
-      "tags": [
-        "发布会",
-        "数码"
-      ],
-      "entities": [
-        {
-          "name": "华为",
-          "type": "brand",
-          "aliases": [
-            "Huawei",
-            "HarmonyOS",
-            "问界",
-            "智界"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/955/751.htm",
-          "title": "安全可靠等级 I 级：华为昇腾 310 / 910 人工智能训练推理芯片通过中国信息安全测评中心认证",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 67,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 5,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.2,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现；具备视频选题潜力",
-      "score_parts": {
-        "relevance": 21,
-        "trend": 7,
-        "freshness": 18,
-        "change": 4,
-        "credibility": 10,
-        "scarcity": 7
-      },
-      "caps": []
     },
     {
       "id": "evt_29caff307383ba2e1f2a",
@@ -2198,11 +2271,11 @@
       "importance_score": 58,
       "worth_following": 1,
       "first_seen_at": "2026-05-27T12:00:00+08:00",
-      "last_seen_at": "2026-05-27T15:41:07+08:00",
+      "last_seen_at": "2026-05-27T15:50:01+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:36:08+08:00",
-      "updated_at": "2026-05-27T15:41:17+08:00",
+      "updated_at": "2026-05-27T15:50:12+08:00",
       "tags": [
         "数码"
       ],
@@ -3319,11 +3392,11 @@
       "importance_score": 52,
       "worth_following": 1,
       "first_seen_at": "2026-05-27T11:00:00+08:00",
-      "last_seen_at": "2026-05-27T15:41:07+08:00",
+      "last_seen_at": "2026-05-27T15:50:01+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:36:08+08:00",
-      "updated_at": "2026-05-27T15:41:17+08:00",
+      "updated_at": "2026-05-27T15:50:12+08:00",
       "tags": [
         "数码"
       ],
@@ -3370,11 +3443,11 @@
       "importance_score": 52,
       "worth_following": 1,
       "first_seen_at": "2026-05-27T10:00:00+08:00",
-      "last_seen_at": "2026-05-27T15:41:07+08:00",
+      "last_seen_at": "2026-05-27T15:50:01+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:36:08+08:00",
-      "updated_at": "2026-05-27T15:41:17+08:00",
+      "updated_at": "2026-05-27T15:50:12+08:00",
       "tags": [
         "数码"
       ],
@@ -3522,11 +3595,11 @@
       "importance_score": 43,
       "worth_following": 0,
       "first_seen_at": "2026-05-27T11:52:01+08:00",
-      "last_seen_at": "2026-05-27T15:41:07+08:00",
+      "last_seen_at": "2026-05-27T15:50:01+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T12:30:12+08:00",
-      "updated_at": "2026-05-27T15:41:17+08:00",
+      "updated_at": "2026-05-27T15:50:12+08:00",
       "tags": [
         "数码"
       ],
@@ -3857,6 +3930,55 @@
       ]
     },
     {
+      "id": "evt_f9bdbca995a506c583e5",
+      "title": "《异环》安魂曲角色短片丨晚安，我温柔的星光",
+      "summary": "行业出现值得入库的信号：《异环》安魂曲角色短片丨晚安，我温柔的星光。它涉及 相关主体，尚未识别到明确的行业标签。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：超自然都市开放世界RPG《异环》全平台公测现已开启！立刻下载>>>https://www.biligame.com/detail/?id=111795\n\n晚安，我温柔的星光\n又听见你的呼唤在远方\n当一切都褪去，只剩下痛伤\n我仍会记得你 来源为 bilibili，发布时间标记为 05/27 11:00。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：《异环》安魂曲角色短片丨晚安，我温柔的星光",
+      "category": "unknown",
+      "importance_score": 44,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-27T11:00:00+08:00",
+      "last_seen_at": "2026-05-27T15:50:01+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T15:36:08+08:00",
+      "updated_at": "2026-05-27T15:50:12+08:00",
+      "tags": [],
+      "entities": [],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV14TLA6FEBf",
+          "title": "《异环》安魂曲角色短片丨晚安，我温柔的星光",
+          "author": "异环"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 45,
+      "radar_level": "C",
+      "radar_section": "background",
+      "video_potential": 3,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.2,
+      "push_reason": "近期新出现",
+      "score_parts": {
+        "relevance": 2,
+        "trend": 10,
+        "freshness": 18,
+        "change": 2,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
       "id": "evt_0afed940cc9176392195",
       "title": "降噪大挑战！安克消噪耳机Pro体验 补齐所有短板？",
       "summary": "数码行业出现值得入库的信号：降噪大挑战！安克消噪耳机Pro体验 补齐所有短板？。它涉及 相关主体，系统识别到 数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
@@ -3906,55 +4028,6 @@
       "caps": [
         "单一弱来源封顶",
         "评测/体验稿默认不做头条"
-      ]
-    },
-    {
-      "id": "evt_f9bdbca995a506c583e5",
-      "title": "《异环》安魂曲角色短片丨晚安，我温柔的星光",
-      "summary": "行业出现值得入库的信号：《异环》安魂曲角色短片丨晚安，我温柔的星光。它涉及 相关主体，尚未识别到明确的行业标签。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：超自然都市开放世界RPG《异环》全平台公测现已开启！立刻下载>>>https://www.biligame.com/detail/?id=111795\n\n晚安，我温柔的星光\n又听见你的呼唤在远方\n当一切都褪去，只剩下痛伤\n我仍会记得你 来源为 bilibili，发布时间标记为 05/27 11:00。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：《异环》安魂曲角色短片丨晚安，我温柔的星光",
-      "category": "unknown",
-      "importance_score": 44,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-27T11:00:00+08:00",
-      "last_seen_at": "2026-05-27T15:41:07+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T15:36:08+08:00",
-      "updated_at": "2026-05-27T15:41:17+08:00",
-      "tags": [],
-      "entities": [],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV14TLA6FEBf",
-          "title": "《异环》安魂曲角色短片丨晚安，我温柔的星光",
-          "author": "异环"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 45,
-      "radar_level": "C",
-      "radar_section": "background",
-      "video_potential": 3,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.2,
-      "push_reason": "近期新出现",
-      "score_parts": {
-        "relevance": 2,
-        "trend": 10,
-        "freshness": 18,
-        "change": 2,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
       ]
     },
     {
@@ -4111,7 +4184,7 @@
       "video_potential": 3,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.1,
+      "freshness_days": 1.2,
       "push_reason": "仅适合沉淀为背景知识",
       "score_parts": {
         "relevance": 2,
