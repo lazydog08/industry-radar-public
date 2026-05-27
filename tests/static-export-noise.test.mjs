@@ -7,5 +7,6 @@ test("static export filters already-stored public noise events", () => {
 
   assert.match(source, /import \{ isNoiseContent \} from "\.\.\/scoring\/keywords\.js"/);
   assert.match(source, /filter\(isPublicEventAllowed\)/);
+  assert.match(source, /isNoiseContent\(event\.title\)/);
   assert.match(source, /filterPublicKnowledgeHealth/);
 });

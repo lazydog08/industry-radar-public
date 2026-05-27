@@ -367,7 +367,7 @@ function filterPublicKnowledgeHealth(health: PublicKnowledgeHealth): PublicKnowl
 }
 
 function isPublicEventAllowed(event: PublicEvent): boolean {
-  return !isNoiseContent(`${event.title} ${event.summary || ""} ${(event.tags || []).join(" ")}`);
+  return !isNoiseContent(event.title);
 }
 
 function groupBySection(events: PublicEvent[]): Record<PublicRadarSection, PublicEvent[]> {
