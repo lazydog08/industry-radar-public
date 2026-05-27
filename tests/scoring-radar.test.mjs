@@ -10,10 +10,10 @@ function runRadarFixture() {
 
     const now = new Date("2026-05-27T12:00:00+08:00");
 
-    function radar(title, summary, sourceNames, heatScore) {
+    function radar(title, summary, sourceNames, heatScore, extraTags = []) {
       const text = title + " " + summary;
       const category = detectCategory(text);
-      const tags = detectTags(text, category);
+      const tags = Array.from(new Set([...detectTags(text, category), ...extraTags]));
       const entities = detectEntities(text);
       return buildRadarForEvent(
         {
@@ -64,7 +64,15 @@ function runRadarFixture() {
       60
     );
 
-    console.log(JSON.stringify({ hardTech, review }));
+    const duplicateReview = radar(
+      "【IT之家评测室】OPPO Reno16 Pro 体验：把实况照片玩出新高度",
+      "OPPO Reno16 Pro 手机评测，影像体验和实况照片玩法。",
+      ["ithome", "ithome", "bilibili", "ithome"],
+      60,
+      ["发布会", "系统更新", "选题机会"]
+    );
+
+    console.log(JSON.stringify({ hardTech, review, duplicateReview }));
   `;
   return JSON.parse(execFileSync(process.execPath, ["--import", "tsx", "--input-type=module", "-e", script], { encoding: "utf8" }));
 }
@@ -75,6 +83,13 @@ test("ranks official hard-tech breakthroughs above review stories", () => {
   assert.equal(hardTech.radar_section, "must_read");
   assert.ok(hardTech.radar_score > review.radar_score, `${hardTech.radar_score} should outrank ${review.radar_score}`);
   assert.notEqual(review.radar_section, "must_read");
+});
+
+test("does not treat repeated same-source review links as cross-platform validation", () => {
+  const { duplicateReview } = runRadarFixture();
+
+  assert.notEqual(duplicateReview.radar_section, "must_read");
+  assert.ok(duplicateReview.radar_score < 70, `duplicate review scored ${duplicateReview.radar_score}`);
 });
 
 test("official feeds include Huawei news", () => {

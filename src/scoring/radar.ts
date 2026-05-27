@@ -123,15 +123,15 @@ function calculateRadar(input: {
   const hasUnknownTime = ageDays === null;
   const sourceNames = unique(input.sources.map((source) => source.source).concat(input.signals.map((signal) => signal.source)));
   const sourceUrls = unique(input.sources.map((source) => source.url).concat(input.signals.map((signal) => signal.url || "")));
-  const sourceCount = Math.max(input.sourceCount || 1, sourceNames.length || 1);
+  const distinctSourceCount = Math.max(1, sourceNames.length || 0);
   const isMockLike = sourceNames.includes("mock") || sourceUrls.some((url) => /mock|sample|example/i.test(url));
 
   const relevance = relevanceScore(input.category, input.tags, input.entities, lower);
-  const trend = trendScore(input.signals, sourceCount, input.tags, lower);
+  const trend = trendScore(input.signals, distinctSourceCount, input.tags, lower);
   const freshness = freshnessScore(ageDays);
   const change = changeScore(input.tags, lower);
-  const credibility = credibilityScore(sourceNames, sourceCount);
-  const scarcity = scarcityScore(sourceCount, input.signals, input.tags, lower);
+  const credibility = credibilityScore(sourceNames, distinctSourceCount);
+  const scarcity = scarcityScore(distinctSourceCount, input.signals, input.tags, lower);
 
   const score_parts = { relevance, trend, freshness, change, credibility, scarcity };
   let score = relevance + trend + freshness + change + credibility + scarcity;
@@ -154,18 +154,18 @@ function calculateRadar(input: {
     score = Math.min(score, 45);
     caps.push("Mock/示例数据封顶");
   }
-  if (sourceCount <= 1 && sourceNames.some((source) => weakSources.has(source) || publicSocialSources.has(source))) {
+  if (distinctSourceCount <= 1 && sourceNames.some((source) => weakSources.has(source) || publicSocialSources.has(source))) {
     score = Math.min(score, 60);
     caps.push("单一弱来源封顶");
   }
-  if (isReviewLike(lower) && !hasHardTechSignal(input.tags, lower) && sourceCount <= 2) {
+  if (isReviewLike(lower) && !hasHardTechSignal(input.tags, lower) && distinctSourceCount <= 2) {
     score = Math.min(score, 69);
     caps.push("评测/体验稿默认不做头条");
   }
 
   const radar_score = clampScore(score);
-  const video_potential = videoPotential(input.category, input.tags, input.entities, lower, sourceCount, ageDays);
-  const confidence = confidenceLevel(sourceNames, sourceCount, hasUnknownTime);
+  const video_potential = videoPotential(input.category, input.tags, input.entities, lower, distinctSourceCount, ageDays);
+  const confidence = confidenceLevel(sourceNames, distinctSourceCount, hasUnknownTime);
   const freshness_label = freshnessLabel(ageDays);
   const radar_level = levelForScore(radar_score);
   const radar_section = sectionForScore(radar_score, video_potential, freshness_label, input.tags, confidence);
