@@ -876,6 +876,7 @@ function renderDetail(event) {
   const parts = event.score_parts || {};
   const score = scoreMeta(event);
 
+  els.detail.dataset.eventId = event.id || "";
   els.detail.innerHTML = `<h2>知识卡</h2>
     <h3>${escapeHtml(event.title)}</h3>
     <div class="knowledge-score">
@@ -909,9 +910,6 @@ function renderDetail(event) {
       <div class="source-list">${renderSourceLinks(event.sources, 8)}</div>
     </div>`;
 
-  for (const button of els.detail.querySelectorAll("[data-feedback]")) {
-    button.addEventListener("click", () => toggleFeedback(event.id, button));
-  }
 }
 
 function field(label, value) {
@@ -1503,5 +1501,12 @@ for (const input of [els.category, els.source, els.favorite, els.follow, els.ign
 for (const input of [els.category, els.source, els.entity, els.tag, els.favorite, els.follow, els.ignored]) {
   input.addEventListener("input", updateFilterSummary);
 }
+
+els.detail.addEventListener("click", (event) => {
+  if (!(event.target instanceof Element)) return;
+  const button = event.target.closest("[data-feedback]");
+  if (!(button instanceof HTMLButtonElement) || !els.detail.contains(button)) return;
+  toggleFeedback(els.detail.dataset.eventId || state.selectedId, button);
+});
 
 bootstrap();
