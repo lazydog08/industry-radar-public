@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-27T16:16:00+08:00",
+  "generatedAt": "2026-05-27T16:20:06+08:00",
   "timezone": "Asia/Shanghai",
   "recentDays": 7,
   "total": 89,
@@ -18,11 +18,11 @@
       "importance_score": 91,
       "worth_following": 0,
       "first_seen_at": "2026-05-26T17:25:31+08:00",
-      "last_seen_at": "2026-05-27T16:15:46+08:00",
+      "last_seen_at": "2026-05-27T16:19:52+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:50:12+08:00",
-      "updated_at": "2026-05-27T16:15:59+08:00",
+      "updated_at": "2026-05-27T16:20:05+08:00",
       "tags": [
         "半导体突破",
         "数码"
@@ -286,11 +286,11 @@
       "importance_score": 67,
       "worth_following": 1,
       "first_seen_at": "2026-05-25T10:13:03+08:00",
-      "last_seen_at": "2026-05-27T16:15:46+08:00",
+      "last_seen_at": "2026-05-27T16:19:52+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:50:12+08:00",
-      "updated_at": "2026-05-27T16:15:59+08:00",
+      "updated_at": "2026-05-27T16:20:05+08:00",
       "tags": [
         "发布会",
         "数码"
@@ -1527,6 +1527,162 @@
       "caps": []
     },
     {
+      "id": "evt_58128940ddc2f6a9f3f1",
+      "title": "华为“韬定律”到底是什么？三个问题讲清楚",
+      "summary": "数码行业出现值得入库的信号：华为“韬定律”到底是什么？三个问题讲清楚。它涉及 半导体突破、华为，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：用电梯举例，两分钟看懂华为韬定律到底是什么 来源为 bilibili，发布时间标记为 05/27 10:58。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 半导体突破、华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：华为“韬定律”到底是什么？三个问题讲清楚",
+      "category": "digital",
+      "importance_score": 60,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-27T11:54:42+08:00",
+      "last_seen_at": "2026-05-27T16:19:52+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T15:41:17+08:00",
+      "updated_at": "2026-05-27T16:20:05+08:00",
+      "tags": [
+        "半导体突破",
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "半导体突破",
+          "type": "technology",
+          "aliases": [
+            "半导体",
+            "晶体管",
+            "韬定律",
+            "τ定律",
+            "逻辑折叠",
+            "先进制程"
+          ]
+        },
+        {
+          "name": "华为",
+          "type": "brand",
+          "aliases": [
+            "Huawei",
+            "HarmonyOS",
+            "问界",
+            "智界"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1mEGC6AEuM",
+          "title": "华为“韬定律”到底是什么？三个问题讲清楚",
+          "author": "雯语说"
+        },
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1EaGC6WE8G",
+          "title": "华为新玩法，“韬定律”到底是什么？",
+          "author": "万能的大熊老师"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.2,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
+      "score_parts": {
+        "relevance": 22,
+        "trend": 20,
+        "freshness": 18,
+        "change": 5,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
+      "id": "evt_9d9ebf8841b3801ec2ab",
+      "title": "华为韬定律，中国半导体一次反杀，规则彻底改写",
+      "summary": "数码行业出现值得入库的信号：华为韬定律，中国半导体一次反杀，规则彻底改写。它涉及 半导体突破、华为，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "目前公开信息主要来自标题和来源元数据。 来源为 bilibili，发布时间标记为 05/27 11:59。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 半导体突破、华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：华为韬定律，中国半导体一次反杀，规则彻底改写",
+      "category": "digital",
+      "importance_score": 60,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-27T11:59:15+08:00",
+      "last_seen_at": "2026-05-27T16:19:52+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T15:41:17+08:00",
+      "updated_at": "2026-05-27T16:20:05+08:00",
+      "tags": [
+        "半导体突破",
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "半导体突破",
+          "type": "technology",
+          "aliases": [
+            "半导体",
+            "晶体管",
+            "韬定律",
+            "τ定律",
+            "逻辑折叠",
+            "先进制程"
+          ]
+        },
+        {
+          "name": "华为",
+          "type": "brand",
+          "aliases": [
+            "Huawei",
+            "HarmonyOS",
+            "问界",
+            "智界"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1auGC6uEGG",
+          "title": "华为韬定律，中国半导体一次反杀，规则彻底改写",
+          "author": "李一舟AI"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.2,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
+      "score_parts": {
+        "relevance": 22,
+        "trend": 20,
+        "freshness": 18,
+        "change": 6,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
       "id": "evt_64303f91510cee32ef4a",
       "title": "华为“韬定律”到底牛在哪？用一个“城市交通”的例子，来讲清楚#华为 #韬定律 #时间缩微 #逻辑折叠 #麒麟2026 #中国芯片突破",
       "summary": "数码行业出现值得入库的信号：华为“韬定律”到底牛在哪？用一个“城市交通”的例子，来讲清楚#华为 #韬定律 #时间缩微 #逻辑折叠 #麒麟2026 #中国芯片突破。它涉及 华为、半导体突破，系统识别到 数码、半导体突破 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
@@ -1725,7 +1881,7 @@
       "video_potential": 5,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.7,
+      "freshness_days": 0.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
@@ -2520,162 +2676,6 @@
         "trend": 19,
         "freshness": 18,
         "change": 4,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
-      "id": "evt_58128940ddc2f6a9f3f1",
-      "title": "华为“韬定律”到底是什么？三个问题讲清楚",
-      "summary": "数码行业出现值得入库的信号：华为新玩法，“韬定律”到底是什么？。它涉及 半导体突破、华为，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：用电梯举例，两分钟看懂华为韬定律到底是什么 来源为 bilibili，发布时间标记为 05/27 10:58。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 半导体突破、华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：华为“韬定律”到底是什么？三个问题讲清楚",
-      "category": "digital",
-      "importance_score": 60,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-27T11:54:42+08:00",
-      "last_seen_at": "2026-05-27T15:41:07+08:00",
-      "status": "active",
-      "source_count": 2,
-      "created_at": "2026-05-27T15:41:17+08:00",
-      "updated_at": "2026-05-27T15:41:18+08:00",
-      "tags": [
-        "半导体突破",
-        "数码"
-      ],
-      "entities": [
-        {
-          "name": "半导体突破",
-          "type": "technology",
-          "aliases": [
-            "半导体",
-            "晶体管",
-            "韬定律",
-            "τ定律",
-            "逻辑折叠",
-            "先进制程"
-          ]
-        },
-        {
-          "name": "华为",
-          "type": "brand",
-          "aliases": [
-            "Huawei",
-            "HarmonyOS",
-            "问界",
-            "智界"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1mEGC6AEuM",
-          "title": "华为“韬定律”到底是什么？三个问题讲清楚",
-          "author": "雯语说"
-        },
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1EaGC6WE8G",
-          "title": "华为新玩法，“韬定律”到底是什么？",
-          "author": "万能的大熊老师"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 60,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 5,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.2,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
-      "score_parts": {
-        "relevance": 22,
-        "trend": 20,
-        "freshness": 18,
-        "change": 5,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
-      "id": "evt_9d9ebf8841b3801ec2ab",
-      "title": "华为韬定律，中国半导体一次反杀，规则彻底改写",
-      "summary": "数码行业出现值得入库的信号：华为韬定律，中国半导体一次反杀，规则彻底改写。它涉及 华为、半导体突破，系统识别到 数码、半导体突破 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "目前公开信息主要来自标题和来源元数据。 来源为 bilibili，发布时间标记为 05/27 11:59。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为、半导体突破 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：华为韬定律，中国半导体一次反杀，规则彻底改写",
-      "category": "digital",
-      "importance_score": 60,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-27T11:59:15+08:00",
-      "last_seen_at": "2026-05-27T15:41:07+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T15:41:17+08:00",
-      "updated_at": "2026-05-27T15:41:17+08:00",
-      "tags": [
-        "半导体突破",
-        "数码"
-      ],
-      "entities": [
-        {
-          "name": "半导体突破",
-          "type": "technology",
-          "aliases": [
-            "半导体",
-            "晶体管",
-            "韬定律",
-            "τ定律",
-            "逻辑折叠",
-            "先进制程"
-          ]
-        },
-        {
-          "name": "华为",
-          "type": "brand",
-          "aliases": [
-            "Huawei",
-            "HarmonyOS",
-            "问界",
-            "智界"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1auGC6uEGG",
-          "title": "华为韬定律，中国半导体一次反杀，规则彻底改写",
-          "author": "李一舟AI"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 60,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 5,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.2,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
-      "score_parts": {
-        "relevance": 22,
-        "trend": 20,
-        "freshness": 18,
-        "change": 6,
         "credibility": 6,
         "scarcity": 7
       },
@@ -3910,7 +3910,7 @@
       "video_potential": 4,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
         "relevance": 18,
