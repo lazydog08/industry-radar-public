@@ -245,12 +245,23 @@ export function matchesInterest(text: string): boolean {
 export function isNoiseContent(text: string): boolean {
   const value = text.toLowerCase();
   const gameNoise = [
+    "手机游戏",
+    "原神",
+    "二重螺旋",
+    "战双帕弥什",
     "王者荣耀",
     "阴阳师",
     "火影忍者",
     "勘九郎",
+    "角色逸闻",
     "角色pv",
     "角色 pv",
+    "版本pv",
+    "版本 pv",
+    "前瞻直播",
+    "新增涂装",
+    "外观卡池",
+    "兑换码",
     "赛季前瞻",
     "手游",
     "cg丨",
