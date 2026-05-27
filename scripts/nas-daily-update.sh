@@ -33,6 +33,32 @@ elif [[ -f .env ]]; then
   source .env
 fi
 
+prepend_path_dir() {
+  local dir="$1"
+  [[ -n "$dir" && -d "$dir" ]] || return 0
+  case ":${PATH:-}:" in
+    *":${dir}:"*) ;;
+    *) PATH="${dir}:${PATH:-}" ;;
+  esac
+}
+
+prepend_node_runtime_path() {
+  local dir
+  if [[ -n "${HOME:-}" ]]; then
+    for dir in "$HOME"/.local/node-v*/bin; do
+      prepend_path_dir "$dir"
+    done
+    for dir in "$HOME"/.local/node-v24*/bin; do
+      prepend_path_dir "$dir"
+    done
+    prepend_path_dir "$HOME/.local/bin"
+  fi
+  prepend_path_dir "${NAS_NODE_BIN:-}"
+  export PATH
+}
+
+prepend_node_runtime_path
+
 export DATABASE_URL="${DATABASE_URL:-./data/industry-radar.sqlite}"
 export REPORT_OUTPUT_DIR="${REPORT_OUTPUT_DIR:-./data/reports}"
 export PUBLIC_DATA_DIR="${PUBLIC_DATA_DIR:-./data/public}"

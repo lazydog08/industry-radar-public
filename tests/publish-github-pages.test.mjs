@@ -32,6 +32,9 @@ test("GitHub Pages publisher stages exported data into the Pages public-data dir
 test("NAS daily update surfaces enabled GitHub Pages push failures", () => {
   const script = fs.readFileSync("scripts/nas-daily-update.sh", "utf8");
 
+  assert.match(script, /prepend_node_runtime_path/);
+  assert.match(script, /NAS_NODE_BIN/);
+  assert.match(script, /\.local\/node-v\*\/bin/);
   assert.doesNotMatch(script, /publish-github-pages\.sh\s*\\\s*\|\| log/);
   assert.match(script, /NAS local update success but GitHub Pages push failed/);
   assert.match(script, /GITHUB_PAGES_PUSH_REQUIRED:-false/);
