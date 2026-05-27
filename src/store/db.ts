@@ -587,6 +587,7 @@ export class Store {
       const isSingleSource = (event.sources || []).length <= 1;
       return isCapped || (isLowConfidence && isSingleSource);
     });
+    // Keep the legacy API field stable after removing video-potential judging.
     const videoCandidates: EventRecord[] = [];
     const followUp = events.filter((event) => event.feedback?.includes("follow") || event.radar_section === "developing" || event.worth_following);
     const staleButUseful = events.filter((event) => event.freshness_label === "stale" && (event.radar_score || event.importance_score || 0) >= 58);

@@ -220,7 +220,7 @@ function countSections(events: EventRecord[]): Record<"must_read" | "developing"
 
 function normalizeSection(value: unknown): keyof ReturnType<typeof countSections> | undefined {
   if (value === "video_ready") return "developing";
-  if (value === "must_read" || value === "developing" || value === "video_ready" || value === "background") {
+  if (value === "must_read" || value === "developing" || value === "background") {
     return value;
   }
   return undefined;

@@ -370,7 +370,7 @@ function isPublicEventAllowed(event: PublicEvent): boolean {
   return !isNoiseContent(event.title);
 }
 
-function cleanPublicCopy(value: string | undefined | null): string {
+export function cleanPublicCopy(value: string | undefined | null): string {
   return String(value || "")
     .replace(/；?具备视频选题潜力/g, "")
     .replace(/、可信度和视频潜力决定是否推到首页/g, "和可信度决定是否推到首页")
@@ -420,7 +420,7 @@ function fallbackSection(event: EventRecord): PublicRadarSection {
 
 function normalizeSection(value: unknown): PublicRadarSection | undefined {
   if (value === "video_ready") return "developing";
-  if (value === "must_read" || value === "developing" || value === "video_ready" || value === "background") {
+  if (value === "must_read" || value === "developing" || value === "background") {
     return value;
   }
   return undefined;
