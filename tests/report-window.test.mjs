@@ -35,6 +35,17 @@ function runWindowFixture() {
               category: "digital",
               tags: ["数码", "影像"],
               summaryRaw: "普通评测"
+            },
+            {
+              id: "old-huawei-generic",
+              source: "huawei-news",
+              title: "华为城市活动普通回顾",
+              url: "https://www.huawei.com/cn/news/2026/5/generic",
+              publishedAt: "2026-05-25T12:00:00+08:00",
+              fetchedAt: "2026-05-27T12:00:00+08:00",
+              category: "digital",
+              tags: ["数码"],
+              summaryRaw: "普通活动新闻"
             }
           ]
         }

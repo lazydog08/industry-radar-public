@@ -375,7 +375,7 @@ function renderRootScrollFallbackScript(): string {
 
 function buildSections(input: ReportTemplateInput): SectionModel {
   const newEvents = sortEvents(input.newEvents);
-  const top = newEvents.slice(0, 5);
+  const top = selectTopEvents(newEvents, 5);
   const used = new Set(top.map((event) => event.id));
   const remaining = newEvents.filter((event) => !used.has(event.id));
   const brand = takeUnique(
@@ -412,6 +412,21 @@ function buildSections(input: ReportTemplateInput): SectionModel {
     failed: input.sourceStatuses.filter((status) => !status.ok || status.warnings?.length),
     importantCount: input.newEvents.filter((event) => scoreOf(event) >= 70).length
   };
+}
+
+function selectTopEvents(events: EventRecord[], limit: number): EventRecord[] {
+  const sorted = sortEvents(events);
+  const promoted = sorted.filter(isTopStoryCandidate);
+  const fallback = sorted.filter((event) => !isTopStoryCandidate(event));
+  return [...promoted, ...fallback].slice(0, limit);
+}
+
+function isTopStoryCandidate(event: EventRecord): boolean {
+  return !hasNoHeadlineCap(event);
+}
+
+function hasNoHeadlineCap(event: EventRecord): boolean {
+  return (event.caps || []).some((cap) => cap.includes("不做头条"));
 }
 
 function takeUnique(events: EventRecord[], used: Set<string>, limit: number): EventRecord[] {

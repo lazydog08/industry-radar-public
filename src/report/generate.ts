@@ -158,11 +158,10 @@ function isImportantBackfillItem(item: SourceItem, start: string, end: string): 
   if (publishedAt < daysBefore(start, 3)) return false;
 
   const text = `${item.title} ${item.summaryRaw || ""}`;
-  return (
-    item.source === "huawei-news" ||
-    item.tags.includes("半导体突破") ||
-    /韬|τ|半导体|晶体管|逻辑折叠|产业新原则|技术突破/.test(text)
-  );
+  const hasHardTechSignal = item.tags.includes("半导体突破") || /韬|τ|半导体|晶体管|逻辑折叠|产业新原则|技术突破/.test(text);
+  const hasOfficialHighValueSignal =
+    item.source === "huawei-news" && item.tags.some((tag) => ["半导体突破", "系统更新", "发布会", "平台规则", "智驾", "AI"].includes(tag));
+  return hasHardTechSignal || hasOfficialHighValueSignal;
 }
 
 function daysBefore(value: string, days: number): string {

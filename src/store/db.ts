@@ -639,7 +639,12 @@ export class Store {
 
   private getSourceCount(eventId: string): number {
     const row = this.db
-      .prepare("SELECT COUNT(DISTINCT source_item_id) AS count FROM event_sources WHERE event_id = ?")
+      .prepare(
+        `SELECT COUNT(DISTINCT si.source) AS count
+         FROM event_sources es
+         JOIN source_items si ON si.id = es.source_item_id
+         WHERE es.event_id = ?`
+      )
       .get(eventId) as Row;
     return Number(row.count || 1);
   }

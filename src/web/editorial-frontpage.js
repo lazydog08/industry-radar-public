@@ -17,16 +17,26 @@ const FRONTPAGE_VIEW_STATE = {
 export function buildFrontpageModel(events = [], knowledgeHealth = null) {
   const eventList = Array.isArray(events) ? events.filter(Boolean) : [];
   const priorityEvents = [...eventList].sort(compareByPriority);
+  const lead = selectLead(priorityEvents);
 
   return {
-    lead: priorityEvents[0] ?? null,
-    topSignals: priorityEvents.slice(1, FRONTPAGE_LIMIT + 1),
+    lead,
+    topSignals: priorityEvents.filter((event) => event !== lead).slice(0, FRONTPAGE_LIMIT),
     videoCandidates: eventList
       .filter((event) => videoPotential(event) >= 4)
       .sort(compareByPriority)
       .slice(0, FRONTPAGE_LIMIT),
     needsEvidence: selectNeedsEvidence(eventList, knowledgeHealth)
   };
+}
+
+function selectLead(events) {
+  if (!events.length) return null;
+  return events.find(isLeadCandidate) ?? events.find((event) => !hasNoHeadlineCap(event)) ?? events[0];
+}
+
+function isLeadCandidate(event) {
+  return !hasNoHeadlineCap(event);
 }
 
 export function frontpageStateForView(viewMode) {
@@ -65,6 +75,10 @@ function sourceCount(event) {
 
 function capsCount(event) {
   return Array.isArray(event?.caps) ? event.caps.filter(Boolean).length : 0;
+}
+
+function hasNoHeadlineCap(event) {
+  return Array.isArray(event?.caps) && event.caps.some((cap) => String(cap).includes("不做头条"));
 }
 
 function numericScore(value) {

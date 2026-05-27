@@ -27,6 +27,30 @@ test("selects a high-score lead story before lower-score items", () => {
   assert.deepEqual(model.topSignals.map((event) => event.id), ["low"]);
 });
 
+test("keeps review and experience stories out of the lead slot", () => {
+  const model = buildFrontpageModel([
+    {
+      ...baseEvent,
+      id: "review",
+      title: "评测稿",
+      radar_score: 69,
+      radar_section: "video_ready",
+      caps: ["评测/体验稿默认不做头条"]
+    },
+    {
+      ...baseEvent,
+      id: "policy",
+      title: "政策变化",
+      radar_score: 62,
+      radar_section: "developing",
+      caps: []
+    }
+  ], null);
+
+  assert.equal(model.lead.id, "policy");
+  assert.deepEqual(model.topSignals.map((event) => event.id), ["review"]);
+});
+
 test("extracts video candidates and evidence queue separately", () => {
   const model = buildFrontpageModel([
     { ...baseEvent, id: "video", title: "可拍", radar_score: 70, video_potential: 5, confidence: "high" },
