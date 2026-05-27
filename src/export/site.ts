@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import type { AppConfig } from "../config.js";
+import { isNoiseContent } from "../scoring/keywords.js";
 import { Store } from "../store/db.js";
 import type { EntityHit, EventRecord, EventSourceLink, KnowledgeHealth, ReportRecord } from "../types.js";
 import { dateOnly, nowIso } from "../utils/time.js";
@@ -124,13 +125,13 @@ export async function exportStaticSiteData(
 
   const store = new Store(config);
   try {
-    const events = store.getRecentEvents(recentDays, eventLimit).map(toPublicEvent);
-    const knowledgeEvents = store.getRecentEvents(knowledgeDays, knowledgeLimit).map(toPublicEvent);
+    const events = store.getRecentEvents(recentDays, eventLimit).map(toPublicEvent).filter(isPublicEventAllowed);
+    const knowledgeEvents = store.getRecentEvents(knowledgeDays, knowledgeLimit).map(toPublicEvent).filter(isPublicEventAllowed);
     const reports = await Promise.all(
       store.listReports(reportLimit).map((report) => toPublicReport(report, config.reportOutputDir, outputDir, copyReports))
     );
     const facets = store.listFacets();
-    const knowledgeHealth = toPublicKnowledgeHealth(store.getKnowledgeHealth(12));
+    const knowledgeHealth = filterPublicKnowledgeHealth(toPublicKnowledgeHealth(store.getKnowledgeHealth(12)));
     const sections = groupBySection(events);
     const today = dateOnly();
     const todayEvents = events.filter((event) => event.first_seen_at.startsWith(today) || event.last_seen_at.startsWith(today) || event.updated_at.startsWith(today));
@@ -344,6 +345,29 @@ function toPublicKnowledgeHealth(health: KnowledgeHealth): PublicKnowledgeHealth
       staleButUseful: health.queues.staleButUseful.map(toPublicEvent)
     }
   };
+}
+
+function filterPublicKnowledgeHealth(health: PublicKnowledgeHealth): PublicKnowledgeHealth {
+  const queues = {
+    needsEvidence: health.queues.needsEvidence.filter(isPublicEventAllowed),
+    videoCandidates: health.queues.videoCandidates.filter(isPublicEventAllowed),
+    followUp: health.queues.followUp.filter(isPublicEventAllowed),
+    staleButUseful: health.queues.staleButUseful.filter(isPublicEventAllowed)
+  };
+  return {
+    ...health,
+    queueCounts: {
+      needsEvidence: queues.needsEvidence.length,
+      videoCandidates: queues.videoCandidates.length,
+      followUp: queues.followUp.length,
+      staleButUseful: queues.staleButUseful.length
+    },
+    queues
+  };
+}
+
+function isPublicEventAllowed(event: PublicEvent): boolean {
+  return !isNoiseContent(`${event.title} ${event.summary || ""} ${(event.tags || []).join(" ")}`);
 }
 
 function groupBySection(events: PublicEvent[]): Record<PublicRadarSection, PublicEvent[]> {
