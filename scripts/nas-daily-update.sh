@@ -54,6 +54,8 @@ fi
 NEW_COUNT="unknown"
 HIGH_COUNT="unknown"
 PUBLISHED_TO="${PUBLISH_DIR:-}"
+PAGES_PUSH_FAILED=false
+PAGES_PUSH_EXIT_CODE=0
 
 log() {
   printf '[%s] %s\n' "$(date '+%F %T')" "$*"
@@ -254,22 +256,42 @@ run_stage "generate report" run_report
 run_stage "export static data" run_export_site
 run_stage "publish static data" publish_public_data
 
+CURRENT_STAGE="collect stats"
+log "START collect stats"
+if collect_stats; then
+  log "DONE collect stats"
+else
+  log "collect stats failed; continuing to GitHub Pages push"
+fi
+
 # ── push to github pages ──────────────────────────────────────
 # 仅当 ENABLE_GITHUB_PAGES_PUSH=true 时才执行；默认 false，不影响现有用户
 if [[ "${ENABLE_GITHUB_PAGES_PUSH:-false}" == "true" ]]; then
   CURRENT_STAGE="push to github pages"
   log "START push to github pages"
-  bash scripts/publish-github-pages.sh \
-    || log "GitHub Pages push failed; NAS local result is kept."
-  log "DONE push to github pages"
+  if bash scripts/publish-github-pages.sh; then
+    log "DONE push to github pages"
+  else
+    exit_code=$?
+    PAGES_PUSH_FAILED=true
+    PAGES_PUSH_EXIT_CODE="$exit_code"
+    log "FAILED stage=push to github pages exit=${exit_code}"
+  fi
 else
   log "SKIP push to github pages (ENABLE_GITHUB_PAGES_PUSH is not true)"
 fi
 
-run_stage "collect stats" collect_stats
-
 UPDATED_AT="$(date '+%F %T %Z')"
-SUCCESS_MESSAGE="NAS update success: type=${RUN_TYPE}, date=${RUN_DATE}, new=${NEW_COUNT}, high=${HIGH_COUNT}, updated_at=${UPDATED_AT}, publish=${PUBLISHED_TO:-not-set}"
-log "$SUCCESS_MESSAGE"
-notify_bark "success" "$SUCCESS_MESSAGE"
+if [[ "$PAGES_PUSH_FAILED" == "true" ]]; then
+  FAILURE_MESSAGE="NAS local update success but GitHub Pages push failed: type=${RUN_TYPE}, date=${RUN_DATE}, new=${NEW_COUNT}, high=${HIGH_COUNT}, updated_at=${UPDATED_AT}, log=$(basename "$LOG_FILE")"
+  log "$FAILURE_MESSAGE"
+  notify_bark "failed" "$FAILURE_MESSAGE"
+  if [[ "${GITHUB_PAGES_PUSH_REQUIRED:-false}" == "true" ]]; then
+    exit "$PAGES_PUSH_EXIT_CODE"
+  fi
+else
+  SUCCESS_MESSAGE="NAS update success: type=${RUN_TYPE}, date=${RUN_DATE}, new=${NEW_COUNT}, high=${HIGH_COUNT}, updated_at=${UPDATED_AT}, publish=${PUBLISHED_TO:-not-set}"
+  log "$SUCCESS_MESSAGE"
+  notify_bark "success" "$SUCCESS_MESSAGE"
+fi
 log "Log file: ${LOG_FILE}"

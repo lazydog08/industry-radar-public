@@ -11,13 +11,33 @@ test("NAS setup docs use explicit Bark placeholders", () => {
   }
 });
 
-test("GitHub Pages publisher preflights and force-adds only the configured public-data directory", () => {
+test("GitHub Pages publisher stages exported data into the Pages public-data directory", () => {
   const script = fs.readFileSync("scripts/publish-github-pages.sh", "utf8");
 
   assert.match(script, /preflight_public_data/);
   assert.match(script, /scan_public_data_for_sensitive_content/);
   assert.doesNotMatch(script, /git add -f public-data\//);
-  assert.match(script, /git add -f -- "\$PUBLIC_DATA_DIR"/);
+  assert.match(script, /readonly GITHUB_PAGES_DATA_DIR="\.\/public-data"/);
+  assert.match(script, /GitHub Pages workflow copies this exact repository path/);
+  assert.match(script, /stage_pages_data/);
+  assert.match(script, /GITHUB_PAGES_DATA_DIR must resolve to/);
+  assert.match(script, /PUBLIC_DATA_DIR is not accessible/);
+  assert.match(script, /rsync is required to stage GitHub Pages data safely/);
+  assert.match(script, /rsync -a --delete "\$\{PUBLIC_DATA_DIR%\/\}\/" "\$\{PAGES_STAGING_DIR%\/\}\/" \|\|/);
+  assert.doesNotMatch(script, /git add -f -- "\$PUBLIC_DATA_DIR"/);
+  assert.match(script, /git add -f -- "\$GITHUB_PAGES_DATA_DIR"/);
+  assert.match(script, /scan_public_data_for_sensitive_content "\$PAGES_STAGING_DIR"/);
+});
+
+test("NAS daily update surfaces enabled GitHub Pages push failures", () => {
+  const script = fs.readFileSync("scripts/nas-daily-update.sh", "utf8");
+
+  assert.doesNotMatch(script, /publish-github-pages\.sh\s*\\\s*\|\| log/);
+  assert.match(script, /NAS local update success but GitHub Pages push failed/);
+  assert.match(script, /GITHUB_PAGES_PUSH_REQUIRED:-false/);
+  assert.match(script, /notify_bark "failed"/);
+  assert.match(script, /basename "\$LOG_FILE"/);
+  assert.match(script, /collect stats failed; continuing to GitHub Pages push/);
 });
 
 test("NAS schedule docs match current UGREEN defaults", () => {

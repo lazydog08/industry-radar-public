@@ -19,17 +19,28 @@ fi
 GITHUB_REMOTE="${GITHUB_REMOTE:-github}"
 GITHUB_BRANCH="${GITHUB_BRANCH:-main}"
 PUBLIC_DATA_DIR="${PUBLIC_DATA_DIR:-./public-data}"
+# GitHub Pages workflow copies this exact repository path.
+readonly GITHUB_PAGES_DATA_DIR="./public-data"
+PAGES_STAGING_DIR=""
+PAGES_PREVIOUS_DIR=""
 
 log() {
   printf '[%s] [publish-github-pages] %s\n' "$(date '+%F %T')" "$*"
 }
 
+cleanup_staging() {
+  [[ -n "$PAGES_STAGING_DIR" && -e "$PAGES_STAGING_DIR" ]] && rm -rf -- "$PAGES_STAGING_DIR"
+  [[ -n "$PAGES_PREVIOUS_DIR" && -e "$PAGES_PREVIOUS_DIR" ]] && rm -rf -- "$PAGES_PREVIOUS_DIR"
+}
+trap cleanup_staging EXIT
+
 scan_public_data_for_sensitive_content() {
+  local scan_dir="${1:-$PUBLIC_DATA_DIR}"
   local matches
   matches="$(
     grep -RIlE \
       '(BARK_(KEY|NOTIFY_URL)=|COOKIE=|TOKEN=|PASSWORD=|BEGIN [A-Z ]*PRIVATE KEY|gho_[A-Za-z0-9_]+|github_pat_[A-Za-z0-9_]+|http://(localhost|127\.0\.0\.1|192\.168\.|10\.|172\.(1[6-9]|2[0-9]|3[0-1])\.))' \
-      "$PUBLIC_DATA_DIR" 2>/dev/null || true
+      "$scan_dir" 2>/dev/null || true
   )"
 
   if [[ -n "$matches" ]]; then
@@ -85,7 +96,64 @@ preflight_public_data() {
   fi
 
   scan_tracked_files_for_sensitive_content
-  scan_public_data_for_sensitive_content
+  scan_public_data_for_sensitive_content "$PUBLIC_DATA_DIR"
+}
+
+stage_pages_data() {
+  local root_dir source_dir pages_parent pages_dir
+  root_dir="$(pwd -P)"
+  if ! source_dir="$(cd "$PUBLIC_DATA_DIR" && pwd -P)"; then
+    log "ERROR: PUBLIC_DATA_DIR is not accessible: ${PUBLIC_DATA_DIR}"
+    exit 1
+  fi
+  pages_parent="$(cd "$(dirname "$GITHUB_PAGES_DATA_DIR")" && pwd -P)"
+  pages_dir="${pages_parent}/$(basename "$GITHUB_PAGES_DATA_DIR")"
+
+  if [[ "$pages_dir" != "${root_dir}/public-data" ]]; then
+    log "ERROR: GITHUB_PAGES_DATA_DIR must resolve to ${root_dir}/public-data, got: ${pages_dir}"
+    exit 1
+  fi
+
+  if [[ "$source_dir" == "$pages_dir" ]]; then
+    return 0
+  fi
+
+  if ! command -v rsync >/dev/null 2>&1; then
+    log "ERROR: rsync is required to stage GitHub Pages data safely."
+    exit 1
+  fi
+
+  PAGES_STAGING_DIR="${root_dir}/.public-data.staging-$$"
+  PAGES_PREVIOUS_DIR="${root_dir}/.public-data.previous-$$"
+  rm -rf -- "$PAGES_STAGING_DIR" "$PAGES_PREVIOUS_DIR"
+  mkdir -p "$PAGES_STAGING_DIR"
+
+  log "Staging ${PUBLIC_DATA_DIR} into ${GITHUB_PAGES_DATA_DIR} for GitHub Pages..."
+  rsync -a --delete "${PUBLIC_DATA_DIR%/}/" "${PAGES_STAGING_DIR%/}/" || {
+    log "ERROR: rsync failed while staging GitHub Pages data."
+    exit 1
+  }
+  scan_public_data_for_sensitive_content "$PAGES_STAGING_DIR"
+
+  if [[ -e "$GITHUB_PAGES_DATA_DIR" ]]; then
+    mv "$GITHUB_PAGES_DATA_DIR" "$PAGES_PREVIOUS_DIR"
+  fi
+  if mv "$PAGES_STAGING_DIR" "$GITHUB_PAGES_DATA_DIR"; then
+    rm -rf -- "$PAGES_PREVIOUS_DIR"
+    PAGES_PREVIOUS_DIR=""
+  else
+    log "ERROR: failed to replace ${GITHUB_PAGES_DATA_DIR} with staged data."
+    if [[ -e "$PAGES_PREVIOUS_DIR" ]]; then
+      if mv "$PAGES_PREVIOUS_DIR" "$GITHUB_PAGES_DATA_DIR"; then
+        PAGES_PREVIOUS_DIR=""
+      else
+        log "ERROR: failed to restore previous ${GITHUB_PAGES_DATA_DIR}; backup kept at ${PAGES_PREVIOUS_DIR}"
+        PAGES_PREVIOUS_DIR=""
+      fi
+    fi
+    exit 1
+  fi
+  PAGES_STAGING_DIR=""
 }
 
 # ── 检查 remote 是否存在 ──────────────────────────────────────
@@ -97,10 +165,11 @@ fi
 
 # ── 检查 public-data 目录 ─────────────────────────────────────
 preflight_public_data
+stage_pages_data
 
 # ── 强制将 public-data 加入 Git（绕过 .gitignore）─────────────
-log "Adding ${PUBLIC_DATA_DIR} to git (force, bypassing .gitignore)..."
-git add -f -- "$PUBLIC_DATA_DIR"
+log "Adding ${GITHUB_PAGES_DATA_DIR} to git (force, bypassing .gitignore)..."
+git add -f -- "$GITHUB_PAGES_DATA_DIR"
 
 # ── 如果没有改动就跳过 commit ─────────────────────────────────
 if git diff --cached --quiet; then
