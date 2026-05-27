@@ -1,10 +1,10 @@
 import fs from "node:fs";
 import path from "node:path";
 import type { AppConfig } from "../config.js";
-import type { DailyReportType, GeneratedReport, PeriodReportType, SourceFetchResult, SourceStatus } from "../types.js";
+import type { DailyReportType, GeneratedReport, PeriodReportType, SourceFetchResult, SourceItem, SourceStatus } from "../types.js";
 import { Store } from "../store/db.js";
 import { makeId } from "../utils/ids.js";
-import { filenameDate, isBetween, reportWindow } from "../utils/time.js";
+import { filenameDate, isBetween, reportWindow, toShanghaiIso } from "../utils/time.js";
 import { getSourceAdapters, mockSource } from "../sources/index.js";
 import { logger } from "../utils/logger.js";
 import { toGeneratedReport } from "./templates.js";
@@ -140,9 +140,9 @@ function toSourceStatuses(results: SourceFetchResult[]): SourceStatus[] {
   }));
 }
 
-function filterResultsToWindow(results: SourceFetchResult[], start: string, end: string): SourceFetchResult[] {
+export function filterResultsToWindow(results: SourceFetchResult[], start: string, end: string): SourceFetchResult[] {
   return results.map((result) => {
-    const kept = result.items.filter((item) => isBetween(item.publishedAt || item.fetchedAt, start, end));
+    const kept = result.items.filter((item) => isBetween(item.publishedAt || item.fetchedAt, start, end) || isImportantBackfillItem(item, start, end));
     const omitted = result.items.length - kept.length;
     return {
       ...result,
@@ -150,4 +150,23 @@ function filterResultsToWindow(results: SourceFetchResult[], start: string, end:
       warnings: omitted > 0 ? [...(result.warnings || []), `${omitted} 条不在报告时间窗口内，已排除`] : result.warnings
     };
   });
+}
+
+function isImportantBackfillItem(item: SourceItem, start: string, end: string): boolean {
+  const publishedAt = item.publishedAt || item.fetchedAt;
+  if (!publishedAt || publishedAt > end) return false;
+  if (publishedAt < daysBefore(start, 3)) return false;
+
+  const text = `${item.title} ${item.summaryRaw || ""}`;
+  return (
+    item.source === "huawei-news" ||
+    item.tags.includes("半导体突破") ||
+    /韬|τ|半导体|晶体管|逻辑折叠|产业新原则|技术突破/.test(text)
+  );
+}
+
+function daysBefore(value: string, days: number): string {
+  const date = new Date(value);
+  date.setDate(date.getDate() - days);
+  return toShanghaiIso(date);
 }
