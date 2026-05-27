@@ -1023,10 +1023,6 @@ async function toggleStaticFeedback(eventId, feedbackType, enabled) {
     await search();
     return;
   }
-  if (state.viewMode === "home") {
-    renderHome(state.events);
-    return;
-  }
   if (event) renderDetail(event);
 }
 
