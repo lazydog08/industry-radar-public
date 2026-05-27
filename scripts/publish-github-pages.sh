@@ -31,6 +31,7 @@ log() {
 cleanup_staging() {
   [[ -n "$PAGES_STAGING_DIR" && -e "$PAGES_STAGING_DIR" ]] && rm -rf -- "$PAGES_STAGING_DIR"
   [[ -n "$PAGES_PREVIOUS_DIR" && -e "$PAGES_PREVIOUS_DIR" ]] && rm -rf -- "$PAGES_PREVIOUS_DIR"
+  return 0
 }
 trap cleanup_staging EXIT
 
