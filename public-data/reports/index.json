@@ -1,9 +1,33 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-27T18:49:55+08:00",
+  "generatedAt": "2026-05-27T23:35:26+08:00",
   "timezone": "Asia/Shanghai",
-  "total": 15,
+  "total": 16,
   "reports": [
+    {
+      "id": "report_eff96450b68015f1b1c8",
+      "report_type": "night",
+      "window_start": "2026-05-27T12:00:00+08:00",
+      "window_end": "2026-05-27T22:00:00+08:00",
+      "event_count": 44,
+      "created_at": "2026-05-27T23:35:25+08:00",
+      "html_url": "reports/2026-05-27-night.html",
+      "markdown_url": "reports/2026-05-27-night.md",
+      "files": {
+        "html": {
+          "name": "2026-05-27-night.html",
+          "url": "reports/2026-05-27-night.html",
+          "copied": true,
+          "available": true
+        },
+        "markdown": {
+          "name": "2026-05-27-night.md",
+          "url": "reports/2026-05-27-night.md",
+          "copied": true,
+          "available": true
+        }
+      }
+    },
     {
       "id": "report_d3bf289e9ec3a0dadf06",
       "report_type": "noon",
