@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-27T16:51:54+08:00",
+  "generatedAt": "2026-05-27T18:49:55+08:00",
   "timezone": "Asia/Shanghai",
   "total": 83,
   "metrics": {
     "total": 91,
     "highConfidence": 0,
     "lowConfidence": 91,
-    "singleSource": 85,
-    "capped": 43,
+    "singleSource": 86,
+    "capped": 42,
     "videoReady": 0,
     "followed": 0,
     "usedForVideo": 0
@@ -31,14 +31,14 @@
         "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
         "cover_angle": "这条消息别只看标题：华为发表韬(τ)定律，实现晶体管密度与系统性能…",
         "category": "digital",
-        "importance_score": 91,
+        "importance_score": 88,
         "worth_following": 0,
         "first_seen_at": "2026-05-26T17:25:31+08:00",
-        "last_seen_at": "2026-05-27T16:51:43+08:00",
+        "last_seen_at": "2026-05-27T18:49:43+08:00",
         "status": "active",
         "source_count": 1,
         "created_at": "2026-05-27T15:50:12+08:00",
-        "updated_at": "2026-05-27T16:51:54+08:00",
+        "updated_at": "2026-05-27T18:49:54+08:00",
         "tags": [
           "半导体突破",
           "数码"
@@ -76,76 +76,21 @@
           }
         ],
         "feedback": [],
-        "radar_score": 92,
+        "radar_score": 89,
         "radar_level": "S",
         "radar_section": "must_read",
         "video_potential": 1,
         "confidence": "low",
-        "freshness_label": "new",
-        "freshness_days": 1,
+        "freshness_label": "recent",
+        "freshness_days": 1.1,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；包含明确变化信号",
         "score_parts": {
           "relevance": 22,
           "trend": 20,
-          "freshness": 18,
+          "freshness": 15,
           "change": 8,
           "credibility": 10,
           "scarcity": 7
-        },
-        "caps": []
-      },
-      {
-        "id": "evt_ea06357865ee41c9af8a",
-        "title": "工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施",
-        "summary": "跨行业出现值得入库的信号：工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施。它涉及 相关主体，系统识别到 数码、自媒体、汽车、系统更新、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，工信部发布 2026 年汽车标准化工作要点。其中包括，完善汽车标准体系规划。完成汽车行业“十五五”技术标准体系建设方案编制，扎实开展标准“推转强”可行性试点研究，科学评估汽车强制性国家标准路线图实施成效并适时启动修订，健全完善并落实智能网联汽车、… 来源为 ithome，发布时间标记为 05/26 17:38。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-        "content_angle": "争议拆解：工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施，普通用户到底该怎么看？",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "mixed",
-        "importance_score": 76,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-26T17:38:46+08:00",
-        "last_seen_at": "2026-05-27T00:20:55+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-27T00:21:06+08:00",
-        "updated_at": "2026-05-27T00:21:06+08:00",
-        "tags": [
-          "争议",
-          "发布会",
-          "影像",
-          "数码",
-          "汽车",
-          "系统更新",
-          "自媒体"
-        ],
-        "entities": [],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/548.htm",
-            "title": "工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 73,
-        "radar_level": "A",
-        "radar_section": "developing",
-        "video_potential": 1,
-        "confidence": "low",
-        "freshness_label": "new",
-        "freshness_days": 1,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
-        "score_parts": {
-          "relevance": 19,
-          "trend": 7,
-          "freshness": 18,
-          "change": 9,
-          "credibility": 10,
-          "scarcity": 8
         },
         "caps": []
       },
@@ -199,13 +144,129 @@
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "new",
-        "freshness_days": 0.2,
+        "freshness_days": 0.3,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
         "score_parts": {
           "relevance": 21,
           "trend": 7,
           "freshness": 18,
           "change": 8,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_ea06357865ee41c9af8a",
+        "title": "工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施",
+        "summary": "跨行业出现值得入库的信号：工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施。它涉及 相关主体，系统识别到 数码、自媒体、汽车、系统更新、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+        "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，工信部发布 2026 年汽车标准化工作要点。其中包括，完善汽车标准体系规划。完成汽车行业“十五五”技术标准体系建设方案编制，扎实开展标准“推转强”可行性试点研究，科学评估汽车强制性国家标准路线图实施成效并适时启动修订，健全完善并落实智能网联汽车、… 来源为 ithome，发布时间标记为 05/26 17:38。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "争议拆解：工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施，普通用户到底该怎么看？",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "mixed",
+        "importance_score": 76,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-26T17:38:46+08:00",
+        "last_seen_at": "2026-05-27T00:20:55+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-27T00:21:06+08:00",
+        "updated_at": "2026-05-27T00:21:06+08:00",
+        "tags": [
+          "争议",
+          "发布会",
+          "影像",
+          "数码",
+          "汽车",
+          "系统更新",
+          "自媒体"
+        ],
+        "entities": [],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/955/548.htm",
+            "title": "工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 70,
+        "radar_level": "A",
+        "radar_section": "developing",
+        "video_potential": 1,
+        "confidence": "low",
+        "freshness_label": "recent",
+        "freshness_days": 1,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
+        "score_parts": {
+          "relevance": 19,
+          "trend": 7,
+          "freshness": 15,
+          "change": 9,
+          "credibility": 10,
+          "scarcity": 8
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_88cebdfbca609f2cb8b1",
+        "title": "华为发布AI DC数据基础设施全栈方案，加速行业智能化跃升",
+        "summary": "数码行业出现值得入库的信号：华为发布AI DC数据基础设施全栈方案，加速行业智能化跃升。它涉及 华为，系统识别到 发布会、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+        "what_happened": "公开摘要提到：5月21日，以“数据觉醒，存力跃迁”为主题的2026华为创新数据基础设施论坛在巴黎举行。 来源为 huawei-news，发布时间标记为 05/25 10:13。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "华为 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 67,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-25T10:13:03+08:00",
+        "last_seen_at": "2026-05-27T18:49:43+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-27T15:50:12+08:00",
+        "updated_at": "2026-05-27T18:49:54+08:00",
+        "tags": [
+          "发布会",
+          "数码"
+        ],
+        "entities": [
+          {
+            "name": "华为",
+            "type": "brand",
+            "aliases": [
+              "Huawei",
+              "HarmonyOS",
+              "问界",
+              "智界"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "source": "huawei-news",
+            "url": "https://www.huawei.com/cn/news/2026/5/idi-forum-data",
+            "title": "华为发布AI DC数据基础设施全栈方案，加速行业智能化跃升",
+            "author": "华为新闻动态"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 69,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 1,
+        "confidence": "low",
+        "freshness_label": "recent",
+        "freshness_days": 2.4,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+        "score_parts": {
+          "relevance": 21,
+          "trend": 12,
+          "freshness": 15,
+          "change": 4,
           "credibility": 10,
           "scarcity": 7
         },
@@ -260,7 +321,7 @@
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "new",
-        "freshness_days": 0.3,
+        "freshness_days": 0.4,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
         "score_parts": {
           "relevance": 21,
@@ -311,7 +372,7 @@
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "new",
-        "freshness_days": 0.2,
+        "freshness_days": 0.3,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
         "score_parts": {
           "relevance": 17,
@@ -420,7 +481,7 @@
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "new",
-        "freshness_days": 0.3,
+        "freshness_days": 0.4,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
         "score_parts": {
           "relevance": 19,
@@ -470,7 +531,7 @@
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "new",
-        "freshness_days": 0.2,
+        "freshness_days": 0.3,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
         "score_parts": {
           "relevance": 19,
@@ -584,56 +645,6 @@
         "caps": []
       },
       {
-        "id": "evt_949d0e0e9ad2a88f55ff",
-        "title": "中日韩新马泰 6 国科学家联合发布亚洲首个合成细胞十年技术路线图",
-        "summary": "数码行业出现值得入库的信号：中日韩新马泰 6 国科学家联合发布亚洲首个合成细胞十年技术路线图。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，中国科学院深圳先进技术研究院联合来自中国、日本、韩国、新加坡、马来西亚、泰国等亚洲六国的 100 多个实验室， 发布了亚洲首个合成细胞十年技术路线图 ，文章于今日（5 月 26 日）发表于《自然 · 生物技术》。 科研团队聚焦“ 人工合成单细胞生… 来源为 ithome，发布时间标记为 05/26 17:46。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 61,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-26T17:46:29+08:00",
-        "last_seen_at": "2026-05-27T00:20:55+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-27T00:21:06+08:00",
-        "updated_at": "2026-05-27T00:21:06+08:00",
-        "tags": [
-          "发布会",
-          "数码"
-        ],
-        "entities": [],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/550.htm",
-            "title": "中日韩新马泰 6 国科学家联合发布亚洲首个合成细胞十年技术路线图",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 65,
-        "radar_level": "B",
-        "radar_section": "developing",
-        "video_potential": 1,
-        "confidence": "low",
-        "freshness_label": "new",
-        "freshness_days": 1,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
-        "score_parts": {
-          "relevance": 17,
-          "trend": 8,
-          "freshness": 18,
-          "change": 5,
-          "credibility": 10,
-          "scarcity": 7
-        },
-        "caps": []
-      },
-      {
         "id": "evt_19147928061fd7aa294e",
         "title": "研究显示医学论文中的虚假参考文献数量激增，AI 难辞其咎",
         "summary": "数码行业出现值得入库的信号：研究显示医学论文中的虚假参考文献数量激增，AI 难辞其咎。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
@@ -671,7 +682,7 @@
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "new",
-        "freshness_days": 0.8,
+        "freshness_days": 0.9,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
         "score_parts": {
           "relevance": 19,
@@ -686,61 +697,6 @@
     ],
     "videoCandidates": [],
     "followUp": [
-      {
-        "id": "evt_ea06357865ee41c9af8a",
-        "title": "工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施",
-        "summary": "跨行业出现值得入库的信号：工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施。它涉及 相关主体，系统识别到 数码、自媒体、汽车、系统更新、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，工信部发布 2026 年汽车标准化工作要点。其中包括，完善汽车标准体系规划。完成汽车行业“十五五”技术标准体系建设方案编制，扎实开展标准“推转强”可行性试点研究，科学评估汽车强制性国家标准路线图实施成效并适时启动修订，健全完善并落实智能网联汽车、… 来源为 ithome，发布时间标记为 05/26 17:38。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-        "content_angle": "争议拆解：工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施，普通用户到底该怎么看？",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "mixed",
-        "importance_score": 76,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-26T17:38:46+08:00",
-        "last_seen_at": "2026-05-27T00:20:55+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-27T00:21:06+08:00",
-        "updated_at": "2026-05-27T00:21:06+08:00",
-        "tags": [
-          "争议",
-          "发布会",
-          "影像",
-          "数码",
-          "汽车",
-          "系统更新",
-          "自媒体"
-        ],
-        "entities": [],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/548.htm",
-            "title": "工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 73,
-        "radar_level": "A",
-        "radar_section": "developing",
-        "video_potential": 1,
-        "confidence": "low",
-        "freshness_label": "new",
-        "freshness_days": 1,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
-        "score_parts": {
-          "relevance": 19,
-          "trend": 7,
-          "freshness": 18,
-          "change": 9,
-          "credibility": 10,
-          "scarcity": 8
-        },
-        "caps": []
-      },
       {
         "id": "evt_5abf9b146eed4f1697e3",
         "title": "微星 MPG X870E CARBON MAX WIFI 暗黑主板上市，2999 元",
@@ -791,13 +747,129 @@
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "new",
-        "freshness_days": 0.2,
+        "freshness_days": 0.3,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
         "score_parts": {
           "relevance": 21,
           "trend": 7,
           "freshness": 18,
           "change": 8,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_ea06357865ee41c9af8a",
+        "title": "工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施",
+        "summary": "跨行业出现值得入库的信号：工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施。它涉及 相关主体，系统识别到 数码、自媒体、汽车、系统更新、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+        "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，工信部发布 2026 年汽车标准化工作要点。其中包括，完善汽车标准体系规划。完成汽车行业“十五五”技术标准体系建设方案编制，扎实开展标准“推转强”可行性试点研究，科学评估汽车强制性国家标准路线图实施成效并适时启动修订，健全完善并落实智能网联汽车、… 来源为 ithome，发布时间标记为 05/26 17:38。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "争议拆解：工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施，普通用户到底该怎么看？",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "mixed",
+        "importance_score": 76,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-26T17:38:46+08:00",
+        "last_seen_at": "2026-05-27T00:20:55+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-27T00:21:06+08:00",
+        "updated_at": "2026-05-27T00:21:06+08:00",
+        "tags": [
+          "争议",
+          "发布会",
+          "影像",
+          "数码",
+          "汽车",
+          "系统更新",
+          "自媒体"
+        ],
+        "entities": [],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/955/548.htm",
+            "title": "工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 70,
+        "radar_level": "A",
+        "radar_section": "developing",
+        "video_potential": 1,
+        "confidence": "low",
+        "freshness_label": "recent",
+        "freshness_days": 1,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
+        "score_parts": {
+          "relevance": 19,
+          "trend": 7,
+          "freshness": 15,
+          "change": 9,
+          "credibility": 10,
+          "scarcity": 8
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_88cebdfbca609f2cb8b1",
+        "title": "华为发布AI DC数据基础设施全栈方案，加速行业智能化跃升",
+        "summary": "数码行业出现值得入库的信号：华为发布AI DC数据基础设施全栈方案，加速行业智能化跃升。它涉及 华为，系统识别到 发布会、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+        "what_happened": "公开摘要提到：5月21日，以“数据觉醒，存力跃迁”为主题的2026华为创新数据基础设施论坛在巴黎举行。 来源为 huawei-news，发布时间标记为 05/25 10:13。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "华为 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 67,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-25T10:13:03+08:00",
+        "last_seen_at": "2026-05-27T18:49:43+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-27T15:50:12+08:00",
+        "updated_at": "2026-05-27T18:49:54+08:00",
+        "tags": [
+          "发布会",
+          "数码"
+        ],
+        "entities": [
+          {
+            "name": "华为",
+            "type": "brand",
+            "aliases": [
+              "Huawei",
+              "HarmonyOS",
+              "问界",
+              "智界"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "source": "huawei-news",
+            "url": "https://www.huawei.com/cn/news/2026/5/idi-forum-data",
+            "title": "华为发布AI DC数据基础设施全栈方案，加速行业智能化跃升",
+            "author": "华为新闻动态"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 69,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 1,
+        "confidence": "low",
+        "freshness_label": "recent",
+        "freshness_days": 2.4,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+        "score_parts": {
+          "relevance": 21,
+          "trend": 12,
+          "freshness": 15,
+          "change": 4,
           "credibility": 10,
           "scarcity": 7
         },
@@ -852,7 +924,7 @@
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "new",
-        "freshness_days": 0.3,
+        "freshness_days": 0.4,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
         "score_parts": {
           "relevance": 21,
@@ -903,7 +975,7 @@
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "new",
-        "freshness_days": 0.2,
+        "freshness_days": 0.3,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
         "score_parts": {
           "relevance": 17,
@@ -1037,7 +1109,7 @@
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "new",
-        "freshness_days": 0.2,
+        "freshness_days": 0.3,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
         "score_parts": {
           "relevance": 22,
@@ -1095,7 +1167,7 @@
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "new",
-        "freshness_days": 0.3,
+        "freshness_days": 0.4,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
         "score_parts": {
           "relevance": 19,
@@ -1145,7 +1217,7 @@
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "new",
-        "freshness_days": 0.2,
+        "freshness_days": 0.3,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
         "score_parts": {
           "relevance": 19,
@@ -1259,56 +1331,6 @@
         "caps": []
       },
       {
-        "id": "evt_949d0e0e9ad2a88f55ff",
-        "title": "中日韩新马泰 6 国科学家联合发布亚洲首个合成细胞十年技术路线图",
-        "summary": "数码行业出现值得入库的信号：中日韩新马泰 6 国科学家联合发布亚洲首个合成细胞十年技术路线图。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，中国科学院深圳先进技术研究院联合来自中国、日本、韩国、新加坡、马来西亚、泰国等亚洲六国的 100 多个实验室， 发布了亚洲首个合成细胞十年技术路线图 ，文章于今日（5 月 26 日）发表于《自然 · 生物技术》。 科研团队聚焦“ 人工合成单细胞生… 来源为 ithome，发布时间标记为 05/26 17:46。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 61,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-26T17:46:29+08:00",
-        "last_seen_at": "2026-05-27T00:20:55+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-27T00:21:06+08:00",
-        "updated_at": "2026-05-27T00:21:06+08:00",
-        "tags": [
-          "发布会",
-          "数码"
-        ],
-        "entities": [],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/550.htm",
-            "title": "中日韩新马泰 6 国科学家联合发布亚洲首个合成细胞十年技术路线图",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 65,
-        "radar_level": "B",
-        "radar_section": "developing",
-        "video_potential": 1,
-        "confidence": "low",
-        "freshness_label": "new",
-        "freshness_days": 1,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
-        "score_parts": {
-          "relevance": 17,
-          "trend": 8,
-          "freshness": 18,
-          "change": 5,
-          "credibility": 10,
-          "scarcity": 7
-        },
-        "caps": []
-      },
-      {
         "id": "evt_19147928061fd7aa294e",
         "title": "研究显示医学论文中的虚假参考文献数量激增，AI 难辞其咎",
         "summary": "数码行业出现值得入库的信号：研究显示医学论文中的虚假参考文献数量激增，AI 难辞其咎。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
@@ -1346,7 +1368,7 @@
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "new",
-        "freshness_days": 0.8,
+        "freshness_days": 0.9,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
         "score_parts": {
           "relevance": 19,
@@ -1372,14 +1394,14 @@
       "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
       "cover_angle": "这条消息别只看标题：华为发表韬(τ)定律，实现晶体管密度与系统性能…",
       "category": "digital",
-      "importance_score": 91,
+      "importance_score": 88,
       "worth_following": 0,
       "first_seen_at": "2026-05-26T17:25:31+08:00",
-      "last_seen_at": "2026-05-27T16:51:43+08:00",
+      "last_seen_at": "2026-05-27T18:49:43+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:50:12+08:00",
-      "updated_at": "2026-05-27T16:51:54+08:00",
+      "updated_at": "2026-05-27T18:49:54+08:00",
       "tags": [
         "半导体突破",
         "数码"
@@ -1417,76 +1439,21 @@
         }
       ],
       "feedback": [],
-      "radar_score": 92,
+      "radar_score": 89,
       "radar_level": "S",
       "radar_section": "must_read",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 1,
+      "freshness_label": "recent",
+      "freshness_days": 1.1,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；包含明确变化信号",
       "score_parts": {
         "relevance": 22,
         "trend": 20,
-        "freshness": 18,
+        "freshness": 15,
         "change": 8,
         "credibility": 10,
         "scarcity": 7
-      },
-      "caps": []
-    },
-    {
-      "id": "evt_ea06357865ee41c9af8a",
-      "title": "工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施",
-      "summary": "跨行业出现值得入库的信号：工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施。它涉及 相关主体，系统识别到 数码、自媒体、汽车、系统更新、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，工信部发布 2026 年汽车标准化工作要点。其中包括，完善汽车标准体系规划。完成汽车行业“十五五”技术标准体系建设方案编制，扎实开展标准“推转强”可行性试点研究，科学评估汽车强制性国家标准路线图实施成效并适时启动修订，健全完善并落实智能网联汽车、… 来源为 ithome，发布时间标记为 05/26 17:38。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "争议拆解：工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施，普通用户到底该怎么看？",
-      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-      "category": "mixed",
-      "importance_score": 76,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-26T17:38:46+08:00",
-      "last_seen_at": "2026-05-27T00:20:55+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T00:21:06+08:00",
-      "updated_at": "2026-05-27T00:21:06+08:00",
-      "tags": [
-        "争议",
-        "发布会",
-        "影像",
-        "数码",
-        "汽车",
-        "系统更新",
-        "自媒体"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/955/548.htm",
-          "title": "工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 73,
-      "radar_level": "A",
-      "radar_section": "developing",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 1,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
-      "score_parts": {
-        "relevance": 19,
-        "trend": 7,
-        "freshness": 18,
-        "change": 9,
-        "credibility": 10,
-        "scarcity": 8
       },
       "caps": []
     },
@@ -1550,7 +1517,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.8,
+      "freshness_days": 0.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
         "relevance": 22,
@@ -1618,7 +1585,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.8,
+      "freshness_days": 0.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
       "score_parts": {
         "relevance": 21,
@@ -1627,6 +1594,61 @@
         "change": 8,
         "credibility": 10,
         "scarcity": 7
+      },
+      "caps": []
+    },
+    {
+      "id": "evt_ea06357865ee41c9af8a",
+      "title": "工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施",
+      "summary": "跨行业出现值得入库的信号：工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施。它涉及 相关主体，系统识别到 数码、自媒体、汽车、系统更新、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，工信部发布 2026 年汽车标准化工作要点。其中包括，完善汽车标准体系规划。完成汽车行业“十五五”技术标准体系建设方案编制，扎实开展标准“推转强”可行性试点研究，科学评估汽车强制性国家标准路线图实施成效并适时启动修订，健全完善并落实智能网联汽车、… 来源为 ithome，发布时间标记为 05/26 17:38。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "争议拆解：工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施，普通用户到底该怎么看？",
+      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+      "category": "mixed",
+      "importance_score": 76,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-26T17:38:46+08:00",
+      "last_seen_at": "2026-05-27T00:20:55+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T00:21:06+08:00",
+      "updated_at": "2026-05-27T00:21:06+08:00",
+      "tags": [
+        "争议",
+        "发布会",
+        "影像",
+        "数码",
+        "汽车",
+        "系统更新",
+        "自媒体"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/955/548.htm",
+          "title": "工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 70,
+      "radar_level": "A",
+      "radar_section": "developing",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 1,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
+      "score_parts": {
+        "relevance": 19,
+        "trend": 7,
+        "freshness": 15,
+        "change": 9,
+        "credibility": 10,
+        "scarcity": 8
       },
       "caps": []
     },
@@ -1643,11 +1665,11 @@
       "importance_score": 67,
       "worth_following": 1,
       "first_seen_at": "2026-05-25T10:13:03+08:00",
-      "last_seen_at": "2026-05-27T16:51:43+08:00",
+      "last_seen_at": "2026-05-27T18:49:43+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:50:12+08:00",
-      "updated_at": "2026-05-27T16:51:54+08:00",
+      "updated_at": "2026-05-27T18:49:54+08:00",
       "tags": [
         "发布会",
         "数码"
@@ -1679,7 +1701,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.3,
+      "freshness_days": 2.4,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 21,
@@ -1730,7 +1752,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
       "score_parts": {
         "relevance": 17,
@@ -1864,7 +1886,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
       "score_parts": {
         "relevance": 22,
@@ -1922,7 +1944,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.3,
+      "freshness_days": 0.4,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
         "relevance": 19,
@@ -2022,7 +2044,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
         "relevance": 19,
@@ -2086,56 +2108,6 @@
       "caps": []
     },
     {
-      "id": "evt_949d0e0e9ad2a88f55ff",
-      "title": "中日韩新马泰 6 国科学家联合发布亚洲首个合成细胞十年技术路线图",
-      "summary": "数码行业出现值得入库的信号：中日韩新马泰 6 国科学家联合发布亚洲首个合成细胞十年技术路线图。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，中国科学院深圳先进技术研究院联合来自中国、日本、韩国、新加坡、马来西亚、泰国等亚洲六国的 100 多个实验室， 发布了亚洲首个合成细胞十年技术路线图 ，文章于今日（5 月 26 日）发表于《自然 · 生物技术》。 科研团队聚焦“ 人工合成单细胞生… 来源为 ithome，发布时间标记为 05/26 17:46。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-      "category": "digital",
-      "importance_score": 61,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-26T17:46:29+08:00",
-      "last_seen_at": "2026-05-27T00:20:55+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T00:21:06+08:00",
-      "updated_at": "2026-05-27T00:21:06+08:00",
-      "tags": [
-        "发布会",
-        "数码"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/955/550.htm",
-          "title": "中日韩新马泰 6 国科学家联合发布亚洲首个合成细胞十年技术路线图",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 65,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 1,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
-      "score_parts": {
-        "relevance": 17,
-        "trend": 8,
-        "freshness": 18,
-        "change": 5,
-        "credibility": 10,
-        "scarcity": 7
-      },
-      "caps": []
-    },
-    {
       "id": "evt_19147928061fd7aa294e",
       "title": "研究显示医学论文中的虚假参考文献数量激增，AI 难辞其咎",
       "summary": "数码行业出现值得入库的信号：研究显示医学论文中的虚假参考文献数量激增，AI 难辞其咎。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
@@ -2173,7 +2145,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.8,
+      "freshness_days": 0.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
         "relevance": 19,
@@ -2290,7 +2262,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
         "relevance": 19,
@@ -2340,7 +2312,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.8,
+      "freshness_days": 0.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
         "relevance": 17,
@@ -2390,7 +2362,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.3,
+      "freshness_days": 0.4,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
         "relevance": 17,
@@ -2468,7 +2440,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
         "relevance": 22,
@@ -2520,7 +2492,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
         "relevance": 17,
@@ -2571,7 +2543,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
         "relevance": 17,
@@ -2621,7 +2593,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
         "relevance": 17,
@@ -2671,7 +2643,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
         "relevance": 17,
@@ -2721,56 +2693,6 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.8,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
-      "score_parts": {
-        "relevance": 17,
-        "trend": 7,
-        "freshness": 18,
-        "change": 4,
-        "credibility": 10,
-        "scarcity": 7
-      },
-      "caps": []
-    },
-    {
-      "id": "evt_77e6e48b0f1ef619343a",
-      "title": "R 星母公司 T2 CEO 泽尔尼克否认《荒野大镖客 线上模式》失败，称其拥有“长久生命力”",
-      "summary": "数码行业出现值得入库的信号：R 星母公司 T2 CEO 泽尔尼克否认《荒野大镖客 线上模式》失败，称其拥有“长久生命力”。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，据游戏媒体 IGN 今天报道，R 星母公司 Take-Two 掌门人施特劳斯 · 泽尔尼克最近反驳“《荒野大镖客 线上模式》错失发展机会”观点， 坚称该作取得巨大成功 ， 并拥有长久生命力 。 作为参考，《荒野大镖客 线上模式》是《荒野大镖客：救… 来源为 ithome，发布时间标记为 05/26 18:42。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-      "category": "digital",
-      "importance_score": 60,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-26T18:42:16+08:00",
-      "last_seen_at": "2026-05-27T00:20:55+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T00:21:05+08:00",
-      "updated_at": "2026-05-27T00:21:05+08:00",
-      "tags": [
-        "发布会",
-        "数码"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/955/572.htm",
-          "title": "R 星母公司 T2 CEO 泽尔尼克否认《荒野大镖客 线上模式》失败，称其拥有“长久生命力”",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 63,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "new",
       "freshness_days": 0.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
@@ -2784,23 +2706,23 @@
       "caps": []
     },
     {
-      "id": "evt_f360b46fbb045600e680",
-      "title": "7-Eleven 便利店遭黑客团伙 ShinyHunters 入侵，超 18.3 万名用户个人信息泄露",
-      "summary": "数码行业出现值得入库的信号：7-Eleven 便利店遭黑客团伙 ShinyHunters 入侵，超 18.3 万名用户个人信息泄露。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，据外媒 bleepingcomputer 报道，便利店巨头 7-Eleven（711 便利店）上月遭遇臭名昭著的黑客团伙 ShinyHunters 攻击，超过 18.3 万名用户的个人信息被窃取。 虽然 7-Eleven 官方并未公开确认具体攻击… 来源为 ithome，发布时间标记为 05/26 18:00。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "id": "evt_949d0e0e9ad2a88f55ff",
+      "title": "中日韩新马泰 6 国科学家联合发布亚洲首个合成细胞十年技术路线图",
+      "summary": "数码行业出现值得入库的信号：中日韩新马泰 6 国科学家联合发布亚洲首个合成细胞十年技术路线图。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，中国科学院深圳先进技术研究院联合来自中国、日本、韩国、新加坡、马来西亚、泰国等亚洲六国的 100 多个实验室， 发布了亚洲首个合成细胞十年技术路线图 ，文章于今日（5 月 26 日）发表于《自然 · 生物技术》。 科研团队聚焦“ 人工合成单细胞生… 来源为 ithome，发布时间标记为 05/26 17:46。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
       "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
       "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
       "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
       "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
       "category": "digital",
-      "importance_score": 59,
+      "importance_score": 61,
       "worth_following": 1,
-      "first_seen_at": "2026-05-26T18:00:47+08:00",
+      "first_seen_at": "2026-05-26T17:46:29+08:00",
       "last_seen_at": "2026-05-27T00:20:55+08:00",
       "status": "active",
       "source_count": 1,
-      "created_at": "2026-05-27T00:21:05+08:00",
-      "updated_at": "2026-05-27T00:21:05+08:00",
+      "created_at": "2026-05-27T00:21:06+08:00",
+      "updated_at": "2026-05-27T00:21:06+08:00",
       "tags": [
         "发布会",
         "数码"
@@ -2809,75 +2731,25 @@
       "sources": [
         {
           "source": "ithome",
-          "url": "https://www.ithome.com/0/955/557.htm",
-          "title": "7-Eleven 便利店遭黑客团伙 ShinyHunters 入侵，超 18.3 万名用户个人信息泄露",
+          "url": "https://www.ithome.com/0/955/550.htm",
+          "title": "中日韩新马泰 6 国科学家联合发布亚洲首个合成细胞十年技术路线图",
           "author": "IT之家"
         }
       ],
       "feedback": [],
-      "radar_score": 63,
+      "radar_score": 62,
       "radar_level": "B",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
+      "freshness_label": "recent",
       "freshness_days": 1,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 17,
-        "trend": 7,
-        "freshness": 18,
-        "change": 4,
-        "credibility": 10,
-        "scarcity": 7
-      },
-      "caps": []
-    },
-    {
-      "id": "evt_e6636fb8d622ca0ed3c7",
-      "title": "我国第一所“汽车”普通本科大学要来了",
-      "summary": "数码行业出现值得入库的信号：我国第一所“汽车”普通本科大学要来了。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，湖北省十堰市人民政府 5 月 18 日发布《十堰市国民经济和社会发展第十五个五年规划纲要》。其中提到： 支持湖北汽车工业学院、湖北医药学院更名大学并获博士学位授权 。 而在 2025 年 12 月 8 日，湖北省教育厅发布关于拟申报高校设置事项的… 来源为 ithome，发布时间标记为 05/26 18:22。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-      "category": "digital",
-      "importance_score": 59,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-26T18:22:05+08:00",
-      "last_seen_at": "2026-05-27T00:20:55+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T00:21:05+08:00",
-      "updated_at": "2026-05-27T00:21:05+08:00",
-      "tags": [
-        "发布会",
-        "数码"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/955/567.htm",
-          "title": "我国第一所“汽车”普通本科大学要来了",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 63,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.9,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
-      "score_parts": {
-        "relevance": 17,
-        "trend": 7,
-        "freshness": 18,
-        "change": 4,
+        "trend": 8,
+        "freshness": 15,
+        "change": 5,
         "credibility": 10,
         "scarcity": 7
       },
@@ -3100,7 +2972,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -3175,7 +3047,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -3238,7 +3110,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
@@ -3313,7 +3185,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.8,
+      "freshness_days": 0.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -3388,7 +3260,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.8,
+      "freshness_days": 0.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -3451,7 +3323,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.8,
+      "freshness_days": 0.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
@@ -3526,7 +3398,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.8,
+      "freshness_days": 0.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -3599,7 +3471,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.7,
+      "freshness_days": 0.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -3689,7 +3561,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.4,
+      "freshness_days": 0.5,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -3752,7 +3624,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.4,
+      "freshness_days": 0.5,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
@@ -3825,7 +3697,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.4,
+      "freshness_days": 0.5,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -3877,7 +3749,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.4,
+      "freshness_days": 0.5,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 19,
@@ -3950,7 +3822,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.4,
+      "freshness_days": 0.5,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -4026,7 +3898,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.3,
+      "freshness_days": 0.4,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -4092,7 +3964,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
         "relevance": 19,
@@ -4142,7 +4014,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.9,
+      "freshness_days": 1,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
         "relevance": 17,
@@ -4194,7 +4066,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.8,
+      "freshness_days": 0.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
         "relevance": 17,
@@ -4266,7 +4138,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.8,
+      "freshness_days": 0.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
         "relevance": 22,
@@ -4279,6 +4151,208 @@
       "caps": [
         "单一弱来源封顶",
         "评测/体验稿默认不做头条"
+      ]
+    },
+    {
+      "id": "evt_77e6e48b0f1ef619343a",
+      "title": "R 星母公司 T2 CEO 泽尔尼克否认《荒野大镖客 线上模式》失败，称其拥有“长久生命力”",
+      "summary": "数码行业出现值得入库的信号：R 星母公司 T2 CEO 泽尔尼克否认《荒野大镖客 线上模式》失败，称其拥有“长久生命力”。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，据游戏媒体 IGN 今天报道，R 星母公司 Take-Two 掌门人施特劳斯 · 泽尔尼克最近反驳“《荒野大镖客 线上模式》错失发展机会”观点， 坚称该作取得巨大成功 ， 并拥有长久生命力 。 作为参考，《荒野大镖客 线上模式》是《荒野大镖客：救… 来源为 ithome，发布时间标记为 05/26 18:42。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+      "category": "digital",
+      "importance_score": 60,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-26T18:42:16+08:00",
+      "last_seen_at": "2026-05-27T00:20:55+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T00:21:05+08:00",
+      "updated_at": "2026-05-27T00:21:05+08:00",
+      "tags": [
+        "发布会",
+        "数码"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/955/572.htm",
+          "title": "R 星母公司 T2 CEO 泽尔尼克否认《荒野大镖客 线上模式》失败，称其拥有“长久生命力”",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 1,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+      "score_parts": {
+        "relevance": 17,
+        "trend": 7,
+        "freshness": 15,
+        "change": 4,
+        "credibility": 10,
+        "scarcity": 7
+      },
+      "caps": []
+    },
+    {
+      "id": "evt_f360b46fbb045600e680",
+      "title": "7-Eleven 便利店遭黑客团伙 ShinyHunters 入侵，超 18.3 万名用户个人信息泄露",
+      "summary": "数码行业出现值得入库的信号：7-Eleven 便利店遭黑客团伙 ShinyHunters 入侵，超 18.3 万名用户个人信息泄露。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，据外媒 bleepingcomputer 报道，便利店巨头 7-Eleven（711 便利店）上月遭遇臭名昭著的黑客团伙 ShinyHunters 攻击，超过 18.3 万名用户的个人信息被窃取。 虽然 7-Eleven 官方并未公开确认具体攻击… 来源为 ithome，发布时间标记为 05/26 18:00。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+      "category": "digital",
+      "importance_score": 59,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-26T18:00:47+08:00",
+      "last_seen_at": "2026-05-27T00:20:55+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T00:21:05+08:00",
+      "updated_at": "2026-05-27T00:21:05+08:00",
+      "tags": [
+        "发布会",
+        "数码"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/955/557.htm",
+          "title": "7-Eleven 便利店遭黑客团伙 ShinyHunters 入侵，超 18.3 万名用户个人信息泄露",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 1,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+      "score_parts": {
+        "relevance": 17,
+        "trend": 7,
+        "freshness": 15,
+        "change": 4,
+        "credibility": 10,
+        "scarcity": 7
+      },
+      "caps": []
+    },
+    {
+      "id": "evt_e6636fb8d622ca0ed3c7",
+      "title": "我国第一所“汽车”普通本科大学要来了",
+      "summary": "数码行业出现值得入库的信号：我国第一所“汽车”普通本科大学要来了。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，湖北省十堰市人民政府 5 月 18 日发布《十堰市国民经济和社会发展第十五个五年规划纲要》。其中提到： 支持湖北汽车工业学院、湖北医药学院更名大学并获博士学位授权 。 而在 2025 年 12 月 8 日，湖北省教育厅发布关于拟申报高校设置事项的… 来源为 ithome，发布时间标记为 05/26 18:22。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+      "category": "digital",
+      "importance_score": 59,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-26T18:22:05+08:00",
+      "last_seen_at": "2026-05-27T00:20:55+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T00:21:05+08:00",
+      "updated_at": "2026-05-27T00:21:05+08:00",
+      "tags": [
+        "发布会",
+        "数码"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/955/567.htm",
+          "title": "我国第一所“汽车”普通本科大学要来了",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 1,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+      "score_parts": {
+        "relevance": 17,
+        "trend": 7,
+        "freshness": 15,
+        "change": 4,
+        "credibility": 10,
+        "scarcity": 7
+      },
+      "caps": []
+    },
+    {
+      "id": "evt_373cf016d7e215e9d4b0",
+      "title": "高市早苗的魅力外交",
+      "summary": "数码行业出现值得入库的信号：高市早苗的魅力外交。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：本视频提及事件以及信息来源如下：\n《日本政府称“石脑油供应不存在问题”民调显示超六成民众不接受政府说法》来自：央视网，2026-05-25 10:54:17发布\n《日本外相访问非洲四国开展“资源外交”，随行人员透露紧急磋商采购石油》来自：上观新闻，2026-05-08 04:0… 来源为 bilibili，发布时间标记为 05/26 11:50。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+      "category": "digital",
+      "importance_score": 60,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-26T11:50:00+08:00",
+      "last_seen_at": "2026-05-26T23:38:47+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-26T23:38:58+08:00",
+      "updated_at": "2026-05-26T23:38:58+08:00",
+      "tags": [
+        "发布会",
+        "数码"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1c8GR6sEu6",
+          "title": "高市早苗的魅力外交",
+          "author": "燕三嘤嘤嘤"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 1.3,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+      "score_parts": {
+        "relevance": 17,
+        "trend": 14,
+        "freshness": 15,
+        "change": 4,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
       ]
     },
     {
@@ -4322,71 +4396,19 @@
         }
       ],
       "feedback": [],
-      "radar_score": 60,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 1,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
-      "score_parts": {
-        "relevance": 18,
-        "trend": 10,
-        "freshness": 18,
-        "change": 3,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
-      "id": "evt_373cf016d7e215e9d4b0",
-      "title": "高市早苗的魅力外交",
-      "summary": "数码行业出现值得入库的信号：高市早苗的魅力外交。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：本视频提及事件以及信息来源如下：\n《日本政府称“石脑油供应不存在问题”民调显示超六成民众不接受政府说法》来自：央视网，2026-05-25 10:54:17发布\n《日本外相访问非洲四国开展“资源外交”，随行人员透露紧急磋商采购石油》来自：上观新闻，2026-05-08 04:0… 来源为 bilibili，发布时间标记为 05/26 11:50。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-      "category": "digital",
-      "importance_score": 60,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-26T11:50:00+08:00",
-      "last_seen_at": "2026-05-26T23:38:47+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-26T23:38:58+08:00",
-      "updated_at": "2026-05-26T23:38:58+08:00",
-      "tags": [
-        "发布会",
-        "数码"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1c8GR6sEu6",
-          "title": "高市早苗的魅力外交",
-          "author": "燕三嘤嘤嘤"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 60,
+      "radar_score": 59,
       "radar_level": "B",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.2,
+      "freshness_days": 1,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
-        "relevance": 17,
-        "trend": 14,
+        "relevance": 18,
+        "trend": 10,
         "freshness": 15,
-        "change": 4,
+        "change": 3,
         "credibility": 6,
         "scarcity": 7
       },
@@ -4441,7 +4463,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.3,
+      "freshness_days": 1.4,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 18,
@@ -4494,7 +4516,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
       "score_parts": {
         "relevance": 17,
@@ -4584,7 +4606,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.2,
+      "freshness_days": 1.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 21,
@@ -4708,58 +4730,6 @@
       "caps": []
     },
     {
-      "id": "evt_d4b60ceebc1f5d5843ce",
-      "title": "我收集了16台Ultra，才发现手机拍照变强的秘密【小祥】",
-      "summary": "数码行业出现值得入库的信号：我收集了16台Ultra，才发现手机拍照变强的秘密【小祥】。它涉及 相关主体，系统识别到 数码、影像 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：16台Ultra！跨越7年时间！这是一段“丧心病狂”的手机影像发展史 来源为 bilibili，发布时间标记为 05/26 18:00。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：我收集了16台Ultra，才发现手机拍照变强的…",
-      "category": "digital",
-      "importance_score": 55,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-26T18:00:00+08:00",
-      "last_seen_at": "2026-05-27T00:20:55+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T00:21:06+08:00",
-      "updated_at": "2026-05-27T00:21:06+08:00",
-      "tags": [
-        "影像",
-        "数码"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1aPVP6PEwF",
-          "title": "我收集了16台Ultra，才发现手机拍照变强的秘密【小祥】",
-          "author": "时代玩家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 56,
-      "radar_level": "B",
-      "radar_section": "background",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 1,
-      "push_reason": "近期新出现",
-      "score_parts": {
-        "relevance": 16,
-        "trend": 8,
-        "freshness": 18,
-        "change": 1,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
       "id": "evt_8cb059fafd7e9360b4b3",
       "title": "日月光业界率先推出 310mm PLP 先进封装自动化产线，2027H1 量产",
       "summary": "数码行业出现值得入库的信号：日月光业界率先推出 310mm PLP 先进封装自动化产线，2027H1 量产。它涉及 相关主体，系统识别到 数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
@@ -4796,7 +4766,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.3,
+      "freshness_days": 0.4,
       "push_reason": "近期新出现",
       "score_parts": {
         "relevance": 16,
@@ -4846,7 +4816,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.9,
+      "freshness_days": 1,
       "push_reason": "近期新出现",
       "score_parts": {
         "relevance": 16,
@@ -4915,7 +4885,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.9,
+      "freshness_days": 1,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
         "relevance": 19,
@@ -4975,7 +4945,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.8,
+      "freshness_days": 0.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
         "relevance": 18,
@@ -5034,7 +5004,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.3,
+      "freshness_days": 0.4,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
         "relevance": 18,
@@ -5154,170 +5124,11 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.3,
+      "freshness_days": 0.4,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
       "score_parts": {
         "relevance": 18,
         "trend": 0,
-        "freshness": 18,
-        "change": 1,
-        "credibility": 10,
-        "scarcity": 7
-      },
-      "caps": []
-    },
-    {
-      "id": "evt_132701ccc35567a2711b",
-      "title": "小米集团：实施 200 亿港元股份购回计划",
-      "summary": "数码行业出现值得入库的信号：小米集团：实施 200 亿港元股份购回计划。它涉及 小米，系统识别到 数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，小米集团公告，董事会已采纳于市场实施新的股份回购计划，现有股份购回计划将在 2026 年 6 月 2 日股东周年大会后届满。根据新计划，公司可在未来 12 个月内回购总价值不超过 200 亿港元的 B 类普通股，直至 2027 年股东周年大会结束… 来源为 ithome，发布时间标记为 05/26 17:55。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 ithome，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 小米 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：小米集团：实施 200 亿港元股份购回计划",
-      "category": "digital",
-      "importance_score": 55,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-26T17:55:36+08:00",
-      "last_seen_at": "2026-05-27T00:20:55+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T00:21:05+08:00",
-      "updated_at": "2026-05-27T00:21:05+08:00",
-      "tags": [
-        "数码"
-      ],
-      "entities": [
-        {
-          "name": "小米",
-          "type": "brand",
-          "aliases": [
-            "Xiaomi",
-            "小米汽车",
-            "SU7",
-            "HyperOS"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/955/554.htm",
-          "title": "小米集团：实施 200 亿港元股份购回计划",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 54,
-      "radar_level": "C",
-      "radar_section": "background",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 1,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
-      "score_parts": {
-        "relevance": 18,
-        "trend": 0,
-        "freshness": 18,
-        "change": 1,
-        "credibility": 10,
-        "scarcity": 7
-      },
-      "caps": []
-    },
-    {
-      "id": "evt_e87f94dd8e9ea89030d6",
-      "title": "存内 AI 计算企业 TetraMem 完成 22nm SoC 验证，瞄准低功耗低延迟应用",
-      "summary": "数码行业出现值得入库的信号：存内 AI 计算企业 TetraMem 完成 22nm SoC 验证，瞄准低功耗低延迟应用。它涉及 相关主体，系统识别到 数码、影像 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，硅谷 AI 芯片初创企业 TetraMem 当地时间 19 日宣布，其 22nm SoC MLX200 在台积电制程上完成芯片验证，评估套件预计于 2026H2 推出。 IT之家了解到，TetraMem 瞄准的是低功耗低延迟应用这一细分场景，目标… 来源为 ithome，发布时间标记为 05/26 18:14。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 ithome，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：存内 AI 计算企业 TetraMem 完成 …",
-      "category": "digital",
-      "importance_score": 53,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-26T18:14:48+08:00",
-      "last_seen_at": "2026-05-27T00:20:55+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T00:21:05+08:00",
-      "updated_at": "2026-05-27T00:21:05+08:00",
-      "tags": [
-        "影像",
-        "数码"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/955/564.htm",
-          "title": "存内 AI 计算企业 TetraMem 完成 22nm SoC 验证，瞄准低功耗低延迟应用",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 54,
-      "radar_level": "C",
-      "radar_section": "background",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.9,
-      "push_reason": "近期新出现",
-      "score_parts": {
-        "relevance": 16,
-        "trend": 2,
-        "freshness": 18,
-        "change": 1,
-        "credibility": 10,
-        "scarcity": 7
-      },
-      "caps": []
-    },
-    {
-      "id": "evt_f611e09e5f21f0da1cce",
-      "title": "联想来酷 Air14 酷睿版上架：英特尔 Core 5 315 + 12G + 512G、配 1200P 面板",
-      "summary": "数码行业出现值得入库的信号：联想来酷 Air14 酷睿版上架：英特尔 Core 5 315 + 12G + 512G、配 1200P 面板。它涉及 相关主体，系统识别到 数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，联想现已在京东上架来酷 Air14 酷睿版笔记本，将于 5 月 31 日开启预约。 该机拥有一体式全金属机身，薄约 12.95mm、轻约 990g。A 面带有联想来酷 Logo；B 面配备一块 14 英寸 1920×1200 分辨率 60Hz 面… 来源为 ithome，发布时间标记为 05/26 18:35。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 ithome，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：联想来酷 Air14 酷睿版上架：英特尔 Co…",
-      "category": "digital",
-      "importance_score": 53,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-26T18:35:24+08:00",
-      "last_seen_at": "2026-05-27T00:20:55+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T00:21:05+08:00",
-      "updated_at": "2026-05-27T00:21:05+08:00",
-      "tags": [
-        "数码"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/955/570.htm",
-          "title": "联想来酷 Air14 酷睿版上架：英特尔 Core 5 315 + 12G + 512G、配 1200P 面板",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 54,
-      "radar_level": "C",
-      "radar_section": "background",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.9,
-      "push_reason": "近期新出现",
-      "score_parts": {
-        "relevance": 16,
-        "trend": 2,
         "freshness": 18,
         "change": 1,
         "credibility": 10,
@@ -5362,7 +5173,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.8,
+      "freshness_days": 0.9,
       "push_reason": "近期新出现",
       "score_parts": {
         "relevance": 16,
@@ -5412,7 +5223,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.8,
+      "freshness_days": 0.9,
       "push_reason": "近期新出现",
       "score_parts": {
         "relevance": 16,
@@ -5471,11 +5282,63 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.3,
+      "freshness_days": 1.4,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 18,
         "trend": 7,
+        "freshness": 15,
+        "change": 1,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
+      "id": "evt_d4b60ceebc1f5d5843ce",
+      "title": "我收集了16台Ultra，才发现手机拍照变强的秘密【小祥】",
+      "summary": "数码行业出现值得入库的信号：我收集了16台Ultra，才发现手机拍照变强的秘密【小祥】。它涉及 相关主体，系统识别到 数码、影像 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：16台Ultra！跨越7年时间！这是一段“丧心病狂”的手机影像发展史 来源为 bilibili，发布时间标记为 05/26 18:00。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：我收集了16台Ultra，才发现手机拍照变强的…",
+      "category": "digital",
+      "importance_score": 55,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-26T18:00:00+08:00",
+      "last_seen_at": "2026-05-27T00:20:55+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T00:21:06+08:00",
+      "updated_at": "2026-05-27T00:21:06+08:00",
+      "tags": [
+        "影像",
+        "数码"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1aPVP6PEwF",
+          "title": "我收集了16台Ultra，才发现手机拍照变强的秘密【小祥】",
+          "author": "时代玩家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 53,
+      "radar_level": "C",
+      "radar_section": "background",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 1,
+      "push_reason": "仅适合沉淀为背景知识",
+      "score_parts": {
+        "relevance": 16,
+        "trend": 8,
         "freshness": 15,
         "change": 1,
         "credibility": 6,
@@ -5522,7 +5385,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "近期新出现",
       "score_parts": {
         "relevance": 14,
@@ -5572,7 +5435,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.2,
+      "freshness_days": 1.3,
       "push_reason": "仅适合沉淀为背景知识",
       "score_parts": {
         "relevance": 16,
@@ -5585,6 +5448,165 @@
       "caps": [
         "单一弱来源封顶"
       ]
+    },
+    {
+      "id": "evt_132701ccc35567a2711b",
+      "title": "小米集团：实施 200 亿港元股份购回计划",
+      "summary": "数码行业出现值得入库的信号：小米集团：实施 200 亿港元股份购回计划。它涉及 小米，系统识别到 数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，小米集团公告，董事会已采纳于市场实施新的股份回购计划，现有股份购回计划将在 2026 年 6 月 2 日股东周年大会后届满。根据新计划，公司可在未来 12 个月内回购总价值不超过 200 亿港元的 B 类普通股，直至 2027 年股东周年大会结束… 来源为 ithome，发布时间标记为 05/26 17:55。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 ithome，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 小米 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：小米集团：实施 200 亿港元股份购回计划",
+      "category": "digital",
+      "importance_score": 55,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-26T17:55:36+08:00",
+      "last_seen_at": "2026-05-27T00:20:55+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T00:21:05+08:00",
+      "updated_at": "2026-05-27T00:21:05+08:00",
+      "tags": [
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "小米",
+          "type": "brand",
+          "aliases": [
+            "Xiaomi",
+            "小米汽车",
+            "SU7",
+            "HyperOS"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/955/554.htm",
+          "title": "小米集团：实施 200 亿港元股份购回计划",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 51,
+      "radar_level": "C",
+      "radar_section": "background",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 1,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+      "score_parts": {
+        "relevance": 18,
+        "trend": 0,
+        "freshness": 15,
+        "change": 1,
+        "credibility": 10,
+        "scarcity": 7
+      },
+      "caps": []
+    },
+    {
+      "id": "evt_e87f94dd8e9ea89030d6",
+      "title": "存内 AI 计算企业 TetraMem 完成 22nm SoC 验证，瞄准低功耗低延迟应用",
+      "summary": "数码行业出现值得入库的信号：存内 AI 计算企业 TetraMem 完成 22nm SoC 验证，瞄准低功耗低延迟应用。它涉及 相关主体，系统识别到 数码、影像 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，硅谷 AI 芯片初创企业 TetraMem 当地时间 19 日宣布，其 22nm SoC MLX200 在台积电制程上完成芯片验证，评估套件预计于 2026H2 推出。 IT之家了解到，TetraMem 瞄准的是低功耗低延迟应用这一细分场景，目标… 来源为 ithome，发布时间标记为 05/26 18:14。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 ithome，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：存内 AI 计算企业 TetraMem 完成 …",
+      "category": "digital",
+      "importance_score": 53,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-26T18:14:48+08:00",
+      "last_seen_at": "2026-05-27T00:20:55+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T00:21:05+08:00",
+      "updated_at": "2026-05-27T00:21:05+08:00",
+      "tags": [
+        "影像",
+        "数码"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/955/564.htm",
+          "title": "存内 AI 计算企业 TetraMem 完成 22nm SoC 验证，瞄准低功耗低延迟应用",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 51,
+      "radar_level": "C",
+      "radar_section": "background",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 1,
+      "push_reason": "仅适合沉淀为背景知识",
+      "score_parts": {
+        "relevance": 16,
+        "trend": 2,
+        "freshness": 15,
+        "change": 1,
+        "credibility": 10,
+        "scarcity": 7
+      },
+      "caps": []
+    },
+    {
+      "id": "evt_f611e09e5f21f0da1cce",
+      "title": "联想来酷 Air14 酷睿版上架：英特尔 Core 5 315 + 12G + 512G、配 1200P 面板",
+      "summary": "数码行业出现值得入库的信号：联想来酷 Air14 酷睿版上架：英特尔 Core 5 315 + 12G + 512G、配 1200P 面板。它涉及 相关主体，系统识别到 数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，联想现已在京东上架来酷 Air14 酷睿版笔记本，将于 5 月 31 日开启预约。 该机拥有一体式全金属机身，薄约 12.95mm、轻约 990g。A 面带有联想来酷 Logo；B 面配备一块 14 英寸 1920×1200 分辨率 60Hz 面… 来源为 ithome，发布时间标记为 05/26 18:35。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 ithome，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：联想来酷 Air14 酷睿版上架：英特尔 Co…",
+      "category": "digital",
+      "importance_score": 53,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-26T18:35:24+08:00",
+      "last_seen_at": "2026-05-27T00:20:55+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T00:21:05+08:00",
+      "updated_at": "2026-05-27T00:21:05+08:00",
+      "tags": [
+        "数码"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/955/570.htm",
+          "title": "联想来酷 Air14 酷睿版上架：英特尔 Core 5 315 + 12G + 512G、配 1200P 面板",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 51,
+      "radar_level": "C",
+      "radar_section": "background",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 1,
+      "push_reason": "仅适合沉淀为背景知识",
+      "score_parts": {
+        "relevance": 16,
+        "trend": 2,
+        "freshness": 15,
+        "change": 1,
+        "credibility": 10,
+        "scarcity": 7
+      },
+      "caps": []
     },
     {
       "id": "evt_073920e0630569f4168c",
@@ -5623,7 +5645,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "近期新出现",
       "score_parts": {
         "relevance": 14,
@@ -5672,7 +5694,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.3,
+      "freshness_days": 0.4,
       "push_reason": "近期新出现",
       "score_parts": {
         "relevance": 14,
@@ -5819,7 +5841,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.2,
+      "freshness_days": 1.3,
       "push_reason": "仅适合沉淀为背景知识",
       "score_parts": {
         "relevance": 14,
@@ -5864,74 +5886,23 @@
         }
       ],
       "feedback": [],
-      "radar_score": 49,
+      "radar_score": 46,
       "radar_level": "C",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
+      "freshness_label": "recent",
       "freshness_days": 1,
-      "push_reason": "近期新出现",
+      "push_reason": "仅适合沉淀为背景知识",
       "score_parts": {
         "relevance": 3,
         "trend": 7,
-        "freshness": 18,
+        "freshness": 15,
         "change": 4,
         "credibility": 10,
         "scarcity": 7
       },
       "caps": []
-    },
-    {
-      "id": "evt_64372a68feb12d5cbeeb",
-      "title": "四个月花光全年 AI 预算，Uber 总裁质疑 AI 投入合理性",
-      "summary": "汽车行业出现值得入库的信号：四个月花光全年 AI 预算，Uber 总裁质疑 AI 投入合理性。它涉及 相关主体，系统识别到 汽车 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，据报道，Uber 在 2026 年仅过去四个月就耗尽了全年人工智能预算，如今该公司开始质疑这笔投入是否真正产生了实质回报。Uber 总裁兼首席运营官安德鲁 · 麦克唐纳在接受 Rapid Response 采访时表示，公司并未发现 Claude … 来源为 ithome，发布时间标记为 05/26 18:09。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "汽车行业动作通常会持续发酵到价格、智驾、补能和用户口碑，具备多期内容延展空间。适合先入库观察，不急着按单条新闻下结论。",
-      "creator_impact": "适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。优先找车主反馈、实测画面和同级竞品对照，避免只复述厂商话术。",
-      "content_angle": "把车企动作翻译成消费者能听懂的购车/用车影响。",
-      "cover_angle": "车企新动作，谁最受影响",
-      "category": "auto",
-      "importance_score": 54,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-26T18:09:46+08:00",
-      "last_seen_at": "2026-05-27T00:20:55+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T00:21:05+08:00",
-      "updated_at": "2026-05-27T00:21:05+08:00",
-      "tags": [
-        "汽车"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/955/563.htm",
-          "title": "四个月花光全年 AI 预算，Uber 总裁质疑 AI 投入合理性",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 47,
-      "radar_level": "C",
-      "radar_section": "background",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.9,
-      "push_reason": "近期新出现",
-      "score_parts": {
-        "relevance": 16,
-        "trend": 2,
-        "freshness": 18,
-        "change": 1,
-        "credibility": 10,
-        "scarcity": 8
-      },
-      "caps": [
-        "评测/体验稿默认不做头条"
-      ]
     },
     {
       "id": "evt_0afed940cc9176392195",
@@ -5970,7 +5941,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "近期新出现",
       "score_parts": {
         "relevance": 14,
@@ -5982,6 +5953,57 @@
       },
       "caps": [
         "单一弱来源封顶",
+        "评测/体验稿默认不做头条"
+      ]
+    },
+    {
+      "id": "evt_64372a68feb12d5cbeeb",
+      "title": "四个月花光全年 AI 预算，Uber 总裁质疑 AI 投入合理性",
+      "summary": "汽车行业出现值得入库的信号：四个月花光全年 AI 预算，Uber 总裁质疑 AI 投入合理性。它涉及 相关主体，系统识别到 汽车 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，据报道，Uber 在 2026 年仅过去四个月就耗尽了全年人工智能预算，如今该公司开始质疑这笔投入是否真正产生了实质回报。Uber 总裁兼首席运营官安德鲁 · 麦克唐纳在接受 Rapid Response 采访时表示，公司并未发现 Claude … 来源为 ithome，发布时间标记为 05/26 18:09。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "汽车行业动作通常会持续发酵到价格、智驾、补能和用户口碑，具备多期内容延展空间。适合先入库观察，不急着按单条新闻下结论。",
+      "creator_impact": "适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。优先找车主反馈、实测画面和同级竞品对照，避免只复述厂商话术。",
+      "content_angle": "把车企动作翻译成消费者能听懂的购车/用车影响。",
+      "cover_angle": "车企新动作，谁最受影响",
+      "category": "auto",
+      "importance_score": 54,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-26T18:09:46+08:00",
+      "last_seen_at": "2026-05-27T00:20:55+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T00:21:05+08:00",
+      "updated_at": "2026-05-27T00:21:05+08:00",
+      "tags": [
+        "汽车"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/955/563.htm",
+          "title": "四个月花光全年 AI 预算，Uber 总裁质疑 AI 投入合理性",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 44,
+      "radar_level": "C",
+      "radar_section": "background",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 1,
+      "push_reason": "仅适合沉淀为背景知识",
+      "score_parts": {
+        "relevance": 16,
+        "trend": 2,
+        "freshness": 15,
+        "change": 1,
+        "credibility": 10,
+        "scarcity": 8
+      },
+      "caps": [
         "评测/体验稿默认不做头条"
       ]
     },
@@ -6030,7 +6052,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.2,
+      "freshness_days": 1.3,
       "push_reason": "仅适合沉淀为背景知识",
       "score_parts": {
         "relevance": 4,
@@ -6079,7 +6101,56 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.2,
+      "freshness_days": 1.3,
+      "push_reason": "仅适合沉淀为背景知识",
+      "score_parts": {
+        "relevance": 2,
+        "trend": 9,
+        "freshness": 15,
+        "change": 1,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
+      "id": "evt_ea44f3471772ea5f000a",
+      "title": "旭阳小课堂第一期：AI Agent最危险的不是AI，而是“中间人”",
+      "summary": "行业出现值得入库的信号：旭阳小课堂第一期：AI Agent最危险的不是AI，而是“中间人”。它涉及 相关主体，尚未识别到明确的行业标签。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/26 11:09。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：旭阳小课堂第一期：AI Agent最危险的不是…",
+      "category": "unknown",
+      "importance_score": 42,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-26T11:09:40+08:00",
+      "last_seen_at": "2026-05-26T23:38:47+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-26T23:38:58+08:00",
+      "updated_at": "2026-05-26T23:38:58+08:00",
+      "tags": [],
+      "entities": [],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1HcVA6jE2R",
+          "title": "旭阳小课堂第一期：AI Agent最危险的不是AI，而是“中间人”",
+          "author": "老头们的快乐生活"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 40,
+      "radar_level": "C",
+      "radar_section": "background",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 1.3,
       "push_reason": "仅适合沉淀为背景知识",
       "score_parts": {
         "relevance": 2,
@@ -6124,72 +6195,23 @@
         }
       ],
       "feedback": [],
-      "radar_score": 40,
-      "radar_level": "C",
+      "radar_score": 37,
+      "radar_level": "D",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
+      "freshness_label": "recent",
       "freshness_days": 1,
-      "push_reason": "近期新出现",
+      "push_reason": "仅适合沉淀为背景知识",
       "score_parts": {
         "relevance": 3,
         "trend": 7,
-        "freshness": 18,
+        "freshness": 15,
         "change": 5,
         "credibility": 10,
         "scarcity": 7
       },
       "caps": []
-    },
-    {
-      "id": "evt_ea44f3471772ea5f000a",
-      "title": "旭阳小课堂第一期：AI Agent最危险的不是AI，而是“中间人”",
-      "summary": "行业出现值得入库的信号：旭阳小课堂第一期：AI Agent最危险的不是AI，而是“中间人”。它涉及 相关主体，尚未识别到明确的行业标签。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/26 11:09。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：旭阳小课堂第一期：AI Agent最危险的不是…",
-      "category": "unknown",
-      "importance_score": 42,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-26T11:09:40+08:00",
-      "last_seen_at": "2026-05-26T23:38:47+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-26T23:38:58+08:00",
-      "updated_at": "2026-05-26T23:38:58+08:00",
-      "tags": [],
-      "entities": [],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1HcVA6jE2R",
-          "title": "旭阳小课堂第一期：AI Agent最危险的不是AI，而是“中间人”",
-          "author": "老头们的快乐生活"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 40,
-      "radar_level": "C",
-      "radar_section": "background",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "recent",
-      "freshness_days": 1.2,
-      "push_reason": "仅适合沉淀为背景知识",
-      "score_parts": {
-        "relevance": 2,
-        "trend": 9,
-        "freshness": 15,
-        "change": 1,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
     },
     {
       "id": "evt_97e72f57272c781d1937",
@@ -6226,7 +6248,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.8,
+      "freshness_days": 0.9,
       "push_reason": "近期新出现",
       "score_parts": {
         "relevance": 0,
