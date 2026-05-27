@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-27T15:36:09+08:00",
+  "generatedAt": "2026-05-27T15:41:18+08:00",
   "timezone": "Asia/Shanghai",
-  "total": 72,
+  "total": 76,
   "metrics": {
-    "total": 75,
-    "highConfidence": 2,
-    "lowConfidence": 72,
-    "singleSource": 72,
-    "capped": 26,
-    "videoReady": 69,
+    "total": 79,
+    "highConfidence": 0,
+    "lowConfidence": 79,
+    "singleSource": 74,
+    "capped": 32,
+    "videoReady": 73,
     "followed": 0,
     "usedForVideo": 0
   },
   "queueCounts": {
-    "needsEvidence": 73,
-    "videoCandidates": 69,
-    "followUp": 52,
+    "needsEvidence": 78,
+    "videoCandidates": 73,
+    "followUp": 57,
     "staleButUseful": 0
   },
   "queues": {
@@ -139,85 +139,6 @@
         "caps": []
       },
       {
-        "id": "evt_e49de04ee24277184545",
-        "title": "江铃全新易至 EV3 纯电小车发布：10.1 英寸悬浮式中控、50kW 液冷永磁同步电机",
-        "summary": "数码行业出现值得入库的信号：江铃全新易至 EV3 纯电小车发布：10.1 英寸悬浮式中控、50kW 液冷永磁同步电机。它涉及 智能驾驶，系统识别到 数码、智驾、发布会、影像 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 27 日消息，蔚来汽车今日宣布， 姚明成为蔚来 ES9 首席体验官 。蔚来 ES9 上市发布会将于 5 月 27 日 19:30 举行。 据IT之家今早报道， 蔚来 ES9 将首发蔚来世界模型全新版本 ，带来三项首发技术： 国内首个直接操作方向盘与踏板的智能辅… 来源为 ithome，发布时间标记为 05/27 11:37。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "智能驾驶相关变化容易引发用户安全感、体验差异和车企技术路线讨论。对视频创作者来说，真正值得盯的是功能覆盖、接管体验、用户口碑和车企路线，而不是单纯复述一次 OTA 或发布节点。",
-        "creator_impact": "适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。优先找车主反馈、实测画面和同级竞品对照，避免只复述厂商话术。",
-        "content_angle": "智驾更新看起来很强，但普通车主真正关心哪 3 件事？",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 63,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-26T21:08:45+08:00",
-        "last_seen_at": "2026-05-27T15:35:58+08:00",
-        "status": "active",
-        "source_count": 2,
-        "created_at": "2026-05-27T00:21:05+08:00",
-        "updated_at": "2026-05-27T15:36:08+08:00",
-        "tags": [
-          "发布会",
-          "影像",
-          "数码",
-          "智驾",
-          "汽车",
-          "自媒体"
-        ],
-        "entities": [
-          {
-            "name": "智能驾驶",
-            "type": "technology",
-            "aliases": [
-              "智驾",
-              "NOA",
-              "辅助驾驶"
-            ]
-          },
-          {
-            "name": "蔚来",
-            "type": "brand",
-            "aliases": [
-              "NIO"
-            ]
-          }
-        ],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/598.htm",
-            "title": "江铃全新易至 EV3 纯电小车发布：10.1 英寸悬浮式中控、50kW 液冷永磁同步电机",
-            "author": "IT之家"
-          },
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/823.htm",
-            "title": "姚明成为蔚来 ES9 首席体验官",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 68,
-        "radar_level": "B",
-        "radar_section": "video_ready",
-        "video_potential": 5,
-        "confidence": "high",
-        "freshness_label": "new",
-        "freshness_days": 0.8,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
-        "score_parts": {
-          "relevance": 22,
-          "trend": 10,
-          "freshness": 18,
-          "change": 7,
-          "credibility": 12,
-          "scarcity": 7
-        },
-        "caps": [
-          "评测/体验稿默认不做头条"
-        ]
-      },
-      {
         "id": "evt_ac2f568176d709f87fe1",
         "title": "酷态科 CP 挂绳式编织 6A 线开售：0.2m 长、凯夫拉纤维，24.9 元",
         "summary": "数码行业出现值得入库的信号：酷态科 CP 挂绳式编织 6A 线开售：0.2m 长、凯夫拉纤维，24.9 元。它涉及 小米，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
@@ -273,67 +194,6 @@
           "trend": 7,
           "freshness": 18,
           "change": 5,
-          "credibility": 10,
-          "scarcity": 7
-        },
-        "caps": []
-      },
-      {
-        "id": "evt_20604596cbf502655e54",
-        "title": "AI 制造 AI：面壁智能开源全球首个完全由 AI 编写的生产级训练框架 ForgeTrain",
-        "summary": "数码行业出现值得入库的信号：AI 制造 AI：面壁智能开源全球首个完全由 AI 编写的生产级训练框架 ForgeTrain。它涉及 华为，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 27 日消息，面壁智能今日联合清华大学、OpenBMB 开源社区正式发布 ForgeTrain—— 全球首个完全由 AI 编写、零人类代码介入的生产级大模型训练框架 。 面壁智能使用 ForgeTrain 在 华为昇腾 芯片上成功完成了面壁智能新一代「小钢炮」… 来源为 ithome，发布时间标记为 05/27 11:51。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "华为 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 57,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-27T11:51:33+08:00",
-        "last_seen_at": "2026-05-27T15:35:58+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-27T12:30:12+08:00",
-        "updated_at": "2026-05-27T15:36:08+08:00",
-        "tags": [
-          "发布会",
-          "数码"
-        ],
-        "entities": [
-          {
-            "name": "华为",
-            "type": "brand",
-            "aliases": [
-              "Huawei",
-              "HarmonyOS",
-              "问界",
-              "智界"
-            ]
-          }
-        ],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/829.htm",
-            "title": "AI 制造 AI：面壁智能开源全球首个完全由 AI 编写的生产级训练框架 ForgeTrain",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 67,
-        "radar_level": "B",
-        "radar_section": "developing",
-        "video_potential": 5,
-        "confidence": "low",
-        "freshness_label": "new",
-        "freshness_days": 0.2,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现；具备视频选题潜力",
-        "score_parts": {
-          "relevance": 21,
-          "trend": 7,
-          "freshness": 18,
-          "change": 4,
           "credibility": 10,
           "scarcity": 7
         },
@@ -699,6 +559,114 @@
           "scarcity": 7
         },
         "caps": []
+      },
+      {
+        "id": "evt_19147928061fd7aa294e",
+        "title": "研究显示医学论文中的虚假参考文献数量激增，AI 难辞其咎",
+        "summary": "数码行业出现值得入库的信号：研究显示医学论文中的虚假参考文献数量激增，AI 难辞其咎。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+        "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，一项针对 250 万篇生物医学论文的核查显示，同行评审研究中的虚假参考文献已演变为系统性问题。2023 年至今，虚假参考文献的出现率飙升至原先的十二倍以上。 哥伦比亚大学及多家机构的研究团队在《柳叶刀》期刊上发布了迄今为止规模最大的生物医学论文引… 来源为 ithome，发布时间标记为 05/26 21:07。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 64,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-26T21:07:44+08:00",
+        "last_seen_at": "2026-05-27T00:20:55+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-27T00:21:05+08:00",
+        "updated_at": "2026-05-27T00:21:05+08:00",
+        "tags": [
+          "发布会",
+          "数码"
+        ],
+        "entities": [],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/955/597.htm",
+            "title": "研究显示医学论文中的虚假参考文献数量激增，AI 难辞其咎",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 65,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 5,
+        "confidence": "low",
+        "freshness_label": "new",
+        "freshness_days": 0.8,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现；具备视频选题潜力",
+        "score_parts": {
+          "relevance": 19,
+          "trend": 7,
+          "freshness": 18,
+          "change": 4,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_3e4add88552474ad209b",
+        "title": "宏碁掠夺者 Atlas 8 掌机曝光，预计搭载英特尔 Arc G3 平台",
+        "summary": "数码行业出现值得入库的信号：宏碁掠夺者 Atlas 8 掌机曝光，预计搭载英特尔 Arc G3 平台。它涉及 小红书，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+        "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，据科技媒体 Videocardz 今天报道，宏碁正准备以掠夺者（Predator）品牌推出全新游戏掌机，新品名为 Atlas 8，对标华硕 ROG Ally、联想 Legion Go、微星 Claw 等产品。 IT之家在此援引 Videocard… 来源为 ithome，发布时间标记为 05/26 20:10。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "小红书 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 小红书 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 61,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-26T20:10:25+08:00",
+        "last_seen_at": "2026-05-27T00:20:55+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-27T00:21:05+08:00",
+        "updated_at": "2026-05-27T00:21:05+08:00",
+        "tags": [
+          "发布会",
+          "数码"
+        ],
+        "entities": [
+          {
+            "name": "小红书",
+            "type": "platform",
+            "aliases": [
+              "RED"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/955/585.htm",
+            "title": "宏碁掠夺者 Atlas 8 掌机曝光，预计搭载英特尔 Arc G3 平台",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 65,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 5,
+        "confidence": "low",
+        "freshness_label": "new",
+        "freshness_days": 0.8,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现；具备视频选题潜力",
+        "score_parts": {
+          "relevance": 19,
+          "trend": 7,
+          "freshness": 18,
+          "change": 4,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
       }
     ],
     "videoCandidates": [
@@ -754,89 +722,6 @@
           "change": 9,
           "credibility": 10,
           "scarcity": 8
-        },
-        "caps": []
-      },
-      {
-        "id": "evt_617e4c1253920812515a",
-        "title": "用户反馈三星 Galaxy S26 Ultra 手机升级 One UI 9 Beta 后无法侧载 App",
-        "summary": "数码行业出现值得入库的信号：谷歌升级 Workspace 图标，网友反馈 Chat“撞衫”微信支付。它涉及 Google、三星，系统识别到 发布会、数码、系统更新、选题机会、争议 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 27 日消息，谷歌昨日（5 月 26 日）发布公告， 公布其 14 款生产力套件 Workspace 的新图标，采用更明显的渐变配色风格。 Google Workspace 新图标总览 IT之家注，本次更新覆盖以下生产力套件： Gmail Calendar C… 来源为 ithome，发布时间标记为 05/27 10:13。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "Google、三星 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 Google、三星 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-        "content_angle": "争议拆解：谷歌升级 Workspace 图标，网友反馈 Chat“撞衫”微信支付，普通用户到底该怎么看？",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 69,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-27T11:46:02+08:00",
-        "last_seen_at": "2026-05-27T15:35:58+08:00",
-        "status": "active",
-        "source_count": 3,
-        "created_at": "2026-05-27T12:30:12+08:00",
-        "updated_at": "2026-05-27T15:36:08+08:00",
-        "tags": [
-          "争议",
-          "发布会",
-          "数码",
-          "系统更新",
-          "选题机会"
-        ],
-        "entities": [
-          {
-            "name": "Google",
-            "type": "brand",
-            "aliases": [
-              "Android",
-              "Pixel",
-              "Gemini"
-            ]
-          },
-          {
-            "name": "三星",
-            "type": "brand",
-            "aliases": [
-              "Samsung",
-              "Galaxy"
-            ]
-          }
-        ],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/825.htm",
-            "title": "用户反馈三星 Galaxy S26 Ultra 手机升级 One UI 9 Beta 后无法侧载 App",
-            "author": "IT之家"
-          },
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/710.htm",
-            "title": "三星 One UI 8.5 被曝视频显示异常，Galaxy S24/S25 系列手机上通知一来就偏色",
-            "author": "IT之家"
-          },
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/703.htm",
-            "title": "谷歌升级 Workspace 图标，网友反馈 Chat“撞衫”微信支付",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 72,
-        "radar_level": "A",
-        "radar_section": "video_ready",
-        "video_potential": 5,
-        "confidence": "high",
-        "freshness_label": "new",
-        "freshness_days": 0.2,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
-        "score_parts": {
-          "relevance": 22,
-          "trend": 11,
-          "freshness": 18,
-          "change": 9,
-          "credibility": 14,
-          "scarcity": 6
         },
         "caps": []
       },
@@ -903,85 +788,6 @@
         "caps": []
       },
       {
-        "id": "evt_e49de04ee24277184545",
-        "title": "江铃全新易至 EV3 纯电小车发布：10.1 英寸悬浮式中控、50kW 液冷永磁同步电机",
-        "summary": "数码行业出现值得入库的信号：江铃全新易至 EV3 纯电小车发布：10.1 英寸悬浮式中控、50kW 液冷永磁同步电机。它涉及 智能驾驶，系统识别到 数码、智驾、发布会、影像 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 27 日消息，蔚来汽车今日宣布， 姚明成为蔚来 ES9 首席体验官 。蔚来 ES9 上市发布会将于 5 月 27 日 19:30 举行。 据IT之家今早报道， 蔚来 ES9 将首发蔚来世界模型全新版本 ，带来三项首发技术： 国内首个直接操作方向盘与踏板的智能辅… 来源为 ithome，发布时间标记为 05/27 11:37。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "智能驾驶相关变化容易引发用户安全感、体验差异和车企技术路线讨论。对视频创作者来说，真正值得盯的是功能覆盖、接管体验、用户口碑和车企路线，而不是单纯复述一次 OTA 或发布节点。",
-        "creator_impact": "适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。优先找车主反馈、实测画面和同级竞品对照，避免只复述厂商话术。",
-        "content_angle": "智驾更新看起来很强，但普通车主真正关心哪 3 件事？",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 63,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-26T21:08:45+08:00",
-        "last_seen_at": "2026-05-27T15:35:58+08:00",
-        "status": "active",
-        "source_count": 2,
-        "created_at": "2026-05-27T00:21:05+08:00",
-        "updated_at": "2026-05-27T15:36:08+08:00",
-        "tags": [
-          "发布会",
-          "影像",
-          "数码",
-          "智驾",
-          "汽车",
-          "自媒体"
-        ],
-        "entities": [
-          {
-            "name": "智能驾驶",
-            "type": "technology",
-            "aliases": [
-              "智驾",
-              "NOA",
-              "辅助驾驶"
-            ]
-          },
-          {
-            "name": "蔚来",
-            "type": "brand",
-            "aliases": [
-              "NIO"
-            ]
-          }
-        ],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/598.htm",
-            "title": "江铃全新易至 EV3 纯电小车发布：10.1 英寸悬浮式中控、50kW 液冷永磁同步电机",
-            "author": "IT之家"
-          },
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/823.htm",
-            "title": "姚明成为蔚来 ES9 首席体验官",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 68,
-        "radar_level": "B",
-        "radar_section": "video_ready",
-        "video_potential": 5,
-        "confidence": "high",
-        "freshness_label": "new",
-        "freshness_days": 0.8,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
-        "score_parts": {
-          "relevance": 22,
-          "trend": 10,
-          "freshness": 18,
-          "change": 7,
-          "credibility": 12,
-          "scarcity": 7
-        },
-        "caps": [
-          "评测/体验稿默认不做头条"
-        ]
-      },
-      {
         "id": "evt_ac2f568176d709f87fe1",
         "title": "酷态科 CP 挂绳式编织 6A 线开售：0.2m 长、凯夫拉纤维，24.9 元",
         "summary": "数码行业出现值得入库的信号：酷态科 CP 挂绳式编织 6A 线开售：0.2m 长、凯夫拉纤维，24.9 元。它涉及 小米，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
@@ -1037,67 +843,6 @@
           "trend": 7,
           "freshness": 18,
           "change": 5,
-          "credibility": 10,
-          "scarcity": 7
-        },
-        "caps": []
-      },
-      {
-        "id": "evt_20604596cbf502655e54",
-        "title": "AI 制造 AI：面壁智能开源全球首个完全由 AI 编写的生产级训练框架 ForgeTrain",
-        "summary": "数码行业出现值得入库的信号：AI 制造 AI：面壁智能开源全球首个完全由 AI 编写的生产级训练框架 ForgeTrain。它涉及 华为，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 27 日消息，面壁智能今日联合清华大学、OpenBMB 开源社区正式发布 ForgeTrain—— 全球首个完全由 AI 编写、零人类代码介入的生产级大模型训练框架 。 面壁智能使用 ForgeTrain 在 华为昇腾 芯片上成功完成了面壁智能新一代「小钢炮」… 来源为 ithome，发布时间标记为 05/27 11:51。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "华为 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 57,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-27T11:51:33+08:00",
-        "last_seen_at": "2026-05-27T15:35:58+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-27T12:30:12+08:00",
-        "updated_at": "2026-05-27T15:36:08+08:00",
-        "tags": [
-          "发布会",
-          "数码"
-        ],
-        "entities": [
-          {
-            "name": "华为",
-            "type": "brand",
-            "aliases": [
-              "Huawei",
-              "HarmonyOS",
-              "问界",
-              "智界"
-            ]
-          }
-        ],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/829.htm",
-            "title": "AI 制造 AI：面壁智能开源全球首个完全由 AI 编写的生产级训练框架 ForgeTrain",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 67,
-        "radar_level": "B",
-        "radar_section": "developing",
-        "video_potential": 5,
-        "confidence": "low",
-        "freshness_label": "new",
-        "freshness_days": 0.2,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现；具备视频选题潜力",
-        "score_parts": {
-          "relevance": 21,
-          "trend": 7,
-          "freshness": 18,
-          "change": 4,
           "credibility": 10,
           "scarcity": 7
         },
@@ -1202,6 +947,89 @@
           "change": 8,
           "credibility": 10,
           "scarcity": 7
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_617e4c1253920812515a",
+        "title": "用户反馈三星 Galaxy S26 Ultra 手机升级 One UI 9 Beta 后无法侧载 App",
+        "summary": "数码行业出现值得入库的信号：谷歌升级 Workspace 图标，网友反馈 Chat“撞衫”微信支付。它涉及 Google、三星，系统识别到 发布会、数码、系统更新、选题机会、争议 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+        "what_happened": "公开摘要提到：IT之家 5 月 27 日消息，谷歌昨日（5 月 26 日）发布公告， 公布其 14 款生产力套件 Workspace 的新图标，采用更明显的渐变配色风格。 Google Workspace 新图标总览 IT之家注，本次更新覆盖以下生产力套件： Gmail Calendar C… 来源为 ithome，发布时间标记为 05/27 10:13。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "Google、三星 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 Google、三星 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "争议拆解：谷歌升级 Workspace 图标，网友反馈 Chat“撞衫”微信支付，普通用户到底该怎么看？",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 63,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-27T11:46:02+08:00",
+        "last_seen_at": "2026-05-27T15:41:07+08:00",
+        "status": "active",
+        "source_count": 3,
+        "created_at": "2026-05-27T12:30:12+08:00",
+        "updated_at": "2026-05-27T15:41:17+08:00",
+        "tags": [
+          "争议",
+          "发布会",
+          "数码",
+          "系统更新",
+          "选题机会"
+        ],
+        "entities": [
+          {
+            "name": "Google",
+            "type": "brand",
+            "aliases": [
+              "Android",
+              "Pixel",
+              "Gemini"
+            ]
+          },
+          {
+            "name": "三星",
+            "type": "brand",
+            "aliases": [
+              "Samsung",
+              "Galaxy"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/955/825.htm",
+            "title": "用户反馈三星 Galaxy S26 Ultra 手机升级 One UI 9 Beta 后无法侧载 App",
+            "author": "IT之家"
+          },
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/955/710.htm",
+            "title": "三星 One UI 8.5 被曝视频显示异常，Galaxy S24/S25 系列手机上通知一来就偏色",
+            "author": "IT之家"
+          },
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/955/703.htm",
+            "title": "谷歌升级 Workspace 图标，网友反馈 Chat“撞衫”微信支付",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 66,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 5,
+        "confidence": "low",
+        "freshness_label": "new",
+        "freshness_days": 0.2,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
+        "score_parts": {
+          "relevance": 22,
+          "trend": 7,
+          "freshness": 18,
+          "change": 9,
+          "credibility": 10,
+          "scarcity": 8
         },
         "caps": []
       },
@@ -1403,6 +1231,106 @@
         "confidence": "low",
         "freshness_label": "new",
         "freshness_days": 0.2,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现；具备视频选题潜力",
+        "score_parts": {
+          "relevance": 19,
+          "trend": 7,
+          "freshness": 18,
+          "change": 4,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_949d0e0e9ad2a88f55ff",
+        "title": "中日韩新马泰 6 国科学家联合发布亚洲首个合成细胞十年技术路线图",
+        "summary": "数码行业出现值得入库的信号：中日韩新马泰 6 国科学家联合发布亚洲首个合成细胞十年技术路线图。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+        "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，中国科学院深圳先进技术研究院联合来自中国、日本、韩国、新加坡、马来西亚、泰国等亚洲六国的 100 多个实验室， 发布了亚洲首个合成细胞十年技术路线图 ，文章于今日（5 月 26 日）发表于《自然 · 生物技术》。 科研团队聚焦“ 人工合成单细胞生… 来源为 ithome，发布时间标记为 05/26 17:46。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 61,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-26T17:46:29+08:00",
+        "last_seen_at": "2026-05-27T00:20:55+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-27T00:21:06+08:00",
+        "updated_at": "2026-05-27T00:21:06+08:00",
+        "tags": [
+          "发布会",
+          "数码"
+        ],
+        "entities": [],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/955/550.htm",
+            "title": "中日韩新马泰 6 国科学家联合发布亚洲首个合成细胞十年技术路线图",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 65,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 5,
+        "confidence": "low",
+        "freshness_label": "new",
+        "freshness_days": 0.9,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现；具备视频选题潜力",
+        "score_parts": {
+          "relevance": 17,
+          "trend": 8,
+          "freshness": 18,
+          "change": 5,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_19147928061fd7aa294e",
+        "title": "研究显示医学论文中的虚假参考文献数量激增，AI 难辞其咎",
+        "summary": "数码行业出现值得入库的信号：研究显示医学论文中的虚假参考文献数量激增，AI 难辞其咎。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+        "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，一项针对 250 万篇生物医学论文的核查显示，同行评审研究中的虚假参考文献已演变为系统性问题。2023 年至今，虚假参考文献的出现率飙升至原先的十二倍以上。 哥伦比亚大学及多家机构的研究团队在《柳叶刀》期刊上发布了迄今为止规模最大的生物医学论文引… 来源为 ithome，发布时间标记为 05/26 21:07。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 64,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-26T21:07:44+08:00",
+        "last_seen_at": "2026-05-27T00:20:55+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-27T00:21:05+08:00",
+        "updated_at": "2026-05-27T00:21:05+08:00",
+        "tags": [
+          "发布会",
+          "数码"
+        ],
+        "entities": [],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/955/597.htm",
+            "title": "研究显示医学论文中的虚假参考文献数量激增，AI 难辞其咎",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 65,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 5,
+        "confidence": "low",
+        "freshness_label": "new",
+        "freshness_days": 0.8,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现；具备视频选题潜力",
         "score_parts": {
           "relevance": 19,
@@ -1472,89 +1400,6 @@
         "caps": []
       },
       {
-        "id": "evt_617e4c1253920812515a",
-        "title": "用户反馈三星 Galaxy S26 Ultra 手机升级 One UI 9 Beta 后无法侧载 App",
-        "summary": "数码行业出现值得入库的信号：谷歌升级 Workspace 图标，网友反馈 Chat“撞衫”微信支付。它涉及 Google、三星，系统识别到 发布会、数码、系统更新、选题机会、争议 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 27 日消息，谷歌昨日（5 月 26 日）发布公告， 公布其 14 款生产力套件 Workspace 的新图标，采用更明显的渐变配色风格。 Google Workspace 新图标总览 IT之家注，本次更新覆盖以下生产力套件： Gmail Calendar C… 来源为 ithome，发布时间标记为 05/27 10:13。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "Google、三星 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 Google、三星 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-        "content_angle": "争议拆解：谷歌升级 Workspace 图标，网友反馈 Chat“撞衫”微信支付，普通用户到底该怎么看？",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 69,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-27T11:46:02+08:00",
-        "last_seen_at": "2026-05-27T15:35:58+08:00",
-        "status": "active",
-        "source_count": 3,
-        "created_at": "2026-05-27T12:30:12+08:00",
-        "updated_at": "2026-05-27T15:36:08+08:00",
-        "tags": [
-          "争议",
-          "发布会",
-          "数码",
-          "系统更新",
-          "选题机会"
-        ],
-        "entities": [
-          {
-            "name": "Google",
-            "type": "brand",
-            "aliases": [
-              "Android",
-              "Pixel",
-              "Gemini"
-            ]
-          },
-          {
-            "name": "三星",
-            "type": "brand",
-            "aliases": [
-              "Samsung",
-              "Galaxy"
-            ]
-          }
-        ],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/825.htm",
-            "title": "用户反馈三星 Galaxy S26 Ultra 手机升级 One UI 9 Beta 后无法侧载 App",
-            "author": "IT之家"
-          },
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/710.htm",
-            "title": "三星 One UI 8.5 被曝视频显示异常，Galaxy S24/S25 系列手机上通知一来就偏色",
-            "author": "IT之家"
-          },
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/703.htm",
-            "title": "谷歌升级 Workspace 图标，网友反馈 Chat“撞衫”微信支付",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 72,
-        "radar_level": "A",
-        "radar_section": "video_ready",
-        "video_potential": 5,
-        "confidence": "high",
-        "freshness_label": "new",
-        "freshness_days": 0.2,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
-        "score_parts": {
-          "relevance": 22,
-          "trend": 11,
-          "freshness": 18,
-          "change": 9,
-          "credibility": 14,
-          "scarcity": 6
-        },
-        "caps": []
-      },
-      {
         "id": "evt_5abf9b146eed4f1697e3",
         "title": "微星 MPG X870E CARBON MAX WIFI 暗黑主板上市，2999 元",
         "summary": "数码行业出现值得入库的信号：微星 MPG X870E CARBON MAX WIFI 暗黑主板上市，2999 元。它涉及 苹果，系统识别到 数码、系统更新、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
@@ -1617,85 +1462,6 @@
         "caps": []
       },
       {
-        "id": "evt_e49de04ee24277184545",
-        "title": "江铃全新易至 EV3 纯电小车发布：10.1 英寸悬浮式中控、50kW 液冷永磁同步电机",
-        "summary": "数码行业出现值得入库的信号：江铃全新易至 EV3 纯电小车发布：10.1 英寸悬浮式中控、50kW 液冷永磁同步电机。它涉及 智能驾驶，系统识别到 数码、智驾、发布会、影像 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 27 日消息，蔚来汽车今日宣布， 姚明成为蔚来 ES9 首席体验官 。蔚来 ES9 上市发布会将于 5 月 27 日 19:30 举行。 据IT之家今早报道， 蔚来 ES9 将首发蔚来世界模型全新版本 ，带来三项首发技术： 国内首个直接操作方向盘与踏板的智能辅… 来源为 ithome，发布时间标记为 05/27 11:37。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "智能驾驶相关变化容易引发用户安全感、体验差异和车企技术路线讨论。对视频创作者来说，真正值得盯的是功能覆盖、接管体验、用户口碑和车企路线，而不是单纯复述一次 OTA 或发布节点。",
-        "creator_impact": "适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。优先找车主反馈、实测画面和同级竞品对照，避免只复述厂商话术。",
-        "content_angle": "智驾更新看起来很强，但普通车主真正关心哪 3 件事？",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 63,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-26T21:08:45+08:00",
-        "last_seen_at": "2026-05-27T15:35:58+08:00",
-        "status": "active",
-        "source_count": 2,
-        "created_at": "2026-05-27T00:21:05+08:00",
-        "updated_at": "2026-05-27T15:36:08+08:00",
-        "tags": [
-          "发布会",
-          "影像",
-          "数码",
-          "智驾",
-          "汽车",
-          "自媒体"
-        ],
-        "entities": [
-          {
-            "name": "智能驾驶",
-            "type": "technology",
-            "aliases": [
-              "智驾",
-              "NOA",
-              "辅助驾驶"
-            ]
-          },
-          {
-            "name": "蔚来",
-            "type": "brand",
-            "aliases": [
-              "NIO"
-            ]
-          }
-        ],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/598.htm",
-            "title": "江铃全新易至 EV3 纯电小车发布：10.1 英寸悬浮式中控、50kW 液冷永磁同步电机",
-            "author": "IT之家"
-          },
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/823.htm",
-            "title": "姚明成为蔚来 ES9 首席体验官",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 68,
-        "radar_level": "B",
-        "radar_section": "video_ready",
-        "video_potential": 5,
-        "confidence": "high",
-        "freshness_label": "new",
-        "freshness_days": 0.8,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
-        "score_parts": {
-          "relevance": 22,
-          "trend": 10,
-          "freshness": 18,
-          "change": 7,
-          "credibility": 12,
-          "scarcity": 7
-        },
-        "caps": [
-          "评测/体验稿默认不做头条"
-        ]
-      },
-      {
         "id": "evt_ac2f568176d709f87fe1",
         "title": "酷态科 CP 挂绳式编织 6A 线开售：0.2m 长、凯夫拉纤维，24.9 元",
         "summary": "数码行业出现值得入库的信号：酷态科 CP 挂绳式编织 6A 线开售：0.2m 长、凯夫拉纤维，24.9 元。它涉及 小米，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
@@ -1751,67 +1517,6 @@
           "trend": 7,
           "freshness": 18,
           "change": 5,
-          "credibility": 10,
-          "scarcity": 7
-        },
-        "caps": []
-      },
-      {
-        "id": "evt_20604596cbf502655e54",
-        "title": "AI 制造 AI：面壁智能开源全球首个完全由 AI 编写的生产级训练框架 ForgeTrain",
-        "summary": "数码行业出现值得入库的信号：AI 制造 AI：面壁智能开源全球首个完全由 AI 编写的生产级训练框架 ForgeTrain。它涉及 华为，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 27 日消息，面壁智能今日联合清华大学、OpenBMB 开源社区正式发布 ForgeTrain—— 全球首个完全由 AI 编写、零人类代码介入的生产级大模型训练框架 。 面壁智能使用 ForgeTrain 在 华为昇腾 芯片上成功完成了面壁智能新一代「小钢炮」… 来源为 ithome，发布时间标记为 05/27 11:51。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "华为 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 57,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-27T11:51:33+08:00",
-        "last_seen_at": "2026-05-27T15:35:58+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-27T12:30:12+08:00",
-        "updated_at": "2026-05-27T15:36:08+08:00",
-        "tags": [
-          "发布会",
-          "数码"
-        ],
-        "entities": [
-          {
-            "name": "华为",
-            "type": "brand",
-            "aliases": [
-              "Huawei",
-              "HarmonyOS",
-              "问界",
-              "智界"
-            ]
-          }
-        ],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/829.htm",
-            "title": "AI 制造 AI：面壁智能开源全球首个完全由 AI 编写的生产级训练框架 ForgeTrain",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 67,
-        "radar_level": "B",
-        "radar_section": "developing",
-        "video_potential": 5,
-        "confidence": "low",
-        "freshness_label": "new",
-        "freshness_days": 0.2,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现；具备视频选题潜力",
-        "score_parts": {
-          "relevance": 21,
-          "trend": 7,
-          "freshness": 18,
-          "change": 4,
           "credibility": 10,
           "scarcity": 7
         },
@@ -1916,6 +1621,89 @@
           "change": 8,
           "credibility": 10,
           "scarcity": 7
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_617e4c1253920812515a",
+        "title": "用户反馈三星 Galaxy S26 Ultra 手机升级 One UI 9 Beta 后无法侧载 App",
+        "summary": "数码行业出现值得入库的信号：谷歌升级 Workspace 图标，网友反馈 Chat“撞衫”微信支付。它涉及 Google、三星，系统识别到 发布会、数码、系统更新、选题机会、争议 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+        "what_happened": "公开摘要提到：IT之家 5 月 27 日消息，谷歌昨日（5 月 26 日）发布公告， 公布其 14 款生产力套件 Workspace 的新图标，采用更明显的渐变配色风格。 Google Workspace 新图标总览 IT之家注，本次更新覆盖以下生产力套件： Gmail Calendar C… 来源为 ithome，发布时间标记为 05/27 10:13。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "Google、三星 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 Google、三星 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "争议拆解：谷歌升级 Workspace 图标，网友反馈 Chat“撞衫”微信支付，普通用户到底该怎么看？",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 63,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-27T11:46:02+08:00",
+        "last_seen_at": "2026-05-27T15:41:07+08:00",
+        "status": "active",
+        "source_count": 3,
+        "created_at": "2026-05-27T12:30:12+08:00",
+        "updated_at": "2026-05-27T15:41:17+08:00",
+        "tags": [
+          "争议",
+          "发布会",
+          "数码",
+          "系统更新",
+          "选题机会"
+        ],
+        "entities": [
+          {
+            "name": "Google",
+            "type": "brand",
+            "aliases": [
+              "Android",
+              "Pixel",
+              "Gemini"
+            ]
+          },
+          {
+            "name": "三星",
+            "type": "brand",
+            "aliases": [
+              "Samsung",
+              "Galaxy"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/955/825.htm",
+            "title": "用户反馈三星 Galaxy S26 Ultra 手机升级 One UI 9 Beta 后无法侧载 App",
+            "author": "IT之家"
+          },
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/955/710.htm",
+            "title": "三星 One UI 8.5 被曝视频显示异常，Galaxy S24/S25 系列手机上通知一来就偏色",
+            "author": "IT之家"
+          },
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/955/703.htm",
+            "title": "谷歌升级 Workspace 图标，网友反馈 Chat“撞衫”微信支付",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 66,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 5,
+        "confidence": "low",
+        "freshness_label": "new",
+        "freshness_days": 0.2,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
+        "score_parts": {
+          "relevance": 22,
+          "trend": 7,
+          "freshness": 18,
+          "change": 9,
+          "credibility": 10,
+          "scarcity": 8
         },
         "caps": []
       },
@@ -2127,176 +1915,111 @@
           "scarcity": 7
         },
         "caps": []
+      },
+      {
+        "id": "evt_949d0e0e9ad2a88f55ff",
+        "title": "中日韩新马泰 6 国科学家联合发布亚洲首个合成细胞十年技术路线图",
+        "summary": "数码行业出现值得入库的信号：中日韩新马泰 6 国科学家联合发布亚洲首个合成细胞十年技术路线图。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+        "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，中国科学院深圳先进技术研究院联合来自中国、日本、韩国、新加坡、马来西亚、泰国等亚洲六国的 100 多个实验室， 发布了亚洲首个合成细胞十年技术路线图 ，文章于今日（5 月 26 日）发表于《自然 · 生物技术》。 科研团队聚焦“ 人工合成单细胞生… 来源为 ithome，发布时间标记为 05/26 17:46。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 61,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-26T17:46:29+08:00",
+        "last_seen_at": "2026-05-27T00:20:55+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-27T00:21:06+08:00",
+        "updated_at": "2026-05-27T00:21:06+08:00",
+        "tags": [
+          "发布会",
+          "数码"
+        ],
+        "entities": [],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/955/550.htm",
+            "title": "中日韩新马泰 6 国科学家联合发布亚洲首个合成细胞十年技术路线图",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 65,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 5,
+        "confidence": "low",
+        "freshness_label": "new",
+        "freshness_days": 0.9,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现；具备视频选题潜力",
+        "score_parts": {
+          "relevance": 17,
+          "trend": 8,
+          "freshness": 18,
+          "change": 5,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_19147928061fd7aa294e",
+        "title": "研究显示医学论文中的虚假参考文献数量激增，AI 难辞其咎",
+        "summary": "数码行业出现值得入库的信号：研究显示医学论文中的虚假参考文献数量激增，AI 难辞其咎。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+        "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，一项针对 250 万篇生物医学论文的核查显示，同行评审研究中的虚假参考文献已演变为系统性问题。2023 年至今，虚假参考文献的出现率飙升至原先的十二倍以上。 哥伦比亚大学及多家机构的研究团队在《柳叶刀》期刊上发布了迄今为止规模最大的生物医学论文引… 来源为 ithome，发布时间标记为 05/26 21:07。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 64,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-26T21:07:44+08:00",
+        "last_seen_at": "2026-05-27T00:20:55+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-27T00:21:05+08:00",
+        "updated_at": "2026-05-27T00:21:05+08:00",
+        "tags": [
+          "发布会",
+          "数码"
+        ],
+        "entities": [],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/955/597.htm",
+            "title": "研究显示医学论文中的虚假参考文献数量激增，AI 难辞其咎",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 65,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 5,
+        "confidence": "low",
+        "freshness_label": "new",
+        "freshness_days": 0.8,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现；具备视频选题潜力",
+        "score_parts": {
+          "relevance": 19,
+          "trend": 7,
+          "freshness": 18,
+          "change": 4,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
       }
     ],
     "staleButUseful": []
   },
   "cards": [
-    {
-      "id": "evt_fe93a50c31b02bf94647",
-      "title": "【IT之家评测室】OPPO Reno16 Pro 体验：把实况照片玩出新高度",
-      "summary": "数码行业出现值得入库的信号：OPPO Reno 16 系列手机全新毕业季影像故事片定档 5 月 29 日首映。它涉及 Google、OPPO、荣耀，系统识别到 发布会、影像、数码、系统更新、选题机会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 27 日消息，OPPO 官方今日宣布， Reno 16 系列手机全新毕业季影像故事片将在 5 月 29 日首映 。 年少时的我们，总是对未来充满好奇： 10 年后的我... 会长成想象中的样子吗？ OPPO Reno 16 系列手机已于 5 月 25 日晚发布… 来源为 ithome，发布时间标记为 05/27 10:21。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "Google、OPPO、荣耀 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 Google、OPPO、荣耀 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-      "category": "digital",
-      "importance_score": 81,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-26T21:47:39+08:00",
-      "last_seen_at": "2026-05-27T12:30:01+08:00",
-      "status": "active",
-      "source_count": 4,
-      "created_at": "2026-05-27T00:21:05+08:00",
-      "updated_at": "2026-05-27T12:30:12+08:00",
-      "tags": [
-        "发布会",
-        "影像",
-        "数码",
-        "系统更新",
-        "选题机会"
-      ],
-      "entities": [
-        {
-          "name": "Google",
-          "type": "brand",
-          "aliases": [
-            "Android",
-            "Pixel",
-            "Gemini"
-          ]
-        },
-        {
-          "name": "OPPO",
-          "type": "brand",
-          "aliases": [
-            "ColorOS",
-            "Find"
-          ]
-        },
-        {
-          "name": "荣耀",
-          "type": "brand",
-          "aliases": [
-            "Honor",
-            "MagicOS"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/955/604.htm",
-          "title": "【IT之家评测室】OPPO Reno16 Pro 体验：把实况照片玩出新高度",
-          "author": "IT之家"
-        },
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/955/565.htm",
-          "title": "荣耀 600e 手机海外发布：天玑 7100 芯片、1 亿像素主摄，6.6 寸 1.5K 120Hz 屏幕",
-          "author": "IT之家"
-        },
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1w6VA6SERh",
-          "title": "出圈的不止是颜值，OPPO Reno16解锁年轻人专属潮流影像手机",
-          "author": "天极网"
-        },
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/955/707.htm",
-          "title": "OPPO Reno 16 系列手机全新毕业季影像故事片定档 5 月 29 日首映",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 82,
-      "radar_level": "A",
-      "radar_section": "must_read",
-      "video_potential": 5,
-      "confidence": "high",
-      "freshness_label": "new",
-      "freshness_days": 0.7,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；热度和扩散信号较强，适合优先判断是否跟进；包含明确变化信号",
-      "score_parts": {
-        "relevance": 22,
-        "trend": 22,
-        "freshness": 18,
-        "change": 7,
-        "credibility": 16,
-        "scarcity": 5
-      },
-      "caps": []
-    },
-    {
-      "id": "evt_6aa6e4d8de0d355d9530",
-      "title": "小米 Poco Pad C1 平板海外发布：骁龙 6s 4G Gen 2 芯片、9.7 英寸 2K 120Hz 屏幕",
-      "summary": "数码行业出现值得入库的信号：卢伟冰：小米不能简单地把内存涨价成本转移给消费者，今年七八月将发布新一代 OS。它涉及 小米，系统识别到 发布会、数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，据 36 氪报道，今日小米集团总裁、集团合伙人卢伟冰在小米财报电话会上表示，尽管这个季度全行业承压，小米手机在关键指标上展现出了强韧性：全球市场份额连续 23 个季度稳居前三，手机均价及海外均价均创历史新高，手机毛利率超出市场预期。 卢伟冰表示，… 来源为 ithome，发布时间标记为 05/26 18:59。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "小米 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 小米 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-      "category": "digital",
-      "importance_score": 74,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-26T21:11:45+08:00",
-      "last_seen_at": "2026-05-27T00:20:55+08:00",
-      "status": "active",
-      "source_count": 2,
-      "created_at": "2026-05-27T00:21:05+08:00",
-      "updated_at": "2026-05-27T00:21:05+08:00",
-      "tags": [
-        "发布会",
-        "数码",
-        "系统更新"
-      ],
-      "entities": [
-        {
-          "name": "小米",
-          "type": "brand",
-          "aliases": [
-            "Xiaomi",
-            "小米汽车",
-            "SU7",
-            "HyperOS"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/955/599.htm",
-          "title": "小米 Poco Pad C1 平板海外发布：骁龙 6s 4G Gen 2 芯片、9.7 英寸 2K 120Hz 屏幕",
-          "author": "IT之家"
-        },
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/955/574.htm",
-          "title": "卢伟冰：小米不能简单地把内存涨价成本转移给消费者，今年七八月将发布新一代 OS",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 75,
-      "radar_level": "A",
-      "radar_section": "must_read",
-      "video_potential": 5,
-      "confidence": "high",
-      "freshness_label": "new",
-      "freshness_days": 0.8,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
-      "score_parts": {
-        "relevance": 21,
-        "trend": 9,
-        "freshness": 18,
-        "change": 8,
-        "credibility": 12,
-        "scarcity": 7
-      },
-      "caps": []
-    },
     {
       "id": "evt_ea06357865ee41c9af8a",
       "title": "工信部：推动自动驾驶系统强制性国家标准、自动驾驶仿真试验方法标准发布实施",
@@ -2423,6 +2146,173 @@
         "scarcity": 8
       },
       "caps": []
+    },
+    {
+      "id": "evt_6aa6e4d8de0d355d9530",
+      "title": "小米 Poco Pad C1 平板海外发布：骁龙 6s 4G Gen 2 芯片、9.7 英寸 2K 120Hz 屏幕",
+      "summary": "数码行业出现值得入库的信号：卢伟冰：小米不能简单地把内存涨价成本转移给消费者，今年七八月将发布新一代 OS。它涉及 小米，系统识别到 发布会、数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，据 36 氪报道，今日小米集团总裁、集团合伙人卢伟冰在小米财报电话会上表示，尽管这个季度全行业承压，小米手机在关键指标上展现出了强韧性：全球市场份额连续 23 个季度稳居前三，手机均价及海外均价均创历史新高，手机毛利率超出市场预期。 卢伟冰表示，… 来源为 ithome，发布时间标记为 05/26 18:59。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "小米 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 小米 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+      "category": "digital",
+      "importance_score": 74,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-26T21:11:45+08:00",
+      "last_seen_at": "2026-05-27T00:20:55+08:00",
+      "status": "active",
+      "source_count": 2,
+      "created_at": "2026-05-27T00:21:05+08:00",
+      "updated_at": "2026-05-27T00:21:05+08:00",
+      "tags": [
+        "发布会",
+        "数码",
+        "系统更新"
+      ],
+      "entities": [
+        {
+          "name": "小米",
+          "type": "brand",
+          "aliases": [
+            "Xiaomi",
+            "小米汽车",
+            "SU7",
+            "HyperOS"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/955/599.htm",
+          "title": "小米 Poco Pad C1 平板海外发布：骁龙 6s 4G Gen 2 芯片、9.7 英寸 2K 120Hz 屏幕",
+          "author": "IT之家"
+        },
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/955/574.htm",
+          "title": "卢伟冰：小米不能简单地把内存涨价成本转移给消费者，今年七八月将发布新一代 OS",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 71,
+      "radar_level": "A",
+      "radar_section": "developing",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.8,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
+      "score_parts": {
+        "relevance": 21,
+        "trend": 7,
+        "freshness": 18,
+        "change": 8,
+        "credibility": 10,
+        "scarcity": 7
+      },
+      "caps": []
+    },
+    {
+      "id": "evt_fe93a50c31b02bf94647",
+      "title": "【IT之家评测室】OPPO Reno16 Pro 体验：把实况照片玩出新高度",
+      "summary": "数码行业出现值得入库的信号：OPPO Reno 16 系列手机全新毕业季影像故事片定档 5 月 29 日首映。它涉及 Google、OPPO、荣耀，系统识别到 发布会、影像、数码、系统更新、选题机会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 27 日消息，OPPO 官方今日宣布， Reno 16 系列手机全新毕业季影像故事片将在 5 月 29 日首映 。 年少时的我们，总是对未来充满好奇： 10 年后的我... 会长成想象中的样子吗？ OPPO Reno 16 系列手机已于 5 月 25 日晚发布… 来源为 ithome，发布时间标记为 05/27 10:21。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "Google、OPPO、荣耀 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 Google、OPPO、荣耀 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+      "category": "digital",
+      "importance_score": 81,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-26T21:47:39+08:00",
+      "last_seen_at": "2026-05-27T12:30:01+08:00",
+      "status": "active",
+      "source_count": 4,
+      "created_at": "2026-05-27T00:21:05+08:00",
+      "updated_at": "2026-05-27T12:30:12+08:00",
+      "tags": [
+        "发布会",
+        "影像",
+        "数码",
+        "系统更新",
+        "选题机会"
+      ],
+      "entities": [
+        {
+          "name": "Google",
+          "type": "brand",
+          "aliases": [
+            "Android",
+            "Pixel",
+            "Gemini"
+          ]
+        },
+        {
+          "name": "OPPO",
+          "type": "brand",
+          "aliases": [
+            "ColorOS",
+            "Find"
+          ]
+        },
+        {
+          "name": "荣耀",
+          "type": "brand",
+          "aliases": [
+            "Honor",
+            "MagicOS"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/955/604.htm",
+          "title": "【IT之家评测室】OPPO Reno16 Pro 体验：把实况照片玩出新高度",
+          "author": "IT之家"
+        },
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/955/565.htm",
+          "title": "荣耀 600e 手机海外发布：天玑 7100 芯片、1 亿像素主摄，6.6 寸 1.5K 120Hz 屏幕",
+          "author": "IT之家"
+        },
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1w6VA6SERh",
+          "title": "出圈的不止是颜值，OPPO Reno16解锁年轻人专属潮流影像手机",
+          "author": "天极网"
+        },
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/955/707.htm",
+          "title": "OPPO Reno 16 系列手机全新毕业季影像故事片定档 5 月 29 日首映",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 69,
+      "radar_level": "B",
+      "radar_section": "video_ready",
+      "video_potential": 5,
+      "confidence": "high",
+      "freshness_label": "new",
+      "freshness_days": 0.7,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
+      "score_parts": {
+        "relevance": 22,
+        "trend": 17,
+        "freshness": 18,
+        "change": 7,
+        "credibility": 15,
+        "scarcity": 7
+      },
+      "caps": [
+        "评测/体验稿默认不做头条"
+      ]
     },
     {
       "id": "evt_c9db159ff0f2886d584c",
@@ -3536,9 +3426,240 @@
       "caps": []
     },
     {
+      "id": "evt_9b9312edc31d2af9a395",
+      "title": "华天科技四天三板！单日成交破百亿，华为韬定律引爆先进封装#资本像素 #华天科技 #先进封装 #华为韬定律 #半导体",
+      "summary": "数码行业出现值得入库的信号：华天科技四天三板！单日成交破百亿，华为韬定律引爆先进封装#资本像素 #华天科技 #先进封装 #华为韬定律 #半导体。它涉及 华为、半导体突破，系统识别到 数码、半导体突破 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/27 10:30。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为、半导体突破 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：华天科技四天三板！单日成交破百亿，华为韬定律引…",
+      "category": "digital",
+      "importance_score": 60,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-27T10:30:57+08:00",
+      "last_seen_at": "2026-05-27T15:41:07+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T15:41:18+08:00",
+      "updated_at": "2026-05-27T15:41:18+08:00",
+      "tags": [
+        "半导体突破",
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "半导体突破",
+          "type": "technology",
+          "aliases": [
+            "半导体",
+            "晶体管",
+            "韬定律",
+            "τ定律",
+            "逻辑折叠",
+            "先进制程"
+          ]
+        },
+        {
+          "name": "华为",
+          "type": "brand",
+          "aliases": [
+            "Huawei",
+            "HarmonyOS",
+            "问界",
+            "智界"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1spGC68Ex2",
+          "title": "华天科技四天三板！单日成交破百亿，华为韬定律引爆先进封装#资本像素 #华天科技 #先进封装 #华为韬定律 #半导体",
+          "author": "资本像素"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.2,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
+      "score_parts": {
+        "relevance": 22,
+        "trend": 19,
+        "freshness": 18,
+        "change": 5,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
+      "id": "evt_9b9e277578bb74ac2fff",
+      "title": "彭博社：华为芯片技术突破？逻辑折叠？2031年1.4纳米？",
+      "summary": "数码行业出现值得入库的信号：彭博社：华为芯片技术突破？逻辑折叠？2031年1.4纳米？。它涉及 华为、半导体突破，系统识别到 数码、半导体突破 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：https://youtu.be/lB5duW73Mfw 来源为 bilibili，发布时间标记为 05/27 10:51。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为、半导体突破 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：彭博社：华为芯片技术突破？逻辑折叠？2031年…",
+      "category": "digital",
+      "importance_score": 60,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-27T10:51:42+08:00",
+      "last_seen_at": "2026-05-27T15:41:07+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T15:41:18+08:00",
+      "updated_at": "2026-05-27T15:41:18+08:00",
+      "tags": [
+        "半导体突破",
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "半导体突破",
+          "type": "technology",
+          "aliases": [
+            "半导体",
+            "晶体管",
+            "韬定律",
+            "τ定律",
+            "逻辑折叠",
+            "先进制程"
+          ]
+        },
+        {
+          "name": "华为",
+          "type": "brand",
+          "aliases": [
+            "Huawei",
+            "HarmonyOS",
+            "问界",
+            "智界"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1LrGC67Ese",
+          "title": "彭博社：华为芯片技术突破？逻辑折叠？2031年1.4纳米？",
+          "author": "花刀伤了自己"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.2,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
+      "score_parts": {
+        "relevance": 22,
+        "trend": 19,
+        "freshness": 18,
+        "change": 4,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
+      "id": "evt_58128940ddc2f6a9f3f1",
+      "title": "华为“韬定律”到底是什么？三个问题讲清楚",
+      "summary": "数码行业出现值得入库的信号：华为新玩法，“韬定律”到底是什么？。它涉及 半导体突破、华为，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：用电梯举例，两分钟看懂华为韬定律到底是什么 来源为 bilibili，发布时间标记为 05/27 10:58。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 半导体突破、华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：华为“韬定律”到底是什么？三个问题讲清楚",
+      "category": "digital",
+      "importance_score": 60,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-27T11:54:42+08:00",
+      "last_seen_at": "2026-05-27T15:41:07+08:00",
+      "status": "active",
+      "source_count": 2,
+      "created_at": "2026-05-27T15:41:17+08:00",
+      "updated_at": "2026-05-27T15:41:18+08:00",
+      "tags": [
+        "半导体突破",
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "半导体突破",
+          "type": "technology",
+          "aliases": [
+            "半导体",
+            "晶体管",
+            "韬定律",
+            "τ定律",
+            "逻辑折叠",
+            "先进制程"
+          ]
+        },
+        {
+          "name": "华为",
+          "type": "brand",
+          "aliases": [
+            "Huawei",
+            "HarmonyOS",
+            "问界",
+            "智界"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1mEGC6AEuM",
+          "title": "华为“韬定律”到底是什么？三个问题讲清楚",
+          "author": "雯语说"
+        },
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1EaGC6WE8G",
+          "title": "华为新玩法，“韬定律”到底是什么？",
+          "author": "万能的大熊老师"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.2,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
+      "score_parts": {
+        "relevance": 22,
+        "trend": 20,
+        "freshness": 18,
+        "change": 5,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
       "id": "evt_acf0458892aa4355711d",
       "title": "【粤语时评】华为韬(τ)定律或掀芯片技术革命?(26/5/27)",
-      "summary": "数码行业出现值得入库的信号：【粤语时评】华为韬(τ)定律或掀芯片技术革命?(26/5/27)。它涉及 华为，系统识别到 数码、半导体突破 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "summary": "数码行业出现值得入库的信号：【粤语时评】华为韬(τ)定律或掀芯片技术革命?(26/5/27)。它涉及 华为，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
       "what_happened": "公开摘要提到：ts\n不含时政敏感内容\n2026年5月27日 来源为 bilibili，发布时间标记为 05/27 11:09。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
       "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
       "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
@@ -3548,11 +3669,11 @@
       "importance_score": 60,
       "worth_following": 0,
       "first_seen_at": "2026-05-27T11:09:04+08:00",
-      "last_seen_at": "2026-05-27T15:35:58+08:00",
+      "last_seen_at": "2026-05-27T15:41:07+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:36:08+08:00",
-      "updated_at": "2026-05-27T15:36:08+08:00",
+      "updated_at": "2026-05-27T15:41:18+08:00",
       "tags": [
         "半导体突破",
         "数码"
@@ -3591,6 +3712,81 @@
         "trend": 20,
         "freshness": 18,
         "change": 5,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
+      "id": "evt_9d9ebf8841b3801ec2ab",
+      "title": "华为韬定律，中国半导体一次反杀，规则彻底改写",
+      "summary": "数码行业出现值得入库的信号：华为韬定律，中国半导体一次反杀，规则彻底改写。它涉及 华为、半导体突破，系统识别到 数码、半导体突破 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "目前公开信息主要来自标题和来源元数据。 来源为 bilibili，发布时间标记为 05/27 11:59。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为、半导体突破 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：华为韬定律，中国半导体一次反杀，规则彻底改写",
+      "category": "digital",
+      "importance_score": 60,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-27T11:59:15+08:00",
+      "last_seen_at": "2026-05-27T15:41:07+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T15:41:17+08:00",
+      "updated_at": "2026-05-27T15:41:17+08:00",
+      "tags": [
+        "半导体突破",
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "半导体突破",
+          "type": "technology",
+          "aliases": [
+            "半导体",
+            "晶体管",
+            "韬定律",
+            "τ定律",
+            "逻辑折叠",
+            "先进制程"
+          ]
+        },
+        {
+          "name": "华为",
+          "type": "brand",
+          "aliases": [
+            "Huawei",
+            "HarmonyOS",
+            "问界",
+            "智界"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1auGC6uEGG",
+          "title": "华为韬定律，中国半导体一次反杀，规则彻底改写",
+          "author": "李一舟AI"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.2,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
+      "score_parts": {
+        "relevance": 22,
+        "trend": 20,
+        "freshness": 18,
+        "change": 6,
         "credibility": 6,
         "scarcity": 7
       },
@@ -3700,7 +3896,7 @@
       "video_potential": 5,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.8,
+      "freshness_days": 0.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现；具备视频选题潜力",
       "score_parts": {
         "relevance": 17,
@@ -4017,11 +4213,11 @@
       "importance_score": 58,
       "worth_following": 1,
       "first_seen_at": "2026-05-27T12:00:00+08:00",
-      "last_seen_at": "2026-05-27T15:35:58+08:00",
+      "last_seen_at": "2026-05-27T15:41:07+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:36:08+08:00",
-      "updated_at": "2026-05-27T15:36:08+08:00",
+      "updated_at": "2026-05-27T15:41:17+08:00",
       "tags": [
         "数码"
       ],
@@ -4129,7 +4325,7 @@
     {
       "id": "evt_e2d11171e16bc4dcc1b9",
       "title": "第二艘国产大型邮轮“爱达 · 花城号”完成试航，11 月正式交付运营",
-      "summary": "汽车行业出现值得入库的信号：第二艘国产大型邮轮“爱达 · 花城号”完成试航，11 月正式交付运营。它涉及 相关主体，系统识别到 汽车、系统更新、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "summary": "汽车行业出现值得入库的信号：第二艘国产大型邮轮“爱达 · 花城号”完成试航，11 月正式交付运营。它涉及 相关主体，系统识别到 发布会、汽车、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
       "what_happened": "公开摘要提到：IT之家 5 月 27 日消息，据央视新闻报道， 第二艘国产大型邮轮“爱达 · 花城号”今天（5 月 27 日）完成为期 12 天的试航任务并靠港 。 在试航期间，技术人员完成了对主推进器、船舶操纵、航速耐久性、全船振动噪声、无人机舱运行及救助艇释放等核心难点项目验收。 试航涵… 来源为 ithome，发布时间标记为 05/27 11:50。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
       "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
       "creator_impact": "适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。优先找车主反馈、实测画面和同级竞品对照，避免只复述厂商话术。",
@@ -4139,11 +4335,11 @@
       "importance_score": 55,
       "worth_following": 1,
       "first_seen_at": "2026-05-27T11:50:03+08:00",
-      "last_seen_at": "2026-05-27T15:35:58+08:00",
+      "last_seen_at": "2026-05-27T15:41:07+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T12:30:12+08:00",
-      "updated_at": "2026-05-27T15:36:08+08:00",
+      "updated_at": "2026-05-27T15:41:17+08:00",
       "tags": [
         "发布会",
         "汽车",
@@ -5138,11 +5334,11 @@
       "importance_score": 52,
       "worth_following": 1,
       "first_seen_at": "2026-05-27T11:00:00+08:00",
-      "last_seen_at": "2026-05-27T15:35:58+08:00",
+      "last_seen_at": "2026-05-27T15:41:07+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:36:08+08:00",
-      "updated_at": "2026-05-27T15:36:08+08:00",
+      "updated_at": "2026-05-27T15:41:17+08:00",
       "tags": [
         "数码"
       ],
@@ -5189,11 +5385,11 @@
       "importance_score": 52,
       "worth_following": 1,
       "first_seen_at": "2026-05-27T10:00:00+08:00",
-      "last_seen_at": "2026-05-27T15:35:58+08:00",
+      "last_seen_at": "2026-05-27T15:41:07+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:36:08+08:00",
-      "updated_at": "2026-05-27T15:36:08+08:00",
+      "updated_at": "2026-05-27T15:41:17+08:00",
       "tags": [
         "数码"
       ],
@@ -5341,11 +5537,11 @@
       "importance_score": 43,
       "worth_following": 0,
       "first_seen_at": "2026-05-27T11:52:01+08:00",
-      "last_seen_at": "2026-05-27T15:35:58+08:00",
+      "last_seen_at": "2026-05-27T15:41:07+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T12:30:12+08:00",
-      "updated_at": "2026-05-27T15:36:08+08:00",
+      "updated_at": "2026-05-27T15:41:17+08:00",
       "tags": [
         "数码"
       ],
@@ -5688,11 +5884,11 @@
       "importance_score": 44,
       "worth_following": 1,
       "first_seen_at": "2026-05-27T11:42:25+08:00",
-      "last_seen_at": "2026-05-27T15:35:58+08:00",
+      "last_seen_at": "2026-05-27T15:41:07+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:36:08+08:00",
-      "updated_at": "2026-05-27T15:36:08+08:00",
+      "updated_at": "2026-05-27T15:41:17+08:00",
       "tags": [
         "数码"
       ],
@@ -5740,11 +5936,11 @@
       "importance_score": 44,
       "worth_following": 1,
       "first_seen_at": "2026-05-27T11:00:00+08:00",
-      "last_seen_at": "2026-05-27T15:35:58+08:00",
+      "last_seen_at": "2026-05-27T15:41:07+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:36:08+08:00",
-      "updated_at": "2026-05-27T15:36:08+08:00",
+      "updated_at": "2026-05-27T15:41:17+08:00",
       "tags": [],
       "entities": [],
       "sources": [

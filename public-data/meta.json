@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-27T15:36:09+08:00",
+  "generatedAt": "2026-05-27T15:41:18+08:00",
   "timezone": "Asia/Shanghai",
   "exporter": "industry-radar-static-export",
   "output": {
@@ -16,14 +16,14 @@
   "source": {
     "databaseFile": "industry-radar.sqlite",
     "databaseExistedBeforeExport": true,
-    "databaseSizeBytesBeforeExport": 1318912,
+    "databaseSizeBytesBeforeExport": 1380352,
     "reportDirectory": "reports"
   },
   "counts": {
-    "events": 72,
-    "knowledgeCards": 72,
-    "reports": 6,
-    "todayEvents": 67
+    "events": 76,
+    "knowledgeCards": 76,
+    "reports": 7,
+    "todayEvents": 71
   },
   "empty": false,
   "notes": []
