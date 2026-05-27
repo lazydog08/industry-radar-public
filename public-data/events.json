@@ -1,28 +1,28 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-27T15:50:13+08:00",
+  "generatedAt": "2026-05-27T16:04:48+08:00",
   "timezone": "Asia/Shanghai",
   "recentDays": 7,
-  "total": 77,
+  "total": 78,
   "events": [
     {
       "id": "evt_f170f2cd2fe5e5db90ee",
       "title": "华为发表韬(τ)定律，实现晶体管密度与系统性能突破",
-      "summary": "数码行业出现值得入库的信号：华为发表韬(τ)定律，实现晶体管密度与系统性能突破。它涉及 华为、半导体突破，系统识别到 数码、半导体突破 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "summary": "数码行业出现值得入库的信号：华为发表韬(τ)定律，实现晶体管密度与系统性能突破。它涉及 半导体突破、华为，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
       "what_happened": "公开摘要提到：今日，在电气电子工程师学会（IEEE）举办的国际电路系统研讨会ISCAS 2026上，华为何庭波发表题为“半导体新路径探索与实践”的主旨演讲，发表了指导半导体产业发展的新原则——韬(τ)定律。 来源为 huawei-news，发布时间标记为 05/26 17:25。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
       "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 huawei-news，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为、半导体突破 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 半导体突破、华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
       "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
       "cover_angle": "这条消息别只看标题：华为发表韬(τ)定律，实现晶体管密度与系统性能…",
       "category": "digital",
       "importance_score": 91,
       "worth_following": 0,
       "first_seen_at": "2026-05-26T17:25:31+08:00",
-      "last_seen_at": "2026-05-27T15:50:01+08:00",
+      "last_seen_at": "2026-05-27T16:04:37+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:50:12+08:00",
-      "updated_at": "2026-05-27T15:50:12+08:00",
+      "updated_at": "2026-05-27T16:04:47+08:00",
       "tags": [
         "半导体突破",
         "数码"
@@ -276,7 +276,7 @@
     {
       "id": "evt_88cebdfbca609f2cb8b1",
       "title": "华为发布AI DC数据基础设施全栈方案，加速行业智能化跃升",
-      "summary": "数码行业出现值得入库的信号：华为发布AI DC数据基础设施全栈方案，加速行业智能化跃升。它涉及 华为，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "summary": "数码行业出现值得入库的信号：华为发布AI DC数据基础设施全栈方案，加速行业智能化跃升。它涉及 华为，系统识别到 发布会、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
       "what_happened": "公开摘要提到：5月21日，以“数据觉醒，存力跃迁”为主题的2026华为创新数据基础设施论坛在巴黎举行。 来源为 huawei-news，发布时间标记为 05/25 10:13。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
       "why_it_matters": "华为 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
       "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
@@ -286,11 +286,11 @@
       "importance_score": 67,
       "worth_following": 1,
       "first_seen_at": "2026-05-25T10:13:03+08:00",
-      "last_seen_at": "2026-05-27T15:50:01+08:00",
+      "last_seen_at": "2026-05-27T16:04:37+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:50:12+08:00",
-      "updated_at": "2026-05-27T15:50:12+08:00",
+      "updated_at": "2026-05-27T16:04:47+08:00",
       "tags": [
         "发布会",
         "数码"
@@ -333,105 +333,6 @@
         "scarcity": 7
       },
       "caps": []
-    },
-    {
-      "id": "evt_fe93a50c31b02bf94647",
-      "title": "【IT之家评测室】OPPO Reno16 Pro 体验：把实况照片玩出新高度",
-      "summary": "数码行业出现值得入库的信号：OPPO Reno 16 系列手机全新毕业季影像故事片定档 5 月 29 日首映。它涉及 Google、OPPO、荣耀，系统识别到 发布会、影像、数码、系统更新、选题机会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 27 日消息，OPPO 官方今日宣布， Reno 16 系列手机全新毕业季影像故事片将在 5 月 29 日首映 。 年少时的我们，总是对未来充满好奇： 10 年后的我... 会长成想象中的样子吗？ OPPO Reno 16 系列手机已于 5 月 25 日晚发布… 来源为 ithome，发布时间标记为 05/27 10:21。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "Google、OPPO、荣耀 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 Google、OPPO、荣耀 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-      "category": "digital",
-      "importance_score": 81,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-26T21:47:39+08:00",
-      "last_seen_at": "2026-05-27T12:30:01+08:00",
-      "status": "active",
-      "source_count": 4,
-      "created_at": "2026-05-27T00:21:05+08:00",
-      "updated_at": "2026-05-27T12:30:12+08:00",
-      "tags": [
-        "发布会",
-        "影像",
-        "数码",
-        "系统更新",
-        "选题机会"
-      ],
-      "entities": [
-        {
-          "name": "Google",
-          "type": "brand",
-          "aliases": [
-            "Android",
-            "Pixel",
-            "Gemini"
-          ]
-        },
-        {
-          "name": "OPPO",
-          "type": "brand",
-          "aliases": [
-            "ColorOS",
-            "Find"
-          ]
-        },
-        {
-          "name": "荣耀",
-          "type": "brand",
-          "aliases": [
-            "Honor",
-            "MagicOS"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/955/604.htm",
-          "title": "【IT之家评测室】OPPO Reno16 Pro 体验：把实况照片玩出新高度",
-          "author": "IT之家"
-        },
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/955/565.htm",
-          "title": "荣耀 600e 手机海外发布：天玑 7100 芯片、1 亿像素主摄，6.6 寸 1.5K 120Hz 屏幕",
-          "author": "IT之家"
-        },
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1w6VA6SERh",
-          "title": "出圈的不止是颜值，OPPO Reno16解锁年轻人专属潮流影像手机",
-          "author": "天极网"
-        },
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/955/707.htm",
-          "title": "OPPO Reno 16 系列手机全新毕业季影像故事片定档 5 月 29 日首映",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 69,
-      "radar_level": "B",
-      "radar_section": "video_ready",
-      "video_potential": 5,
-      "confidence": "high",
-      "freshness_label": "new",
-      "freshness_days": 0.8,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
-      "score_parts": {
-        "relevance": 22,
-        "trend": 17,
-        "freshness": 18,
-        "change": 7,
-        "credibility": 15,
-        "scarcity": 7
-      },
-      "caps": [
-        "评测/体验稿默认不做头条"
-      ]
     },
     {
       "id": "evt_29caff307383ba2e1f2a",
@@ -536,6 +437,89 @@
       "caps": []
     },
     {
+      "id": "evt_617e4c1253920812515a",
+      "title": "用户反馈三星 Galaxy S26 Ultra 手机升级 One UI 9 Beta 后无法侧载 App",
+      "summary": "数码行业出现值得入库的信号：谷歌升级 Workspace 图标，网友反馈 Chat“撞衫”微信支付。它涉及 Google、三星，系统识别到 发布会、数码、系统更新、选题机会、争议 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 27 日消息，谷歌昨日（5 月 26 日）发布公告， 公布其 14 款生产力套件 Workspace 的新图标，采用更明显的渐变配色风格。 Google Workspace 新图标总览 IT之家注，本次更新覆盖以下生产力套件： Gmail Calendar C… 来源为 ithome，发布时间标记为 05/27 10:13。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "Google、三星 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 Google、三星 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "争议拆解：谷歌升级 Workspace 图标，网友反馈 Chat“撞衫”微信支付，普通用户到底该怎么看？",
+      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+      "category": "digital",
+      "importance_score": 63,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-27T11:46:02+08:00",
+      "last_seen_at": "2026-05-27T15:41:07+08:00",
+      "status": "active",
+      "source_count": 3,
+      "created_at": "2026-05-27T12:30:12+08:00",
+      "updated_at": "2026-05-27T15:41:17+08:00",
+      "tags": [
+        "争议",
+        "发布会",
+        "数码",
+        "系统更新",
+        "选题机会"
+      ],
+      "entities": [
+        {
+          "name": "Google",
+          "type": "brand",
+          "aliases": [
+            "Android",
+            "Pixel",
+            "Gemini"
+          ]
+        },
+        {
+          "name": "三星",
+          "type": "brand",
+          "aliases": [
+            "Samsung",
+            "Galaxy"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/955/825.htm",
+          "title": "用户反馈三星 Galaxy S26 Ultra 手机升级 One UI 9 Beta 后无法侧载 App",
+          "author": "IT之家"
+        },
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/955/710.htm",
+          "title": "三星 One UI 8.5 被曝视频显示异常，Galaxy S24/S25 系列手机上通知一来就偏色",
+          "author": "IT之家"
+        },
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/955/703.htm",
+          "title": "谷歌升级 Workspace 图标，网友反馈 Chat“撞衫”微信支付",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 66,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.2,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
+      "score_parts": {
+        "relevance": 22,
+        "trend": 7,
+        "freshness": 18,
+        "change": 9,
+        "credibility": 10,
+        "scarcity": 8
+      },
+      "caps": []
+    },
+    {
       "id": "evt_39cc3518166313648b7a",
       "title": "李柯透露比亚迪正开发人形机器人，未来有望用在 4S 店当导购",
       "summary": "数码行业出现值得入库的信号：李柯透露比亚迪正开发人形机器人，未来有望用在 4S 店当导购。它涉及 比亚迪，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
@@ -581,7 +565,7 @@
       "video_potential": 5,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现；具备视频选题潜力",
       "score_parts": {
         "relevance": 19,
@@ -895,6 +879,65 @@
       "score_parts": {
         "relevance": 19,
         "trend": 7,
+        "freshness": 18,
+        "change": 4,
+        "credibility": 10,
+        "scarcity": 7
+      },
+      "caps": []
+    },
+    {
+      "id": "evt_638d7510924326ca9a42",
+      "title": "荣耀曹工回应手机截屏弹出“存储不足”提示：实际能正常保存到相册，问题也已确认并找到解决方案",
+      "summary": "数码行业出现值得入库的信号：荣耀曹工回应手机截屏弹出“存储不足”提示：实际能正常保存到相册，问题也已确认并找到解决方案。它涉及 荣耀，系统识别到 数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 27 日消息，最近有用户反馈， 荣耀手机在截屏时会弹出“无法捕获屏幕截图”的提醒 ，称是因为存储空间有限而无法截图。但实际上，用户手机的存储容量往往有较多剩余。 IT之家注意到，荣耀研发工程师 @荣耀曹工 发文回应了此事。他表示，截屏时弹出“存储不足”提示， … 来源为 ithome，发布时间标记为 05/27 11:20。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "荣耀 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 荣耀 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "更新后最该试的 3 个功能",
+      "category": "digital",
+      "importance_score": 61,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-27T11:20:44+08:00",
+      "last_seen_at": "2026-05-27T12:30:01+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-27T12:30:12+08:00",
+      "updated_at": "2026-05-27T12:30:12+08:00",
+      "tags": [
+        "数码",
+        "系统更新"
+      ],
+      "entities": [
+        {
+          "name": "荣耀",
+          "type": "brand",
+          "aliases": [
+            "Honor",
+            "MagicOS"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/955/806.htm",
+          "title": "荣耀曹工回应手机截屏弹出“存储不足”提示：实际能正常保存到相册，问题也已确认并找到解决方案",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 64,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 5,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 0.2,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现；具备视频选题潜力",
+      "score_parts": {
+        "relevance": 19,
+        "trend": 6,
         "freshness": 18,
         "change": 4,
         "credibility": 10,
@@ -2271,11 +2314,11 @@
       "importance_score": 58,
       "worth_following": 1,
       "first_seen_at": "2026-05-27T12:00:00+08:00",
-      "last_seen_at": "2026-05-27T15:50:01+08:00",
+      "last_seen_at": "2026-05-27T16:04:37+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:36:08+08:00",
-      "updated_at": "2026-05-27T15:50:12+08:00",
+      "updated_at": "2026-05-27T16:04:47+08:00",
       "tags": [
         "数码"
       ],
@@ -2434,6 +2477,73 @@
       ]
     },
     {
+      "id": "evt_6098fddafb5a2af53641",
+      "title": "Reno16系列选购指南：小屏、省钱、影像、续航怎么取舍",
+      "summary": "数码行业出现值得入库的信号：20260526【i-dle】宋雨琦 - OPPO Reno16 系列🎬影像故事预告 4K。它涉及 OPPO，系统识别到 影像、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
+      "what_happened": "公开摘要提到：这期把 OPPO Reno16 和 Reno16 Pro 放到真实需求里拆开讲：预算卡死、小屏长期主力、影像视频、性能游戏、无线充续航，到底该选哪一档？不是越贵越值得，也不是标准版一定够用。看完按自己的使用场景直接抄作业，少被参数和Pro名头带跑。 来源为 bilibili，发布时间标记为 05/26 17:02。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 OPPO 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：Reno16系列选购指南：小屏、省钱、影像、续…",
+      "category": "digital",
+      "importance_score": 61,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-26T17:02:00+08:00",
+      "last_seen_at": "2026-05-27T12:30:01+08:00",
+      "status": "active",
+      "source_count": 2,
+      "created_at": "2026-05-27T00:21:06+08:00",
+      "updated_at": "2026-05-27T12:30:13+08:00",
+      "tags": [
+        "影像",
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "OPPO",
+          "type": "brand",
+          "aliases": [
+            "ColorOS",
+            "Find"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1CWVP6JEc8",
+          "title": "Reno16系列选购指南：小屏、省钱、影像、续航怎么取舍",
+          "author": "数码和猫"
+        },
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1WxGC6tEKL",
+          "title": "20260526【i-dle】宋雨琦 - OPPO Reno16 系列🎬影像故事预告 4K",
+          "author": "聪明的奶味蓝刷刷"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 58,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 4,
+      "confidence": "low",
+      "freshness_label": "new",
+      "freshness_days": 1,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现；具备视频选题潜力",
+      "score_parts": {
+        "relevance": 18,
+        "trend": 8,
+        "freshness": 18,
+        "change": 1,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
       "id": "evt_edd876904ae02c1f5e70",
       "title": "环球音乐集团与 TikTok、Spotify 达成授权合作",
       "summary": "自媒体/平台生态出现值得入库的信号：环球音乐集团与 TikTok、Spotify 达成授权合作。它涉及 相关主体，系统识别到 自媒体 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
@@ -2477,65 +2587,6 @@
         "trend": 3,
         "freshness": 18,
         "change": 3,
-        "credibility": 10,
-        "scarcity": 7
-      },
-      "caps": []
-    },
-    {
-      "id": "evt_cf7c3065aee0e254a361",
-      "title": "三星 Galaxy A27 手机规格曝光：骁龙 6 Gen 3 芯片，5000mAh 电池",
-      "summary": "数码行业出现值得入库的信号：三星 Galaxy A27 手机规格曝光：骁龙 6 Gen 3 芯片，5000mAh 电池。它涉及 三星，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散、可信度和视频潜力决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 26 日消息，据科技媒体 SammyGuru 今天报道，三星新款中端机 Galaxy A27 的 CAD 渲染图、规格详情已经曝光，新品将提供三种配色，预计将采用高通骁龙芯片， 预计下半年发布 。 据介绍，这款手机提供浅粉色、蓝色、黑色三种配色可选，机身尺寸为… 来源为 ithome，发布时间标记为 05/26 17:35。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "三星 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 三星 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-      "category": "digital",
-      "importance_score": 53,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-26T17:35:50+08:00",
-      "last_seen_at": "2026-05-27T00:20:55+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-27T00:21:06+08:00",
-      "updated_at": "2026-05-27T00:21:06+08:00",
-      "tags": [
-        "发布会",
-        "数码"
-      ],
-      "entities": [
-        {
-          "name": "三星",
-          "type": "brand",
-          "aliases": [
-            "Samsung",
-            "Galaxy"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/955/547.htm",
-          "title": "三星 Galaxy A27 手机规格曝光：骁龙 6 Gen 3 芯片，5000mAh 电池",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 57,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 5,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.9,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现；具备视频选题潜力",
-      "score_parts": {
-        "relevance": 21,
-        "trend": 7,
-        "freshness": 18,
-        "change": 4,
         "credibility": 10,
         "scarcity": 7
       },
@@ -3365,7 +3416,7 @@
       "video_potential": 4,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.2,
+      "freshness_days": 1.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 18,
@@ -3392,11 +3443,11 @@
       "importance_score": 52,
       "worth_following": 1,
       "first_seen_at": "2026-05-27T11:00:00+08:00",
-      "last_seen_at": "2026-05-27T15:50:01+08:00",
+      "last_seen_at": "2026-05-27T16:04:37+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:36:08+08:00",
-      "updated_at": "2026-05-27T15:50:12+08:00",
+      "updated_at": "2026-05-27T16:04:47+08:00",
       "tags": [
         "数码"
       ],
@@ -3443,11 +3494,11 @@
       "importance_score": 52,
       "worth_following": 1,
       "first_seen_at": "2026-05-27T10:00:00+08:00",
-      "last_seen_at": "2026-05-27T15:50:01+08:00",
+      "last_seen_at": "2026-05-27T16:04:37+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:36:08+08:00",
-      "updated_at": "2026-05-27T15:50:12+08:00",
+      "updated_at": "2026-05-27T16:04:47+08:00",
       "tags": [
         "数码"
       ],
@@ -3467,7 +3518,7 @@
       "video_potential": 4,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "近期新出现",
       "score_parts": {
         "relevance": 14,
@@ -3668,7 +3719,7 @@
       "video_potential": 4,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.2,
+      "freshness_days": 0.3,
       "push_reason": "近期新出现",
       "score_parts": {
         "relevance": 14,
@@ -3942,11 +3993,11 @@
       "importance_score": 44,
       "worth_following": 1,
       "first_seen_at": "2026-05-27T11:00:00+08:00",
-      "last_seen_at": "2026-05-27T15:50:01+08:00",
+      "last_seen_at": "2026-05-27T16:04:37+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-27T15:36:08+08:00",
-      "updated_at": "2026-05-27T15:50:12+08:00",
+      "updated_at": "2026-05-27T16:04:47+08:00",
       "tags": [],
       "entities": [],
       "sources": [
@@ -4331,7 +4382,7 @@
       "video_potential": 3,
       "confidence": "low",
       "freshness_label": "new",
-      "freshness_days": 0.7,
+      "freshness_days": 0.8,
       "push_reason": "近期新出现",
       "score_parts": {
         "relevance": 0,
