@@ -348,7 +348,7 @@ async function syncHotspotRefreshStatus() {
     renderHotspotRefreshStatus(data.job || { status: "idle" });
     if (data.job?.status === "running") scheduleHotspotRefreshPoll();
   } catch (error) {
-    if (state.readOnly) {
+    if (state.readOnly && !isLocalOrigin()) {
       renderHotspotRefreshStatus({ status: "static" });
       return;
     }
@@ -370,7 +370,7 @@ async function startHotspotRefresh() {
     if (job.status === "running") scheduleHotspotRefreshPoll();
     else if (job.status === "success") await refreshAfterHotspotJob(job);
   } catch (error) {
-    if (state.readOnly) {
+    if (state.readOnly && !isLocalOrigin()) {
       renderHotspotRefreshStatus({ status: "static" });
       return;
     }
@@ -400,7 +400,7 @@ async function pollHotspotRefreshStatus() {
     }
     if (job.status === "success") await refreshAfterHotspotJob(job);
   } catch (error) {
-    if (state.readOnly) {
+    if (state.readOnly && !isLocalOrigin()) {
       renderHotspotRefreshStatus({ status: "static" });
       return;
     }
@@ -490,6 +490,16 @@ function targetLabel(target) {
 
 function escapeStatusClass(value) {
   return String(value || "idle").replace(/[^a-z0-9_-]/gi, "");
+}
+
+function isLocalOrigin() {
+  const h = window.location.hostname;
+  if (h === "localhost" || h === "::1" || h === "[::1]") return true;
+  if (/^127\./.test(h)) return true;
+  if (/^192\.168\./.test(h)) return true;
+  if (/^10\./.test(h)) return true;
+  if (/^172\.(1[6-9]|2\d|3[01])\./.test(h)) return true;
+  return false;
 }
 
 function enableRootScrollFallback() {

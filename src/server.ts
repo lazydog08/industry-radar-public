@@ -21,10 +21,12 @@ app.use(express.json());
 app.use("/public-data", express.static(publicDataDir, { fallthrough: true, index: false }));
 
 app.get("/", (_req, res) => {
+  res.setHeader("Cache-Control", "no-store");
   res.type("html").send(fs.readFileSync(path.join(webDir, "index.html"), "utf8"));
 });
 
 app.get("/styles.css", (_req, res) => {
+  res.setHeader("Cache-Control", "no-store");
   res.type("css").send(fs.readFileSync(path.join(webDir, "styles.css"), "utf8"));
 });
 
@@ -34,6 +36,7 @@ app.get("/app.js", (_req, res) => {
     res.status(404).type("text/plain").send("app.js not found");
     return;
   }
+  res.setHeader("Cache-Control", "no-store");
   res.type("application/javascript").send(fs.readFileSync(jsPath, "utf8"));
 });
 
@@ -43,6 +46,7 @@ app.get("/filter-summary.js", (_req, res) => {
     res.status(404).type("text/plain").send("filter-summary.js not found");
     return;
   }
+  res.setHeader("Cache-Control", "no-store");
   res.type("application/javascript").send(fs.readFileSync(jsPath, "utf8"));
 });
 
@@ -52,6 +56,7 @@ app.get("/editorial-frontpage.js", (_req, res) => {
     res.status(404).type("text/plain").send("editorial-frontpage.js not found");
     return;
   }
+  res.setHeader("Cache-Control", "no-store");
   res.type("application/javascript").send(fs.readFileSync(jsPath, "utf8"));
 });
 
