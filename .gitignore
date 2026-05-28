@@ -1,4 +1,5 @@
 .env
+.env.local
 .DS_Store
 .claude/
 node_modules/
@@ -15,5 +16,6 @@ data/real-runs/
 data/simulations/
 data/runtime/
 data/publish/
+data/public/
 public-data/
 coverage/

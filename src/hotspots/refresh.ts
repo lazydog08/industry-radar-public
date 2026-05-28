@@ -4,10 +4,12 @@ import type { EventEmitter } from "node:events";
 
 export type HotspotRunType = "morning" | "noon" | "night";
 export type HotspotRefreshStatus = "idle" | "running" | "success" | "failed";
+export type HotspotRefreshTarget = "local-script" | "nas-ssh";
 
 export interface HotspotRefreshJob {
   id: string;
   status: HotspotRefreshStatus;
+  target: HotspotRefreshTarget | null;
   runType: HotspotRunType | null;
   startedAt: string | null;
   finishedAt: string | null;
@@ -45,6 +47,7 @@ interface HotspotRefreshControllerOptions {
 
 const RUN_TYPES = new Set<HotspotRunType>(["morning", "noon", "night"]);
 const DEFAULT_MAX_LOG_LINES = 80;
+const DEFAULT_NAS_APP_DIR = "/mnt/user-data/shares/industry-radar";
 
 export function normalizeHotspotRunType(value: unknown): HotspotRunType | undefined {
   const text = String(value || "").trim().toLowerCase();
@@ -75,6 +78,7 @@ export function createHotspotRefreshController(options: HotspotRefreshController
   const now = options.now || (() => new Date());
   const timeZone = options.timeZone || "Asia/Shanghai";
   const maxLogLines = options.maxLogLines || DEFAULT_MAX_LOG_LINES;
+  const controllerEnv = options.env ?? process.env;
   let sequence = 0;
   let current: HotspotRefreshJob = idleJob();
 
@@ -88,10 +92,16 @@ export function createHotspotRefreshController(options: HotspotRefreshController
     }
 
     const runType = startOptions.runType || pickHotspotRunType(now(), timeZone);
+    const command = buildRefreshCommand(runType, {
+      env: controllerEnv,
+      rootDir,
+      scriptPath
+    });
     const startedAt = now().toISOString();
     current = {
       id: `hotspot-${compactTimestamp(startedAt)}-${++sequence}`,
       status: "running",
+      target: command.target,
       runType,
       startedAt,
       finishedAt: null,
@@ -102,11 +112,11 @@ export function createHotspotRefreshController(options: HotspotRefreshController
     };
 
     try {
-      const child = spawner("bash", [scriptPath, runType], {
+      const child = spawner(command.command, command.args, {
         cwd: rootDir,
         env: {
           ...process.env,
-          ...(options.env || {}),
+          ...controllerEnv,
           HOTSPOT_REFRESH_TRIGGER: "web"
         },
         stdio: ["ignore", "pipe", "pipe"]
@@ -161,6 +171,7 @@ function idleJob(): HotspotRefreshJob {
   return {
     id: "",
     status: "idle",
+    target: null,
     runType: null,
     startedAt: null,
     finishedAt: null,
@@ -184,4 +195,69 @@ function compactTimestamp(value: string): string {
 
 function errorMessage(error: unknown): string {
   return error instanceof Error ? error.message : String(error);
+}
+
+interface RefreshCommandOptions {
+  env: NodeJS.ProcessEnv;
+  rootDir: string;
+  scriptPath: string;
+}
+
+interface RefreshCommand {
+  args: string[];
+  command: string;
+  target: HotspotRefreshTarget;
+}
+
+function buildRefreshCommand(runType: HotspotRunType, options: RefreshCommandOptions): RefreshCommand {
+  const mode = envValue(options.env, "NAS_REFRESH_MODE", "HOTSPOT_REFRESH_MODE").toLowerCase();
+  const host = envValue(options.env, "NAS_REFRESH_SSH_HOST", "NAS_SSH_HOST", "HOTSPOT_REFRESH_SSH_HOST");
+  if (mode === "ssh" || host) {
+    return buildSshRefreshCommand(runType, options.env, host);
+  }
+  return {
+    command: "bash",
+    args: [options.scriptPath, runType],
+    target: "local-script"
+  };
+}
+
+function buildSshRefreshCommand(runType: HotspotRunType, env: NodeJS.ProcessEnv, configuredHost: string): RefreshCommand {
+  const host = configuredHost || envValue(env, "NAS_REFRESH_SSH_HOST", "NAS_SSH_HOST", "HOTSPOT_REFRESH_SSH_HOST");
+  if (!host) {
+    throw new Error("NAS_REFRESH_SSH_HOST is required when NAS_REFRESH_MODE=ssh");
+  }
+  const user = envValue(env, "NAS_REFRESH_SSH_USER", "NAS_SSH_USER", "HOTSPOT_REFRESH_SSH_USER");
+  const port = envValue(env, "NAS_REFRESH_SSH_PORT", "NAS_SSH_PORT", "HOTSPOT_REFRESH_SSH_PORT");
+  const keyPath = envValue(env, "NAS_REFRESH_SSH_KEY", "NAS_SSH_KEY", "HOTSPOT_REFRESH_SSH_KEY");
+  const connectTimeout = positiveEnvInt(envValue(env, "NAS_REFRESH_CONNECT_TIMEOUT", "HOTSPOT_REFRESH_CONNECT_TIMEOUT"), 10);
+  const appDir = envValue(env, "NAS_REFRESH_APP_DIR", "NAS_APP_DIR", "APP_DIR") || DEFAULT_NAS_APP_DIR;
+  const sshTarget = user ? `${user}@${host}` : host;
+  const args = ["-o", "BatchMode=yes", "-o", `ConnectTimeout=${connectTimeout}`];
+  if (keyPath) args.push("-i", keyPath);
+  if (port) args.push("-p", port);
+  args.push(sshTarget, `cd ${shellQuote(appDir)} && /bin/bash scripts/nas-daily-update.sh ${shellQuote(runType)}`);
+  return {
+    command: "ssh",
+    args,
+    target: "nas-ssh"
+  };
+}
+
+function envValue(env: NodeJS.ProcessEnv, ...keys: string[]): string {
+  for (const key of keys) {
+    const value = env[key]?.trim();
+    if (value) return value;
+  }
+  return "";
+}
+
+function positiveEnvInt(value: string, fallback: number): number {
+  const parsed = Number.parseInt(value, 10);
+  return Number.isFinite(parsed) && parsed > 0 ? parsed : fallback;
+}
+
+function shellQuote(value: string): string {
+  if (/^[A-Za-z0-9_./:=+-]+$/.test(value)) return value;
+  return `'${value.replace(/'/g, "'\\''")}'`;
 }

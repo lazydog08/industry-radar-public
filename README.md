@@ -84,6 +84,18 @@ pnpm nas:daily -- night
 
 该流程会执行“抓取公开数据 -> 入库和评分 -> 生成报告 -> 导出线上 JSON -> 发布到网页目录 -> 通知模块”。详见 `docs/NAS_DAILY_UPDATE.md`。
 
+如果希望网页上的“发送 NAS 抓取命令”按钮直接触发 NAS，在运行 Web UI 的机器上配置 SSH 转发：
+
+```bash
+NAS_REFRESH_MODE=ssh
+NAS_REFRESH_SSH_HOST=192.168.31.50
+NAS_REFRESH_SSH_USER=<NAS_USER>
+NAS_REFRESH_SSH_PORT=22
+NAS_REFRESH_APP_DIR=/mnt/user-data/shares/industry-radar
+```
+
+之后访问内网 Web UI，点击按钮会让后端执行 `ssh NAS 'cd NAS_REFRESH_APP_DIR && bash scripts/nas-daily-update.sh <type>'`。公网 GitHub Pages 仍保持只读，不暴露 NAS 命令入口。
+
 ## NAS 部署最短闭环
 
 QNAP 用户详见 `docs/QNAP_SETUP.md`，绿联用户详见 `docs/UGREEN_SETUP.md`。

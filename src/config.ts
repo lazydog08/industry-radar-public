@@ -2,7 +2,8 @@ import dotenv from "dotenv";
 import path from "node:path";
 import fs from "node:fs";
 
-dotenv.config({ quiet: true });
+const shellEnvKeys = new Set(Object.keys(process.env));
+loadEnvFiles();
 
 export interface AppConfig {
   timezone: string;
@@ -31,6 +32,18 @@ function parsePositiveInteger(value: string | undefined, fallback: number, max?:
   const parsed = Number.parseInt(value || "", 10);
   if (!Number.isFinite(parsed) || parsed < 1) return fallback;
   return max ? Math.min(parsed, max) : parsed;
+}
+
+function loadEnvFiles(): void {
+  dotenv.config({ path: path.resolve(process.cwd(), ".env"), quiet: true });
+  const localEnv = dotenv.config({ path: path.resolve(process.cwd(), ".env.local"), quiet: true });
+  if (!localEnv.parsed) return;
+
+  for (const [key, value] of Object.entries(localEnv.parsed)) {
+    if (!shellEnvKeys.has(key)) {
+      process.env[key] = value;
+    }
+  }
 }
 
 export function loadConfig(): AppConfig {

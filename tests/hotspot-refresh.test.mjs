@@ -72,6 +72,126 @@ console.log(JSON.stringify({
   ]);
 });
 
+test("hotspot refresh controller can send the refresh command to NAS over SSH", () => {
+  const result = runTs(`
+import { EventEmitter } from "node:events";
+import { createHotspotRefreshController } from "./src/hotspots/refresh.ts";
+
+const spawned = [];
+const fakeSpawn = (command, args, options) => {
+  spawned.push({ command, args, cwd: options.cwd, trigger: options.env.HOTSPOT_REFRESH_TRIGGER });
+  const child = new EventEmitter();
+  child.pid = 9876;
+  child.stdout = new EventEmitter();
+  child.stderr = new EventEmitter();
+  child.stdout.setEncoding = () => {};
+  child.stderr.setEncoding = () => {};
+  child.kill = () => {};
+  queueMicrotask(() => {
+    child.stdout.emit("data", "NAS update success: type=night\\n");
+    child.emit("close", 0);
+  });
+  return child;
+};
+
+const controller = createHotspotRefreshController({
+  rootDir: "/tmp/local-copy",
+  env: {
+    NAS_REFRESH_MODE: "ssh",
+    NAS_REFRESH_SSH_HOST: "192.168.31.50",
+    NAS_REFRESH_SSH_USER: "lazydog",
+    NAS_REFRESH_SSH_PORT: "2222",
+    NAS_REFRESH_APP_DIR: "/mnt/user data/shares/industry-radar",
+    NAS_REFRESH_CONNECT_TIMEOUT: "6"
+  },
+  now: () => new Date("2026-05-28T19:20:00+08:00"),
+  spawn: fakeSpawn
+});
+
+const started = controller.start({ runType: "night" });
+await new Promise((resolve) => setImmediate(resolve));
+
+console.log(JSON.stringify({
+  started,
+  status: controller.getStatus(),
+  spawned
+}));
+`);
+
+  assert.equal(result.started.started, true);
+  assert.equal(result.started.job.target, "nas-ssh");
+  assert.equal(result.status.status, "success");
+  assert.deepEqual(result.status.logTail, ["NAS update success: type=night"]);
+  assert.deepEqual(result.spawned, [
+    {
+      command: "ssh",
+      args: [
+        "-o",
+        "BatchMode=yes",
+        "-o",
+        "ConnectTimeout=6",
+        "-p",
+        "2222",
+        "lazydog@192.168.31.50",
+        "cd '/mnt/user data/shares/industry-radar' && /bin/bash scripts/nas-daily-update.sh night"
+      ],
+      cwd: "/tmp/local-copy",
+      trigger: "web"
+    }
+  ]);
+});
+
+test("hotspot refresh controller reads NAS SSH settings from process env by default", () => {
+  const result = runTs(`
+import { EventEmitter } from "node:events";
+import { createHotspotRefreshController } from "./src/hotspots/refresh.ts";
+
+process.env.NAS_REFRESH_MODE = "ssh";
+process.env.NAS_REFRESH_SSH_HOST = "192.168.31.50";
+process.env.NAS_REFRESH_SSH_USER = "admin";
+process.env.NAS_REFRESH_SSH_PORT = "22";
+process.env.NAS_REFRESH_APP_DIR = "/volume1/industry-radar";
+
+const spawned = [];
+const fakeSpawn = (command, args, options) => {
+  spawned.push({ command, args, cwd: options.cwd });
+  const child = new EventEmitter();
+  child.pid = 2468;
+  child.stdout = new EventEmitter();
+  child.stderr = new EventEmitter();
+  child.stdout.setEncoding = () => {};
+  child.stderr.setEncoding = () => {};
+  child.kill = () => {};
+  queueMicrotask(() => child.emit("close", 0));
+  return child;
+};
+
+const controller = createHotspotRefreshController({
+  rootDir: "/tmp/local-copy",
+  now: () => new Date("2026-05-28T19:20:00+08:00"),
+  spawn: fakeSpawn
+});
+
+const started = controller.start({ runType: "night" });
+await new Promise((resolve) => setImmediate(resolve));
+
+console.log(JSON.stringify({
+  started,
+  status: controller.getStatus(),
+  spawned
+}));
+`);
+
+  assert.equal(result.started.started, true);
+  assert.equal(result.started.job.target, "nas-ssh");
+  assert.equal(result.status.status, "success");
+  assert.equal(result.spawned[0].command, "ssh");
+  assert.deepEqual(result.spawned[0].args.slice(-2), [
+    "admin@192.168.31.50",
+    "cd /volume1/industry-radar && /bin/bash scripts/nas-daily-update.sh night"
+  ]);
+});
+
 test("web shell exposes a prominent hotspot refresh action", () => {
   const html = fs.readFileSync("src/web/index.html", "utf8");
   const appJs = fs.readFileSync("src/web/app.js", "utf8");
@@ -79,7 +199,7 @@ test("web shell exposes a prominent hotspot refresh action", () => {
   const serverTs = fs.readFileSync("src/server.ts", "utf8");
 
   assert.match(html, /id="hotspotRefreshBtn"/);
-  assert.match(html, /开始抓取热点/);
+  assert.match(html, /发送 NAS 抓取命令/);
   assert.match(html, /id="hotspotStatus"/);
   assert.match(css, /\.hotspot-refresh-button/);
   assert.match(css, /--hotspot/);

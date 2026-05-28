@@ -437,38 +437,38 @@ function renderHotspotRefreshStatus(job) {
   els.hotspotStatus.className = `hotspot-status is-${escapeStatusClass(status)}`;
 
   if (status === "requesting") {
-    setHotspotButtonLabel("正在启动抓取", "连接 NAS 任务管线");
-    els.hotspotStatus.textContent = "正在请求 NAS 开始抓取热点...";
+    setHotspotButtonLabel("正在发送命令", "连接 NAS 任务管线");
+    els.hotspotStatus.textContent = "正在向 NAS 发送抓取命令...";
     return;
   }
   if (status === "running") {
-    setHotspotButtonLabel("正在抓取热点", `${runTypeLabel(job.runType)} · 完成后 Bark 提醒`);
-    els.hotspotStatus.textContent = `任务运行中${job.startedAt ? ` · ${formatDateTime(job.startedAt)}` : ""}`;
+    setHotspotButtonLabel("NAS 正在抓取", `${runTypeLabel(job.runType)} · 完成后 Bark 提醒`);
+    els.hotspotStatus.textContent = `${targetLabel(job.target)}运行中${job.startedAt ? ` · ${formatDateTime(job.startedAt)}` : ""}`;
     return;
   }
   if (status === "success") {
-    setHotspotButtonLabel("再次抓取热点", "全网抓取 · 重算权重 · Bark 提醒");
+    setHotspotButtonLabel("再次发送 NAS 命令", "远程触发 · 重算权重 · Bark 提醒");
     els.hotspotStatus.textContent = `抓取完成，权重已重算${job.finishedAt ? ` · ${formatDateTime(job.finishedAt)}` : ""}`;
     return;
   }
   if (status === "failed") {
-    setHotspotButtonLabel("重新抓取热点", "上次任务失败");
+    setHotspotButtonLabel("重新发送 NAS 命令", "上次任务失败");
     els.hotspotStatus.textContent = `抓取失败：${job.error || "请查看 NAS 日志"}`;
     return;
   }
   if (status === "unavailable") {
-    setHotspotButtonLabel("开始抓取热点", "等待本地任务接口");
-    els.hotspotStatus.textContent = `本地任务接口不可用：${job.error || "未知错误"}`;
+    setHotspotButtonLabel("发送 NAS 抓取命令", "等待命令接口");
+    els.hotspotStatus.textContent = `命令接口不可用：${job.error || "未知错误"}`;
     return;
   }
   if (isStatic) {
-    setHotspotButtonLabel("回 NAS 抓取热点", "公开页只读");
-    els.hotspotStatus.textContent = "公开页只读：热点抓取需要 NAS 本地服务。";
+    setHotspotButtonLabel("打开内网服务发命令", "公开页只读");
+    els.hotspotStatus.textContent = "公开页只读：发送 NAS 命令需要内网 Web 服务。";
     return;
   }
 
-  setHotspotButtonLabel("开始抓取热点", "全网抓取 · 重算权重 · Bark 提醒");
-  els.hotspotStatus.textContent = "NAS 热点抓取待命";
+  setHotspotButtonLabel("发送 NAS 抓取命令", "远程触发 · 重算权重 · Bark 提醒");
+  els.hotspotStatus.textContent = "NAS 命令通道待命";
 }
 
 function setHotspotButtonLabel(title, subtitle) {
@@ -484,6 +484,10 @@ function runTypeLabel(type) {
     noon: "午报",
     night: "晚报"
   }[type] || "即时";
+}
+
+function targetLabel(target) {
+  return target === "nas-ssh" ? "NAS 命令" : "本机任务";
 }
 
 function escapeStatusClass(value) {
