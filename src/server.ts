@@ -4,6 +4,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import type { NextFunction, Request, Response } from "express";
 import { loadConfig } from "./config.js";
+import { createHotspotRefreshController, normalizeHotspotRunType } from "./hotspots/refresh.js";
 import { Store } from "./store/db.js";
 import type { FeedbackType, SearchFilters } from "./types.js";
 import type { EventRecord } from "./types.js";
@@ -11,6 +12,7 @@ import { startInternalScheduler } from "./scheduler.js";
 
 const config = loadConfig();
 const app = express();
+const hotspotRefresh = createHotspotRefreshController({ rootDir: config.rootDir });
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const webDir = path.resolve(__dirname, "web");
 const publicDataDir = path.resolve(process.env.PUBLIC_DATA_DIR || process.env.EXPORT_SITE_DIR || "public-data");
@@ -107,6 +109,20 @@ app.get("/api/facets", (_req, res) => {
 app.get("/api/knowledge/health", (_req, res) => {
   const knowledgeHealth = withStore((store) => store.getKnowledgeHealth(12));
   res.json({ knowledgeHealth });
+});
+
+app.get("/api/hotspots/refresh", (_req, res) => {
+  res.json({ job: hotspotRefresh.getStatus() });
+});
+
+app.post("/api/hotspots/refresh", (req, res) => {
+  const requestedRunType = req.body?.runType === undefined ? undefined : normalizeHotspotRunType(req.body.runType);
+  if (req.body?.runType !== undefined && !requestedRunType) {
+    res.status(400).json({ error: "invalid runType" });
+    return;
+  }
+  const result = hotspotRefresh.start({ runType: requestedRunType });
+  res.status(result.started ? 202 : 200).json(result);
 });
 
 app.get("/api/search", (req, res) => {

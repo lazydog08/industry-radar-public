@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>行业情报雷达</title>
-  <link rel="stylesheet" href="./styles.css?v=20260528-0008" />
+  <link rel="stylesheet" href="./styles.css?v=20260528-0100" />
 </head>
 <body>
   <main class="shell">
@@ -13,7 +13,14 @@
         <p class="eyebrow">RADAR DAILY</p>
         <h1>情报日报</h1>
       </div>
-      <div id="updatedAt" class="muted"></div>
+      <div class="topbar-actions">
+        <div id="updatedAt" class="muted"></div>
+        <button id="hotspotRefreshBtn" class="hotspot-refresh-button" type="button">
+          <span>开始抓取热点</span>
+          <small>全网抓取 · 重算权重 · Bark 提醒</small>
+        </button>
+        <div id="hotspotStatus" class="hotspot-status" role="status" aria-live="polite">NAS 热点抓取待命</div>
+      </div>
     </header>
 
     <section class="overview" aria-label="概览">
@@ -120,6 +127,6 @@
       </aside>
     </section>
   </main>
-  <script type="module" src="./app.js?v=20260528-0008"></script>
+  <script type="module" src="./app.js?v=20260528-0100"></script>
 </body>
 </html>

@@ -1,304 +1,64 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-27T23:35:26+08:00",
+  "generatedAt": "2026-05-28T12:10:09+08:00",
   "timezone": "Asia/Shanghai",
-  "total": 16,
+  "total": 6,
   "reports": [
     {
-      "id": "report_eff96450b68015f1b1c8",
+      "id": "report_d5223f210369b07a1e67",
       "report_type": "night",
-      "window_start": "2026-05-27T12:00:00+08:00",
-      "window_end": "2026-05-27T22:00:00+08:00",
-      "event_count": 44,
-      "created_at": "2026-05-27T23:35:25+08:00",
-      "html_url": "reports/2026-05-27-night.html",
-      "markdown_url": "reports/2026-05-27-night.md",
+      "window_start": "2026-05-25T12:00:00+08:00",
+      "window_end": "2026-05-25T22:00:00+08:00",
+      "event_count": 33,
+      "created_at": "2026-05-26T03:48:04+08:00",
+      "html_url": "reports/2026-05-25-night.html",
+      "markdown_url": "reports/2026-05-25-night.md",
       "files": {
         "html": {
-          "name": "2026-05-27-night.html",
-          "url": "reports/2026-05-27-night.html",
+          "name": "2026-05-25-night.html",
+          "url": "reports/2026-05-25-night.html",
           "copied": true,
           "available": true
         },
         "markdown": {
-          "name": "2026-05-27-night.md",
-          "url": "reports/2026-05-27-night.md",
+          "name": "2026-05-25-night.md",
+          "url": "reports/2026-05-25-night.md",
           "copied": true,
           "available": true
         }
       }
     },
     {
-      "id": "report_d3bf289e9ec3a0dadf06",
-      "report_type": "noon",
-      "window_start": "2026-05-27T10:00:00+08:00",
-      "window_end": "2026-05-27T12:00:00+08:00",
-      "event_count": 2,
-      "created_at": "2026-05-27T18:49:54+08:00",
-      "html_url": "reports/2026-05-27-noon.html",
-      "markdown_url": "reports/2026-05-27-noon.md",
+      "id": "report_bf5d1e282b4729a9ff57",
+      "report_type": "night",
+      "window_start": "2026-05-25T12:00:00+08:00",
+      "window_end": "2026-05-25T22:00:00+08:00",
+      "event_count": 30,
+      "created_at": "2026-05-26T03:42:48+08:00",
+      "html_url": "reports/2026-05-25-night.html",
+      "markdown_url": "reports/2026-05-25-night.md",
       "files": {
         "html": {
-          "name": "2026-05-27-noon.html",
-          "url": "reports/2026-05-27-noon.html",
+          "name": "2026-05-25-night.html",
+          "url": "reports/2026-05-25-night.html",
           "copied": true,
           "available": true
         },
         "markdown": {
-          "name": "2026-05-27-noon.md",
-          "url": "reports/2026-05-27-noon.md",
+          "name": "2026-05-25-night.md",
+          "url": "reports/2026-05-25-night.md",
           "copied": true,
           "available": true
         }
       }
     },
     {
-      "id": "report_92e50985e2808819807e",
-      "report_type": "noon",
-      "window_start": "2026-05-27T10:00:00+08:00",
-      "window_end": "2026-05-27T12:00:00+08:00",
-      "event_count": 9,
-      "created_at": "2026-05-27T16:51:54+08:00",
-      "html_url": "reports/2026-05-27-noon.html",
-      "markdown_url": "reports/2026-05-27-noon.md",
-      "files": {
-        "html": {
-          "name": "2026-05-27-noon.html",
-          "url": "reports/2026-05-27-noon.html",
-          "copied": true,
-          "available": true
-        },
-        "markdown": {
-          "name": "2026-05-27-noon.md",
-          "url": "reports/2026-05-27-noon.md",
-          "copied": true,
-          "available": true
-        }
-      }
-    },
-    {
-      "id": "report_415f9322e7359340ceca",
-      "report_type": "noon",
-      "window_start": "2026-05-27T10:00:00+08:00",
-      "window_end": "2026-05-27T12:00:00+08:00",
-      "event_count": 19,
-      "created_at": "2026-05-27T16:29:45+08:00",
-      "html_url": "reports/2026-05-27-noon.html",
-      "markdown_url": "reports/2026-05-27-noon.md",
-      "files": {
-        "html": {
-          "name": "2026-05-27-noon.html",
-          "url": "reports/2026-05-27-noon.html",
-          "copied": true,
-          "available": true
-        },
-        "markdown": {
-          "name": "2026-05-27-noon.md",
-          "url": "reports/2026-05-27-noon.md",
-          "copied": true,
-          "available": true
-        }
-      }
-    },
-    {
-      "id": "report_9a2f211432806ea4a65c",
-      "report_type": "noon",
-      "window_start": "2026-05-27T10:00:00+08:00",
-      "window_end": "2026-05-27T12:00:00+08:00",
-      "event_count": 8,
-      "created_at": "2026-05-27T16:26:10+08:00",
-      "html_url": "reports/2026-05-27-noon.html",
-      "markdown_url": "reports/2026-05-27-noon.md",
-      "files": {
-        "html": {
-          "name": "2026-05-27-noon.html",
-          "url": "reports/2026-05-27-noon.html",
-          "copied": true,
-          "available": true
-        },
-        "markdown": {
-          "name": "2026-05-27-noon.md",
-          "url": "reports/2026-05-27-noon.md",
-          "copied": true,
-          "available": true
-        }
-      }
-    },
-    {
-      "id": "report_483f57c7c3a4eb9f65e2",
-      "report_type": "noon",
-      "window_start": "2026-05-27T10:00:00+08:00",
-      "window_end": "2026-05-27T12:00:00+08:00",
-      "event_count": 5,
-      "created_at": "2026-05-27T16:20:05+08:00",
-      "html_url": "reports/2026-05-27-noon.html",
-      "markdown_url": "reports/2026-05-27-noon.md",
-      "files": {
-        "html": {
-          "name": "2026-05-27-noon.html",
-          "url": "reports/2026-05-27-noon.html",
-          "copied": true,
-          "available": true
-        },
-        "markdown": {
-          "name": "2026-05-27-noon.md",
-          "url": "reports/2026-05-27-noon.md",
-          "copied": true,
-          "available": true
-        }
-      }
-    },
-    {
-      "id": "report_5eb8a344a7b65760bebe",
-      "report_type": "noon",
-      "window_start": "2026-05-27T10:00:00+08:00",
-      "window_end": "2026-05-27T12:00:00+08:00",
-      "event_count": 17,
-      "created_at": "2026-05-27T16:15:59+08:00",
-      "html_url": "reports/2026-05-27-noon.html",
-      "markdown_url": "reports/2026-05-27-noon.md",
-      "files": {
-        "html": {
-          "name": "2026-05-27-noon.html",
-          "url": "reports/2026-05-27-noon.html",
-          "copied": true,
-          "available": true
-        },
-        "markdown": {
-          "name": "2026-05-27-noon.md",
-          "url": "reports/2026-05-27-noon.md",
-          "copied": true,
-          "available": true
-        }
-      }
-    },
-    {
-      "id": "report_f5addd3e9aa6414b3631",
-      "report_type": "noon",
-      "window_start": "2026-05-27T10:00:00+08:00",
-      "window_end": "2026-05-27T12:00:00+08:00",
-      "event_count": 7,
-      "created_at": "2026-05-27T16:04:47+08:00",
-      "html_url": "reports/2026-05-27-noon.html",
-      "markdown_url": "reports/2026-05-27-noon.md",
-      "files": {
-        "html": {
-          "name": "2026-05-27-noon.html",
-          "url": "reports/2026-05-27-noon.html",
-          "copied": true,
-          "available": true
-        },
-        "markdown": {
-          "name": "2026-05-27-noon.md",
-          "url": "reports/2026-05-27-noon.md",
-          "copied": true,
-          "available": true
-        }
-      }
-    },
-    {
-      "id": "report_eb0036a9b96a4ca95d71",
-      "report_type": "noon",
-      "window_start": "2026-05-27T10:00:00+08:00",
-      "window_end": "2026-05-27T12:00:00+08:00",
-      "event_count": 7,
-      "created_at": "2026-05-27T15:50:12+08:00",
-      "html_url": "reports/2026-05-27-noon.html",
-      "markdown_url": "reports/2026-05-27-noon.md",
-      "files": {
-        "html": {
-          "name": "2026-05-27-noon.html",
-          "url": "reports/2026-05-27-noon.html",
-          "copied": true,
-          "available": true
-        },
-        "markdown": {
-          "name": "2026-05-27-noon.md",
-          "url": "reports/2026-05-27-noon.md",
-          "copied": true,
-          "available": true
-        }
-      }
-    },
-    {
-      "id": "report_a8e959e9cfd907cd6a2e",
-      "report_type": "noon",
-      "window_start": "2026-05-27T10:00:00+08:00",
-      "window_end": "2026-05-27T12:00:00+08:00",
-      "event_count": 16,
-      "created_at": "2026-05-27T15:41:18+08:00",
-      "html_url": "reports/2026-05-27-noon.html",
-      "markdown_url": "reports/2026-05-27-noon.md",
-      "files": {
-        "html": {
-          "name": "2026-05-27-noon.html",
-          "url": "reports/2026-05-27-noon.html",
-          "copied": true,
-          "available": true
-        },
-        "markdown": {
-          "name": "2026-05-27-noon.md",
-          "url": "reports/2026-05-27-noon.md",
-          "copied": true,
-          "available": true
-        }
-      }
-    },
-    {
-      "id": "report_ee100b0b996d94eda3d1",
-      "report_type": "noon",
-      "window_start": "2026-05-27T10:00:00+08:00",
-      "window_end": "2026-05-27T12:00:00+08:00",
-      "event_count": 11,
-      "created_at": "2026-05-27T15:36:08+08:00",
-      "html_url": "reports/2026-05-27-noon.html",
-      "markdown_url": "reports/2026-05-27-noon.md",
-      "files": {
-        "html": {
-          "name": "2026-05-27-noon.html",
-          "url": "reports/2026-05-27-noon.html",
-          "copied": true,
-          "available": true
-        },
-        "markdown": {
-          "name": "2026-05-27-noon.md",
-          "url": "reports/2026-05-27-noon.md",
-          "copied": true,
-          "available": true
-        }
-      }
-    },
-    {
-      "id": "report_be694409b78e75183d17",
-      "report_type": "noon",
-      "window_start": "2026-05-27T10:00:00+08:00",
-      "window_end": "2026-05-27T12:00:00+08:00",
-      "event_count": 38,
-      "created_at": "2026-05-27T12:30:13+08:00",
-      "html_url": "reports/2026-05-27-noon.html",
-      "markdown_url": "reports/2026-05-27-noon.md",
-      "files": {
-        "html": {
-          "name": "2026-05-27-noon.html",
-          "url": "reports/2026-05-27-noon.html",
-          "copied": true,
-          "available": true
-        },
-        "markdown": {
-          "name": "2026-05-27-noon.md",
-          "url": "reports/2026-05-27-noon.md",
-          "copied": true,
-          "available": true
-        }
-      }
-    },
-    {
-      "id": "report_2e913050606bbaa8bac1",
+      "id": "report_56b0b62a5d1721ce0e66",
       "report_type": "night",
       "window_start": "2026-05-26T12:00:00+08:00",
       "window_end": "2026-05-26T22:00:00+08:00",
-      "event_count": 42,
-      "created_at": "2026-05-27T00:21:06+08:00",
+      "event_count": 5,
+      "created_at": "2026-05-26T03:41:55+08:00",
       "html_url": "reports/2026-05-26-night.html",
       "markdown_url": "reports/2026-05-26-night.md",
       "files": {
@@ -317,60 +77,60 @@
       }
     },
     {
-      "id": "report_5fc4eeb2d0c81d917d8a",
-      "report_type": "night",
-      "window_start": "2026-05-27T12:00:00+08:00",
-      "window_end": "2026-05-27T22:00:00+08:00",
-      "event_count": 0,
-      "created_at": "2026-05-27T00:20:37+08:00",
-      "html_url": "reports/2026-05-27-night.html",
-      "markdown_url": "reports/2026-05-27-night.md",
-      "files": {
-        "html": {
-          "name": "2026-05-27-night.html",
-          "url": "reports/2026-05-27-night.html",
-          "copied": true,
-          "available": true
-        },
-        "markdown": {
-          "name": "2026-05-27-night.md",
-          "url": "reports/2026-05-27-night.md",
-          "copied": true,
-          "available": true
-        }
-      }
-    },
-    {
-      "id": "report_dbbf7735a24a596810b1",
-      "report_type": "night",
-      "window_start": "2026-05-27T12:00:00+08:00",
-      "window_end": "2026-05-27T22:00:00+08:00",
-      "event_count": 0,
-      "created_at": "2026-05-27T00:00:49+08:00",
-      "html_url": "reports/2026-05-27-night.html",
-      "markdown_url": "reports/2026-05-27-night.md",
-      "files": {
-        "html": {
-          "name": "2026-05-27-night.html",
-          "url": "reports/2026-05-27-night.html",
-          "copied": true,
-          "available": true
-        },
-        "markdown": {
-          "name": "2026-05-27-night.md",
-          "url": "reports/2026-05-27-night.md",
-          "copied": true,
-          "available": true
-        }
-      }
-    },
-    {
-      "id": "report_56c51c2c8753aa719781",
+      "id": "report_4ffc7c5fc9fd7552880c",
       "report_type": "noon",
       "window_start": "2026-05-26T10:00:00+08:00",
       "window_end": "2026-05-26T12:00:00+08:00",
-      "event_count": 6,
-      "created_at": "2026-05-26T23:38:58+08:00",
+      "event_count": 4,
+      "created_at": "2026-05-26T03:41:52+08:00",
+      "html_url": "reports/2026-05-26-noon.html",
+      "markdown_url": "reports/2026-05-26-noon.md",
+      "files": {
+        "html": {
+          "name": "2026-05-26-noon.html",
+          "url": "reports/2026-05-26-noon.html",
+          "copied": true,
+          "available": true
+        },
+        "markdown": {
+          "name": "2026-05-26-noon.md",
+          "url": "reports/2026-05-26-noon.md",
+          "copied": true,
+          "available": true
+        }
+      }
+    },
+    {
+      "id": "report_d8061ec27674eb85876b",
+      "report_type": "night",
+      "window_start": "2026-05-26T12:00:00+08:00",
+      "window_end": "2026-05-26T22:00:00+08:00",
+      "event_count": 5,
+      "created_at": "2026-05-26T03:04:25+08:00",
+      "html_url": "reports/2026-05-26-night.html",
+      "markdown_url": "reports/2026-05-26-night.md",
+      "files": {
+        "html": {
+          "name": "2026-05-26-night.html",
+          "url": "reports/2026-05-26-night.html",
+          "copied": true,
+          "available": true
+        },
+        "markdown": {
+          "name": "2026-05-26-night.md",
+          "url": "reports/2026-05-26-night.md",
+          "copied": true,
+          "available": true
+        }
+      }
+    },
+    {
+      "id": "report_44af21c0a9f8c878dc27",
+      "report_type": "noon",
+      "window_start": "2026-05-26T10:00:00+08:00",
+      "window_end": "2026-05-26T12:00:00+08:00",
+      "event_count": 4,
+      "created_at": "2026-05-26T03:04:17+08:00",
       "html_url": "reports/2026-05-26-noon.html",
       "markdown_url": "reports/2026-05-26-noon.md",
       "files": {

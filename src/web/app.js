@@ -3,6 +3,7 @@ import { summarizeActiveFilters } from "./filter-summary.js";
 
 const SECTION_PREVIEW_LIMIT = 4;
 const REPORT_PREVIEW_LIMIT = 8;
+const HOTSPOT_POLL_INTERVAL_MS = 3000;
 const STATIC_FEEDBACK_STORAGE_KEY = "industry-radar.staticFeedback.v1";
 const STATIC_FEEDBACK_TYPES = ["favorite", "follow", "ignore"];
 
@@ -11,6 +12,7 @@ const state = {
   selectedId: "",
   detailRequestId: 0,
   dataMode: "unknown",
+  apiOverviewError: null,
   viewMode: "home",
   readOnly: false,
   expandedSections: new Set(),
@@ -24,6 +26,8 @@ const state = {
   staticNoticeShown: false,
   staticEventIndex: new Map(),
   staticFeedback: loadStaticFeedback(),
+  hotspotPollTimer: 0,
+  hotspotRefreshLastCompletedId: "",
   knowledgeHealth: null,
   facets: {
     sources: [],
@@ -37,6 +41,8 @@ const STATIC_OVERVIEW_CANDIDATES = ["./public-data/overview.json", "/public-data
 
 const els = {
   updatedAt: requireElement("updatedAt"),
+  hotspotRefreshBtn: requireElement("hotspotRefreshBtn"),
+  hotspotStatus: requireElement("hotspotStatus"),
   metricRecent: requireElement("metricRecent"),
   metricImportant: requireElement("metricImportant"),
   metricFollow: requireElement("metricFollow"),
@@ -128,34 +134,46 @@ async function bootstrap() {
     renderKnowledgeHealth(data.knowledgeHealth);
     renderReports(data.reports || []);
     renderHome(data.events || []);
+    syncHotspotRefreshStatus();
   } catch (error) {
     renderError(error);
+    syncHotspotRefreshStatus();
   }
 }
 
 async function loadOverview() {
-  const staticError = state.dataMode === "api" ? undefined : await tryLoadStaticOverview();
+  const apiOverview = await tryLoadApiOverview();
+  if (apiOverview) return apiOverview;
+
+  const staticError = await tryLoadStaticOverview();
   if (state.staticOverview) return state.staticOverview;
 
+  const apiError = state.apiOverviewError;
+  const message = [
+    "没有找到线上静态数据，也无法连接本地 API。",
+    "请确认 public-data/overview.json 已发布，或本地服务正在运行。",
+    staticError ? `静态数据：${staticError.message}` : "",
+    apiError ? `本地 API：${apiError.message}` : ""
+  ]
+    .filter(Boolean)
+    .join(" ");
+  throw new Error(message);
+}
+
+async function tryLoadApiOverview() {
   try {
     state.dataMode = "api";
     state.readOnly = false;
     const data = await fetchJson("/api/overview");
+    state.apiOverviewError = null;
     state.staticOverview = null;
     state.staticOverviewUrl = "";
     resetStaticAllEvents();
     state.staticEventIndex = new Map();
     return normalizeOverviewPayload(data);
   } catch (apiError) {
-    const message = [
-      "没有找到线上静态数据，也无法连接本地 API。",
-      "请确认 public-data/overview.json 已发布，或本地服务正在运行。",
-      staticError ? `静态数据：${staticError.message}` : "",
-      apiError ? `本地 API：${apiError.message}` : ""
-    ]
-      .filter(Boolean)
-      .join(" ");
-    throw new Error(message);
+    state.apiOverviewError = apiError;
+    return null;
   }
 }
 
@@ -321,6 +339,155 @@ function showStaticDataNotice(message) {
     const current = els.sourceStatus.textContent || "";
     els.sourceStatus.textContent = current ? `${current} · ${message}` : message;
   }
+}
+
+async function syncHotspotRefreshStatus() {
+  clearHotspotPollTimer();
+  if (state.readOnly) {
+    renderHotspotRefreshStatus({ status: "static" });
+    return;
+  }
+
+  try {
+    const data = await fetchJson("/api/hotspots/refresh");
+    renderHotspotRefreshStatus(data.job || { status: "idle" });
+    if (data.job?.status === "running") scheduleHotspotRefreshPoll();
+  } catch (error) {
+    renderHotspotRefreshStatus({ status: "unavailable", error: error.message });
+  }
+}
+
+async function startHotspotRefresh() {
+  if (state.readOnly) {
+    renderHotspotRefreshStatus({ status: "static" });
+    return;
+  }
+
+  clearHotspotPollTimer();
+  renderHotspotRefreshStatus({ status: "requesting" });
+  try {
+    const data = await fetchJson("/api/hotspots/refresh", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: "{}"
+    });
+    const job = data.job || { status: data.started ? "running" : "idle" };
+    renderHotspotRefreshStatus(job);
+    if (job.status === "running") scheduleHotspotRefreshPoll();
+    else if (job.status === "success") await refreshAfterHotspotJob(job);
+  } catch (error) {
+    renderHotspotRefreshStatus({ status: "failed", error: error.message });
+  }
+}
+
+function scheduleHotspotRefreshPoll(delay = HOTSPOT_POLL_INTERVAL_MS) {
+  clearHotspotPollTimer();
+  state.hotspotPollTimer = window.setTimeout(pollHotspotRefreshStatus, delay);
+}
+
+function clearHotspotPollTimer() {
+  if (!state.hotspotPollTimer) return;
+  window.clearTimeout(state.hotspotPollTimer);
+  state.hotspotPollTimer = 0;
+}
+
+async function pollHotspotRefreshStatus() {
+  if (state.readOnly) {
+    renderHotspotRefreshStatus({ status: "static" });
+    return;
+  }
+  try {
+    const data = await fetchJson("/api/hotspots/refresh", { cache: "no-store" });
+    const job = data.job || { status: "idle" };
+    renderHotspotRefreshStatus(job);
+    if (job.status === "running") {
+      scheduleHotspotRefreshPoll();
+      return;
+    }
+    if (job.status === "success") await refreshAfterHotspotJob(job);
+  } catch (error) {
+    renderHotspotRefreshStatus({ status: "unavailable", error: error.message });
+  }
+}
+
+async function refreshAfterHotspotJob(job) {
+  if (!job?.id || state.hotspotRefreshLastCompletedId === job.id) return;
+  state.hotspotRefreshLastCompletedId = job.id;
+  try {
+    const data = await loadOverview();
+    state.facets = data.facets || state.facets;
+    renderOverview(data);
+    renderFacetControls(state.facets);
+    renderKnowledgeHealth(data.knowledgeHealth);
+    renderReports(data.reports || []);
+    renderHome(data.events || []);
+  } catch (error) {
+    renderHotspotRefreshStatus({ status: "failed", error: `刷新页面数据失败：${error.message}` });
+  }
+}
+
+function renderHotspotRefreshStatus(job) {
+  const status = job?.status || "idle";
+  const isBusy = status === "running" || status === "requesting";
+  const isStatic = status === "static" || state.readOnly;
+  els.hotspotRefreshBtn.disabled = isBusy || isStatic;
+  els.hotspotRefreshBtn.classList.toggle("is-running", isBusy);
+  els.hotspotRefreshBtn.classList.toggle("is-static", isStatic);
+  els.hotspotRefreshBtn.classList.toggle("is-failed", status === "failed" || status === "unavailable");
+  els.hotspotStatus.className = `hotspot-status is-${escapeStatusClass(status)}`;
+
+  if (status === "requesting") {
+    setHotspotButtonLabel("正在启动抓取", "连接 NAS 任务管线");
+    els.hotspotStatus.textContent = "正在请求 NAS 开始抓取热点...";
+    return;
+  }
+  if (status === "running") {
+    setHotspotButtonLabel("正在抓取热点", `${runTypeLabel(job.runType)} · 完成后 Bark 提醒`);
+    els.hotspotStatus.textContent = `任务运行中${job.startedAt ? ` · ${formatDateTime(job.startedAt)}` : ""}`;
+    return;
+  }
+  if (status === "success") {
+    setHotspotButtonLabel("再次抓取热点", "全网抓取 · 重算权重 · Bark 提醒");
+    els.hotspotStatus.textContent = `抓取完成，权重已重算${job.finishedAt ? ` · ${formatDateTime(job.finishedAt)}` : ""}`;
+    return;
+  }
+  if (status === "failed") {
+    setHotspotButtonLabel("重新抓取热点", "上次任务失败");
+    els.hotspotStatus.textContent = `抓取失败：${job.error || "请查看 NAS 日志"}`;
+    return;
+  }
+  if (status === "unavailable") {
+    setHotspotButtonLabel("开始抓取热点", "等待本地任务接口");
+    els.hotspotStatus.textContent = `本地任务接口不可用：${job.error || "未知错误"}`;
+    return;
+  }
+  if (isStatic) {
+    setHotspotButtonLabel("回 NAS 抓取热点", "公开页只读");
+    els.hotspotStatus.textContent = "公开页只读：热点抓取需要 NAS 本地服务。";
+    return;
+  }
+
+  setHotspotButtonLabel("开始抓取热点", "全网抓取 · 重算权重 · Bark 提醒");
+  els.hotspotStatus.textContent = "NAS 热点抓取待命";
+}
+
+function setHotspotButtonLabel(title, subtitle) {
+  const titleEl = els.hotspotRefreshBtn.querySelector("span");
+  const subtitleEl = els.hotspotRefreshBtn.querySelector("small");
+  if (titleEl) titleEl.textContent = title;
+  if (subtitleEl) subtitleEl.textContent = subtitle;
+}
+
+function runTypeLabel(type) {
+  return {
+    morning: "早报",
+    noon: "午报",
+    night: "晚报"
+  }[type] || "即时";
+}
+
+function escapeStatusClass(value) {
+  return String(value || "idle").replace(/[^a-z0-9_-]/gi, "");
 }
 
 function enableRootScrollFallback() {
@@ -1479,6 +1646,7 @@ function safeUrl(value) {
 
 els.searchBtn.addEventListener("click", search);
 els.timelineBtn.addEventListener("click", loadTimeline);
+els.hotspotRefreshBtn.addEventListener("click", startHotspotRefresh);
 enableRootScrollFallback();
 
 for (const input of [els.query, els.entity, els.tag, els.timelineQuery]) {
