@@ -343,26 +343,20 @@ function showStaticDataNotice(message) {
 
 async function syncHotspotRefreshStatus() {
   clearHotspotPollTimer();
-  if (state.readOnly) {
-    renderHotspotRefreshStatus({ status: "static" });
-    return;
-  }
-
   try {
     const data = await fetchJson("/api/hotspots/refresh");
     renderHotspotRefreshStatus(data.job || { status: "idle" });
     if (data.job?.status === "running") scheduleHotspotRefreshPoll();
   } catch (error) {
+    if (state.readOnly) {
+      renderHotspotRefreshStatus({ status: "static" });
+      return;
+    }
     renderHotspotRefreshStatus({ status: "unavailable", error: error.message });
   }
 }
 
 async function startHotspotRefresh() {
-  if (state.readOnly) {
-    renderHotspotRefreshStatus({ status: "static" });
-    return;
-  }
-
   clearHotspotPollTimer();
   renderHotspotRefreshStatus({ status: "requesting" });
   try {
@@ -376,6 +370,10 @@ async function startHotspotRefresh() {
     if (job.status === "running") scheduleHotspotRefreshPoll();
     else if (job.status === "success") await refreshAfterHotspotJob(job);
   } catch (error) {
+    if (state.readOnly) {
+      renderHotspotRefreshStatus({ status: "static" });
+      return;
+    }
     renderHotspotRefreshStatus({ status: "failed", error: error.message });
   }
 }
@@ -392,10 +390,6 @@ function clearHotspotPollTimer() {
 }
 
 async function pollHotspotRefreshStatus() {
-  if (state.readOnly) {
-    renderHotspotRefreshStatus({ status: "static" });
-    return;
-  }
   try {
     const data = await fetchJson("/api/hotspots/refresh", { cache: "no-store" });
     const job = data.job || { status: "idle" };
@@ -406,6 +400,10 @@ async function pollHotspotRefreshStatus() {
     }
     if (job.status === "success") await refreshAfterHotspotJob(job);
   } catch (error) {
+    if (state.readOnly) {
+      renderHotspotRefreshStatus({ status: "static" });
+      return;
+    }
     renderHotspotRefreshStatus({ status: "unavailable", error: error.message });
   }
 }
@@ -429,7 +427,7 @@ async function refreshAfterHotspotJob(job) {
 function renderHotspotRefreshStatus(job) {
   const status = job?.status || "idle";
   const isBusy = status === "running" || status === "requesting";
-  const isStatic = status === "static" || state.readOnly;
+  const isStatic = status === "static";
   els.hotspotRefreshBtn.disabled = isBusy || isStatic;
   els.hotspotRefreshBtn.classList.toggle("is-running", isBusy);
   els.hotspotRefreshBtn.classList.toggle("is-static", isStatic);

@@ -218,3 +218,14 @@ test("web app prefers the local API before static data so NAS controls stay enab
   assert.match(appJs, /if \(apiOverview\) return apiOverview;/);
   assert.match(appJs, /const staticError = await tryLoadStaticOverview\(\);/);
 });
+
+test("web app keeps NAS command availability independent from static overview data", () => {
+  const appJs = fs.readFileSync("src/web/app.js", "utf8");
+
+  assert.doesNotMatch(appJs, /const isStatic = status === "static" \|\| state\.readOnly;/);
+  assert.match(appJs, /const isStatic = status === "static";/);
+  assert.doesNotMatch(appJs, /async function syncHotspotRefreshStatus\(\) \{\s*clearHotspotPollTimer\(\);\s*if \(state\.readOnly\) \{[\s\S]*?renderHotspotRefreshStatus\(\{ status: "static" \}\);[\s\S]*?return;[\s\S]*?\}\s*try \{/);
+  assert.doesNotMatch(appJs, /async function startHotspotRefresh\(\) \{\s*if \(state\.readOnly\) \{[\s\S]*?renderHotspotRefreshStatus\(\{ status: "static" \}\);[\s\S]*?return;[\s\S]*?\}/);
+  assert.doesNotMatch(appJs, /async function pollHotspotRefreshStatus\(\) \{\s*if \(state\.readOnly\) \{[\s\S]*?renderHotspotRefreshStatus\(\{ status: "static" \}\);[\s\S]*?return;[\s\S]*?\}/);
+  assert.match(appJs, /catch \(error\) \{\s*if \(state\.readOnly\) \{\s*renderHotspotRefreshStatus\(\{ status: "static" \}\);\s*return;\s*\}\s*renderHotspotRefreshStatus\(\{ status: "unavailable", error: error\.message \}\);/);
+});
