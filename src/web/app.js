@@ -43,6 +43,8 @@ const els = {
   updatedAt: requireElement("updatedAt"),
   hotspotRefreshBtn: requireElement("hotspotRefreshBtn"),
   hotspotStatus: requireElement("hotspotStatus"),
+  nasAutomationSummary: requireElement("nasAutomationSummary"),
+  nasAutomationStatus: requireElement("nasAutomationStatus"),
   metricRecent: requireElement("metricRecent"),
   metricImportant: requireElement("metricImportant"),
   metricFollow: requireElement("metricFollow"),
@@ -135,9 +137,11 @@ async function bootstrap() {
     renderReports(data.reports || []);
     renderHome(data.events || []);
     syncHotspotRefreshStatus();
+    syncNasAutomationStatus();
   } catch (error) {
     renderError(error);
     syncHotspotRefreshStatus();
+    syncNasAutomationStatus();
   }
 }
 
@@ -356,6 +360,30 @@ async function syncHotspotRefreshStatus() {
   }
 }
 
+async function syncNasAutomationStatus() {
+  if (state.readOnly && !isLocalOrigin()) {
+    renderNasAutomationStatus({
+      summary: {
+        level: "static",
+        message: "公开页只读：NAS 自动化状态需要打开内网 Web 服务查看。"
+      }
+    });
+    return;
+  }
+
+  try {
+    const data = await fetchJson("/api/nas/status", { cache: "no-store" });
+    renderNasAutomationStatus(data.status);
+  } catch (error) {
+    renderNasAutomationStatus({
+      summary: {
+        level: "error",
+        message: `NAS 自动化状态不可用：${error.message}`
+      }
+    });
+  }
+}
+
 async function startHotspotRefresh() {
   clearHotspotPollTimer();
   renderHotspotRefreshStatus({ status: "requesting" });
@@ -369,12 +397,14 @@ async function startHotspotRefresh() {
     renderHotspotRefreshStatus(job);
     if (job.status === "running") scheduleHotspotRefreshPoll();
     else if (job.status === "success") await refreshAfterHotspotJob(job);
+    syncNasAutomationStatus();
   } catch (error) {
     if (state.readOnly && !isLocalOrigin()) {
       renderHotspotRefreshStatus({ status: "static" });
       return;
     }
     renderHotspotRefreshStatus({ status: "failed", error: error.message });
+    syncNasAutomationStatus();
   }
 }
 
@@ -399,6 +429,7 @@ async function pollHotspotRefreshStatus() {
       return;
     }
     if (job.status === "success") await refreshAfterHotspotJob(job);
+    if (job.status !== "running") syncNasAutomationStatus();
   } catch (error) {
     if (state.readOnly && !isLocalOrigin()) {
       renderHotspotRefreshStatus({ status: "static" });
@@ -467,6 +498,45 @@ function renderHotspotRefreshStatus(job) {
 
   setHotspotButtonLabel("发送 NAS 抓取命令", "远程触发 · 重算权重 · Bark 提醒");
   els.hotspotStatus.textContent = "NAS 命令通道待命";
+}
+
+function renderNasAutomationStatus(status) {
+  const summary = status?.summary || {};
+  const level = summary.level || "warn";
+  els.nasAutomationSummary.textContent = summary.message || "NAS 自动化状态未知";
+  els.nasAutomationSummary.className = `muted nas-summary is-${escapeStatusClass(level)}`;
+
+  if (level === "static") {
+    els.nasAutomationStatus.innerHTML = `<div class="nas-status-card is-static">
+      <b>公开页只读</b>
+      <span>需要内网 Web 服务查看 cron、SSH 和发布目录状态。</span>
+    </div>`;
+    return;
+  }
+
+  const cards = [
+    nasStatusCard("NAS cron", status?.schedule?.message || "查看 NAS 本机任务计划和 logs/nas-daily。", status?.latestLog?.exists ? "ok" : "warn", status?.latestLog?.message),
+    nasStatusCard("SSH 触发", status?.ssh?.message || "未检查 SSH 触发。", status?.ssh?.ok === false ? "error" : status?.ssh?.ok === true ? "ok" : "warn", status?.ssh?.target),
+    nasStatusCard("发布目录", status?.publish?.message || "未检查发布目录。", status?.publish?.configured && status?.publish?.exists !== false ? "ok" : status?.publish?.required ? "error" : "warn", status?.publish?.pathLabel),
+    nasStatusCard("静态数据", status?.staticData?.message || "未检查静态数据。", status?.staticData?.exists ? "ok" : "error", nasStaticMeta(status?.staticData))
+  ];
+  els.nasAutomationStatus.innerHTML = cards.join("");
+}
+
+function nasStatusCard(title, message, level, meta) {
+  return `<article class="nas-status-card is-${escapeStatusClass(level)}">
+    <b>${escapeHtml(title)}</b>
+    <span>${escapeHtml(message)}</span>
+    ${meta ? `<small>${escapeHtml(meta)}</small>` : ""}
+  </article>`;
+}
+
+function nasStaticMeta(staticData) {
+  if (!staticData) return "";
+  const counts = [];
+  if (Number.isFinite(Number(staticData.events))) counts.push(`${staticData.events} 条事件`);
+  if (Number.isFinite(Number(staticData.reports))) counts.push(`${staticData.reports} 份报告`);
+  return counts.join(" · ") || staticData.pathLabel || "";
 }
 
 function setHotspotButtonLabel(title, subtitle) {

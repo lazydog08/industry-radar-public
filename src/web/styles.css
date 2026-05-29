@@ -214,6 +214,80 @@ a:hover {
   font-weight: 650;
 }
 
+.nas-automation-panel {
+  display: grid;
+  gap: 14px;
+  padding: 16px 0 4px;
+  border-top: 1px solid var(--ink);
+}
+
+.nas-automation-panel .section-head {
+  align-items: baseline;
+}
+
+.nas-summary.is-ok {
+  color: var(--green);
+  font-weight: 650;
+}
+
+.nas-summary.is-error {
+  color: var(--danger);
+  font-weight: 650;
+}
+
+.nas-automation-status {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.nas-status-card {
+  display: grid;
+  gap: 6px;
+  min-height: 112px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--accent);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.nas-status-card b {
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.25;
+}
+
+.nas-status-card span,
+.nas-status-card small {
+  min-width: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+
+.nas-status-card small {
+  align-self: end;
+  color: var(--ink);
+  font-weight: 650;
+}
+
+.nas-status-card.is-ok {
+  border-left-color: var(--green);
+}
+
+.nas-status-card.is-warn,
+.nas-status-card.is-static {
+  border-left-color: #d97706;
+  background: #fffbeb;
+}
+
+.nas-status-card.is-error {
+  border-left-color: var(--danger);
+  background: var(--hotspot-soft);
+}
+
 .eyebrow,
 .muted,
 .stamp {
@@ -1515,6 +1589,10 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .nas-automation-status {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .knowledge {
     position: static;
   }
@@ -1937,6 +2015,18 @@ h3 {
   .hotspot-status {
     max-width: none;
     text-align: left;
+  }
+
+  .nas-automation-panel {
+    padding-top: 12px;
+  }
+
+  .nas-automation-status {
+    grid-template-columns: 1fr;
+  }
+
+  .nas-status-card {
+    min-height: 92px;
   }
 
   .overview {
