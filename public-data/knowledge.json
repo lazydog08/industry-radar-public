@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-28T12:10:09+08:00",
+  "generatedAt": "2026-05-29T18:27:59+08:00",
   "timezone": "Asia/Shanghai",
   "total": 33,
   "metrics": {
@@ -54,18 +54,18 @@
           }
         ],
         "feedback": [],
-        "radar_score": 67,
+        "radar_score": 63,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 2.6,
+        "freshness_days": 3.9,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
         "score_parts": {
           "relevance": 19,
           "trend": 7,
-          "freshness": 15,
+          "freshness": 11,
           "change": 6,
           "credibility": 10,
           "scarcity": 8
@@ -115,18 +115,18 @@
           }
         ],
         "feedback": [],
-        "radar_score": 66,
+        "radar_score": 62,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 2.7,
+        "freshness_days": 3.9,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
         "score_parts": {
           "relevance": 21,
           "trend": 8,
-          "freshness": 15,
+          "freshness": 11,
           "change": 5,
           "credibility": 10,
           "scarcity": 7
@@ -173,18 +173,18 @@
           }
         ],
         "feedback": [],
-        "radar_score": 65,
+        "radar_score": 61,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 2.6,
+        "freshness_days": 3.9,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
         "score_parts": {
           "relevance": 18,
           "trend": 8,
-          "freshness": 15,
+          "freshness": 11,
           "change": 0,
           "credibility": 10,
           "scarcity": 7
@@ -226,321 +226,19 @@
           }
         ],
         "feedback": [],
-        "radar_score": 64,
-        "radar_level": "B",
-        "radar_section": "developing",
-        "video_potential": 1,
-        "confidence": "low",
-        "freshness_label": "recent",
-        "freshness_days": 2.7,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
-        "score_parts": {
-          "relevance": 19,
-          "trend": 7,
-          "freshness": 15,
-          "change": 6,
-          "credibility": 10,
-          "scarcity": 7
-        },
-        "caps": []
-      },
-      {
-        "id": "evt_3e9e02b1100d2c80431c",
-        "title": "深光影像 AF 35mm F2.2 全画幅相机镜头银色版 L 卡口开售，739 元起",
-        "summary": "数码行业方向出现新动态：深光影像 AF 35mm F2.2 全画幅相机镜头银色版 L 卡口开售，739 元起",
-        "what_happened": "公开摘要提到：IT之家 5 月 25 日消息，深光影像 AF 35mm F2.2 全画幅相机镜头银色版 L 卡口今晚 20:00 开售， 售价 739 元起 ： 739 元（不含遮光罩） 78… 来源为 ithome，涉及 相关主体。",
-        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。",
-        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 78,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-25T19:58:13+08:00",
-        "last_seen_at": "2026-05-26T03:47:53+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-26T03:42:48+08:00",
-        "updated_at": "2026-05-26T03:48:04+08:00",
-        "tags": [
-          "发布会",
-          "影像",
-          "数码"
-        ],
-        "entities": [],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/021.htm",
-            "title": "深光影像 AF 35mm F2.2 全画幅相机镜头银色版 L 卡口开售，739 元起",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 63,
-        "radar_level": "B",
-        "radar_section": "developing",
-        "video_potential": 1,
-        "confidence": "low",
-        "freshness_label": "recent",
-        "freshness_days": 2.7,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
-        "score_parts": {
-          "relevance": 19,
-          "trend": 7,
-          "freshness": 15,
-          "change": 5,
-          "credibility": 10,
-          "scarcity": 7
-        },
-        "caps": []
-      },
-      {
-        "id": "evt_a81e1d8744b667505b7c",
-        "title": "华硕 ROG 魔盒 Pro Max 电竞路由器开售：BE12000、双万兆，最低到手 3199 元",
-        "summary": "数码行业方向出现新动态：华硕 ROG 魔盒 Pro Max 电竞路由器开售：BE12000、双万兆，最低到手 3199 元",
-        "what_happened": "公开摘要提到：IT之家 5 月 25 日消息，华硕 ROG 魔盒 Pro Max 游戏电竞路由器今晚 20:00 正式开售， 到手价 4055 元 ， P LUS 会员补贴到手价 3199 元… 来源为 ithome，涉及 相关主体。",
-        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。",
-        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 71,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-25T20:06:46+08:00",
-        "last_seen_at": "2026-05-26T03:47:53+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-26T03:42:48+08:00",
-        "updated_at": "2026-05-26T03:48:04+08:00",
-        "tags": [
-          "发布会",
-          "数码"
-        ],
-        "entities": [],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/025.htm",
-            "title": "华硕 ROG 魔盒 Pro Max 电竞路由器开售：BE12000、双万兆，最低到手 3199 元",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 62,
-        "radar_level": "B",
-        "radar_section": "developing",
-        "video_potential": 1,
-        "confidence": "low",
-        "freshness_label": "recent",
-        "freshness_days": 2.7,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
-        "score_parts": {
-          "relevance": 17,
-          "trend": 7,
-          "freshness": 15,
-          "change": 6,
-          "credibility": 10,
-          "scarcity": 7
-        },
-        "caps": []
-      },
-      {
-        "id": "evt_77b361e88a178f4ab37a",
-        "title": "松下 LUMIX L10 固定镜头相机国行首销，8998 元起",
-        "summary": "数码行业方向出现新动态：松下 LUMIX L10 固定镜头相机国行首销，8998 元起",
-        "what_happened": "公开摘要提到：IT之家 5 月 25 日消息，松下 LUMIX L10 相机国行今晚 20:00 开售，经典版定价 10998 元， 首发优惠 8998 元 。 京东 松下 L10 M43 传… 来源为 ithome，涉及 相关主体。",
-        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。",
-        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 73,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-25T19:20:00+08:00",
-        "last_seen_at": "2026-05-26T03:47:53+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-26T03:42:48+08:00",
-        "updated_at": "2026-05-26T03:48:04+08:00",
-        "tags": [
-          "发布会",
-          "影像",
-          "数码"
-        ],
-        "entities": [],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/010.htm",
-            "title": "松下 LUMIX L10 固定镜头相机国行首销，8998 元起",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 62,
-        "radar_level": "B",
-        "radar_section": "developing",
-        "video_potential": 1,
-        "confidence": "low",
-        "freshness_label": "recent",
-        "freshness_days": 2.7,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
-        "score_parts": {
-          "relevance": 17,
-          "trend": 8,
-          "freshness": 15,
-          "change": 5,
-          "credibility": 10,
-          "scarcity": 7
-        },
-        "caps": []
-      },
-      {
-        "id": "evt_7407acc9ea436d4af9bd",
-        "title": "上海出台 AI 微短剧新政：支持企业租用智能算力，对优秀剧本给予奖励",
-        "summary": "自媒体/平台生态方向出现新动态：上海出台 AI 微短剧新政：支持企业租用智能算力，对优秀剧本给予奖励",
-        "what_happened": "公开摘要提到：IT之家 5 月 25 日消息，上海市文旅局今日发文称，为深入实施“人工智能 +”行动，加快推进人工智能技术赋能微短剧产业高质量发展，市文化旅游局会同相关部门研究制定《上海市加快… 来源为 ithome，涉及 相关主体。",
-        "why_it_matters": "创作者生态变化会影响内容生产、分发和变现，需要转化成可执行的方法论。",
-        "creator_impact": "可以转化为创作者避坑、平台规则解读、流量变化观察和内容策略调整。",
-        "content_angle": "争议拆解：上海出台 AI 微短剧新政：支持企业租用智能算力，对优秀剧本给予奖励，普通用户到底该怎么看？",
-        "cover_angle": "这条消息别只看标题：上海出台 AI 微短剧新政：支持企业租用智能算…",
-        "category": "media",
-        "importance_score": 89,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-25T17:43:44+08:00",
-        "last_seen_at": "2026-05-26T03:47:53+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-26T03:42:48+08:00",
-        "updated_at": "2026-05-26T03:48:04+08:00",
-        "tags": [
-          "争议",
-          "自媒体"
-        ],
-        "entities": [],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/954/989.htm",
-            "title": "上海出台 AI 微短剧新政：支持企业租用智能算力，对优秀剧本给予奖励",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 62,
-        "radar_level": "B",
-        "radar_section": "developing",
-        "video_potential": 1,
-        "confidence": "low",
-        "freshness_label": "recent",
-        "freshness_days": 2.8,
-        "push_reason": "适合进入观察池",
-        "score_parts": {
-          "relevance": 16,
-          "trend": 7,
-          "freshness": 15,
-          "change": 4,
-          "credibility": 10,
-          "scarcity": 8
-        },
-        "caps": []
-      },
-      {
-        "id": "evt_b0d047747eeeaae9b491",
-        "title": "Anthropic 联合创始人奥拉：人工智能的发展不能仅由科技公司主导",
-        "summary": "数码行业方向出现新动态：Anthropic 联合创始人奥拉：人工智能的发展不能仅由科技公司主导",
-        "what_happened": "公开摘要提到：IT之家 5 月 25 日消息，Anthropic 联合创始人克里斯・奥拉（Chris Olah）于当地时间周一表示，人工智能的发展不能完全交由科技公司，他呼吁宗教领袖、政府和民… 来源为 ithome，涉及 相关主体。",
-        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。",
-        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 66,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-25T20:34:37+08:00",
-        "last_seen_at": "2026-05-26T03:47:53+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-26T03:42:48+08:00",
-        "updated_at": "2026-05-26T03:48:04+08:00",
-        "tags": [
-          "发布会",
-          "数码"
-        ],
-        "entities": [],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/033.htm",
-            "title": "Anthropic 联合创始人奥拉：人工智能的发展不能仅由科技公司主导",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
         "radar_score": 60,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 2.6,
+        "freshness_days": 3.9,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
         "score_parts": {
-          "relevance": 17,
+          "relevance": 19,
           "trend": 7,
-          "freshness": 15,
-          "change": 4,
-          "credibility": 10,
-          "scarcity": 7
-        },
-        "caps": []
-      },
-      {
-        "id": "evt_32878da06a6c392b8764",
-        "title": "中国前首富钟睒睒杀入固态电池赛道，养生堂 5 亿元战略入股智邦锂电",
-        "summary": "数码行业方向出现新动态：中国前首富钟睒睒杀入固态电池赛道，养生堂 5 亿元战略入股智邦锂电",
-        "what_happened": "公开摘要提到：IT之家 5 月 25 日消息，近日，农夫山泉创始人、前中国首富钟睒睒通过旗下养生堂有限公司，斥资约 5 亿元战略投资固态电池材料企业浙江智邦锂电新材料有限公司（以下简称“智邦锂… 来源为 ithome，涉及 相关主体。",
-        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。",
-        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 66,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-25T19:41:42+08:00",
-        "last_seen_at": "2026-05-26T03:47:53+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-26T03:42:48+08:00",
-        "updated_at": "2026-05-26T03:48:04+08:00",
-        "tags": [
-          "发布会",
-          "数码"
-        ],
-        "entities": [],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/955/017.htm",
-            "title": "中国前首富钟睒睒杀入固态电池赛道，养生堂 5 亿元战略入股智邦锂电",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 60,
-        "radar_level": "B",
-        "radar_section": "developing",
-        "video_potential": 1,
-        "confidence": "low",
-        "freshness_label": "recent",
-        "freshness_days": 2.7,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
-        "score_parts": {
-          "relevance": 17,
-          "trend": 7,
-          "freshness": 15,
-          "change": 4,
+          "freshness": 11,
+          "change": 6,
           "credibility": 10,
           "scarcity": 7
         },
@@ -595,12 +293,12 @@
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 1.8,
+        "freshness_days": 3,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
         "score_parts": {
           "relevance": 21,
           "trend": 14,
-          "freshness": 15,
+          "freshness": 11,
           "change": 6,
           "credibility": 6,
           "scarcity": 8
@@ -608,6 +306,308 @@
         "caps": [
           "单一弱来源封顶"
         ]
+      },
+      {
+        "id": "evt_3e9e02b1100d2c80431c",
+        "title": "深光影像 AF 35mm F2.2 全画幅相机镜头银色版 L 卡口开售，739 元起",
+        "summary": "数码行业方向出现新动态：深光影像 AF 35mm F2.2 全画幅相机镜头银色版 L 卡口开售，739 元起",
+        "what_happened": "公开摘要提到：IT之家 5 月 25 日消息，深光影像 AF 35mm F2.2 全画幅相机镜头银色版 L 卡口今晚 20:00 开售， 售价 739 元起 ： 739 元（不含遮光罩） 78… 来源为 ithome，涉及 相关主体。",
+        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 78,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-25T19:58:13+08:00",
+        "last_seen_at": "2026-05-26T03:47:53+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-26T03:42:48+08:00",
+        "updated_at": "2026-05-26T03:48:04+08:00",
+        "tags": [
+          "发布会",
+          "影像",
+          "数码"
+        ],
+        "entities": [],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/955/021.htm",
+            "title": "深光影像 AF 35mm F2.2 全画幅相机镜头银色版 L 卡口开售，739 元起",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 59,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 1,
+        "confidence": "low",
+        "freshness_label": "recent",
+        "freshness_days": 3.9,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+        "score_parts": {
+          "relevance": 19,
+          "trend": 7,
+          "freshness": 11,
+          "change": 5,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_a81e1d8744b667505b7c",
+        "title": "华硕 ROG 魔盒 Pro Max 电竞路由器开售：BE12000、双万兆，最低到手 3199 元",
+        "summary": "数码行业方向出现新动态：华硕 ROG 魔盒 Pro Max 电竞路由器开售：BE12000、双万兆，最低到手 3199 元",
+        "what_happened": "公开摘要提到：IT之家 5 月 25 日消息，华硕 ROG 魔盒 Pro Max 游戏电竞路由器今晚 20:00 正式开售， 到手价 4055 元 ， P LUS 会员补贴到手价 3199 元… 来源为 ithome，涉及 相关主体。",
+        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 71,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-25T20:06:46+08:00",
+        "last_seen_at": "2026-05-26T03:47:53+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-26T03:42:48+08:00",
+        "updated_at": "2026-05-26T03:48:04+08:00",
+        "tags": [
+          "发布会",
+          "数码"
+        ],
+        "entities": [],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/955/025.htm",
+            "title": "华硕 ROG 魔盒 Pro Max 电竞路由器开售：BE12000、双万兆，最低到手 3199 元",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 58,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 1,
+        "confidence": "low",
+        "freshness_label": "recent",
+        "freshness_days": 3.9,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+        "score_parts": {
+          "relevance": 17,
+          "trend": 7,
+          "freshness": 11,
+          "change": 6,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_77b361e88a178f4ab37a",
+        "title": "松下 LUMIX L10 固定镜头相机国行首销，8998 元起",
+        "summary": "数码行业方向出现新动态：松下 LUMIX L10 固定镜头相机国行首销，8998 元起",
+        "what_happened": "公开摘要提到：IT之家 5 月 25 日消息，松下 LUMIX L10 相机国行今晚 20:00 开售，经典版定价 10998 元， 首发优惠 8998 元 。 京东 松下 L10 M43 传… 来源为 ithome，涉及 相关主体。",
+        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 73,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-25T19:20:00+08:00",
+        "last_seen_at": "2026-05-26T03:47:53+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-26T03:42:48+08:00",
+        "updated_at": "2026-05-26T03:48:04+08:00",
+        "tags": [
+          "发布会",
+          "影像",
+          "数码"
+        ],
+        "entities": [],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/955/010.htm",
+            "title": "松下 LUMIX L10 固定镜头相机国行首销，8998 元起",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 58,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 1,
+        "confidence": "low",
+        "freshness_label": "recent",
+        "freshness_days": 4,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+        "score_parts": {
+          "relevance": 17,
+          "trend": 8,
+          "freshness": 11,
+          "change": 5,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_7407acc9ea436d4af9bd",
+        "title": "上海出台 AI 微短剧新政：支持企业租用智能算力，对优秀剧本给予奖励",
+        "summary": "自媒体/平台生态方向出现新动态：上海出台 AI 微短剧新政：支持企业租用智能算力，对优秀剧本给予奖励",
+        "what_happened": "公开摘要提到：IT之家 5 月 25 日消息，上海市文旅局今日发文称，为深入实施“人工智能 +”行动，加快推进人工智能技术赋能微短剧产业高质量发展，市文化旅游局会同相关部门研究制定《上海市加快… 来源为 ithome，涉及 相关主体。",
+        "why_it_matters": "创作者生态变化会影响内容生产、分发和变现，需要转化成可执行的方法论。",
+        "creator_impact": "可以转化为创作者避坑、平台规则解读、流量变化观察和内容策略调整。",
+        "content_angle": "争议拆解：上海出台 AI 微短剧新政：支持企业租用智能算力，对优秀剧本给予奖励，普通用户到底该怎么看？",
+        "cover_angle": "这条消息别只看标题：上海出台 AI 微短剧新政：支持企业租用智能算…",
+        "category": "media",
+        "importance_score": 89,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-25T17:43:44+08:00",
+        "last_seen_at": "2026-05-26T03:47:53+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-26T03:42:48+08:00",
+        "updated_at": "2026-05-26T03:48:04+08:00",
+        "tags": [
+          "争议",
+          "自媒体"
+        ],
+        "entities": [],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/954/989.htm",
+            "title": "上海出台 AI 微短剧新政：支持企业租用智能算力，对优秀剧本给予奖励",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 58,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 1,
+        "confidence": "low",
+        "freshness_label": "recent",
+        "freshness_days": 4,
+        "push_reason": "适合进入观察池",
+        "score_parts": {
+          "relevance": 16,
+          "trend": 7,
+          "freshness": 11,
+          "change": 4,
+          "credibility": 10,
+          "scarcity": 8
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_b0d047747eeeaae9b491",
+        "title": "Anthropic 联合创始人奥拉：人工智能的发展不能仅由科技公司主导",
+        "summary": "数码行业方向出现新动态：Anthropic 联合创始人奥拉：人工智能的发展不能仅由科技公司主导",
+        "what_happened": "公开摘要提到：IT之家 5 月 25 日消息，Anthropic 联合创始人克里斯・奥拉（Chris Olah）于当地时间周一表示，人工智能的发展不能完全交由科技公司，他呼吁宗教领袖、政府和民… 来源为 ithome，涉及 相关主体。",
+        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 66,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-25T20:34:37+08:00",
+        "last_seen_at": "2026-05-26T03:47:53+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-26T03:42:48+08:00",
+        "updated_at": "2026-05-26T03:48:04+08:00",
+        "tags": [
+          "发布会",
+          "数码"
+        ],
+        "entities": [],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/955/033.htm",
+            "title": "Anthropic 联合创始人奥拉：人工智能的发展不能仅由科技公司主导",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 56,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 1,
+        "confidence": "low",
+        "freshness_label": "recent",
+        "freshness_days": 3.9,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+        "score_parts": {
+          "relevance": 17,
+          "trend": 7,
+          "freshness": 11,
+          "change": 4,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_32878da06a6c392b8764",
+        "title": "中国前首富钟睒睒杀入固态电池赛道，养生堂 5 亿元战略入股智邦锂电",
+        "summary": "数码行业方向出现新动态：中国前首富钟睒睒杀入固态电池赛道，养生堂 5 亿元战略入股智邦锂电",
+        "what_happened": "公开摘要提到：IT之家 5 月 25 日消息，近日，农夫山泉创始人、前中国首富钟睒睒通过旗下养生堂有限公司，斥资约 5 亿元战略投资固态电池材料企业浙江智邦锂电新材料有限公司（以下简称“智邦锂… 来源为 ithome，涉及 相关主体。",
+        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 66,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-25T19:41:42+08:00",
+        "last_seen_at": "2026-05-26T03:47:53+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-26T03:42:48+08:00",
+        "updated_at": "2026-05-26T03:48:04+08:00",
+        "tags": [
+          "发布会",
+          "数码"
+        ],
+        "entities": [],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/955/017.htm",
+            "title": "中国前首富钟睒睒杀入固态电池赛道，养生堂 5 亿元战略入股智邦锂电",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 56,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 1,
+        "confidence": "low",
+        "freshness_label": "recent",
+        "freshness_days": 3.9,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+        "score_parts": {
+          "relevance": 17,
+          "trend": 7,
+          "freshness": 11,
+          "change": 4,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
       },
       {
         "id": "evt_19e833e939ec6ac0ca46",
@@ -641,18 +641,18 @@
           }
         ],
         "feedback": [],
-        "radar_score": 53,
+        "radar_score": 49,
         "radar_level": "C",
         "radar_section": "background",
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 2.6,
+        "freshness_days": 3.9,
         "push_reason": "仅适合沉淀为背景知识",
         "score_parts": {
           "relevance": 16,
           "trend": 3,
-          "freshness": 15,
+          "freshness": 11,
           "change": 2,
           "credibility": 10,
           "scarcity": 7
@@ -695,18 +695,18 @@
           }
         ],
         "feedback": [],
-        "radar_score": 67,
+        "radar_score": 63,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 2.6,
+        "freshness_days": 3.9,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
         "score_parts": {
           "relevance": 19,
           "trend": 7,
-          "freshness": 15,
+          "freshness": 11,
           "change": 6,
           "credibility": 10,
           "scarcity": 8
@@ -756,18 +756,18 @@
           }
         ],
         "feedback": [],
-        "radar_score": 66,
+        "radar_score": 62,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 2.7,
+        "freshness_days": 3.9,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
         "score_parts": {
           "relevance": 21,
           "trend": 8,
-          "freshness": 15,
+          "freshness": 11,
           "change": 5,
           "credibility": 10,
           "scarcity": 7
@@ -814,18 +814,18 @@
           }
         ],
         "feedback": [],
-        "radar_score": 65,
+        "radar_score": 61,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 2.6,
+        "freshness_days": 3.9,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
         "score_parts": {
           "relevance": 18,
           "trend": 8,
-          "freshness": 15,
+          "freshness": 11,
           "change": 0,
           "credibility": 10,
           "scarcity": 7
@@ -867,23 +867,86 @@
           }
         ],
         "feedback": [],
-        "radar_score": 64,
+        "radar_score": 60,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 2.7,
+        "freshness_days": 3.9,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
         "score_parts": {
           "relevance": 19,
           "trend": 7,
-          "freshness": 15,
+          "freshness": 11,
           "change": 6,
           "credibility": 10,
           "scarcity": 7
         },
         "caps": []
+      },
+      {
+        "id": "evt_6f2c3fba0ba17c7991f0",
+        "title": "B站创作激励规则调整登上热议，创作者关注收益和流量稳定性",
+        "summary": "自媒体/平台生态方向出现新动态：B站创作激励规则调整登上热议，创作者关注收益和流量稳定性",
+        "what_happened": "公开摘要提到：公开讨论围绕平台规则、收益变化、内容垂类分发和中腰部创作者生存空间。 来源为 weibo，涉及 B站。",
+        "why_it_matters": "平台流量、创作激励或推荐机制变化会直接影响选题节奏、标题策略和内容分发效率。",
+        "creator_impact": "可以转化为创作者避坑、平台规则解读、流量变化观察和内容策略调整。",
+        "content_angle": "争议拆解：B站创作激励规则调整登上热议，创作者关注收益和流量稳定性，普通用户到底该怎么看？",
+        "cover_angle": "流量规则变了？创作者先看这 3 点",
+        "category": "media",
+        "importance_score": 89,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-26T18:05:00+08:00",
+        "last_seen_at": "2026-05-26T18:05:00+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-26T03:04:25+08:00",
+        "updated_at": "2026-05-26T03:41:55+08:00",
+        "tags": [
+          "争议",
+          "平台规则",
+          "自媒体"
+        ],
+        "entities": [
+          {
+            "name": "B站",
+            "type": "platform",
+            "aliases": [
+              "哔哩哔哩",
+              "Bilibili",
+              "UP主"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "source": "weibo",
+            "url": "https://s.weibo.com/weibo?q=B%E7%AB%99%E5%88%9B%E4%BD%9C%E6%BF%80%E5%8A%B1",
+            "title": "B站创作激励规则调整登上热议，创作者关注收益和流量稳定性",
+            "author": "微博公开搜索样例"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 60,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 1,
+        "confidence": "low",
+        "freshness_label": "recent",
+        "freshness_days": 3,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+        "score_parts": {
+          "relevance": 21,
+          "trend": 14,
+          "freshness": 11,
+          "change": 6,
+          "credibility": 6,
+          "scarcity": 8
+        },
+        "caps": [
+          "单一弱来源封顶"
+        ]
       },
       {
         "id": "evt_09ccc3052a226a00a314",
@@ -946,18 +1009,18 @@
           }
         ],
         "feedback": [],
-        "radar_score": 63,
+        "radar_score": 59,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 2.7,
+        "freshness_days": 3.9,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
         "score_parts": {
           "relevance": 20,
           "trend": 7,
-          "freshness": 15,
+          "freshness": 11,
           "change": 4,
           "credibility": 10,
           "scarcity": 7
@@ -997,18 +1060,18 @@
           }
         ],
         "feedback": [],
-        "radar_score": 63,
+        "radar_score": 59,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 2.7,
+        "freshness_days": 3.9,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
         "score_parts": {
           "relevance": 19,
           "trend": 7,
-          "freshness": 15,
+          "freshness": 11,
           "change": 5,
           "credibility": 10,
           "scarcity": 7
@@ -1047,18 +1110,18 @@
           }
         ],
         "feedback": [],
-        "radar_score": 62,
+        "radar_score": 58,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 2.7,
+        "freshness_days": 3.9,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
         "score_parts": {
           "relevance": 17,
           "trend": 7,
-          "freshness": 15,
+          "freshness": 11,
           "change": 6,
           "credibility": 10,
           "scarcity": 7
@@ -1098,18 +1161,18 @@
           }
         ],
         "feedback": [],
-        "radar_score": 62,
+        "radar_score": 58,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 2.7,
+        "freshness_days": 4,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
         "score_parts": {
           "relevance": 17,
           "trend": 8,
-          "freshness": 15,
+          "freshness": 11,
           "change": 5,
           "credibility": 10,
           "scarcity": 7
@@ -1148,18 +1211,18 @@
           }
         ],
         "feedback": [],
-        "radar_score": 62,
+        "radar_score": 58,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 2.8,
+        "freshness_days": 4,
         "push_reason": "适合进入观察池",
         "score_parts": {
           "relevance": 16,
           "trend": 7,
-          "freshness": 15,
+          "freshness": 11,
           "change": 4,
           "credibility": 10,
           "scarcity": 8
@@ -1198,18 +1261,18 @@
           }
         ],
         "feedback": [],
-        "radar_score": 60,
+        "radar_score": 56,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 2.6,
+        "freshness_days": 3.9,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
         "score_parts": {
           "relevance": 17,
           "trend": 7,
-          "freshness": 15,
+          "freshness": 11,
           "change": 4,
           "credibility": 10,
           "scarcity": 7
@@ -1248,86 +1311,23 @@
           }
         ],
         "feedback": [],
-        "radar_score": 60,
+        "radar_score": 56,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 2.7,
+        "freshness_days": 3.9,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
         "score_parts": {
           "relevance": 17,
           "trend": 7,
-          "freshness": 15,
+          "freshness": 11,
           "change": 4,
           "credibility": 10,
           "scarcity": 7
         },
         "caps": []
-      },
-      {
-        "id": "evt_6f2c3fba0ba17c7991f0",
-        "title": "B站创作激励规则调整登上热议，创作者关注收益和流量稳定性",
-        "summary": "自媒体/平台生态方向出现新动态：B站创作激励规则调整登上热议，创作者关注收益和流量稳定性",
-        "what_happened": "公开摘要提到：公开讨论围绕平台规则、收益变化、内容垂类分发和中腰部创作者生存空间。 来源为 weibo，涉及 B站。",
-        "why_it_matters": "平台流量、创作激励或推荐机制变化会直接影响选题节奏、标题策略和内容分发效率。",
-        "creator_impact": "可以转化为创作者避坑、平台规则解读、流量变化观察和内容策略调整。",
-        "content_angle": "争议拆解：B站创作激励规则调整登上热议，创作者关注收益和流量稳定性，普通用户到底该怎么看？",
-        "cover_angle": "流量规则变了？创作者先看这 3 点",
-        "category": "media",
-        "importance_score": 89,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-26T18:05:00+08:00",
-        "last_seen_at": "2026-05-26T18:05:00+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-26T03:04:25+08:00",
-        "updated_at": "2026-05-26T03:41:55+08:00",
-        "tags": [
-          "争议",
-          "平台规则",
-          "自媒体"
-        ],
-        "entities": [
-          {
-            "name": "B站",
-            "type": "platform",
-            "aliases": [
-              "哔哩哔哩",
-              "Bilibili",
-              "UP主"
-            ]
-          }
-        ],
-        "sources": [
-          {
-            "source": "weibo",
-            "url": "https://s.weibo.com/weibo?q=B%E7%AB%99%E5%88%9B%E4%BD%9C%E6%BF%80%E5%8A%B1",
-            "title": "B站创作激励规则调整登上热议，创作者关注收益和流量稳定性",
-            "author": "微博公开搜索样例"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 60,
-        "radar_level": "B",
-        "radar_section": "developing",
-        "video_potential": 1,
-        "confidence": "low",
-        "freshness_label": "recent",
-        "freshness_days": 1.8,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
-        "score_parts": {
-          "relevance": 21,
-          "trend": 14,
-          "freshness": 15,
-          "change": 6,
-          "credibility": 6,
-          "scarcity": 8
-        },
-        "caps": [
-          "单一弱来源封顶"
-        ]
       }
     ],
     "staleButUseful": []
@@ -1378,18 +1378,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 68,
+      "radar_score": 64,
       "radar_level": "B",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.6,
+      "freshness_days": 3.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
       "score_parts": {
         "relevance": 21,
         "trend": 8,
-        "freshness": 15,
+        "freshness": 11,
         "change": 7,
         "credibility": 10,
         "scarcity": 7
@@ -1429,18 +1429,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 67,
+      "radar_score": 63,
       "radar_level": "B",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.6,
+      "freshness_days": 3.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 19,
         "trend": 7,
-        "freshness": 15,
+        "freshness": 11,
         "change": 6,
         "credibility": 10,
         "scarcity": 8
@@ -1487,18 +1487,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 65,
+      "radar_score": 61,
       "radar_level": "B",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.6,
+      "freshness_days": 3.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 18,
         "trend": 8,
-        "freshness": 15,
+        "freshness": 11,
         "change": 0,
         "credibility": 10,
         "scarcity": 7
@@ -1540,23 +1540,86 @@
         }
       ],
       "feedback": [],
-      "radar_score": 64,
+      "radar_score": 60,
       "radar_level": "B",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.7,
+      "freshness_days": 3.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 19,
         "trend": 7,
-        "freshness": 15,
+        "freshness": 11,
         "change": 6,
         "credibility": 10,
         "scarcity": 7
       },
       "caps": []
+    },
+    {
+      "id": "evt_6f2c3fba0ba17c7991f0",
+      "title": "B站创作激励规则调整登上热议，创作者关注收益和流量稳定性",
+      "summary": "自媒体/平台生态方向出现新动态：B站创作激励规则调整登上热议，创作者关注收益和流量稳定性",
+      "what_happened": "公开摘要提到：公开讨论围绕平台规则、收益变化、内容垂类分发和中腰部创作者生存空间。 来源为 weibo，涉及 B站。",
+      "why_it_matters": "平台流量、创作激励或推荐机制变化会直接影响选题节奏、标题策略和内容分发效率。",
+      "creator_impact": "可以转化为创作者避坑、平台规则解读、流量变化观察和内容策略调整。",
+      "content_angle": "争议拆解：B站创作激励规则调整登上热议，创作者关注收益和流量稳定性，普通用户到底该怎么看？",
+      "cover_angle": "流量规则变了？创作者先看这 3 点",
+      "category": "media",
+      "importance_score": 89,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-26T18:05:00+08:00",
+      "last_seen_at": "2026-05-26T18:05:00+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-26T03:04:25+08:00",
+      "updated_at": "2026-05-26T03:41:55+08:00",
+      "tags": [
+        "争议",
+        "平台规则",
+        "自媒体"
+      ],
+      "entities": [
+        {
+          "name": "B站",
+          "type": "platform",
+          "aliases": [
+            "哔哩哔哩",
+            "Bilibili",
+            "UP主"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "weibo",
+          "url": "https://s.weibo.com/weibo?q=B%E7%AB%99%E5%88%9B%E4%BD%9C%E6%BF%80%E5%8A%B1",
+          "title": "B站创作激励规则调整登上热议，创作者关注收益和流量稳定性",
+          "author": "微博公开搜索样例"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 3,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+      "score_parts": {
+        "relevance": 21,
+        "trend": 14,
+        "freshness": 11,
+        "change": 6,
+        "credibility": 6,
+        "scarcity": 8
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
     },
     {
       "id": "evt_09ccc3052a226a00a314",
@@ -1619,18 +1682,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 63,
+      "radar_score": 59,
       "radar_level": "B",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.7,
+      "freshness_days": 3.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 20,
         "trend": 7,
-        "freshness": 15,
+        "freshness": 11,
         "change": 4,
         "credibility": 10,
         "scarcity": 7
@@ -1670,18 +1733,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 63,
+      "radar_score": 59,
       "radar_level": "B",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.7,
+      "freshness_days": 3.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 19,
         "trend": 7,
-        "freshness": 15,
+        "freshness": 11,
         "change": 5,
         "credibility": 10,
         "scarcity": 7
@@ -1720,18 +1783,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 62,
+      "radar_score": 58,
       "radar_level": "B",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.8,
+      "freshness_days": 4,
       "push_reason": "适合进入观察池",
       "score_parts": {
         "relevance": 16,
         "trend": 7,
-        "freshness": 15,
+        "freshness": 11,
         "change": 4,
         "credibility": 10,
         "scarcity": 8
@@ -1771,18 +1834,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 62,
+      "radar_score": 58,
       "radar_level": "B",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.7,
+      "freshness_days": 4,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 17,
         "trend": 8,
-        "freshness": 15,
+        "freshness": 11,
         "change": 5,
         "credibility": 10,
         "scarcity": 7
@@ -1821,18 +1884,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 62,
+      "radar_score": 58,
       "radar_level": "B",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.7,
+      "freshness_days": 3.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 17,
         "trend": 7,
-        "freshness": 15,
+        "freshness": 11,
         "change": 6,
         "credibility": 10,
         "scarcity": 7
@@ -1871,18 +1934,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 60,
+      "radar_score": 56,
       "radar_level": "B",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.7,
+      "freshness_days": 3.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 17,
         "trend": 7,
-        "freshness": 15,
+        "freshness": 11,
         "change": 4,
         "credibility": 10,
         "scarcity": 7
@@ -1921,86 +1984,23 @@
         }
       ],
       "feedback": [],
-      "radar_score": 60,
+      "radar_score": 56,
       "radar_level": "B",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.6,
+      "freshness_days": 3.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 17,
         "trend": 7,
-        "freshness": 15,
+        "freshness": 11,
         "change": 4,
         "credibility": 10,
         "scarcity": 7
       },
       "caps": []
-    },
-    {
-      "id": "evt_6f2c3fba0ba17c7991f0",
-      "title": "B站创作激励规则调整登上热议，创作者关注收益和流量稳定性",
-      "summary": "自媒体/平台生态方向出现新动态：B站创作激励规则调整登上热议，创作者关注收益和流量稳定性",
-      "what_happened": "公开摘要提到：公开讨论围绕平台规则、收益变化、内容垂类分发和中腰部创作者生存空间。 来源为 weibo，涉及 B站。",
-      "why_it_matters": "平台流量、创作激励或推荐机制变化会直接影响选题节奏、标题策略和内容分发效率。",
-      "creator_impact": "可以转化为创作者避坑、平台规则解读、流量变化观察和内容策略调整。",
-      "content_angle": "争议拆解：B站创作激励规则调整登上热议，创作者关注收益和流量稳定性，普通用户到底该怎么看？",
-      "cover_angle": "流量规则变了？创作者先看这 3 点",
-      "category": "media",
-      "importance_score": 89,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-26T18:05:00+08:00",
-      "last_seen_at": "2026-05-26T18:05:00+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-26T03:04:25+08:00",
-      "updated_at": "2026-05-26T03:41:55+08:00",
-      "tags": [
-        "争议",
-        "平台规则",
-        "自媒体"
-      ],
-      "entities": [
-        {
-          "name": "B站",
-          "type": "platform",
-          "aliases": [
-            "哔哩哔哩",
-            "Bilibili",
-            "UP主"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "weibo",
-          "url": "https://s.weibo.com/weibo?q=B%E7%AB%99%E5%88%9B%E4%BD%9C%E6%BF%80%E5%8A%B1",
-          "title": "B站创作激励规则调整登上热议，创作者关注收益和流量稳定性",
-          "author": "微博公开搜索样例"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 60,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "recent",
-      "freshness_days": 1.8,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
-      "score_parts": {
-        "relevance": 21,
-        "trend": 14,
-        "freshness": 15,
-        "change": 6,
-        "credibility": 6,
-        "scarcity": 8
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
     },
     {
       "id": "evt_19e833e939ec6ac0ca46",
@@ -2034,18 +2034,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 53,
+      "radar_score": 49,
       "radar_level": "C",
       "radar_section": "background",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.6,
+      "freshness_days": 3.9,
       "push_reason": "仅适合沉淀为背景知识",
       "score_parts": {
         "relevance": 16,
         "trend": 3,
-        "freshness": 15,
+        "freshness": 11,
         "change": 2,
         "credibility": 10,
         "scarcity": 7
@@ -2094,18 +2094,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 53,
+      "radar_score": 49,
       "radar_level": "C",
       "radar_section": "background",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.6,
+      "freshness_days": 3.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 18,
         "trend": 7,
-        "freshness": 15,
+        "freshness": 11,
         "change": 0,
         "credibility": 6,
         "scarcity": 7
@@ -2146,18 +2146,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 51,
+      "radar_score": 47,
       "radar_level": "C",
       "radar_section": "background",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.8,
+      "freshness_days": 4,
       "push_reason": "仅适合沉淀为背景知识",
       "score_parts": {
         "relevance": 16,
         "trend": 3,
-        "freshness": 15,
+        "freshness": 11,
         "change": 0,
         "credibility": 10,
         "scarcity": 7
@@ -2204,18 +2204,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 51,
+      "radar_score": 47,
       "radar_level": "C",
       "radar_section": "background",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.6,
+      "freshness_days": 3.9,
       "push_reason": "仅适合沉淀为背景知识",
       "score_parts": {
         "relevance": 16,
         "trend": 7,
-        "freshness": 15,
+        "freshness": 11,
         "change": 0,
         "credibility": 6,
         "scarcity": 7
@@ -2266,287 +2266,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 50,
+      "radar_score": 46,
       "radar_level": "C",
       "radar_section": "background",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.6,
+      "freshness_days": 3.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 18,
         "trend": 0,
-        "freshness": 15,
-        "change": 0,
-        "credibility": 10,
-        "scarcity": 7
-      },
-      "caps": []
-    },
-    {
-      "id": "evt_47899ae064bccc80a5d9",
-      "title": "发售八千，跳水到一开头还得是三星小折叠6代！",
-      "summary": "数码行业方向出现新动态：发售八千，跳水到一开头还得是三星小折叠6代！",
-      "what_happened": "公开摘要提到：- 来源为 bilibili，涉及 三星。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：发售八千，跳水到一开头还得是三星小折叠6代！",
-      "category": "digital",
-      "importance_score": 68,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-25T21:27:29+08:00",
-      "last_seen_at": "2026-05-26T03:47:53+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-26T03:48:04+08:00",
-      "updated_at": "2026-05-26T03:48:04+08:00",
-      "tags": [
-        "数码"
-      ],
-      "entities": [
-        {
-          "name": "三星",
-          "type": "brand",
-          "aliases": [
-            "Samsung",
-            "Galaxy"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV12wGZ6gE8H",
-          "title": "发售八千，跳水到一开头还得是三星小折叠6代！",
-          "author": "独舞kyo"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 49,
-      "radar_level": "C",
-      "radar_section": "background",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "recent",
-      "freshness_days": 2.6,
-      "push_reason": "仅适合沉淀为背景知识",
-      "score_parts": {
-        "relevance": 16,
-        "trend": 5,
-        "freshness": 15,
-        "change": 0,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
-      "id": "evt_6749b8552d7771b14270",
-      "title": "挑战100台转轴排线故障，第三台zflip4屏幕没有触摸。",
-      "summary": "数码行业方向出现新动态：挑战100台转轴排线故障，第三台zflip4屏幕没有触摸。",
-      "what_happened": "公开摘要提到：小贾折叠屏手机维修改装 来源为 bilibili，涉及 相关主体。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：挑战100台转轴排线故障，第三台zflip4屏…",
-      "category": "digital",
-      "importance_score": 68,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-25T21:29:30+08:00",
-      "last_seen_at": "2026-05-26T03:47:53+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-26T03:48:04+08:00",
-      "updated_at": "2026-05-26T03:48:04+08:00",
-      "tags": [
-        "数码"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1yKGZ6qENE",
-          "title": "挑战100台转轴排线故障，第三台zflip4屏幕没有触摸。",
-          "author": "小贾折叠屏手机维修"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 49,
-      "radar_level": "C",
-      "radar_section": "background",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "recent",
-      "freshness_days": 2.6,
-      "push_reason": "仅适合沉淀为背景知识",
-      "score_parts": {
-        "relevance": 14,
-        "trend": 7,
-        "freshness": 15,
-        "change": 0,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
-      "id": "evt_15f2a0dfbf30d74aeae4",
-      "title": "台积电否认削减员工分红：今年涨幅将超去年",
-      "summary": "数码行业方向出现新动态：台积电否认削减员工分红：今年涨幅将超去年",
-      "what_happened": "公开摘要提到：IT之家 5 月 25 日消息，据 FTV 民视财经网报道，台积电今年的股价表现十分亮眼，不过最近有消息称，部分员工对公司即将削减 15% 的分红表示不满，一些台积电员工甚至扬言… 来源为 ithome，涉及 三星。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：台积电否认削减员工分红：今年涨幅将超去年",
-      "category": "digital",
-      "importance_score": 68,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-25T20:08:08+08:00",
-      "last_seen_at": "2026-05-26T03:47:53+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-26T03:42:48+08:00",
-      "updated_at": "2026-05-26T03:48:04+08:00",
-      "tags": [
-        "数码"
-      ],
-      "entities": [
-        {
-          "name": "三星",
-          "type": "brand",
-          "aliases": [
-            "Samsung",
-            "Galaxy"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/955/026.htm",
-          "title": "台积电否认削减员工分红：今年涨幅将超去年",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 48,
-      "radar_level": "C",
-      "radar_section": "background",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "recent",
-      "freshness_days": 2.7,
-      "push_reason": "仅适合沉淀为背景知识",
-      "score_parts": {
-        "relevance": 16,
-        "trend": 0,
-        "freshness": 15,
-        "change": 0,
-        "credibility": 10,
-        "scarcity": 7
-      },
-      "caps": []
-    },
-    {
-      "id": "evt_247ee4febad1c991a137",
-      "title": "TRYX 将推处理器一体式水冷散热器新品 HOLO，支持全息视效",
-      "summary": "数码行业方向出现新动态：TRYX 将推处理器一体式水冷散热器新品 HOLO，支持全息视效",
-      "what_happened": "公开摘要提到：IT之家 5 月 25 日消息，TRYX（创氪星系）是一家不时提供有趣硬件设计的 PC 散热、机箱品牌，而在最近该企业预热了处理器一体式水冷散热器新品 HOLO。 HOLO 的一… 来源为 ithome，涉及 相关主体。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：TRYX 将推处理器一体式水冷散热器新品 HO…",
-      "category": "digital",
-      "importance_score": 78,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-25T19:38:24+08:00",
-      "last_seen_at": "2026-05-26T03:47:53+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-26T03:42:48+08:00",
-      "updated_at": "2026-05-26T03:48:04+08:00",
-      "tags": [
-        "影像",
-        "数码",
-        "选题机会"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/955/015.htm",
-          "title": "TRYX 将推处理器一体式水冷散热器新品 HOLO，支持全息视效",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 46,
-      "radar_level": "C",
-      "radar_section": "background",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "recent",
-      "freshness_days": 2.7,
-      "push_reason": "仅适合沉淀为背景知识",
-      "score_parts": {
-        "relevance": 14,
-        "trend": 0,
-        "freshness": 15,
-        "change": 0,
-        "credibility": 10,
-        "scarcity": 7
-      },
-      "caps": []
-    },
-    {
-      "id": "evt_85aaaf2226af655969ff",
-      "title": "GAMDIAS 推出 ATLAS P6 CG 机箱：三面侧透 + 手办展示台",
-      "summary": "数码行业方向出现新动态：GAMDIAS 推出 ATLAS P6 CG 机箱：三面侧透 + 手办展示台",
-      "what_happened": "公开摘要提到：IT之家 5 月 25 日消息，GAMDIAS 上周宣布推出 ATLAS P6 CG 机箱。这一中塔 ATX 兼容型号的左侧和前方为一块 90° 曲面玻璃，右侧前部设有手办展示台… 来源为 ithome，涉及 相关主体。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：GAMDIAS 推出 ATLAS P6 CG …",
-      "category": "digital",
-      "importance_score": 64,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-25T17:52:19+08:00",
-      "last_seen_at": "2026-05-26T03:47:53+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-26T03:42:48+08:00",
-      "updated_at": "2026-05-26T03:48:04+08:00",
-      "tags": [
-        "数码"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/954/991.htm",
-          "title": "GAMDIAS 推出 ATLAS P6 CG 机箱：三面侧透 + 手办展示台",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 46,
-      "radar_level": "C",
-      "radar_section": "background",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "recent",
-      "freshness_days": 2.8,
-      "push_reason": "仅适合沉淀为背景知识",
-      "score_parts": {
-        "relevance": 14,
-        "trend": 0,
-        "freshness": 15,
+        "freshness": 11,
         "change": 0,
         "credibility": 10,
         "scarcity": 7
@@ -2624,12 +2355,12 @@
       "video_potential": 1,
       "confidence": "high",
       "freshness_label": "recent",
-      "freshness_days": 2.1,
+      "freshness_days": 3.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；热度和扩散信号较强，适合优先判断是否跟进；包含明确变化信号",
       "score_parts": {
         "relevance": 22,
         "trend": 18,
-        "freshness": 15,
+        "freshness": 11,
         "change": 8,
         "credibility": 15,
         "scarcity": 7
@@ -2728,12 +2459,12 @@
       "video_potential": 1,
       "confidence": "high",
       "freshness_label": "recent",
-      "freshness_days": 1.9,
+      "freshness_days": 3.2,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；来源交叉验证较强",
       "score_parts": {
         "relevance": 22,
         "trend": 17,
-        "freshness": 15,
+        "freshness": 11,
         "change": 5,
         "credibility": 15,
         "scarcity": 7
@@ -2741,6 +2472,117 @@
       "caps": [
         "Mock/示例数据封顶",
         "评测/体验稿默认不做头条"
+      ]
+    },
+    {
+      "id": "evt_47899ae064bccc80a5d9",
+      "title": "发售八千，跳水到一开头还得是三星小折叠6代！",
+      "summary": "数码行业方向出现新动态：发售八千，跳水到一开头还得是三星小折叠6代！",
+      "what_happened": "公开摘要提到：- 来源为 bilibili，涉及 三星。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：发售八千，跳水到一开头还得是三星小折叠6代！",
+      "category": "digital",
+      "importance_score": 68,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-25T21:27:29+08:00",
+      "last_seen_at": "2026-05-26T03:47:53+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-26T03:48:04+08:00",
+      "updated_at": "2026-05-26T03:48:04+08:00",
+      "tags": [
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "三星",
+          "type": "brand",
+          "aliases": [
+            "Samsung",
+            "Galaxy"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV12wGZ6gE8H",
+          "title": "发售八千，跳水到一开头还得是三星小折叠6代！",
+          "author": "独舞kyo"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 45,
+      "radar_level": "C",
+      "radar_section": "background",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 3.9,
+      "push_reason": "仅适合沉淀为背景知识",
+      "score_parts": {
+        "relevance": 16,
+        "trend": 5,
+        "freshness": 11,
+        "change": 0,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
+      "id": "evt_6749b8552d7771b14270",
+      "title": "挑战100台转轴排线故障，第三台zflip4屏幕没有触摸。",
+      "summary": "数码行业方向出现新动态：挑战100台转轴排线故障，第三台zflip4屏幕没有触摸。",
+      "what_happened": "公开摘要提到：小贾折叠屏手机维修改装 来源为 bilibili，涉及 相关主体。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：挑战100台转轴排线故障，第三台zflip4屏…",
+      "category": "digital",
+      "importance_score": 68,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-25T21:29:30+08:00",
+      "last_seen_at": "2026-05-26T03:47:53+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-26T03:48:04+08:00",
+      "updated_at": "2026-05-26T03:48:04+08:00",
+      "tags": [
+        "数码"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1yKGZ6qENE",
+          "title": "挑战100台转轴排线故障，第三台zflip4屏幕没有触摸。",
+          "author": "小贾折叠屏手机维修"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 45,
+      "radar_level": "C",
+      "radar_section": "background",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 3.9,
+      "push_reason": "仅适合沉淀为背景知识",
+      "score_parts": {
+        "relevance": 14,
+        "trend": 7,
+        "freshness": 11,
+        "change": 0,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
       ]
     },
     {
@@ -2792,7 +2634,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.7,
+      "freshness_days": 2.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 21,
@@ -2856,12 +2698,12 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.1,
+      "freshness_days": 3.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 21,
         "trend": 12,
-        "freshness": 15,
+        "freshness": 11,
         "change": 6,
         "credibility": 10,
         "scarcity": 7
@@ -2870,6 +2712,164 @@
         "Mock/示例数据封顶",
         "评测/体验稿默认不做头条"
       ]
+    },
+    {
+      "id": "evt_15f2a0dfbf30d74aeae4",
+      "title": "台积电否认削减员工分红：今年涨幅将超去年",
+      "summary": "数码行业方向出现新动态：台积电否认削减员工分红：今年涨幅将超去年",
+      "what_happened": "公开摘要提到：IT之家 5 月 25 日消息，据 FTV 民视财经网报道，台积电今年的股价表现十分亮眼，不过最近有消息称，部分员工对公司即将削减 15% 的分红表示不满，一些台积电员工甚至扬言… 来源为 ithome，涉及 三星。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：台积电否认削减员工分红：今年涨幅将超去年",
+      "category": "digital",
+      "importance_score": 68,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-25T20:08:08+08:00",
+      "last_seen_at": "2026-05-26T03:47:53+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-26T03:42:48+08:00",
+      "updated_at": "2026-05-26T03:48:04+08:00",
+      "tags": [
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "三星",
+          "type": "brand",
+          "aliases": [
+            "Samsung",
+            "Galaxy"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/955/026.htm",
+          "title": "台积电否认削减员工分红：今年涨幅将超去年",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 44,
+      "radar_level": "C",
+      "radar_section": "background",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 3.9,
+      "push_reason": "仅适合沉淀为背景知识",
+      "score_parts": {
+        "relevance": 16,
+        "trend": 0,
+        "freshness": 11,
+        "change": 0,
+        "credibility": 10,
+        "scarcity": 7
+      },
+      "caps": []
+    },
+    {
+      "id": "evt_247ee4febad1c991a137",
+      "title": "TRYX 将推处理器一体式水冷散热器新品 HOLO，支持全息视效",
+      "summary": "数码行业方向出现新动态：TRYX 将推处理器一体式水冷散热器新品 HOLO，支持全息视效",
+      "what_happened": "公开摘要提到：IT之家 5 月 25 日消息，TRYX（创氪星系）是一家不时提供有趣硬件设计的 PC 散热、机箱品牌，而在最近该企业预热了处理器一体式水冷散热器新品 HOLO。 HOLO 的一… 来源为 ithome，涉及 相关主体。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：TRYX 将推处理器一体式水冷散热器新品 HO…",
+      "category": "digital",
+      "importance_score": 78,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-25T19:38:24+08:00",
+      "last_seen_at": "2026-05-26T03:47:53+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-26T03:42:48+08:00",
+      "updated_at": "2026-05-26T03:48:04+08:00",
+      "tags": [
+        "影像",
+        "数码",
+        "选题机会"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/955/015.htm",
+          "title": "TRYX 将推处理器一体式水冷散热器新品 HOLO，支持全息视效",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 42,
+      "radar_level": "C",
+      "radar_section": "background",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 4,
+      "push_reason": "仅适合沉淀为背景知识",
+      "score_parts": {
+        "relevance": 14,
+        "trend": 0,
+        "freshness": 11,
+        "change": 0,
+        "credibility": 10,
+        "scarcity": 7
+      },
+      "caps": []
+    },
+    {
+      "id": "evt_85aaaf2226af655969ff",
+      "title": "GAMDIAS 推出 ATLAS P6 CG 机箱：三面侧透 + 手办展示台",
+      "summary": "数码行业方向出现新动态：GAMDIAS 推出 ATLAS P6 CG 机箱：三面侧透 + 手办展示台",
+      "what_happened": "公开摘要提到：IT之家 5 月 25 日消息，GAMDIAS 上周宣布推出 ATLAS P6 CG 机箱。这一中塔 ATX 兼容型号的左侧和前方为一块 90° 曲面玻璃，右侧前部设有手办展示台… 来源为 ithome，涉及 相关主体。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：GAMDIAS 推出 ATLAS P6 CG …",
+      "category": "digital",
+      "importance_score": 64,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-25T17:52:19+08:00",
+      "last_seen_at": "2026-05-26T03:47:53+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-26T03:42:48+08:00",
+      "updated_at": "2026-05-26T03:48:04+08:00",
+      "tags": [
+        "数码"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/954/991.htm",
+          "title": "GAMDIAS 推出 ATLAS P6 CG 机箱：三面侧透 + 手办展示台",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 42,
+      "radar_level": "C",
+      "radar_section": "background",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 4,
+      "push_reason": "仅适合沉淀为背景知识",
+      "score_parts": {
+        "relevance": 14,
+        "trend": 0,
+        "freshness": 11,
+        "change": 0,
+        "credibility": 10,
+        "scarcity": 7
+      },
+      "caps": []
     },
     {
       "id": "evt_ac0e15ce862cab57facd",
@@ -2910,18 +2910,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 44,
+      "radar_score": 40,
       "radar_level": "C",
       "radar_section": "background",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.8,
+      "freshness_days": 4,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 18,
         "trend": 2,
-        "freshness": 15,
+        "freshness": 11,
         "change": 0,
         "credibility": 10,
         "scarcity": 7
@@ -2961,18 +2961,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 42,
-      "radar_level": "C",
+      "radar_score": 38,
+      "radar_level": "D",
       "radar_section": "background",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.7,
+      "freshness_days": 3.9,
       "push_reason": "仅适合沉淀为背景知识",
       "score_parts": {
         "relevance": 16,
         "trend": 2,
-        "freshness": 15,
+        "freshness": 11,
         "change": 0,
         "credibility": 10,
         "scarcity": 7
@@ -3012,18 +3012,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 42,
-      "radar_level": "C",
+      "radar_score": 38,
+      "radar_level": "D",
       "radar_section": "background",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.8,
+      "freshness_days": 4,
       "push_reason": "仅适合沉淀为背景知识",
       "score_parts": {
         "relevance": 16,
         "trend": 2,
-        "freshness": 15,
+        "freshness": 11,
         "change": 0,
         "credibility": 10,
         "scarcity": 7
@@ -3063,18 +3063,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 42,
-      "radar_level": "C",
+      "radar_score": 38,
+      "radar_level": "D",
       "radar_section": "background",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.6,
+      "freshness_days": 3.9,
       "push_reason": "仅适合沉淀为背景知识",
       "score_parts": {
         "relevance": 16,
         "trend": 2,
-        "freshness": 15,
+        "freshness": 11,
         "change": 0,
         "credibility": 10,
         "scarcity": 7
@@ -3112,18 +3112,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 39,
+      "radar_score": 35,
       "radar_level": "D",
       "radar_section": "background",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.8,
+      "freshness_days": 4.1,
       "push_reason": "仅适合沉淀为背景知识",
       "score_parts": {
         "relevance": 2,
         "trend": 9,
-        "freshness": 15,
+        "freshness": 11,
         "change": 0,
         "credibility": 6,
         "scarcity": 7
@@ -3161,18 +3161,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 36,
+      "radar_score": 32,
       "radar_level": "D",
       "radar_section": "background",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.6,
+      "freshness_days": 3.9,
       "push_reason": "仅适合沉淀为背景知识",
       "score_parts": {
         "relevance": 2,
         "trend": 2,
-        "freshness": 15,
+        "freshness": 11,
         "change": 0,
         "credibility": 10,
         "scarcity": 7
@@ -3208,18 +3208,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 33,
+      "radar_score": 29,
       "radar_level": "D",
       "radar_section": "background",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.7,
+      "freshness_days": 3.9,
       "push_reason": "仅适合沉淀为背景知识",
       "score_parts": {
         "relevance": 0,
         "trend": 1,
-        "freshness": 15,
+        "freshness": 11,
         "change": 0,
         "credibility": 10,
         "scarcity": 7
