@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": "2026-05-31T23:12:59+08:00",
+  "timezone": "Asia/Shanghai",
+  "total": 3,
+  "reports": [
+    {
+      "id": "report_175ad88f47407a987ce9",
+      "report_type": "noon",
+      "window_start": "2026-05-31T10:00:00+08:00",
+      "window_end": "2026-05-31T12:00:00+08:00",
+      "event_count": 6,
+      "created_at": "2026-05-31T22:01:11+08:00",
+      "html_url": "reports/2026-05-31-noon.html",
+      "markdown_url": "reports/2026-05-31-noon.md",
+      "files": {
+        "html": {
+          "name": "2026-05-31-noon.html",
+          "url": "reports/2026-05-31-noon.html",
+          "copied": true,
+          "available": true
+        },
+        "markdown": {
+          "name": "2026-05-31-noon.md",
+          "url": "reports/2026-05-31-noon.md",
+          "copied": true,
+          "available": true
+        }
+      }
+    },
+    {
+      "id": "horizon-2026-05-31-zh",
+      "report_type": "horizon",
+      "window_start": "2026-05-31T00:00:00+08:00",
+      "window_end": "2026-05-31T23:59:59+08:00",
+      "event_count": 26,
+      "created_at": "2026-05-31T21:43:09+08:00",
+      "html_url": "reports/horizon-2026-05-31-zh.html",
+      "markdown_url": "reports/horizon-2026-05-31-zh.md",
+      "files": {
+        "html": {
+          "name": "horizon-2026-05-31-zh.html",
+          "url": "reports/horizon-2026-05-31-zh.html",
+          "copied": true,
+          "available": true
+        },
+        "markdown": {
+          "name": "horizon-2026-05-31-zh.md",
+          "url": "reports/horizon-2026-05-31-zh.md",
+          "copied": true,
+          "available": true
+        }
+      }
+    },
+    {
+      "id": "report_25ed636d66ebb43dde85",
+      "report_type": "noon",
+      "window_start": "2026-05-30T10:00:00+08:00",
+      "window_end": "2026-05-30T12:00:00+08:00",
+      "event_count": 16,
+      "created_at": "2026-05-30T16:23:38+08:00",
+      "html_url": "reports/2026-05-30-noon.html",
+      "markdown_url": "reports/2026-05-30-noon.md",
+      "files": {
+        "html": {
+          "name": "2026-05-30-noon.html",
+          "url": "reports/2026-05-30-noon.html",
+          "copied": true,
+          "available": true
+        },
+        "markdown": {
+          "name": "2026-05-30-noon.md",
+          "url": "reports/2026-05-30-noon.md",
+          "copied": true,
+          "available": true
+        }
+      }
+    }
+  ]
+}

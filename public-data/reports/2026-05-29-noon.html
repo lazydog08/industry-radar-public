@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>行业情报雷达 - 中午报告</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f5f7;
+      --surface: #ffffff;
+      --surface-soft: #fbfbfd;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --line: #e5e5ea;
+      --accent: #0066cc;
+      --good: #1f7a4d;
+      --bad: #b42318;
+    }
+    * { box-sizing: border-box; }
+    html {
+      min-height: 100%;
+      overflow-x: clip;
+      overflow-y: auto;
+      overscroll-behavior-y: contain;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+      overflow-x: clip;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      letter-spacing: 0;
+    }
+    .page { width: min(1120px, calc(100vw - 28px)); min-height: 100dvh; margin: 0 auto; padding: 28px 0 56px; }
+    .masthead { display: grid; gap: 18px; padding: 10px 0 18px; }
+    .eyebrow { color: var(--muted); font-size: 14px; line-height: 1.5; }
+    h1 { margin: 0; font-size: clamp(30px, 4vw, 44px); line-height: 1.1; font-weight: 720; }
+    h2 { margin: 0 0 12px; font-size: 22px; line-height: 1.25; }
+    h3 { margin: 0; font-size: 18px; line-height: 1.38; overflow-wrap: anywhere; }
+    p { margin: 0; line-height: 1.65; }
+    a { color: var(--accent); text-decoration: none; overflow-wrap: anywhere; }
+    a:hover { text-decoration: underline; }
+    .summary-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+    .metric, .status-strip, .mainline, .event-card, .empty, .idea-list, .source-note {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .metric { padding: 13px 14px; min-width: 0; }
+    .metric b { display: block; font-size: 22px; line-height: 1.15; }
+    .metric span { display: block; margin-top: 3px; color: var(--muted); font-size: 12px; }
+    .status-strip { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      max-width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 8px;
+      color: var(--muted);
+      background: var(--surface-soft);
+      font-size: 12px;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+    .status-ok { color: var(--good); }
+    .status-bad { color: var(--bad); }
+    section { margin-top: 28px; }
+    .mainline { padding: 18px; }
+    .mainline ul, .idea-list ol { margin: 0; padding-left: 20px; line-height: 1.75; }
+    .event-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .top-list { grid-template-columns: 1fr; }
+    .event-card { padding: 16px; display: grid; gap: 10px; min-width: 0; }
+    .event-card.top { border-color: #d2d2d7; }
+    .card-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: start; min-width: 0; }
+    .card-head:has(.rank) { grid-template-columns: auto minmax(0, 1fr) auto; }
+    .card-head h3 { min-width: 0; }
+    .rank {
+      width: 28px;
+      height: 28px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #1d1d1f;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      flex: 0 0 auto;
+    }
+    .score { color: var(--accent); font-weight: 700; white-space: nowrap; justify-self: end; }
+    .summary { color: #303033; }
+    .why { color: var(--text); }
+    .creator { color: #3d3d40; }
+    .label { color: var(--muted); font-size: 12px; font-weight: 650; margin-right: 4px; }
+    .meta, .sources { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; }
+    .sources { padding-top: 2px; }
+    .sources a {
+      display: inline-grid;
+      gap: 2px;
+      max-width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 6px 8px;
+      background: var(--surface-soft);
+    }
+    .sources code {
+      color: var(--muted);
+      font-size: 11px;
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+    .empty { padding: 16px; color: var(--muted); }
+    .idea-list { padding: 16px 18px; }
+    .source-note { padding: 14px 16px; margin-bottom: 10px; }
+    @media (max-width: 860px) {
+      .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .event-list { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .page { width: min(100vw - 20px, 1120px); padding-top: 18px; }
+      .summary-grid { grid-template-columns: 1fr; }
+      .card-head, .card-head:has(.rank) { grid-template-columns: auto minmax(0, 1fr); }
+      .score { grid-column: 2; justify-self: start; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <div>
+        <div class="eyebrow">2026-05-29 · 中午报告 · 2026-05-29 10:00:00 - 2026-05-29 12:00:00 UTC+8</div>
+        <h1>行业情报雷达</h1>
+      </div>
+      <div class="summary-grid">
+        <div class="metric"><b>2026-05-29</b><span>日期</span></div>
+        <div class="metric"><b>中午报告</b><span>报告类型</span></div>
+        <div class="metric"><b>4</b><span>新增事件</span></div>
+        <div class="metric"><b>0</b><span>重要事件</span></div>
+        <div class="metric"><b>1/1</b><span>数据源可用</span></div>
+      </div>
+      <div class="status-strip" aria-label="数据源状态"><span class="pill status-ok">OK mock 4</span></div>
+    </header>
+    
+    <section><h2>今日必看</h2><div class="event-list top-list"><article class="event-card top">
+    <div class="card-head">
+      <span class="rank">1</span>
+      <h3>OPPO 影像旗舰发布会定档，AI 影像成核心卖点</h3>
+      <span class="score">C 45</span>
+    </div>
+    <p class="summary"><span class="label">推荐理由</span>与你关注的数码/AI/汽车/平台生态高度相关；近期新出现</p>
+    <p class="summary"><span class="label">一句话</span>数码行业出现值得入库的信号：OPPO 影像旗舰发布会定档，AI 影像成核心卖点。它涉及 OPPO、AI 手机，系统识别到 AI手机、发布会、影像、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。</p>
+    <p class="why"><span class="label">为什么重要</span>AI 手机正在从营销概念转向真实功能竞争，关系到换机理由、发布会卖点和用户痛点表达。需要重点分辨它是品牌预热、真实功能落地，还是媒体二次搬运。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 OPPO、AI 手机 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。</p>
+    <p><span class="label">内容切入</span>AI 手机这次是不是噱头？从真实使用场景做判断。</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">低置信</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">AI手机</span><span class="pill">发布会</span><span class="pill">影像</span><span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.bilibili.com/video/mock-oppo-ai-camera" target="_blank" rel="noreferrer"><span>bilibili</span><code>https://www.bilibili.com/video/mock-oppo-ai-camera</code></a></div>
+  </article><article class="event-card top">
+    <div class="card-head">
+      <span class="rank">2</span>
+      <h3>B站创作激励和流量规则变化，普通 UP 主应该怎么应对？</h3>
+      <span class="score">C 45</span>
+    </div>
+    <p class="summary"><span class="label">推荐理由</span>与你关注的数码/AI/汽车/平台生态高度相关；近期新出现</p>
+    <p class="summary"><span class="label">一句话</span>自媒体/平台生态出现值得入库的信号：B站创作激励和流量规则变化，普通 UP 主应该怎么应对？。它涉及 B站，系统识别到 平台规则、自媒体、选题机会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。</p>
+    <p class="why"><span class="label">为什么重要</span>平台流量、创作激励或推荐机制变化会直接影响选题节奏、标题策略和内容分发效率。它的价值不只在于“有没有热搜”，而在于是否会改变创作者接下来一两周的发布策略、内容结构和复盘指标。</p>
+    <p class="creator"><span class="label">内容关系</span>可以转化为创作者避坑、平台规则解读、流量变化观察和内容策略调整。拍摄时不要只讲“规则变了”，更应该拆成影响对象、变化证据、应对动作和风险边界。</p>
+    <p><span class="label">内容切入</span>平台规则变化会影响哪些创作者？用 3 个例子讲清楚。</p>
+    <p><span class="label">标题/封面</span>流量规则变了？创作者先看这 3 点</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">低置信</span>
+      <span class="pill">自媒体 / 平台生态</span>
+      <span class="pill">平台规则</span><span class="pill">自媒体</span><span class="pill">选题机会</span>
+    </div>
+    <div class="sources"><a href="https://www.zhihu.com/question/mock-bilibili-traffic" target="_blank" rel="noreferrer"><span>zhihu</span><code>https://www.zhihu.com/question/mock-bilibili-traffic</code></a></div>
+  </article><article class="event-card top">
+    <div class="card-head">
+      <span class="rank">3</span>
+      <h3>iOS 新版本首批 AI 功能曝光，或在 WWDC 前后公布</h3>
+      <span class="score">C 45</span>
+    </div>
+    <p class="summary"><span class="label">推荐理由</span>与你关注的数码/AI/汽车/平台生态高度相关；近期新出现</p>
+    <p class="summary"><span class="label">一句话</span>数码行业出现值得入库的信号：iOS 新版本首批 AI 功能曝光，或在 WWDC 前后公布。它涉及 苹果，系统识别到 AI手机、数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。</p>
+    <p class="why"><span class="label">为什么重要</span>AI 手机正在从营销概念转向真实功能竞争，关系到换机理由、发布会卖点和用户痛点表达。需要重点分辨它是品牌预热、真实功能落地，还是媒体二次搬运。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 苹果 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。</p>
+    <p><span class="label">内容切入</span>AI 手机这次是不是噱头？从真实使用场景做判断。</p>
+    <p><span class="label">标题/封面</span>更新后最该试的 3 个功能</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">低置信</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">AI手机</span><span class="pill">数码</span><span class="pill">系统更新</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/mock/ios-ai-wwdc.html" target="_blank" rel="noreferrer"><span>ithome</span><code>https://www.ithome.com/mock/ios-ai-wwdc.html</code></a></div>
+  </article><article class="event-card top">
+    <div class="card-head">
+      <span class="rank">4</span>
+      <h3>小米汽车城市 NOA 体验热度升高，用户重点关注接管和车机协同</h3>
+      <span class="score">C 45</span>
+    </div>
+    <p class="summary"><span class="label">推荐理由</span>与你关注的数码/AI/汽车/平台生态高度相关；近期新出现</p>
+    <p class="summary"><span class="label">一句话</span>汽车行业出现值得入库的信号：小米汽车城市 NOA 体验热度升高，用户重点关注接管和车机协同。它涉及 小米、智能驾驶，系统识别到 智驾、汽车 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。</p>
+    <p class="why"><span class="label">为什么重要</span>智能驾驶相关变化容易引发用户安全感、体验差异和车企技术路线讨论。对视频创作者来说，真正值得盯的是功能覆盖、接管体验、用户口碑和车企路线，而不是单纯复述一次 OTA 或发布节点。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。优先找车主反馈、实测画面和同级竞品对照，避免只复述厂商话术。</p>
+    <p><span class="label">内容切入</span>智驾更新看起来很强，但普通车主真正关心哪 3 件事？</p>
+    <p><span class="label">标题/封面</span>智驾升级，不只看城市数量</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">低置信</span>
+      <span class="pill">汽车行业</span>
+      <span class="pill">智驾</span><span class="pill">汽车</span>
+    </div>
+    <div class="sources"><a href="https://www.bilibili.com/video/mock-xiaomi-noa" target="_blank" rel="noreferrer"><span>bilibili</span><code>https://www.bilibili.com/video/mock-xiaomi-noa</code></a></div>
+  </article></div></section>
+    <section>
+      <h2>今日主线判断</h2>
+      <div class="mainline"><ul><li>数码行业是本窗口的主要信号，集中在 苹果、小米、智能驾驶、AI 手机，关键词是 数码、AI手机、发布会、平台规则、汽车。</li><li>Top 事件优先关注“为什么重要”和“内容创作影响”，它们比单条标题更适合直接转成选题。</li></ul></div>
+    </section>
+    <section><h2>数码行业</h2><div class="empty">暂无新增。</div></section>
+    <section><h2>自媒体 / 平台生态</h2><div class="empty">暂无新增。</div></section>
+    <section><h2>汽车行业</h2><div class="empty">暂无新增。</div></section>
+    <section><h2>品牌 / 高管 / 博主动态</h2><div class="empty">暂无新增。</div></section>
+    <section><h2>持续发酵 / 有更新</h2><div class="empty">暂无新增。</div></section>
+    <section>
+      <h2>数据源异常与限制</h2>
+      <div class="empty">本次未记录数据源异常。</div>
+    </section>
+  </main>
+  <script>
+    (() => {
+      function isPageScrollable() {
+        const root = document.scrollingElement || document.documentElement;
+        return root.scrollHeight > root.clientHeight + 1;
+      }
+      function normalizedWheelDelta(event) {
+        const unit = event.deltaMode === 1 ? 40 : event.deltaMode === 2 ? window.innerHeight : 1;
+        return { x: event.deltaX * unit, y: event.deltaY * unit };
+      }
+      function isInteractiveTarget(target) {
+        return target instanceof Element && Boolean(target.closest("a, button, input, select, textarea, [contenteditable='true'], [tabindex]:not([tabindex='-1'])"));
+      }
+      function hasScrollableAncestor(target, deltaY) {
+        for (let node = target instanceof Element ? target : target?.parentElement; node && node !== document.body; node = node.parentElement) {
+          const style = window.getComputedStyle(node);
+          if (!/(auto|scroll)/.test(style.overflowY)) continue;
+          const canScrollDown = deltaY > 0 && node.scrollTop + node.clientHeight < node.scrollHeight - 1;
+          const canScrollUp = deltaY < 0 && node.scrollTop > 1;
+          if (canScrollDown || canScrollUp) return true;
+        }
+        return false;
+      }
+      function keyScrollDelta(event) {
+        const viewportStep = Math.max(240, Math.floor(window.innerHeight * 0.85));
+        if (event.key === " ") return event.shiftKey ? -viewportStep : viewportStep;
+        return {
+          ArrowDown: 80,
+          ArrowUp: -80,
+          PageDown: viewportStep,
+          PageUp: -viewportStep,
+          Home: "home",
+          End: "end"
+        }[event.key];
+      }
+      window.addEventListener("wheel", (event) => {
+        const delta = normalizedWheelDelta(event);
+        if (event.defaultPrevented || event.ctrlKey || Math.abs(delta.y) <= Math.abs(delta.x)) return;
+        if (!isPageScrollable() || hasScrollableAncestor(event.target, delta.y)) return;
+        const previousY = window.scrollY;
+        window.requestAnimationFrame(() => {
+          if (window.scrollY === previousY) {
+            window.scrollBy({ top: delta.y, left: 0, behavior: "auto" });
+          }
+        });
+      }, { capture: true, passive: true });
+      window.addEventListener("keydown", (event) => {
+        if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey) return;
+        if (!isPageScrollable() || isInteractiveTarget(event.target)) return;
+        const delta = keyScrollDelta(event);
+        if (!delta) return;
+        event.preventDefault();
+        if (delta === "home") {
+          window.scrollTo({ top: 0, behavior: "auto" });
+        } else if (delta === "end") {
+          const root = document.scrollingElement || document.documentElement;
+          window.scrollTo({ top: root.scrollHeight, behavior: "auto" });
+        } else {
+          window.scrollBy({ top: delta, left: 0, behavior: "auto" });
+        }
+      }, { capture: true });
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>行业情报雷达</title>
+  <link rel="stylesheet" href="./styles.css?v=20260528-1500" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">RADAR DAILY</p>
+        <h1>情报日报</h1>
+      </div>
+      <div class="topbar-actions">
+        <div id="updatedAt" class="muted"></div>
+        <button id="hotspotRefreshBtn" class="hotspot-refresh-button" type="button">
+          <span>发送 NAS 抓取命令</span>
+          <small>远程触发 · 重算权重 · Bark 提醒</small>
+        </button>
+        <div id="hotspotStatus" class="hotspot-status" role="status" aria-live="polite">NAS 命令通道待命</div>
+      </div>
+    </header>
+
+    <section class="overview" aria-label="概览">
+      <div class="metric"><b id="metricRecent">0</b><span>7 天事件</span></div>
+      <div class="metric"><b id="metricImportant">0</b><span>今日必看</span></div>
+      <div class="metric"><b id="metricFollow">0</b><span>正在发酵</span></div>
+      <div class="metric"><b id="metricReports">0</b><span>报告归档</span></div>
+    </section>
+
+    <section class="nas-automation-panel" aria-label="NAS 自动化">
+      <div class="section-head">
+        <h2>NAS 自动化</h2>
+        <span id="nasAutomationSummary" class="muted">正在检查自动化链路</span>
+      </div>
+      <div id="nasAutomationStatus" class="nas-automation-status" role="status" aria-live="polite">
+        <div class="empty-state">正在检查 NAS cron、SSH 触发和发布目录...</div>
+      </div>
+    </section>
+
+    <section class="frontpage" aria-label="今日情报头版">
+      <article id="frontpageLead" class="frontpage-lead"></article>
+      <aside class="frontpage-brief">
+        <div id="frontpageStats" class="frontpage-stats"></div>
+        <section class="filters compact frontpage-search" aria-label="筛选">
+          <div class="filter-primary">
+            <input id="query" class="query" placeholder="OPPO 影像 / 小米汽车 智驾 / B站 流量规则" />
+            <button id="searchBtn">搜索</button>
+          </div>
+          <details id="advancedFilters" class="advanced-filters">
+            <summary><span>高级筛选</span><small id="filterSummary">分类、来源、标签、反馈</small></summary>
+            <div class="filter-controls">
+              <select id="category">
+                <option value="">全部分类</option>
+                <option value="digital">数码</option>
+                <option value="media">自媒体</option>
+                <option value="auto">汽车</option>
+                <option value="mixed">跨行业</option>
+              </select>
+              <select id="source">
+                <option value="">全部来源</option>
+              </select>
+              <input id="entity" list="entityList" placeholder="品牌 / 平台 / 产品" />
+              <input id="tag" list="tagList" placeholder="标签" />
+              <div class="toggles">
+                <label><input id="favorite" type="checkbox" /> 收藏</label>
+                <label><input id="follow" type="checkbox" /> 跟踪</label>
+                <label><input id="ignored" type="checkbox" /> 不感兴趣</label>
+              </div>
+            </div>
+          </details>
+          <datalist id="entityList"></datalist>
+          <datalist id="tagList"></datalist>
+        </section>
+      </aside>
+    </section>
+
+    <section id="editorialStrips" class="editorial-strips" aria-label="编辑精选"></section>
+
+    <section class="radar-hero" aria-label="今日雷达">
+      <div id="infographic" class="infographic">
+        <div class="empty-state">正在生成一图读懂...</div>
+      </div>
+      <aside class="radar-brief">
+        <div>
+          <p class="eyebrow">分区摘要</p>
+          <h2>先看趋势，再做选题</h2>
+        </div>
+        <div id="sectionStats" class="section-stats"></div>
+        <p id="sourceStatus" class="muted"></p>
+      </aside>
+    </section>
+
+    <section class="workbench">
+      <div class="feed">
+        <div class="section-head">
+          <h2 id="resultTitle">今日情报分区</h2>
+          <span id="count" class="muted"></span>
+        </div>
+        <div id="sections" class="section-feed"></div>
+        <div id="results" class="results"></div>
+      </div>
+
+      <aside class="side">
+        <section id="detail" class="panel knowledge">
+          <h2>知识卡</h2>
+          <p class="muted">选择事件</p>
+        </section>
+
+        <section class="panel">
+          <div class="section-head">
+            <h2>知识库体检</h2>
+          </div>
+          <div id="knowledgeHealth" class="knowledge-health"></div>
+        </section>
+
+        <section class="panel">
+          <div class="section-head">
+            <h2>报告归档</h2>
+            <a id="reportJsonLink" href="#" target="_blank" rel="noreferrer">数据</a>
+          </div>
+          <div id="reports" class="reports"></div>
+        </section>
+
+        <section class="panel">
+          <div class="section-head">
+            <h2>话题时间线</h2>
+          </div>
+          <div class="timeline-search">
+            <input id="timelineQuery" placeholder="例如：OPPO 影像" />
+            <button id="timelineBtn">查看</button>
+          </div>
+          <div id="timeline" class="timeline-list"></div>
+        </section>
+      </aside>
+    </section>
+  </main>
+  <script type="module" src="./app.js?v=20260528-1500"></script>
+</body>
+</html>
