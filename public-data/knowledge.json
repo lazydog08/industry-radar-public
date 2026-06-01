@@ -1,14 +1,14 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-05-31T23:12:52+08:00",
+  "generatedAt": "2026-06-01T17:06:26+08:00",
   "timezone": "Asia/Shanghai",
-  "total": 135,
+  "total": 136,
   "metrics": {
-    "total": 134,
+    "total": 139,
     "highConfidence": 1,
-    "lowConfidence": 133,
-    "singleSource": 128,
-    "capped": 111,
+    "lowConfidence": 138,
+    "singleSource": 132,
+    "capped": 113,
     "videoReady": 0,
     "followed": 0,
     "usedForVideo": 0
@@ -86,7 +86,7 @@
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 5.2,
+        "freshness_days": 6,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；包含明确变化信号",
         "score_parts": {
           "relevance": 22,
@@ -149,7 +149,7 @@
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 1.6,
+        "freshness_days": 2.4,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；属于硬科技/产业级突破信号",
         "score_parts": {
           "relevance": 21,
@@ -194,18 +194,120 @@
           }
         ],
         "feedback": [],
-        "radar_score": 68,
+        "radar_score": 65,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
-        "freshness_label": "new",
-        "freshness_days": 0.5,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
+        "freshness_label": "recent",
+        "freshness_days": 1.3,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
         "score_parts": {
           "relevance": 19,
           "trend": 7,
-          "freshness": 18,
+          "freshness": 15,
+          "change": 7,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_c1b358883605e1bfe7a1",
+        "title": "OpenAI 升级 GPT-5.5 Instant 模型，AI 回复更自然、易读",
+        "summary": "数码行业出现值得入库的信号：OpenAI 升级 GPT-5.5 Instant 模型，AI 回复更自然、易读。它涉及 相关主体，系统识别到 发布会、数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+        "what_happened": "公开摘要提到：IT之家 5 月 30 日消息，OpenAI 公司于 5 月 28 日发布公告， 宣布更新 ChatGPT 的 GPT-5.5 Instant 版本及其 API，并逐步弃用 OpenAI o3 和 GPT-4.5 模型。 OpenAI 公司于 5 月 5 日推出 GPT-5.5… 来源为 ithome，发布时间标记为 05/30 10:14。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 66,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-30T10:14:38+08:00",
+        "last_seen_at": "2026-05-30T16:22:00+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-30T11:52:37+08:00",
+        "updated_at": "2026-05-30T16:22:11+08:00",
+        "tags": [
+          "发布会",
+          "数码",
+          "系统更新"
+        ],
+        "entities": [],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/957/437.htm",
+            "title": "OpenAI 升级 GPT-5.5 Instant 模型，AI 回复更自然、易读",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 65,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 1,
+        "confidence": "low",
+        "freshness_label": "recent",
+        "freshness_days": 2.3,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
+        "score_parts": {
+          "relevance": 19,
+          "trend": 7,
+          "freshness": 15,
+          "change": 7,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_6a0e92e6450ed436e308",
+        "title": "消息称育碧《雷曼：传奇》重制版游戏 10 月 1 日发售，有望与《宇宙机器人》《光与影：33 号远征队》联动",
+        "summary": "数码行业出现值得入库的信号：消息称育碧《雷曼：传奇》重制版游戏 10 月 1 日发售，有望与《宇宙机器人》《光与影：33 号远征队》联动。它涉及 相关主体，系统识别到 发布会、数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+        "what_happened": "公开摘要提到：IT之家 5 月 30 日消息，知名爆料人 billbil-kun 昨天在 Dealabs 平台透露，育碧旗下游戏《雷曼：传奇》重制版将于 10 月 1 日发售。 据介绍，本作将拥有 PS5、Switch 2 实体版，育碧有可能会在下周正式官宣，索尼也有可能会在 6 月 2 日… 来源为 ithome，发布时间标记为 05/30 11:09。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 64,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-30T11:09:39+08:00",
+        "last_seen_at": "2026-05-30T16:23:28+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-30T11:52:37+08:00",
+        "updated_at": "2026-05-30T16:23:38+08:00",
+        "tags": [
+          "发布会",
+          "数码",
+          "系统更新"
+        ],
+        "entities": [],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/957/451.htm",
+            "title": "消息称育碧《雷曼：传奇》重制版游戏 10 月 1 日发售，有望与《宇宙机器人》《光与影：33 号远征队》联动",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 64,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 1,
+        "confidence": "low",
+        "freshness_label": "recent",
+        "freshness_days": 2.2,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
+        "score_parts": {
+          "relevance": 17,
+          "trend": 8,
+          "freshness": 15,
           "change": 7,
           "credibility": 10,
           "scarcity": 7
@@ -245,19 +347,77 @@
           }
         ],
         "feedback": [],
-        "radar_score": 66,
+        "radar_score": 63,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
-        "freshness_label": "new",
-        "freshness_days": 0.5,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
+        "freshness_label": "recent",
+        "freshness_days": 1.2,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
         "score_parts": {
           "relevance": 17,
           "trend": 7,
-          "freshness": 18,
+          "freshness": 15,
           "change": 7,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_5c121f933b6e9a6c5bb3",
+        "title": "比亚迪方程豹个性轿车“方程 S GT”官图发布，S 系列新车第三季度上市",
+        "summary": "数码行业出现值得入库的信号：比亚迪方程豹个性轿车“方程 S GT”官图发布，S 系列新车第三季度上市。它涉及 比亚迪，系统识别到 发布会、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+        "what_happened": "公开摘要提到：IT之家 5 月 31 日消息，比亚迪方程豹汽车官方昨日发布了旗下个性轿车“方程 S GT”最新官图。 据IT之家 4 月 24 日报道，在 2026 北京国际车展上，比亚迪方程豹宣布其首发的轿车系列产品线定名“方程 S”。官方公布了“方程 S”家族的三款车型，包括方程 S、方… 来源为 ithome，发布时间标记为 05/31 10:55。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "比亚迪 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 比亚迪 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 62,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-31T10:55:33+08:00",
+        "last_seen_at": "2026-05-31T17:07:38+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-31T11:50:20+08:00",
+        "updated_at": "2026-05-31T17:07:49+08:00",
+        "tags": [
+          "发布会",
+          "数码"
+        ],
+        "entities": [
+          {
+            "name": "比亚迪",
+            "type": "brand",
+            "aliases": [
+              "BYD"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/957/737.htm",
+            "title": "比亚迪方程豹个性轿车“方程 S GT”官图发布，S 系列新车第三季度上市",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 63,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 1,
+        "confidence": "low",
+        "freshness_label": "recent",
+        "freshness_days": 1.3,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+        "score_parts": {
+          "relevance": 19,
+          "trend": 8,
+          "freshness": 15,
+          "change": 4,
           "credibility": 10,
           "scarcity": 7
         },
@@ -312,18 +472,83 @@
           }
         ],
         "feedback": [],
-        "radar_score": 66,
+        "radar_score": 63,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
-        "freshness_label": "new",
-        "freshness_days": 0.5,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
+        "freshness_label": "recent",
+        "freshness_days": 1.3,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
         "score_parts": {
           "relevance": 20,
           "trend": 7,
-          "freshness": 18,
+          "freshness": 15,
+          "change": 4,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_7bdd02ca8ffeea153c6f",
+        "title": "QQ 鸿蒙版 App 获 9.2.25 新版本邀测升级：支持设置在线状态，新增 QQ 邮箱、 QQ 钱包插件",
+        "summary": "数码行业出现值得入库的信号：QQ 鸿蒙版 App 获 9.2.25 新版本邀测升级：支持设置在线状态，新增 QQ 邮箱、 QQ 钱包插件。它涉及 华为，系统识别到 数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+        "what_happened": "公开摘要提到：IT之家 5 月 30 日消息，QQ 鸿蒙版 App 昨日在华为应用市场（App Gallery）开启 9.2.25（2914）版本邀测升级（需收到短信通知后点击链接跳转安装），测试时间为 2026/5/29-2026/6/30。 IT之家附测试说明如下： 1、新增支持 QQ … 来源为 ithome，发布时间标记为 05/30 11:12。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "华为 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "更新后最该试的 3 个功能",
+        "category": "digital",
+        "importance_score": 56,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-30T11:12:10+08:00",
+        "last_seen_at": "2026-05-30T16:23:28+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-30T11:52:37+08:00",
+        "updated_at": "2026-05-30T16:23:38+08:00",
+        "tags": [
+          "数码",
+          "系统更新"
+        ],
+        "entities": [
+          {
+            "name": "华为",
+            "type": "brand",
+            "aliases": [
+              "Huawei",
+              "HarmonyOS",
+              "问界",
+              "智界",
+              "韬定律",
+              "τ定律",
+              "何庭波",
+              "麒麟"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/957/452.htm",
+            "title": "QQ 鸿蒙版 App 获 9.2.25 新版本邀测升级：支持设置在线状态，新增 QQ 邮箱、 QQ 钱包插件",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 63,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 1,
+        "confidence": "low",
+        "freshness_label": "recent",
+        "freshness_days": 2.2,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+        "score_parts": {
+          "relevance": 21,
+          "trend": 6,
+          "freshness": 15,
           "change": 4,
           "credibility": 10,
           "scarcity": 7
@@ -362,18 +587,18 @@
           }
         ],
         "feedback": [],
-        "radar_score": 65,
+        "radar_score": 62,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
-        "freshness_label": "new",
-        "freshness_days": 0.5,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
+        "freshness_label": "recent",
+        "freshness_days": 1.2,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
         "score_parts": {
           "relevance": 17,
           "trend": 7,
-          "freshness": 18,
+          "freshness": 15,
           "change": 6,
           "credibility": 10,
           "scarcity": 7
@@ -413,170 +638,18 @@
           }
         ],
         "feedback": [],
-        "radar_score": 65,
-        "radar_level": "B",
-        "radar_section": "developing",
-        "video_potential": 1,
-        "confidence": "low",
-        "freshness_label": "new",
-        "freshness_days": 0.5,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
-        "score_parts": {
-          "relevance": 19,
-          "trend": 7,
-          "freshness": 18,
-          "change": 4,
-          "credibility": 10,
-          "scarcity": 7
-        },
-        "caps": []
-      },
-      {
-        "id": "evt_c1b358883605e1bfe7a1",
-        "title": "OpenAI 升级 GPT-5.5 Instant 模型，AI 回复更自然、易读",
-        "summary": "数码行业出现值得入库的信号：OpenAI 升级 GPT-5.5 Instant 模型，AI 回复更自然、易读。它涉及 相关主体，系统识别到 发布会、数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 30 日消息，OpenAI 公司于 5 月 28 日发布公告， 宣布更新 ChatGPT 的 GPT-5.5 Instant 版本及其 API，并逐步弃用 OpenAI o3 和 GPT-4.5 模型。 OpenAI 公司于 5 月 5 日推出 GPT-5.5… 来源为 ithome，发布时间标记为 05/30 10:14。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 66,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-30T10:14:38+08:00",
-        "last_seen_at": "2026-05-30T16:22:00+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-30T11:52:37+08:00",
-        "updated_at": "2026-05-30T16:22:11+08:00",
-        "tags": [
-          "发布会",
-          "数码",
-          "系统更新"
-        ],
-        "entities": [],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/957/437.htm",
-            "title": "OpenAI 升级 GPT-5.5 Instant 模型，AI 回复更自然、易读",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 65,
-        "radar_level": "B",
-        "radar_section": "developing",
-        "video_potential": 1,
-        "confidence": "low",
-        "freshness_label": "recent",
-        "freshness_days": 1.5,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
-        "score_parts": {
-          "relevance": 19,
-          "trend": 7,
-          "freshness": 15,
-          "change": 7,
-          "credibility": 10,
-          "scarcity": 7
-        },
-        "caps": []
-      },
-      {
-        "id": "evt_6a0e92e6450ed436e308",
-        "title": "消息称育碧《雷曼：传奇》重制版游戏 10 月 1 日发售，有望与《宇宙机器人》《光与影：33 号远征队》联动",
-        "summary": "数码行业出现值得入库的信号：消息称育碧《雷曼：传奇》重制版游戏 10 月 1 日发售，有望与《宇宙机器人》《光与影：33 号远征队》联动。它涉及 相关主体，系统识别到 发布会、数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 30 日消息，知名爆料人 billbil-kun 昨天在 Dealabs 平台透露，育碧旗下游戏《雷曼：传奇》重制版将于 10 月 1 日发售。 据介绍，本作将拥有 PS5、Switch 2 实体版，育碧有可能会在下周正式官宣，索尼也有可能会在 6 月 2 日… 来源为 ithome，发布时间标记为 05/30 11:09。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 64,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-30T11:09:39+08:00",
-        "last_seen_at": "2026-05-30T16:23:28+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-30T11:52:37+08:00",
-        "updated_at": "2026-05-30T16:23:38+08:00",
-        "tags": [
-          "发布会",
-          "数码",
-          "系统更新"
-        ],
-        "entities": [],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/957/451.htm",
-            "title": "消息称育碧《雷曼：传奇》重制版游戏 10 月 1 日发售，有望与《宇宙机器人》《光与影：33 号远征队》联动",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 64,
-        "radar_level": "B",
-        "radar_section": "developing",
-        "video_potential": 1,
-        "confidence": "low",
-        "freshness_label": "recent",
-        "freshness_days": 1.5,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
-        "score_parts": {
-          "relevance": 17,
-          "trend": 8,
-          "freshness": 15,
-          "change": 7,
-          "credibility": 10,
-          "scarcity": 7
-        },
-        "caps": []
-      },
-      {
-        "id": "evt_9c4fe5099d45da198f0e",
-        "title": "技嘉推出 D5 Single Boost：单通道内存自动超频 8400MT/s，带宽接近双通道",
-        "summary": "数码行业出现值得入库的信号：技嘉推出 D5 Single Boost：单通道内存自动超频 8400MT/s，带宽接近双通道。它涉及 相关主体，系统识别到 数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 31 日消息，技嘉 (GIGABYTE) 本月 29 日宣布推出内存优化技术 D5 Single Boost。其可在兼容硬件上实现自动内存超频， 让单通道单模组平台实现接近标准双通道平台的带宽 ，提升最终性能，在内存价格维持高位的今天降低装机成本。 ▲ 技嘉 … 来源为 ithome，发布时间标记为 05/31 10:46。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-        "cover_angle": "更新后最该试的 3 个功能",
-        "category": "digital",
-        "importance_score": 64,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-31T10:46:41+08:00",
-        "last_seen_at": "2026-05-31T17:07:38+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-31T11:50:20+08:00",
-        "updated_at": "2026-05-31T17:07:49+08:00",
-        "tags": [
-          "数码",
-          "系统更新"
-        ],
-        "entities": [],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/957/735.htm",
-            "title": "技嘉推出 D5 Single Boost：单通道内存自动超频 8400MT/s，带宽接近双通道",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
         "radar_score": 62,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
-        "freshness_label": "new",
-        "freshness_days": 0.5,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
+        "freshness_label": "recent",
+        "freshness_days": 1.3,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
         "score_parts": {
-          "relevance": 17,
-          "trend": 6,
-          "freshness": 18,
+          "relevance": 19,
+          "trend": 7,
+          "freshness": 15,
           "change": 4,
           "credibility": 10,
           "scarcity": 7
@@ -621,61 +694,11 @@
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 1.5,
+        "freshness_days": 2.3,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
         "score_parts": {
           "relevance": 19,
           "trend": 7,
-          "freshness": 15,
-          "change": 4,
-          "credibility": 10,
-          "scarcity": 7
-        },
-        "caps": []
-      },
-      {
-        "id": "evt_463652b885e9c3d15ca2",
-        "title": "首次原生支持 AMD HDMI VRR，SteamOS 3.8.6 Beta 版发布",
-        "summary": "数码行业出现值得入库的信号：首次原生支持 AMD HDMI VRR，SteamOS 3.8.6 Beta 版发布。它涉及 相关主体，系统识别到 发布会、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 30 日消息，V社今天发布 SteamOS 3.8.6 系统 Beta 测试版，首次引入 AMD 原生 HDMI 可变刷新率（VRR）。 据悉， SteamOS 3.8.6 将为原生配备 HDMI 输出接口的设备带来实验性质的 HDMI VRR 支持 。同时 … 来源为 ithome，发布时间标记为 05/30 11:32。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 52,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-30T11:32:42+08:00",
-        "last_seen_at": "2026-05-30T16:23:28+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-30T11:52:37+08:00",
-        "updated_at": "2026-05-30T16:23:38+08:00",
-        "tags": [
-          "发布会",
-          "数码"
-        ],
-        "entities": [],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/957/456.htm",
-            "title": "首次原生支持 AMD HDMI VRR，SteamOS 3.8.6 Beta 版发布",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 61,
-        "radar_level": "B",
-        "radar_section": "developing",
-        "video_potential": 1,
-        "confidence": "low",
-        "freshness_label": "recent",
-        "freshness_days": 1.5,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
-        "score_parts": {
-          "relevance": 17,
-          "trend": 8,
           "freshness": 15,
           "change": 4,
           "credibility": 10,
@@ -687,54 +710,30 @@
     "videoCandidates": [],
     "followUp": [
       {
-        "id": "evt_b0ded882e9c5baa2f2f0",
-        "title": "华为为什么要公布韬定律，公开了那不是西方厂商也可以叠加做了？",
-        "summary": "数码行业出现值得入库的信号：IT早报 0531：微软宣布下周携手英伟达开启 PC 新时代；深圳网约车市场已饱和官方发风险提示；苹果 iPhone 18 机模曝光；Mini…。它涉及 苹果、Google、小米、vivo，系统识别到 争议、半导体突破、发布会、影像、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 31 日消息，在 5 月 29 日上午的粤港澳大湾区车展期间，蔚来新款乐道 L60 正式发布并开启预售。新车具有 106 项升级，展车已到达全国门店， 6 月 6 日开放试驾、6 月 11 日正式上市 。 蔚来高级副总裁兼乐道汽车总裁沈斐昨日发文总结了此次乐道… 来源为 ithome，发布时间标记为 05/31 11:10。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "智能驾驶相关变化容易引发用户安全感、体验差异和车企技术路线讨论。对视频创作者来说，真正值得盯的是功能覆盖、接管体验、用户口碑和车企路线，而不是单纯复述一次 OTA 或发布节点。",
-        "creator_impact": "适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。优先找车主反馈、实测画面和同级竞品对照，避免只复述厂商话术。",
-        "content_angle": "争议拆解：乐道沈斐总结焕新款 L60 汽车六大维度升级关键信息，称智驾进入第一梯队，普通用户到底该怎么看？",
-        "cover_angle": "更新后最该试的 3 个功能",
+        "id": "evt_b02b807ff54e4e709825",
+        "title": "2026华为麒麟芯片等效台积电3nm制程",
+        "summary": "数码行业出现值得入库的信号：华为徐直军“感谢”美国制裁：使得我们国家半导体产业链能够真正地成长起来，现在势头好得很。它涉及 华为、半导体突破，系统识别到 半导体突破、发布会、数码、选题机会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+        "what_happened": "公开摘要提到：IT之家 5 月 31 日消息，据钛媒体报道，华为副董事长、轮值董事长徐直军近日在接受采访时，针对公司最新发布的“韬定律”以及逻辑折叠芯片架构作出回应，直言美国的制裁压力反而促成了中国半导体产业链的快速成长。 徐直军坦言：“如果不是美国逼我们国家、我们公司、我们产业界，不可能要… 来源为 ithome，发布时间标记为 05/31 10:25。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "华为、半导体突破 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为、半导体突破 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
         "category": "digital",
-        "importance_score": 60,
+        "importance_score": 87,
         "worth_following": 1,
-        "first_seen_at": "2026-05-29T20:00:01+08:00",
-        "last_seen_at": "2026-05-31T22:01:00+08:00",
+        "first_seen_at": "2026-05-29T12:00:00+08:00",
+        "last_seen_at": "2026-05-31T17:07:38+08:00",
         "status": "active",
         "source_count": 2,
-        "created_at": "2026-05-30T00:22:23+08:00",
-        "updated_at": "2026-05-31T22:01:11+08:00",
+        "created_at": "2026-05-29T23:28:07+08:00",
+        "updated_at": "2026-05-31T17:07:49+08:00",
         "tags": [
-          "争议",
           "半导体突破",
           "发布会",
-          "影像",
           "数码",
-          "智驾",
-          "汽车",
-          "系统更新",
-          "自媒体",
           "选题机会"
         ],
         "entities": [
-          {
-            "name": "Google",
-            "type": "brand",
-            "aliases": [
-              "Android",
-              "Pixel",
-              "Gemini"
-            ]
-          },
-          {
-            "name": "vivo",
-            "type": "brand",
-            "aliases": [
-              "OriginOS",
-              "X Fold",
-              "X 系列"
-            ]
-          },
           {
             "name": "半导体突破",
             "type": "technology",
@@ -760,84 +759,26 @@
               "何庭波",
               "麒麟"
             ]
-          },
-          {
-            "name": "小米",
-            "type": "brand",
-            "aliases": [
-              "Xiaomi",
-              "小米汽车",
-              "SU7",
-              "HyperOS"
-            ]
-          },
-          {
-            "name": "智能驾驶",
-            "type": "technology",
-            "aliases": [
-              "智驾",
-              "NOA",
-              "辅助驾驶"
-            ]
-          },
-          {
-            "name": "比亚迪",
-            "type": "brand",
-            "aliases": [
-              "BYD"
-            ]
-          },
-          {
-            "name": "特斯拉",
-            "type": "brand",
-            "aliases": [
-              "Tesla",
-              "FSD"
-            ]
-          },
-          {
-            "name": "理想",
-            "type": "brand",
-            "aliases": [
-              "Li Auto"
-            ]
-          },
-          {
-            "name": "苹果",
-            "type": "brand",
-            "aliases": [
-              "Apple",
-              "iPhone",
-              "iOS",
-              "WWDC"
-            ]
-          },
-          {
-            "name": "蔚来",
-            "type": "brand",
-            "aliases": [
-              "NIO"
-            ]
           }
         ],
         "sources": [
           {
             "source": "bilibili",
-            "url": "https://www.bilibili.com/video/BV1heV86BEbj",
-            "title": "华为为什么要公布韬定律，公开了那不是西方厂商也可以叠加做了？",
-            "author": "创业者李孟"
+            "url": "https://www.bilibili.com/video/BV1dDVH6REb8",
+            "title": "2026华为麒麟芯片等效台积电3nm制程",
+            "author": "折腾的老猫"
           },
           {
             "source": "bilibili",
-            "url": "https://www.bilibili.com/video/BV1kDV86oEMB",
-            "title": "华为押注“逻辑折叠”，韬定律到底是突破，还是高代价豪赌？",
-            "author": "智视界"
+            "url": "https://www.bilibili.com/video/BV1z5V86HEBY",
+            "title": "华为发布τ定律当天，韩国教授直接泼冷水：这不是新技术，真可怕的在别处",
+            "author": "远境见闻录"
           },
           {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/957/400.htm",
-            "title": "IT早报 0530：10 名车主诉特斯拉 FSD 欺诈案国内开庭；Claude Opus 4.8 被指蒸馏中国 AI；黄仁勋评价华为韬定律；央视曝光某国用 41 种网络武器攻击我高校...",
-            "author": "IT之家"
+            "source": "bilibili",
+            "url": "https://www.bilibili.com/video/BV13qVa6LETG",
+            "title": "【台海观察】华为发布“韬定律” 领军中国“芯”突破，介文汲：建立独立自主的芯片创新体系。 #台海观察",
+            "author": "沪台通"
           },
           {
             "source": "bilibili",
@@ -847,39 +788,21 @@
           },
           {
             "source": "bilibili",
-            "url": "https://www.bilibili.com/video/BV16BVM6xEcN",
-            "title": "5月27日会员视频：华为发布存储新技术DoB，其实也是韬定律验证",
-            "author": "Rick老张有话说"
+            "url": "https://www.bilibili.com/video/BV1dsV86yEen",
+            "title": "从DeepSeek-V4发布到华为韬定律，美国正被中国架空—中美产业博弈下的顶级权谋",
+            "author": "IGE产业全球眼"
           },
           {
             "source": "bilibili",
-            "url": "https://www.bilibili.com/video/BV13qVa6LETG",
-            "title": "【台海观察】华为发布“韬定律” 领军中国“芯”突破，介文汲：建立独立自主的芯片创新体系。 #台海观察",
-            "author": "沪台通"
-          },
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/957/450.htm",
-            "title": "奇瑞 iCAR 超级 V23 赛博暗影极客版上市，售 16.08 万元",
-            "author": "IT之家"
+            "url": "https://www.bilibili.com/video/BV1H9Va6YEk5",
+            "title": "华为韬定律新魔法？老办法？",
+            "author": "未来博士wepon"
           },
           {
             "source": "bilibili",
-            "url": "https://www.bilibili.com/video/BV1dKVM67EFr",
-            "title": "黄仁勋的华为焦虑：韬定律横空出世，DeepSeek牵手昇腾",
-            "author": "流霜时"
-          },
-          {
-            "source": "bilibili",
-            "url": "https://www.bilibili.com/video/BV1p5V36zE2S",
-            "title": "华为智驾毫无反应，遇到紧急情况要及时接管！",
-            "author": "北凝陌寒"
-          },
-          {
-            "source": "bilibili",
-            "url": "https://www.bilibili.com/video/BV1KXVV6HEjJ",
-            "title": "外网看华为发布半导体韬定律 #硬核深度计划#华为#外国人看中国",
-            "author": "L譬如朝露"
+            "url": "https://www.bilibili.com/video/BV1W6G96ZE6v",
+            "title": "不靠ASML！华为六年量产381款芯片，半导体格局要变天",
+            "author": "知枢局"
           },
           {
             "source": "bilibili",
@@ -889,63 +812,57 @@
           },
           {
             "source": "bilibili",
+            "url": "https://www.bilibili.com/video/BV19fVG6tENL",
+            "title": "黄仁勋：华为逻辑折叠芯片，我们10年前就玩过了",
+            "author": "贾科丝jax"
+          },
+          {
+            "source": "bilibili",
+            "url": "https://www.bilibili.com/video/BV1KXVV6HEjJ",
+            "title": "外网看华为发布半导体韬定律 #硬核深度计划#华为#外国人看中国",
+            "author": "L譬如朝露"
+          },
+          {
+            "source": "bilibili",
             "url": "https://www.bilibili.com/video/BV1YfVG6tEHr",
             "title": "【爱否科技直播】 彭林谈华为芯片技术突破！韬定律怎么回事？",
             "author": "亮眼NBA"
           },
           {
             "source": "ithome",
-            "url": "https://www.ithome.com/0/957/738.htm",
-            "title": "乐道沈斐总结焕新款 L60 汽车六大维度升级关键信息，称智驾进入第一梯队",
+            "url": "https://www.ithome.com/0/957/730.htm",
+            "title": "华为徐直军“感谢”美国制裁：使得我们国家半导体产业链能够真正地成长起来，现在势头好得很",
             "author": "IT之家"
-          },
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/957/725.htm",
-            "title": "特斯拉 FSD（监督版）获爱沙尼亚批准，即将推送",
-            "author": "IT之家"
-          },
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/957/702.htm",
-            "title": "IT早报 0531：微软宣布下周携手英伟达开启 PC 新时代；深圳网约车市场已饱和官方发风险提示；苹果 iPhone 18 机模曝光；MiniMax 启动 A 股 IPO 进程...",
-            "author": "IT之家"
-          },
-          {
-            "source": "bilibili",
-            "url": "https://www.bilibili.com/video/BV17zV762E3q",
-            "title": "【熟肉】外网著名科技博主上海见证华为韬定律发布 改变业界伟大探索？",
-            "author": "UPTuber"
-          },
-          {
-            "source": "bilibili",
-            "url": "https://www.bilibili.com/video/BV1N9VV6DE4w",
-            "title": "华为发布韬定律，目标是改变行业规则吗？",
-            "author": "科技烟囱"
           },
           {
             "source": "bilibili",
             "url": "https://www.bilibili.com/video/BV1X8VE6rEpP",
             "title": "台专家分析华为韬定律，纸上谈兵啦，很难的啦～",
             "author": "贾科丝jax"
+          },
+          {
+            "source": "bilibili",
+            "url": "https://www.bilibili.com/video/BV1N9VV6DE4w",
+            "title": "华为发布韬定律，目标是改变行业规则吗？",
+            "author": "科技烟囱"
           }
         ],
         "feedback": [],
-        "radar_score": 100,
+        "radar_score": 94,
         "radar_level": "S",
         "radar_section": "must_read",
         "video_potential": 1,
         "confidence": "high",
         "freshness_label": "recent",
-        "freshness_days": 2.1,
+        "freshness_days": 3.2,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；热度和扩散信号较强，适合优先判断是否跟进；包含明确变化信号",
         "score_parts": {
           "relevance": 22,
           "trend": 26,
-          "freshness": 15,
-          "change": 10,
+          "freshness": 11,
+          "change": 8,
           "credibility": 15,
-          "scarcity": 6
+          "scarcity": 5
         },
         "caps": []
       },
@@ -1014,7 +931,7 @@
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 5.2,
+        "freshness_days": 6,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；包含明确变化信号",
         "score_parts": {
           "relevance": 22,
@@ -1077,13 +994,89 @@
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 1.6,
+        "freshness_days": 2.4,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；属于硬科技/产业级突破信号",
         "score_parts": {
           "relevance": 21,
           "trend": 13,
           "freshness": 15,
           "change": 4,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_a6616af2e4cca2eea1b3",
+        "title": "三星 Galaxy Watch9 Classic 智能手表曝光，AI 智能洞察佩戴者健康",
+        "summary": "数码行业出现值得入库的信号：三星 Galaxy Watch9 Classic 智能手表曝光，AI 智能洞察佩戴者健康。它涉及 Google、三星，系统识别到 发布会、影像、数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+        "what_happened": "公开摘要提到：IT之家 5 月 30 日消息，科技媒体 Android Authority 昨日（5 月 29 日）发布博文， 挖掘谷歌 Wear OS 应用更新，发现了 3 款三星智能手表踪迹。 IT之家援引博文介绍，附上 3 款三星智能手表型号如下： Fresh 9：对应三星 Galax… 来源为 ithome，发布时间标记为 05/30 11:16。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "Google、三星 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 Google、三星 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 66,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-30T11:16:15+08:00",
+        "last_seen_at": "2026-05-30T16:23:28+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-30T11:52:37+08:00",
+        "updated_at": "2026-05-30T16:23:38+08:00",
+        "tags": [
+          "发布会",
+          "影像",
+          "数码",
+          "系统更新"
+        ],
+        "entities": [
+          {
+            "name": "Google",
+            "type": "brand",
+            "aliases": [
+              "Android",
+              "Pixel",
+              "Gemini"
+            ]
+          },
+          {
+            "name": "三星",
+            "type": "brand",
+            "aliases": [
+              "Samsung",
+              "Galaxy"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/957/453.htm",
+            "title": "三星 Galaxy Watch9 Classic 智能手表曝光，AI 智能洞察佩戴者健康",
+            "author": "IT之家"
+          },
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/957/447.htm",
+            "title": "2027 款斯柯达柯迪亚克 Kodiaq 路测图曝光",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 68,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 1,
+        "confidence": "low",
+        "freshness_label": "recent",
+        "freshness_days": 2.2,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
+        "score_parts": {
+          "relevance": 22,
+          "trend": 7,
+          "freshness": 15,
+          "change": 7,
           "credibility": 10,
           "scarcity": 7
         },
@@ -1122,18 +1115,120 @@
           }
         ],
         "feedback": [],
-        "radar_score": 68,
+        "radar_score": 65,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
-        "freshness_label": "new",
-        "freshness_days": 0.5,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
+        "freshness_label": "recent",
+        "freshness_days": 1.3,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
         "score_parts": {
           "relevance": 19,
           "trend": 7,
-          "freshness": 18,
+          "freshness": 15,
+          "change": 7,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_c1b358883605e1bfe7a1",
+        "title": "OpenAI 升级 GPT-5.5 Instant 模型，AI 回复更自然、易读",
+        "summary": "数码行业出现值得入库的信号：OpenAI 升级 GPT-5.5 Instant 模型，AI 回复更自然、易读。它涉及 相关主体，系统识别到 发布会、数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+        "what_happened": "公开摘要提到：IT之家 5 月 30 日消息，OpenAI 公司于 5 月 28 日发布公告， 宣布更新 ChatGPT 的 GPT-5.5 Instant 版本及其 API，并逐步弃用 OpenAI o3 和 GPT-4.5 模型。 OpenAI 公司于 5 月 5 日推出 GPT-5.5… 来源为 ithome，发布时间标记为 05/30 10:14。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 66,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-30T10:14:38+08:00",
+        "last_seen_at": "2026-05-30T16:22:00+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-30T11:52:37+08:00",
+        "updated_at": "2026-05-30T16:22:11+08:00",
+        "tags": [
+          "发布会",
+          "数码",
+          "系统更新"
+        ],
+        "entities": [],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/957/437.htm",
+            "title": "OpenAI 升级 GPT-5.5 Instant 模型，AI 回复更自然、易读",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 65,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 1,
+        "confidence": "low",
+        "freshness_label": "recent",
+        "freshness_days": 2.3,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
+        "score_parts": {
+          "relevance": 19,
+          "trend": 7,
+          "freshness": 15,
+          "change": 7,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_6a0e92e6450ed436e308",
+        "title": "消息称育碧《雷曼：传奇》重制版游戏 10 月 1 日发售，有望与《宇宙机器人》《光与影：33 号远征队》联动",
+        "summary": "数码行业出现值得入库的信号：消息称育碧《雷曼：传奇》重制版游戏 10 月 1 日发售，有望与《宇宙机器人》《光与影：33 号远征队》联动。它涉及 相关主体，系统识别到 发布会、数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+        "what_happened": "公开摘要提到：IT之家 5 月 30 日消息，知名爆料人 billbil-kun 昨天在 Dealabs 平台透露，育碧旗下游戏《雷曼：传奇》重制版将于 10 月 1 日发售。 据介绍，本作将拥有 PS5、Switch 2 实体版，育碧有可能会在下周正式官宣，索尼也有可能会在 6 月 2 日… 来源为 ithome，发布时间标记为 05/30 11:09。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 64,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-30T11:09:39+08:00",
+        "last_seen_at": "2026-05-30T16:23:28+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-30T11:52:37+08:00",
+        "updated_at": "2026-05-30T16:23:38+08:00",
+        "tags": [
+          "发布会",
+          "数码",
+          "系统更新"
+        ],
+        "entities": [],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/957/451.htm",
+            "title": "消息称育碧《雷曼：传奇》重制版游戏 10 月 1 日发售，有望与《宇宙机器人》《光与影：33 号远征队》联动",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 64,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 1,
+        "confidence": "low",
+        "freshness_label": "recent",
+        "freshness_days": 2.2,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
+        "score_parts": {
+          "relevance": 17,
+          "trend": 8,
+          "freshness": 15,
           "change": 7,
           "credibility": 10,
           "scarcity": 7
@@ -1173,19 +1268,77 @@
           }
         ],
         "feedback": [],
-        "radar_score": 66,
+        "radar_score": 63,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
-        "freshness_label": "new",
-        "freshness_days": 0.5,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
+        "freshness_label": "recent",
+        "freshness_days": 1.2,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
         "score_parts": {
           "relevance": 17,
           "trend": 7,
-          "freshness": 18,
+          "freshness": 15,
           "change": 7,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_5c121f933b6e9a6c5bb3",
+        "title": "比亚迪方程豹个性轿车“方程 S GT”官图发布，S 系列新车第三季度上市",
+        "summary": "数码行业出现值得入库的信号：比亚迪方程豹个性轿车“方程 S GT”官图发布，S 系列新车第三季度上市。它涉及 比亚迪，系统识别到 发布会、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+        "what_happened": "公开摘要提到：IT之家 5 月 31 日消息，比亚迪方程豹汽车官方昨日发布了旗下个性轿车“方程 S GT”最新官图。 据IT之家 4 月 24 日报道，在 2026 北京国际车展上，比亚迪方程豹宣布其首发的轿车系列产品线定名“方程 S”。官方公布了“方程 S”家族的三款车型，包括方程 S、方… 来源为 ithome，发布时间标记为 05/31 10:55。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "比亚迪 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 比亚迪 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+        "category": "digital",
+        "importance_score": 62,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-31T10:55:33+08:00",
+        "last_seen_at": "2026-05-31T17:07:38+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-31T11:50:20+08:00",
+        "updated_at": "2026-05-31T17:07:49+08:00",
+        "tags": [
+          "发布会",
+          "数码"
+        ],
+        "entities": [
+          {
+            "name": "比亚迪",
+            "type": "brand",
+            "aliases": [
+              "BYD"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/957/737.htm",
+            "title": "比亚迪方程豹个性轿车“方程 S GT”官图发布，S 系列新车第三季度上市",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 63,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 1,
+        "confidence": "low",
+        "freshness_label": "recent",
+        "freshness_days": 1.3,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+        "score_parts": {
+          "relevance": 19,
+          "trend": 8,
+          "freshness": 15,
+          "change": 4,
           "credibility": 10,
           "scarcity": 7
         },
@@ -1240,18 +1393,83 @@
           }
         ],
         "feedback": [],
-        "radar_score": 66,
+        "radar_score": 63,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
-        "freshness_label": "new",
-        "freshness_days": 0.5,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
+        "freshness_label": "recent",
+        "freshness_days": 1.3,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
         "score_parts": {
           "relevance": 20,
           "trend": 7,
-          "freshness": 18,
+          "freshness": 15,
+          "change": 4,
+          "credibility": 10,
+          "scarcity": 7
+        },
+        "caps": []
+      },
+      {
+        "id": "evt_7bdd02ca8ffeea153c6f",
+        "title": "QQ 鸿蒙版 App 获 9.2.25 新版本邀测升级：支持设置在线状态，新增 QQ 邮箱、 QQ 钱包插件",
+        "summary": "数码行业出现值得入库的信号：QQ 鸿蒙版 App 获 9.2.25 新版本邀测升级：支持设置在线状态，新增 QQ 邮箱、 QQ 钱包插件。它涉及 华为，系统识别到 数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+        "what_happened": "公开摘要提到：IT之家 5 月 30 日消息，QQ 鸿蒙版 App 昨日在华为应用市场（App Gallery）开启 9.2.25（2914）版本邀测升级（需收到短信通知后点击链接跳转安装），测试时间为 2026/5/29-2026/6/30。 IT之家附测试说明如下： 1、新增支持 QQ … 来源为 ithome，发布时间标记为 05/30 11:12。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+        "why_it_matters": "华为 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+        "cover_angle": "更新后最该试的 3 个功能",
+        "category": "digital",
+        "importance_score": 56,
+        "worth_following": 1,
+        "first_seen_at": "2026-05-30T11:12:10+08:00",
+        "last_seen_at": "2026-05-30T16:23:28+08:00",
+        "status": "active",
+        "source_count": 1,
+        "created_at": "2026-05-30T11:52:37+08:00",
+        "updated_at": "2026-05-30T16:23:38+08:00",
+        "tags": [
+          "数码",
+          "系统更新"
+        ],
+        "entities": [
+          {
+            "name": "华为",
+            "type": "brand",
+            "aliases": [
+              "Huawei",
+              "HarmonyOS",
+              "问界",
+              "智界",
+              "韬定律",
+              "τ定律",
+              "何庭波",
+              "麒麟"
+            ]
+          }
+        ],
+        "sources": [
+          {
+            "source": "ithome",
+            "url": "https://www.ithome.com/0/957/452.htm",
+            "title": "QQ 鸿蒙版 App 获 9.2.25 新版本邀测升级：支持设置在线状态，新增 QQ 邮箱、 QQ 钱包插件",
+            "author": "IT之家"
+          }
+        ],
+        "feedback": [],
+        "radar_score": 63,
+        "radar_level": "B",
+        "radar_section": "developing",
+        "video_potential": 1,
+        "confidence": "low",
+        "freshness_label": "recent",
+        "freshness_days": 2.2,
+        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+        "score_parts": {
+          "relevance": 21,
+          "trend": 6,
+          "freshness": 15,
           "change": 4,
           "credibility": 10,
           "scarcity": 7
@@ -1290,272 +1508,19 @@
           }
         ],
         "feedback": [],
-        "radar_score": 65,
-        "radar_level": "B",
-        "radar_section": "developing",
-        "video_potential": 1,
-        "confidence": "low",
-        "freshness_label": "new",
-        "freshness_days": 0.5,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
-        "score_parts": {
-          "relevance": 17,
-          "trend": 7,
-          "freshness": 18,
-          "change": 6,
-          "credibility": 10,
-          "scarcity": 7
-        },
-        "caps": []
-      },
-      {
-        "id": "evt_ea2004ed882d98ba9fa0",
-        "title": "影石刘靖康公布 Luna 相机第一人称套件测试视频，临时加需导致延迟到 6 月上市",
-        "summary": "数码行业出现值得入库的信号：影石刘靖康公布 Luna 相机第一人称套件测试视频，临时加需导致延迟到 6 月上市。它涉及 相关主体，系统识别到 发布会、影像、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 31 日消息，影石 CEO 刘靖康今日公布 Luna 相机第一人称套件测试视频，并称“很抱歉由于我临时加需求导致 Luna 相机延迟到 6 月上市”。 他表示，享受当下和记录同等重要， 于是影石在今年临时开发了 Luna 第一人称套件 ，镜头会随着你头动的方向… 来源为 ithome，发布时间标记为 05/31 10:12。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 60,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-31T10:12:51+08:00",
-        "last_seen_at": "2026-05-31T15:59:18+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-31T11:50:20+08:00",
-        "updated_at": "2026-05-31T15:59:29+08:00",
-        "tags": [
-          "发布会",
-          "影像",
-          "数码"
-        ],
-        "entities": [],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/957/726.htm",
-            "title": "影石刘靖康公布 Luna 相机第一人称套件测试视频，临时加需导致延迟到 6 月上市",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 65,
-        "radar_level": "B",
-        "radar_section": "developing",
-        "video_potential": 1,
-        "confidence": "low",
-        "freshness_label": "new",
-        "freshness_days": 0.5,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
-        "score_parts": {
-          "relevance": 19,
-          "trend": 7,
-          "freshness": 18,
-          "change": 4,
-          "credibility": 10,
-          "scarcity": 7
-        },
-        "caps": []
-      },
-      {
-        "id": "evt_c1b358883605e1bfe7a1",
-        "title": "OpenAI 升级 GPT-5.5 Instant 模型，AI 回复更自然、易读",
-        "summary": "数码行业出现值得入库的信号：OpenAI 升级 GPT-5.5 Instant 模型，AI 回复更自然、易读。它涉及 相关主体，系统识别到 发布会、数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 30 日消息，OpenAI 公司于 5 月 28 日发布公告， 宣布更新 ChatGPT 的 GPT-5.5 Instant 版本及其 API，并逐步弃用 OpenAI o3 和 GPT-4.5 模型。 OpenAI 公司于 5 月 5 日推出 GPT-5.5… 来源为 ithome，发布时间标记为 05/30 10:14。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 66,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-30T10:14:38+08:00",
-        "last_seen_at": "2026-05-30T16:22:00+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-30T11:52:37+08:00",
-        "updated_at": "2026-05-30T16:22:11+08:00",
-        "tags": [
-          "发布会",
-          "数码",
-          "系统更新"
-        ],
-        "entities": [],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/957/437.htm",
-            "title": "OpenAI 升级 GPT-5.5 Instant 模型，AI 回复更自然、易读",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 65,
-        "radar_level": "B",
-        "radar_section": "developing",
-        "video_potential": 1,
-        "confidence": "low",
-        "freshness_label": "recent",
-        "freshness_days": 1.5,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
-        "score_parts": {
-          "relevance": 19,
-          "trend": 7,
-          "freshness": 15,
-          "change": 7,
-          "credibility": 10,
-          "scarcity": 7
-        },
-        "caps": []
-      },
-      {
-        "id": "evt_6a0e92e6450ed436e308",
-        "title": "消息称育碧《雷曼：传奇》重制版游戏 10 月 1 日发售，有望与《宇宙机器人》《光与影：33 号远征队》联动",
-        "summary": "数码行业出现值得入库的信号：消息称育碧《雷曼：传奇》重制版游戏 10 月 1 日发售，有望与《宇宙机器人》《光与影：33 号远征队》联动。它涉及 相关主体，系统识别到 发布会、数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 30 日消息，知名爆料人 billbil-kun 昨天在 Dealabs 平台透露，育碧旗下游戏《雷曼：传奇》重制版将于 10 月 1 日发售。 据介绍，本作将拥有 PS5、Switch 2 实体版，育碧有可能会在下周正式官宣，索尼也有可能会在 6 月 2 日… 来源为 ithome，发布时间标记为 05/30 11:09。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 64,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-30T11:09:39+08:00",
-        "last_seen_at": "2026-05-30T16:23:28+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-30T11:52:37+08:00",
-        "updated_at": "2026-05-30T16:23:38+08:00",
-        "tags": [
-          "发布会",
-          "数码",
-          "系统更新"
-        ],
-        "entities": [],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/957/451.htm",
-            "title": "消息称育碧《雷曼：传奇》重制版游戏 10 月 1 日发售，有望与《宇宙机器人》《光与影：33 号远征队》联动",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 64,
-        "radar_level": "B",
-        "radar_section": "developing",
-        "video_potential": 1,
-        "confidence": "low",
-        "freshness_label": "recent",
-        "freshness_days": 1.5,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
-        "score_parts": {
-          "relevance": 17,
-          "trend": 8,
-          "freshness": 15,
-          "change": 7,
-          "credibility": 10,
-          "scarcity": 7
-        },
-        "caps": []
-      },
-      {
-        "id": "evt_9c4fe5099d45da198f0e",
-        "title": "技嘉推出 D5 Single Boost：单通道内存自动超频 8400MT/s，带宽接近双通道",
-        "summary": "数码行业出现值得入库的信号：技嘉推出 D5 Single Boost：单通道内存自动超频 8400MT/s，带宽接近双通道。它涉及 相关主体，系统识别到 数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 31 日消息，技嘉 (GIGABYTE) 本月 29 日宣布推出内存优化技术 D5 Single Boost。其可在兼容硬件上实现自动内存超频， 让单通道单模组平台实现接近标准双通道平台的带宽 ，提升最终性能，在内存价格维持高位的今天降低装机成本。 ▲ 技嘉 … 来源为 ithome，发布时间标记为 05/31 10:46。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-        "cover_angle": "更新后最该试的 3 个功能",
-        "category": "digital",
-        "importance_score": 64,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-31T10:46:41+08:00",
-        "last_seen_at": "2026-05-31T17:07:38+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-31T11:50:20+08:00",
-        "updated_at": "2026-05-31T17:07:49+08:00",
-        "tags": [
-          "数码",
-          "系统更新"
-        ],
-        "entities": [],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/957/735.htm",
-            "title": "技嘉推出 D5 Single Boost：单通道内存自动超频 8400MT/s，带宽接近双通道",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
-        "radar_score": 62,
-        "radar_level": "B",
-        "radar_section": "developing",
-        "video_potential": 1,
-        "confidence": "low",
-        "freshness_label": "new",
-        "freshness_days": 0.5,
-        "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
-        "score_parts": {
-          "relevance": 17,
-          "trend": 6,
-          "freshness": 18,
-          "change": 4,
-          "credibility": 10,
-          "scarcity": 7
-        },
-        "caps": []
-      },
-      {
-        "id": "evt_a6985f03edf1ac6b0da6",
-        "title": "英伟达推出 LocateAnything，主打 AI 高速、高精度检测对象",
-        "summary": "数码行业出现值得入库的信号：英伟达推出 LocateAnything，主打 AI 高速、高精度检测对象。它涉及 相关主体，系统识别到 发布会、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-        "what_happened": "公开摘要提到：IT之家 5 月 30 日消息，英伟达昨日（5 月 29 日）发布博文，宣布携手香港理工大学、南京大学等， 推出 LocateAnything 模型，主打高速、高精度检测对象。 该模型可以从照片或截图中找出指定对象，并用检测框标出位置，重点服务机器人感知、电脑自动操作等需要快速… 来源为 ithome，发布时间标记为 05/30 10:30。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-        "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-        "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-        "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-        "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-        "category": "digital",
-        "importance_score": 57,
-        "worth_following": 1,
-        "first_seen_at": "2026-05-30T10:30:49+08:00",
-        "last_seen_at": "2026-05-30T16:23:28+08:00",
-        "status": "active",
-        "source_count": 1,
-        "created_at": "2026-05-30T11:52:37+08:00",
-        "updated_at": "2026-05-30T16:23:38+08:00",
-        "tags": [
-          "发布会",
-          "数码"
-        ],
-        "entities": [],
-        "sources": [
-          {
-            "source": "ithome",
-            "url": "https://www.ithome.com/0/957/446.htm",
-            "title": "英伟达推出 LocateAnything，主打 AI 高速、高精度检测对象",
-            "author": "IT之家"
-          }
-        ],
-        "feedback": [],
         "radar_score": 62,
         "radar_level": "B",
         "radar_section": "developing",
         "video_potential": 1,
         "confidence": "low",
         "freshness_label": "recent",
-        "freshness_days": 1.5,
+        "freshness_days": 1.2,
         "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
         "score_parts": {
-          "relevance": 19,
+          "relevance": 17,
           "trend": 7,
           "freshness": 15,
-          "change": 4,
+          "change": 6,
           "credibility": 10,
           "scarcity": 7
         },
@@ -1704,18 +1669,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 98,
+      "radar_score": 94,
       "radar_level": "S",
       "radar_section": "must_read",
       "video_potential": 1,
       "confidence": "high",
       "freshness_label": "recent",
-      "freshness_days": 2.5,
+      "freshness_days": 3.2,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；热度和扩散信号较强，适合优先判断是否跟进；包含明确变化信号",
       "score_parts": {
         "relevance": 22,
         "trend": 26,
-        "freshness": 15,
+        "freshness": 11,
         "change": 8,
         "credibility": 15,
         "scarcity": 5
@@ -1787,7 +1752,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 5.2,
+      "freshness_days": 6,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；包含明确变化信号",
       "score_parts": {
         "relevance": 22,
@@ -1850,64 +1815,13 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.6,
+      "freshness_days": 2.4,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
         "trend": 13,
         "freshness": 15,
         "change": 4,
-        "credibility": 10,
-        "scarcity": 7
-      },
-      "caps": []
-    },
-    {
-      "id": "evt_bed6a6f37ac015032865",
-      "title": "微星 Claw 8 EX AI+ 掌机实物亮相，确认升级人体工学防滑握把",
-      "summary": "数码行业出现值得入库的信号：微星 Claw 8 EX AI+ 掌机实物亮相，确认升级人体工学防滑握把。它涉及 相关主体，系统识别到 发布会、数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 31 日消息，据中国台湾地区生活网站与论坛 mobile01 本月 29 日报道，微星 (MSI) 在一次线下活动中提前展示了搭载英特尔新近发布的 锐炫 G3 Extreme 处理器的 Claw 8 EX AI+ 掌机的实物： ▲ 图源：mobile01 ▲ … 来源为 ithome，发布时间标记为 05/31 10:04。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-      "category": "digital",
-      "importance_score": 65,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-31T10:04:52+08:00",
-      "last_seen_at": "2026-05-31T15:59:18+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-31T11:50:20+08:00",
-      "updated_at": "2026-05-31T15:59:29+08:00",
-      "tags": [
-        "发布会",
-        "数码",
-        "系统更新"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/957/723.htm",
-          "title": "微星 Claw 8 EX AI+ 掌机实物亮相，确认升级人体工学防滑握把",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 68,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.5,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
-      "score_parts": {
-        "relevance": 19,
-        "trend": 7,
-        "freshness": 18,
-        "change": 7,
         "credibility": 10,
         "scarcity": 7
       },
@@ -1977,7 +1891,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.5,
+      "freshness_days": 2.2,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
       "score_parts": {
         "relevance": 22,
@@ -2052,11 +1966,164 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.5,
+      "freshness_days": 2.2,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
       "score_parts": {
         "relevance": 22,
         "trend": 6,
+        "freshness": 15,
+        "change": 7,
+        "credibility": 10,
+        "scarcity": 7
+      },
+      "caps": []
+    },
+    {
+      "id": "evt_bed6a6f37ac015032865",
+      "title": "微星 Claw 8 EX AI+ 掌机实物亮相，确认升级人体工学防滑握把",
+      "summary": "数码行业出现值得入库的信号：微星 Claw 8 EX AI+ 掌机实物亮相，确认升级人体工学防滑握把。它涉及 相关主体，系统识别到 发布会、数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 31 日消息，据中国台湾地区生活网站与论坛 mobile01 本月 29 日报道，微星 (MSI) 在一次线下活动中提前展示了搭载英特尔新近发布的 锐炫 G3 Extreme 处理器的 Claw 8 EX AI+ 掌机的实物： ▲ 图源：mobile01 ▲ … 来源为 ithome，发布时间标记为 05/31 10:04。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+      "category": "digital",
+      "importance_score": 65,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-31T10:04:52+08:00",
+      "last_seen_at": "2026-05-31T15:59:18+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-31T11:50:20+08:00",
+      "updated_at": "2026-05-31T15:59:29+08:00",
+      "tags": [
+        "发布会",
+        "数码",
+        "系统更新"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/957/723.htm",
+          "title": "微星 Claw 8 EX AI+ 掌机实物亮相，确认升级人体工学防滑握把",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 65,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 1.3,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
+      "score_parts": {
+        "relevance": 19,
+        "trend": 7,
+        "freshness": 15,
+        "change": 7,
+        "credibility": 10,
+        "scarcity": 7
+      },
+      "caps": []
+    },
+    {
+      "id": "evt_c1b358883605e1bfe7a1",
+      "title": "OpenAI 升级 GPT-5.5 Instant 模型，AI 回复更自然、易读",
+      "summary": "数码行业出现值得入库的信号：OpenAI 升级 GPT-5.5 Instant 模型，AI 回复更自然、易读。它涉及 相关主体，系统识别到 发布会、数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 30 日消息，OpenAI 公司于 5 月 28 日发布公告， 宣布更新 ChatGPT 的 GPT-5.5 Instant 版本及其 API，并逐步弃用 OpenAI o3 和 GPT-4.5 模型。 OpenAI 公司于 5 月 5 日推出 GPT-5.5… 来源为 ithome，发布时间标记为 05/30 10:14。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+      "category": "digital",
+      "importance_score": 66,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-30T10:14:38+08:00",
+      "last_seen_at": "2026-05-30T16:22:00+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-30T11:52:37+08:00",
+      "updated_at": "2026-05-30T16:22:11+08:00",
+      "tags": [
+        "发布会",
+        "数码",
+        "系统更新"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/957/437.htm",
+          "title": "OpenAI 升级 GPT-5.5 Instant 模型，AI 回复更自然、易读",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 65,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 2.3,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
+      "score_parts": {
+        "relevance": 19,
+        "trend": 7,
+        "freshness": 15,
+        "change": 7,
+        "credibility": 10,
+        "scarcity": 7
+      },
+      "caps": []
+    },
+    {
+      "id": "evt_6a0e92e6450ed436e308",
+      "title": "消息称育碧《雷曼：传奇》重制版游戏 10 月 1 日发售，有望与《宇宙机器人》《光与影：33 号远征队》联动",
+      "summary": "数码行业出现值得入库的信号：消息称育碧《雷曼：传奇》重制版游戏 10 月 1 日发售，有望与《宇宙机器人》《光与影：33 号远征队》联动。它涉及 相关主体，系统识别到 发布会、数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 30 日消息，知名爆料人 billbil-kun 昨天在 Dealabs 平台透露，育碧旗下游戏《雷曼：传奇》重制版将于 10 月 1 日发售。 据介绍，本作将拥有 PS5、Switch 2 实体版，育碧有可能会在下周正式官宣，索尼也有可能会在 6 月 2 日… 来源为 ithome，发布时间标记为 05/30 11:09。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+      "category": "digital",
+      "importance_score": 64,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-30T11:09:39+08:00",
+      "last_seen_at": "2026-05-30T16:23:28+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-30T11:52:37+08:00",
+      "updated_at": "2026-05-30T16:23:38+08:00",
+      "tags": [
+        "发布会",
+        "数码",
+        "系统更新"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/957/451.htm",
+          "title": "消息称育碧《雷曼：传奇》重制版游戏 10 月 1 日发售，有望与《宇宙机器人》《光与影：33 号远征队》联动",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 64,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 2.2,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
+      "score_parts": {
+        "relevance": 17,
+        "trend": 8,
         "freshness": 15,
         "change": 7,
         "credibility": 10,
@@ -2097,18 +2164,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 66,
+      "radar_score": 63,
       "radar_level": "B",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.5,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号；近期新出现",
+      "freshness_label": "recent",
+      "freshness_days": 1.2,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
       "score_parts": {
         "relevance": 17,
         "trend": 7,
-        "freshness": 18,
+        "freshness": 15,
         "change": 7,
         "credibility": 10,
         "scarcity": 7
@@ -2164,18 +2231,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 66,
+      "radar_score": 63,
       "radar_level": "B",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.5,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
+      "freshness_label": "recent",
+      "freshness_days": 1.3,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 20,
         "trend": 7,
-        "freshness": 18,
+        "freshness": 15,
         "change": 4,
         "credibility": 10,
         "scarcity": 7
@@ -2222,18 +2289,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 66,
+      "radar_score": 63,
       "radar_level": "B",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.5,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
+      "freshness_label": "recent",
+      "freshness_days": 1.3,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 19,
         "trend": 8,
-        "freshness": 18,
+        "freshness": 15,
         "change": 4,
         "credibility": 10,
         "scarcity": 7
@@ -2272,18 +2339,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 65,
+      "radar_score": 62,
       "radar_level": "B",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.5,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
+      "freshness_label": "recent",
+      "freshness_days": 1.2,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 17,
         "trend": 7,
-        "freshness": 18,
+        "freshness": 15,
         "change": 6,
         "credibility": 10,
         "scarcity": 7
@@ -2323,170 +2390,18 @@
         }
       ],
       "feedback": [],
-      "radar_score": 65,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.5,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
-      "score_parts": {
-        "relevance": 19,
-        "trend": 7,
-        "freshness": 18,
-        "change": 4,
-        "credibility": 10,
-        "scarcity": 7
-      },
-      "caps": []
-    },
-    {
-      "id": "evt_c1b358883605e1bfe7a1",
-      "title": "OpenAI 升级 GPT-5.5 Instant 模型，AI 回复更自然、易读",
-      "summary": "数码行业出现值得入库的信号：OpenAI 升级 GPT-5.5 Instant 模型，AI 回复更自然、易读。它涉及 相关主体，系统识别到 发布会、数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 30 日消息，OpenAI 公司于 5 月 28 日发布公告， 宣布更新 ChatGPT 的 GPT-5.5 Instant 版本及其 API，并逐步弃用 OpenAI o3 和 GPT-4.5 模型。 OpenAI 公司于 5 月 5 日推出 GPT-5.5… 来源为 ithome，发布时间标记为 05/30 10:14。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-      "category": "digital",
-      "importance_score": 66,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-30T10:14:38+08:00",
-      "last_seen_at": "2026-05-30T16:22:00+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-30T11:52:37+08:00",
-      "updated_at": "2026-05-30T16:22:11+08:00",
-      "tags": [
-        "发布会",
-        "数码",
-        "系统更新"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/957/437.htm",
-          "title": "OpenAI 升级 GPT-5.5 Instant 模型，AI 回复更自然、易读",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 65,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "recent",
-      "freshness_days": 1.5,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
-      "score_parts": {
-        "relevance": 19,
-        "trend": 7,
-        "freshness": 15,
-        "change": 7,
-        "credibility": 10,
-        "scarcity": 7
-      },
-      "caps": []
-    },
-    {
-      "id": "evt_6a0e92e6450ed436e308",
-      "title": "消息称育碧《雷曼：传奇》重制版游戏 10 月 1 日发售，有望与《宇宙机器人》《光与影：33 号远征队》联动",
-      "summary": "数码行业出现值得入库的信号：消息称育碧《雷曼：传奇》重制版游戏 10 月 1 日发售，有望与《宇宙机器人》《光与影：33 号远征队》联动。它涉及 相关主体，系统识别到 发布会、数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 30 日消息，知名爆料人 billbil-kun 昨天在 Dealabs 平台透露，育碧旗下游戏《雷曼：传奇》重制版将于 10 月 1 日发售。 据介绍，本作将拥有 PS5、Switch 2 实体版，育碧有可能会在下周正式官宣，索尼也有可能会在 6 月 2 日… 来源为 ithome，发布时间标记为 05/30 11:09。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-      "category": "digital",
-      "importance_score": 64,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-30T11:09:39+08:00",
-      "last_seen_at": "2026-05-30T16:23:28+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-30T11:52:37+08:00",
-      "updated_at": "2026-05-30T16:23:38+08:00",
-      "tags": [
-        "发布会",
-        "数码",
-        "系统更新"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/957/451.htm",
-          "title": "消息称育碧《雷曼：传奇》重制版游戏 10 月 1 日发售，有望与《宇宙机器人》《光与影：33 号远征队》联动",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 64,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "recent",
-      "freshness_days": 1.5,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
-      "score_parts": {
-        "relevance": 17,
-        "trend": 8,
-        "freshness": 15,
-        "change": 7,
-        "credibility": 10,
-        "scarcity": 7
-      },
-      "caps": []
-    },
-    {
-      "id": "evt_9c4fe5099d45da198f0e",
-      "title": "技嘉推出 D5 Single Boost：单通道内存自动超频 8400MT/s，带宽接近双通道",
-      "summary": "数码行业出现值得入库的信号：技嘉推出 D5 Single Boost：单通道内存自动超频 8400MT/s，带宽接近双通道。它涉及 相关主体，系统识别到 数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 31 日消息，技嘉 (GIGABYTE) 本月 29 日宣布推出内存优化技术 D5 Single Boost。其可在兼容硬件上实现自动内存超频， 让单通道单模组平台实现接近标准双通道平台的带宽 ，提升最终性能，在内存价格维持高位的今天降低装机成本。 ▲ 技嘉 … 来源为 ithome，发布时间标记为 05/31 10:46。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "更新后最该试的 3 个功能",
-      "category": "digital",
-      "importance_score": 64,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-31T10:46:41+08:00",
-      "last_seen_at": "2026-05-31T17:07:38+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-31T11:50:20+08:00",
-      "updated_at": "2026-05-31T17:07:49+08:00",
-      "tags": [
-        "数码",
-        "系统更新"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/957/735.htm",
-          "title": "技嘉推出 D5 Single Boost：单通道内存自动超频 8400MT/s，带宽接近双通道",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
       "radar_score": 62,
       "radar_level": "B",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.5,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
+      "freshness_label": "recent",
+      "freshness_days": 1.3,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
-        "relevance": 17,
-        "trend": 6,
-        "freshness": 18,
+        "relevance": 19,
+        "trend": 7,
+        "freshness": 15,
         "change": 4,
         "credibility": 10,
         "scarcity": 7
@@ -2531,7 +2446,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.5,
+      "freshness_days": 2.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 19,
@@ -2581,7 +2496,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.5,
+      "freshness_days": 2.2,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 17,
@@ -2592,6 +2507,164 @@
         "scarcity": 7
       },
       "caps": []
+    },
+    {
+      "id": "evt_b27a61ef371fa97c46d6",
+      "title": "P老师：τ定律没意义 国产芯片还看玄戒O3🤣",
+      "summary": "数码行业出现值得入库的信号：P老师：τ定律没意义 国产芯片还看玄戒O3🤣。它涉及 华为、半导体突破，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/31 10:45。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为、半导体突破 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：P老师：τ定律没意义 国产芯片还看玄戒O3🤣",
+      "category": "digital",
+      "importance_score": 60,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-31T10:45:18+08:00",
+      "last_seen_at": "2026-05-31T23:14:07+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-31T14:32:53+08:00",
+      "updated_at": "2026-05-31T23:14:17+08:00",
+      "tags": [
+        "半导体突破",
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "半导体突破",
+          "type": "technology",
+          "aliases": [
+            "半导体",
+            "晶体管",
+            "韬定律",
+            "τ定律",
+            "逻辑折叠",
+            "先进制程"
+          ]
+        },
+        {
+          "name": "华为",
+          "type": "brand",
+          "aliases": [
+            "Huawei",
+            "HarmonyOS",
+            "问界",
+            "智界",
+            "韬定律",
+            "τ定律",
+            "何庭波",
+            "麒麟"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1iPVJ6EE9n",
+          "title": "P老师：τ定律没意义 国产芯片还看玄戒O3🤣",
+          "author": "剁烂的土豆丫"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 1.3,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
+      "score_parts": {
+        "relevance": 22,
+        "trend": 20,
+        "freshness": 15,
+        "change": 5,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
+    },
+    {
+      "id": "evt_c3f045175b03e87182ad",
+      "title": "为什么全网都在嘲笑华为韬定律？",
+      "summary": "数码行业出现值得入库的信号：为什么全网都在嘲笑华为韬定律？。它涉及 华为、半导体突破，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/31 08:42。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为、半导体突破 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：为什么全网都在嘲笑华为韬定律？",
+      "category": "digital",
+      "importance_score": 60,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-31T08:42:30+08:00",
+      "last_seen_at": "2026-05-31T23:14:07+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-31T11:51:40+08:00",
+      "updated_at": "2026-05-31T23:14:17+08:00",
+      "tags": [
+        "半导体突破",
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "半导体突破",
+          "type": "technology",
+          "aliases": [
+            "半导体",
+            "晶体管",
+            "韬定律",
+            "τ定律",
+            "逻辑折叠",
+            "先进制程"
+          ]
+        },
+        {
+          "name": "华为",
+          "type": "brand",
+          "aliases": [
+            "Huawei",
+            "HarmonyOS",
+            "问界",
+            "智界",
+            "韬定律",
+            "τ定律",
+            "何庭波",
+            "麒麟"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1a5VJ6rEAo",
+          "title": "为什么全网都在嘲笑华为韬定律？",
+          "author": "Y等于ZX加A"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 60,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 1.3,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
+      "score_parts": {
+        "relevance": 22,
+        "trend": 19,
+        "freshness": 15,
+        "change": 5,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
+      ]
     },
     {
       "id": "evt_9bb7e9a5ec6f8631218b",
@@ -2657,13 +2730,13 @@
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.7,
+      "freshness_label": "recent",
+      "freshness_days": 1.4,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
         "trend": 19,
-        "freshness": 18,
+        "freshness": 15,
         "change": 5,
         "credibility": 6,
         "scarcity": 7
@@ -2736,13 +2809,13 @@
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.5,
+      "freshness_label": "recent",
+      "freshness_days": 1.2,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
         "trend": 20,
-        "freshness": 18,
+        "freshness": 15,
         "change": 6,
         "credibility": 6,
         "scarcity": 7
@@ -2803,93 +2876,14 @@
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.9,
+      "freshness_label": "recent",
+      "freshness_days": 1.6,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
         "trend": 18,
-        "freshness": 18,
+        "freshness": 15,
         "change": 4,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
-      "id": "evt_b27a61ef371fa97c46d6",
-      "title": "P老师：τ定律没意义 国产芯片还看玄戒O3🤣",
-      "summary": "数码行业出现值得入库的信号：P老师：τ定律没意义 国产芯片还看玄戒O3🤣。它涉及 华为、半导体突破，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/31 10:45。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为、半导体突破 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：P老师：τ定律没意义 国产芯片还看玄戒O3🤣",
-      "category": "digital",
-      "importance_score": 60,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-31T10:45:18+08:00",
-      "last_seen_at": "2026-05-31T15:59:18+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-31T14:32:53+08:00",
-      "updated_at": "2026-05-31T15:59:29+08:00",
-      "tags": [
-        "半导体突破",
-        "数码"
-      ],
-      "entities": [
-        {
-          "name": "半导体突破",
-          "type": "technology",
-          "aliases": [
-            "半导体",
-            "晶体管",
-            "韬定律",
-            "τ定律",
-            "逻辑折叠",
-            "先进制程"
-          ]
-        },
-        {
-          "name": "华为",
-          "type": "brand",
-          "aliases": [
-            "Huawei",
-            "HarmonyOS",
-            "问界",
-            "智界",
-            "韬定律",
-            "τ定律",
-            "何庭波",
-            "麒麟"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1iPVJ6EE9n",
-          "title": "P老师：τ定律没意义 国产芯片还看玄戒O3🤣",
-          "author": "剁烂的土豆丫"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 60,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.5,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
-      "score_parts": {
-        "relevance": 22,
-        "trend": 20,
-        "freshness": 18,
-        "change": 5,
         "credibility": 6,
         "scarcity": 7
       },
@@ -2961,13 +2955,13 @@
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.9,
+      "freshness_label": "recent",
+      "freshness_days": 1.7,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
         "trend": 20,
-        "freshness": 18,
+        "freshness": 15,
         "change": 5,
         "credibility": 6,
         "scarcity": 7
@@ -3040,13 +3034,13 @@
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.7,
+      "freshness_label": "recent",
+      "freshness_days": 1.5,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
         "trend": 20,
-        "freshness": 18,
+        "freshness": 15,
         "change": 5,
         "credibility": 6,
         "scarcity": 7
@@ -3119,92 +3113,13 @@
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.7,
+      "freshness_label": "recent",
+      "freshness_days": 1.4,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
         "trend": 21,
-        "freshness": 18,
-        "change": 5,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
-      "id": "evt_c3f045175b03e87182ad",
-      "title": "为什么全网都在嘲笑华为韬定律？",
-      "summary": "数码行业出现值得入库的信号：为什么全网都在嘲笑华为韬定律？。它涉及 华为、半导体突破，系统识别到 半导体突破、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：- 来源为 bilibili，发布时间标记为 05/31 08:42。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为、半导体突破 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：为什么全网都在嘲笑华为韬定律？",
-      "category": "digital",
-      "importance_score": 60,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-31T08:42:30+08:00",
-      "last_seen_at": "2026-05-31T15:59:18+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-31T11:51:40+08:00",
-      "updated_at": "2026-05-31T15:59:29+08:00",
-      "tags": [
-        "半导体突破",
-        "数码"
-      ],
-      "entities": [
-        {
-          "name": "半导体突破",
-          "type": "technology",
-          "aliases": [
-            "半导体",
-            "晶体管",
-            "韬定律",
-            "τ定律",
-            "逻辑折叠",
-            "先进制程"
-          ]
-        },
-        {
-          "name": "华为",
-          "type": "brand",
-          "aliases": [
-            "Huawei",
-            "HarmonyOS",
-            "问界",
-            "智界",
-            "韬定律",
-            "τ定律",
-            "何庭波",
-            "麒麟"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1a5VJ6rEAo",
-          "title": "为什么全网都在嘲笑华为韬定律？",
-          "author": "Y等于ZX加A"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 60,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.6,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
-      "score_parts": {
-        "relevance": 22,
-        "trend": 19,
-        "freshness": 18,
+        "freshness": 15,
         "change": 5,
         "credibility": 6,
         "scarcity": 7
@@ -3277,13 +3192,13 @@
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.6,
+      "freshness_label": "recent",
+      "freshness_days": 1.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
         "trend": 20,
-        "freshness": 18,
+        "freshness": 15,
         "change": 5,
         "credibility": 6,
         "scarcity": 7
@@ -3365,13 +3280,13 @@
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.5,
+      "freshness_label": "recent",
+      "freshness_days": 1.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
         "trend": 20,
-        "freshness": 18,
+        "freshness": 15,
         "change": 5,
         "credibility": 6,
         "scarcity": 7
@@ -3454,13 +3369,13 @@
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.9,
+      "freshness_label": "recent",
+      "freshness_days": 1.7,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；包含明确变化信号",
       "score_parts": {
         "relevance": 22,
         "trend": 20,
-        "freshness": 18,
+        "freshness": 15,
         "change": 8,
         "credibility": 6,
         "scarcity": 7
@@ -3534,7 +3449,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.6,
+      "freshness_days": 2.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -3601,7 +3516,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.4,
+      "freshness_days": 2.1,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
@@ -3680,7 +3595,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.2,
+      "freshness_days": 1.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -3759,7 +3674,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.1,
+      "freshness_days": 1.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -3822,7 +3737,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1,
+      "freshness_days": 1.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
@@ -3898,7 +3813,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1,
+      "freshness_days": 1.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -3957,13 +3872,13 @@
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 1,
+      "freshness_label": "recent",
+      "freshness_days": 1.7,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
         "trend": 18,
-        "freshness": 18,
+        "freshness": 15,
         "change": 4,
         "credibility": 6,
         "scarcity": 7
@@ -4037,7 +3952,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1,
+      "freshness_days": 1.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -4115,13 +4030,13 @@
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 1,
+      "freshness_label": "recent",
+      "freshness_days": 1.7,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
         "trend": 19,
-        "freshness": 18,
+        "freshness": 15,
         "change": 5,
         "credibility": 6,
         "scarcity": 7
@@ -4194,13 +4109,13 @@
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.9,
+      "freshness_label": "recent",
+      "freshness_days": 1.7,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
         "trend": 19,
-        "freshness": 18,
+        "freshness": 15,
         "change": 5,
         "credibility": 6,
         "scarcity": 7
@@ -4294,13 +4209,13 @@
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.9,
+      "freshness_label": "recent",
+      "freshness_days": 1.7,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
         "trend": 20,
-        "freshness": 18,
+        "freshness": 15,
         "change": 5,
         "credibility": 6,
         "scarcity": 7
@@ -4374,7 +4289,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1,
+      "freshness_days": 1.7,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；包含明确变化信号",
       "score_parts": {
         "relevance": 22,
@@ -4441,7 +4356,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.9,
+      "freshness_days": 2.7,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
@@ -4516,7 +4431,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.4,
+      "freshness_days": 2.1,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -4595,7 +4510,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.3,
+      "freshness_days": 2.1,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -4674,7 +4589,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.1,
+      "freshness_days": 1.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -4753,7 +4668,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.1,
+      "freshness_days": 1.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -4841,7 +4756,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.1,
+      "freshness_days": 1.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -4935,7 +4850,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1,
+      "freshness_days": 1.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -5023,7 +4938,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1,
+      "freshness_days": 1.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -5112,7 +5027,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1,
+      "freshness_days": 1.7,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -5191,7 +5106,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.5,
+      "freshness_days": 2.2,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -5270,7 +5185,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.5,
+      "freshness_days": 2.2,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -5348,13 +5263,13 @@
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 1,
+      "freshness_label": "recent",
+      "freshness_days": 1.7,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
         "trend": 20,
-        "freshness": 18,
+        "freshness": 15,
         "change": 5,
         "credibility": 6,
         "scarcity": 7
@@ -5400,13 +5315,13 @@
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 1,
+      "freshness_label": "recent",
+      "freshness_days": 1.7,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 19,
         "trend": 18,
-        "freshness": 18,
+        "freshness": 15,
         "change": 4,
         "credibility": 6,
         "scarcity": 7
@@ -5453,7 +5368,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.1,
+      "freshness_days": 2.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 19,
@@ -5518,7 +5433,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2,
+      "freshness_days": 2.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
@@ -5597,7 +5512,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.5,
+      "freshness_days": 2.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -5673,7 +5588,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1,
+      "freshness_days": 1.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -5752,7 +5667,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.2,
+      "freshness_days": 2.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -5819,7 +5734,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.1,
+      "freshness_days": 2.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
@@ -5898,7 +5813,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1,
+      "freshness_days": 1.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -5977,7 +5892,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1,
+      "freshness_days": 1.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -6056,7 +5971,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1,
+      "freshness_days": 1.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -6135,7 +6050,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.6,
+      "freshness_days": 2.4,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -6214,7 +6129,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.6,
+      "freshness_days": 2.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -6293,7 +6208,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.6,
+      "freshness_days": 2.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -6372,7 +6287,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.7,
+      "freshness_days": 2.4,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -6437,7 +6352,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.7,
+      "freshness_days": 2.4,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
@@ -6489,7 +6404,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.5,
+      "freshness_days": 2.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 17,
@@ -6539,7 +6454,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.5,
+      "freshness_days": 2.2,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 17,
@@ -6616,7 +6531,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.6,
+      "freshness_days": 2.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -6695,7 +6610,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.5,
+      "freshness_days": 2.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -6774,7 +6689,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.5,
+      "freshness_days": 2.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -6853,7 +6768,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.5,
+      "freshness_days": 2.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -6920,7 +6835,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.5,
+      "freshness_days": 2.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
@@ -6999,7 +6914,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.5,
+      "freshness_days": 2.2,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -7078,7 +6993,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.5,
+      "freshness_days": 2.2,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -7145,7 +7060,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.1,
+      "freshness_days": 2.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
@@ -7210,7 +7125,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.1,
+      "freshness_days": 2.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
@@ -7309,7 +7224,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2,
+      "freshness_days": 2.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -7388,7 +7303,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2,
+      "freshness_days": 2.7,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -7467,7 +7382,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2,
+      "freshness_days": 2.7,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -7519,7 +7434,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2,
+      "freshness_days": 2.7,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 19,
@@ -7607,7 +7522,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 3,
+      "freshness_days": 3.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -7659,12 +7574,12 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 3,
+      "freshness_days": 3.7,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 19,
         "trend": 19,
-        "freshness": 15,
+        "freshness": 11,
         "change": 4,
         "credibility": 6,
         "scarcity": 7
@@ -7711,12 +7626,12 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.9,
+      "freshness_days": 3.6,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 19,
         "trend": 18,
-        "freshness": 15,
+        "freshness": 11,
         "change": 4,
         "credibility": 6,
         "scarcity": 7
@@ -7788,12 +7703,12 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.7,
+      "freshness_days": 3.5,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
         "trend": 19,
-        "freshness": 15,
+        "freshness": 11,
         "change": 4,
         "credibility": 6,
         "scarcity": 7
@@ -7840,12 +7755,12 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.7,
+      "freshness_days": 3.5,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 19,
         "trend": 19,
-        "freshness": 15,
+        "freshness": 11,
         "change": 4,
         "credibility": 6,
         "scarcity": 7
@@ -7892,12 +7807,12 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.7,
+      "freshness_days": 3.4,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 19,
         "trend": 19,
-        "freshness": 15,
+        "freshness": 11,
         "change": 4,
         "credibility": 6,
         "scarcity": 7
@@ -7971,7 +7886,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.2,
+      "freshness_days": 2.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -8038,7 +7953,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 3.1,
+      "freshness_days": 3.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
@@ -8117,7 +8032,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 3.1,
+      "freshness_days": 3.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -8182,7 +8097,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.2,
+      "freshness_days": 2.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
@@ -8261,7 +8176,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.2,
+      "freshness_days": 2.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -8340,7 +8255,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.2,
+      "freshness_days": 2.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -8419,7 +8334,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.7,
+      "freshness_days": 2.4,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -8498,7 +8413,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.7,
+      "freshness_days": 2.4,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -8583,7 +8498,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2,
+      "freshness_days": 2.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -8650,7 +8565,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2,
+      "freshness_days": 2.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；包含明确变化信号",
       "score_parts": {
         "relevance": 21,
@@ -8729,7 +8644,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2,
+      "freshness_days": 2.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -8808,7 +8723,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2,
+      "freshness_days": 2.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -8875,7 +8790,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2,
+      "freshness_days": 2.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
@@ -8954,7 +8869,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2,
+      "freshness_days": 2.7,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -9045,7 +8960,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.9,
+      "freshness_days": 2.7,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -9124,7 +9039,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.9,
+      "freshness_days": 2.7,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -9203,7 +9118,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.9,
+      "freshness_days": 2.7,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -9282,7 +9197,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.9,
+      "freshness_days": 2.7,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -9349,12 +9264,12 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.4,
+      "freshness_days": 3.1,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
         "trend": 19,
-        "freshness": 15,
+        "freshness": 11,
         "change": 5,
         "credibility": 6,
         "scarcity": 7
@@ -9416,12 +9331,12 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.3,
+      "freshness_days": 3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
         "trend": 19,
-        "freshness": 15,
+        "freshness": 11,
         "change": 5,
         "credibility": 6,
         "scarcity": 7
@@ -9483,7 +9398,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.2,
+      "freshness_days": 3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
@@ -9568,12 +9483,12 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.5,
+      "freshness_days": 3.2,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
         "trend": 19,
-        "freshness": 15,
+        "freshness": 11,
         "change": 4,
         "credibility": 6,
         "scarcity": 7
@@ -9647,7 +9562,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.1,
+      "freshness_days": 2.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -9699,7 +9614,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.1,
+      "freshness_days": 2.8,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 19,
@@ -9778,12 +9693,12 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.5,
+      "freshness_days": 3.2,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
         "trend": 21,
-        "freshness": 15,
+        "freshness": 11,
         "change": 5,
         "credibility": 6,
         "scarcity": 7
@@ -9845,7 +9760,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 3.2,
+      "freshness_days": 3.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
@@ -9907,7 +9822,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.1,
+      "freshness_days": 2.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
@@ -9974,7 +9889,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.1,
+      "freshness_days": 2.9,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 21,
@@ -10053,12 +9968,12 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.6,
+      "freshness_days": 3.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；有热度迹象，但需要先补强来源；属于硬科技/产业级突破信号",
       "score_parts": {
         "relevance": 22,
         "trend": 20,
-        "freshness": 15,
+        "freshness": 11,
         "change": 5,
         "credibility": 6,
         "scarcity": 7
@@ -10066,6 +9981,56 @@
       "caps": [
         "单一弱来源封顶"
       ]
+    },
+    {
+      "id": "evt_9c4fe5099d45da198f0e",
+      "title": "技嘉推出 D5 Single Boost：单通道内存自动超频 8400MT/s，带宽接近双通道",
+      "summary": "数码行业出现值得入库的信号：技嘉推出 D5 Single Boost：单通道内存自动超频 8400MT/s，带宽接近双通道。它涉及 相关主体，系统识别到 数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 31 日消息，技嘉 (GIGABYTE) 本月 29 日宣布推出内存优化技术 D5 Single Boost。其可在兼容硬件上实现自动内存超频， 让单通道单模组平台实现接近标准双通道平台的带宽 ，提升最终性能，在内存价格维持高位的今天降低装机成本。 ▲ 技嘉 … 来源为 ithome，发布时间标记为 05/31 10:46。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "更新后最该试的 3 个功能",
+      "category": "digital",
+      "importance_score": 64,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-31T10:46:41+08:00",
+      "last_seen_at": "2026-05-31T17:07:38+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-31T11:50:20+08:00",
+      "updated_at": "2026-05-31T17:07:49+08:00",
+      "tags": [
+        "数码",
+        "系统更新"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/957/735.htm",
+          "title": "技嘉推出 D5 Single Boost：单通道内存自动超频 8400MT/s，带宽接近双通道",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 59,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 1.3,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+      "score_parts": {
+        "relevance": 17,
+        "trend": 6,
+        "freshness": 15,
+        "change": 4,
+        "credibility": 10,
+        "scarcity": 7
+      },
+      "caps": []
     },
     {
       "id": "evt_861468e96489f9d0cff1",
@@ -10108,18 +10073,131 @@
         }
       ],
       "feedback": [],
-      "radar_score": 59,
+      "radar_score": 56,
       "radar_level": "B",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.5,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
+      "freshness_label": "recent",
+      "freshness_days": 1.2,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 21,
         "trend": 7,
-        "freshness": 18,
+        "freshness": 15,
+        "change": 4,
+        "credibility": 10,
+        "scarcity": 7
+      },
+      "caps": [
+        "评测/体验稿默认不做头条"
+      ]
+    },
+    {
+      "id": "evt_f520b725b2894ed57ea7",
+      "title": "微软 Win11 预览版焕新开始菜单：可隐藏推荐 / 固定区域，切换小尺寸",
+      "summary": "数码行业出现值得入库的信号：微软 Win11 预览版焕新开始菜单：可隐藏推荐 / 固定区域，切换小尺寸。它涉及 相关主体，系统识别到 发布会、数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 30 日消息，科技媒体 Windows Latest 今天（5 月 30 日）发布博文， 在 Windows 11 Build 26300.8553 预览版中 ，测试体验了新版开始菜单。 Windows 11 Build 26300.8553 更新页 IT之家… 来源为 ithome，发布时间标记为 05/30 11:42。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+      "category": "digital",
+      "importance_score": 55,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-30T11:42:13+08:00",
+      "last_seen_at": "2026-05-30T16:23:28+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-30T11:52:37+08:00",
+      "updated_at": "2026-05-30T16:23:38+08:00",
+      "tags": [
+        "发布会",
+        "数码",
+        "系统更新"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/957/457.htm",
+          "title": "微软 Win11 预览版焕新开始菜单：可隐藏推荐 / 固定区域，切换小尺寸",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 55,
+      "radar_level": "B",
+      "radar_section": "developing",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 2.2,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
+      "score_parts": {
+        "relevance": 17,
+        "trend": 7,
+        "freshness": 15,
+        "change": 7,
+        "credibility": 10,
+        "scarcity": 7
+      },
+      "caps": [
+        "评测/体验稿默认不做头条"
+      ]
+    },
+    {
+      "id": "evt_3f35394754ace5b29f60",
+      "title": "MONA 系列首款 SUV，小鹏 L03 罗兰紫色实车曝光",
+      "summary": "汽车行业出现值得入库的信号：MONA 系列首款 SUV，小鹏 L03 罗兰紫色实车曝光。它涉及 小鹏，系统识别到 发布会、汽车 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 31 日消息，博主 @SugarDesign 昨日分享了小鹏 L03 罗兰紫色实车图，该车系 MONA 首款 SUV 车型。 该车已经出现在 4 月的工信部申报目录中，新车采用了与 MONA M03 一致的家族化设计语言，整体外观为动感的溜背 SUV 造型。据… 来源为 ithome，发布时间标记为 05/31 11:35。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "小鹏 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
+      "creator_impact": "适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。优先找车主反馈、实测画面和同级竞品对照，避免只复述厂商话术。",
+      "content_angle": "把车企动作翻译成消费者能听懂的购车/用车影响。",
+      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
+      "category": "auto",
+      "importance_score": 61,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-31T11:35:44+08:00",
+      "last_seen_at": "2026-05-31T17:07:38+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-31T11:50:20+08:00",
+      "updated_at": "2026-05-31T17:07:49+08:00",
+      "tags": [
+        "发布会",
+        "汽车"
+      ],
+      "entities": [
+        {
+          "name": "小鹏",
+          "type": "brand",
+          "aliases": [
+            "XPeng"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/957/743.htm",
+          "title": "MONA 系列首款 SUV，小鹏 L03 罗兰紫色实车曝光",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 54,
+      "radar_level": "C",
+      "radar_section": "developing",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 1.2,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+      "score_parts": {
+        "relevance": 19,
+        "trend": 7,
+        "freshness": 15,
         "change": 4,
         "credibility": 10,
         "scarcity": 7
@@ -10183,84 +10261,24 @@
         }
       ],
       "feedback": [],
-      "radar_score": 58,
-      "radar_level": "B",
-      "radar_section": "developing",
+      "radar_score": 54,
+      "radar_level": "C",
+      "radar_section": "background",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.5,
+      "freshness_days": 3.2,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 22,
         "trend": 12,
-        "freshness": 15,
+        "freshness": 11,
         "change": 4,
         "credibility": 6,
         "scarcity": 7
       },
       "caps": [
         "单一弱来源封顶",
-        "评测/体验稿默认不做头条"
-      ]
-    },
-    {
-      "id": "evt_3f35394754ace5b29f60",
-      "title": "MONA 系列首款 SUV，小鹏 L03 罗兰紫色实车曝光",
-      "summary": "汽车行业出现值得入库的信号：MONA 系列首款 SUV，小鹏 L03 罗兰紫色实车曝光。它涉及 小鹏，系统识别到 发布会、汽车 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 31 日消息，博主 @SugarDesign 昨日分享了小鹏 L03 罗兰紫色实车图，该车系 MONA 首款 SUV 车型。 该车已经出现在 4 月的工信部申报目录中，新车采用了与 MONA M03 一致的家族化设计语言，整体外观为动感的溜背 SUV 造型。据… 来源为 ithome，发布时间标记为 05/31 11:35。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "小鹏 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-      "creator_impact": "适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。优先找车主反馈、实测画面和同级竞品对照，避免只复述厂商话术。",
-      "content_angle": "把车企动作翻译成消费者能听懂的购车/用车影响。",
-      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-      "category": "auto",
-      "importance_score": 61,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-31T11:35:44+08:00",
-      "last_seen_at": "2026-05-31T17:07:38+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-31T11:50:20+08:00",
-      "updated_at": "2026-05-31T17:07:49+08:00",
-      "tags": [
-        "发布会",
-        "汽车"
-      ],
-      "entities": [
-        {
-          "name": "小鹏",
-          "type": "brand",
-          "aliases": [
-            "XPeng"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/957/743.htm",
-          "title": "MONA 系列首款 SUV，小鹏 L03 罗兰紫色实车曝光",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 57,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.5,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
-      "score_parts": {
-        "relevance": 19,
-        "trend": 7,
-        "freshness": 18,
-        "change": 4,
-        "credibility": 10,
-        "scarcity": 7
-      },
-      "caps": [
         "评测/体验稿默认不做头条"
       ]
     },
@@ -10277,11 +10295,11 @@
       "importance_score": 54,
       "worth_following": 0,
       "first_seen_at": "2026-05-31T10:18:49+08:00",
-      "last_seen_at": "2026-05-31T22:01:00+08:00",
+      "last_seen_at": "2026-05-31T23:20:53+08:00",
       "status": "active",
       "source_count": 1,
       "created_at": "2026-05-31T11:50:20+08:00",
-      "updated_at": "2026-05-31T22:01:11+08:00",
+      "updated_at": "2026-05-31T23:21:04+08:00",
       "tags": [
         "影像",
         "数码"
@@ -10296,131 +10314,17 @@
         }
       ],
       "feedback": [],
-      "radar_score": 55,
-      "radar_level": "B",
+      "radar_score": 52,
+      "radar_level": "C",
       "radar_section": "background",
       "video_potential": 1,
       "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.5,
-      "push_reason": "近期新出现",
+      "freshness_label": "recent",
+      "freshness_days": 1.3,
+      "push_reason": "仅适合沉淀为背景知识",
       "score_parts": {
         "relevance": 16,
         "trend": 7,
-        "freshness": 18,
-        "change": 1,
-        "credibility": 6,
-        "scarcity": 7
-      },
-      "caps": [
-        "单一弱来源封顶"
-      ]
-    },
-    {
-      "id": "evt_f520b725b2894ed57ea7",
-      "title": "微软 Win11 预览版焕新开始菜单：可隐藏推荐 / 固定区域，切换小尺寸",
-      "summary": "数码行业出现值得入库的信号：微软 Win11 预览版焕新开始菜单：可隐藏推荐 / 固定区域，切换小尺寸。它涉及 相关主体，系统识别到 发布会、数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 30 日消息，科技媒体 Windows Latest 今天（5 月 30 日）发布博文， 在 Windows 11 Build 26300.8553 预览版中 ，测试体验了新版开始菜单。 Windows 11 Build 26300.8553 更新页 IT之家… 来源为 ithome，发布时间标记为 05/30 11:42。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "发布会定档 + 最大悬念 + 你该等吗",
-      "category": "digital",
-      "importance_score": 55,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-30T11:42:13+08:00",
-      "last_seen_at": "2026-05-30T16:23:28+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-30T11:52:37+08:00",
-      "updated_at": "2026-05-30T16:23:38+08:00",
-      "tags": [
-        "发布会",
-        "数码",
-        "系统更新"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/957/457.htm",
-          "title": "微软 Win11 预览版焕新开始菜单：可隐藏推荐 / 固定区域，切换小尺寸",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 55,
-      "radar_level": "B",
-      "radar_section": "developing",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "recent",
-      "freshness_days": 1.5,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号",
-      "score_parts": {
-        "relevance": 17,
-        "trend": 7,
-        "freshness": 15,
-        "change": 7,
-        "credibility": 10,
-        "scarcity": 7
-      },
-      "caps": [
-        "评测/体验稿默认不做头条"
-      ]
-    },
-    {
-      "id": "evt_83c8a37789f21a824adc",
-      "title": "20260529【i-dle】宋雨琦 - OPPO Reno16 系列🎬影像故事 4K",
-      "summary": "数码行业出现值得入库的信号：20260529【i-dle】宋雨琦 - OPPO Reno16 系列🎬影像故事 4K。它涉及 OPPO，系统识别到 影像、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "目前公开信息主要来自标题和来源元数据。 来源为 bilibili，发布时间标记为 05/29 11:11。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 OPPO 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：20260529【i-dle】宋雨琦 - OP…",
-      "category": "digital",
-      "importance_score": 57,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-29T11:11:20+08:00",
-      "last_seen_at": "2026-05-29T23:34:38+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-29T22:24:09+08:00",
-      "updated_at": "2026-05-29T23:34:49+08:00",
-      "tags": [
-        "影像",
-        "数码"
-      ],
-      "entities": [
-        {
-          "name": "OPPO",
-          "type": "brand",
-          "aliases": [
-            "ColorOS",
-            "Find"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "bilibili",
-          "url": "https://www.bilibili.com/video/BV1KPV86FEJv",
-          "title": "20260529【i-dle】宋雨琦 - OPPO Reno16 系列🎬影像故事 4K",
-          "author": "聪明的奶味蓝刷刷"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 55,
-      "radar_level": "B",
-      "radar_section": "background",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "recent",
-      "freshness_days": 2.5,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
-      "score_parts": {
-        "relevance": 18,
-        "trend": 8,
         "freshness": 15,
         "change": 1,
         "credibility": 6,
@@ -10429,157 +10333,6 @@
       "caps": [
         "单一弱来源封顶"
       ]
-    },
-    {
-      "id": "evt_1746521723962a131e8c",
-      "title": "Please Do Not Vibe Fuck Up This Software – Rsync",
-      "summary": "数码行业出现值得入库的信号：Please Do Not Vibe Fuck Up This Software。它涉及 相关主体，系统识别到 数码、智驾 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "目前公开信息主要来自标题和来源元数据。 来源为 hackernews，发布时间标记为 05/31 11:16。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "智能驾驶相关变化容易引发用户安全感、体验差异和车企技术路线讨论。对视频创作者来说，真正值得盯的是功能覆盖、接管体验、用户口碑和车企路线，而不是单纯复述一次 OTA 或发布节点。",
-      "creator_impact": "适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。优先找车主反馈、实测画面和同级竞品对照，避免只复述厂商话术。",
-      "content_angle": "智驾更新看起来很强，但普通车主真正关心哪 3 件事？",
-      "cover_angle": "智驾升级，不只看城市数量",
-      "category": "digital",
-      "importance_score": 58,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-31T11:16:48+08:00",
-      "last_seen_at": "2026-05-31T22:01:00+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-31T11:56:09+08:00",
-      "updated_at": "2026-05-31T22:01:11+08:00",
-      "tags": [
-        "数码",
-        "智驾"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "hackernews",
-          "url": "https://github.com/RsyncProject/rsync/issues/929",
-          "title": "Please Do Not Vibe Fuck Up This Software",
-          "author": "justdotJS"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 54,
-      "radar_level": "C",
-      "radar_section": "background",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.5,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关；近期新出现",
-      "score_parts": {
-        "relevance": 19,
-        "trend": 10,
-        "freshness": 18,
-        "change": 4,
-        "credibility": 4,
-        "scarcity": 7
-      },
-      "caps": [
-        "评测/体验稿默认不做头条"
-      ]
-    },
-    {
-      "id": "evt_95646de5adf55d0e9c28",
-      "title": "299 元，黑鲨首款 AI 智能耳机“凤鸣耳夹式耳机 Pro”首销",
-      "summary": "数码行业出现值得入库的信号：299 元，黑鲨首款 AI 智能耳机“凤鸣耳夹式耳机 Pro”首销。它涉及 相关主体，系统识别到 数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 31 日消息，黑鲨首款 AI 智能耳机“凤鸣耳夹式耳机 Pro”今日在京东独家首销，官方标价 369 元，国补价 332.1 元，到手价 299 元（叠加晒单返 10 元、老客再返 10 元、种草最高返 30 元）。 IT之家从商品页面获悉， 这款耳机单耳重 … 来源为 ithome，发布时间标记为 05/31 10:29。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 ithome，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：299 元，黑鲨首款 AI 智能耳机“凤鸣耳夹…",
-      "category": "digital",
-      "importance_score": 53,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-31T10:29:57+08:00",
-      "last_seen_at": "2026-05-31T17:07:38+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-31T11:50:20+08:00",
-      "updated_at": "2026-05-31T17:07:49+08:00",
-      "tags": [
-        "数码"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/957/731.htm",
-          "title": "299 元，黑鲨首款 AI 智能耳机“凤鸣耳夹式耳机 Pro”首销",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 54,
-      "radar_level": "C",
-      "radar_section": "background",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.5,
-      "push_reason": "近期新出现",
-      "score_parts": {
-        "relevance": 16,
-        "trend": 2,
-        "freshness": 18,
-        "change": 1,
-        "credibility": 10,
-        "scarcity": 7
-      },
-      "caps": []
-    },
-    {
-      "id": "evt_d09876aa3b26f3fa156b",
-      "title": "韦布望远镜观测远古小红点星系，证实黑洞早于星系诞生",
-      "summary": "数码行业出现值得入库的信号：韦布望远镜观测远古小红点星系，证实黑洞早于星系诞生。它涉及 相关主体，系统识别到 影像、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 31 日消息，詹姆斯・韦布空间望远镜观测到一类被称作“小红点”的远古星系，这或许终于能解答一个谜题：黑洞和它所在的星系，究竟谁先诞生？研究结果出乎科学家的预料，也彻底颠覆了人类对黑洞演化机制的传统认知。 美国国家航空航天局詹姆斯 · 韦布空间望远镜的近红外相机… 来源为 ithome，发布时间标记为 05/31 11:10。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 ithome，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：韦布望远镜观测远古小红点星系，证实黑洞早于星系…",
-      "category": "digital",
-      "importance_score": 50,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-31T11:10:49+08:00",
-      "last_seen_at": "2026-05-31T17:07:38+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-31T11:50:20+08:00",
-      "updated_at": "2026-05-31T17:07:49+08:00",
-      "tags": [
-        "影像",
-        "数码"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/957/739.htm",
-          "title": "韦布望远镜观测远古小红点星系，证实黑洞早于星系诞生",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 54,
-      "radar_level": "C",
-      "radar_section": "background",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.5,
-      "push_reason": "近期新出现",
-      "score_parts": {
-        "relevance": 16,
-        "trend": 2,
-        "freshness": 18,
-        "change": 1,
-        "credibility": 10,
-        "scarcity": 7
-      },
-      "caps": []
     },
     {
       "id": "evt_e11876c2be4f194fec88",
@@ -10619,7 +10372,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.5,
+      "freshness_days": 2.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 19,
@@ -10671,7 +10424,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.5,
+      "freshness_days": 2.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 19,
@@ -10683,6 +10436,218 @@
       },
       "caps": [
         "评测/体验稿默认不做头条"
+      ]
+    },
+    {
+      "id": "evt_1746521723962a131e8c",
+      "title": "Please Do Not Vibe Fuck Up This Software – Rsync",
+      "summary": "数码行业出现值得入库的信号：Please Do Not Vibe Fuck Up This Software。它涉及 相关主体，系统识别到 数码、智驾 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "目前公开信息主要来自标题和来源元数据。 来源为 hackernews，发布时间标记为 05/31 11:16。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "智能驾驶相关变化容易引发用户安全感、体验差异和车企技术路线讨论。对视频创作者来说，真正值得盯的是功能覆盖、接管体验、用户口碑和车企路线，而不是单纯复述一次 OTA 或发布节点。",
+      "creator_impact": "适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。优先找车主反馈、实测画面和同级竞品对照，避免只复述厂商话术。",
+      "content_angle": "智驾更新看起来很强，但普通车主真正关心哪 3 件事？",
+      "cover_angle": "智驾升级，不只看城市数量",
+      "category": "digital",
+      "importance_score": 58,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-31T11:16:48+08:00",
+      "last_seen_at": "2026-05-31T22:01:00+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-31T11:56:09+08:00",
+      "updated_at": "2026-05-31T22:01:11+08:00",
+      "tags": [
+        "数码",
+        "智驾"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "hackernews",
+          "url": "https://github.com/RsyncProject/rsync/issues/929",
+          "title": "Please Do Not Vibe Fuck Up This Software",
+          "author": "justdotJS"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 51,
+      "radar_level": "C",
+      "radar_section": "background",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 1.2,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+      "score_parts": {
+        "relevance": 19,
+        "trend": 10,
+        "freshness": 15,
+        "change": 4,
+        "credibility": 4,
+        "scarcity": 7
+      },
+      "caps": [
+        "评测/体验稿默认不做头条"
+      ]
+    },
+    {
+      "id": "evt_95646de5adf55d0e9c28",
+      "title": "299 元，黑鲨首款 AI 智能耳机“凤鸣耳夹式耳机 Pro”首销",
+      "summary": "数码行业出现值得入库的信号：299 元，黑鲨首款 AI 智能耳机“凤鸣耳夹式耳机 Pro”首销。它涉及 相关主体，系统识别到 数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 31 日消息，黑鲨首款 AI 智能耳机“凤鸣耳夹式耳机 Pro”今日在京东独家首销，官方标价 369 元，国补价 332.1 元，到手价 299 元（叠加晒单返 10 元、老客再返 10 元、种草最高返 30 元）。 IT之家从商品页面获悉， 这款耳机单耳重 … 来源为 ithome，发布时间标记为 05/31 10:29。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 ithome，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：299 元，黑鲨首款 AI 智能耳机“凤鸣耳夹…",
+      "category": "digital",
+      "importance_score": 53,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-31T10:29:57+08:00",
+      "last_seen_at": "2026-05-31T17:07:38+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-31T11:50:20+08:00",
+      "updated_at": "2026-05-31T17:07:49+08:00",
+      "tags": [
+        "数码"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/957/731.htm",
+          "title": "299 元，黑鲨首款 AI 智能耳机“凤鸣耳夹式耳机 Pro”首销",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 51,
+      "radar_level": "C",
+      "radar_section": "background",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 1.3,
+      "push_reason": "仅适合沉淀为背景知识",
+      "score_parts": {
+        "relevance": 16,
+        "trend": 2,
+        "freshness": 15,
+        "change": 1,
+        "credibility": 10,
+        "scarcity": 7
+      },
+      "caps": []
+    },
+    {
+      "id": "evt_d09876aa3b26f3fa156b",
+      "title": "韦布望远镜观测远古小红点星系，证实黑洞早于星系诞生",
+      "summary": "数码行业出现值得入库的信号：韦布望远镜观测远古小红点星系，证实黑洞早于星系诞生。它涉及 相关主体，系统识别到 影像、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 31 日消息，詹姆斯・韦布空间望远镜观测到一类被称作“小红点”的远古星系，这或许终于能解答一个谜题：黑洞和它所在的星系，究竟谁先诞生？研究结果出乎科学家的预料，也彻底颠覆了人类对黑洞演化机制的传统认知。 美国国家航空航天局詹姆斯 · 韦布空间望远镜的近红外相机… 来源为 ithome，发布时间标记为 05/31 11:10。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 ithome，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：韦布望远镜观测远古小红点星系，证实黑洞早于星系…",
+      "category": "digital",
+      "importance_score": 50,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-31T11:10:49+08:00",
+      "last_seen_at": "2026-05-31T17:07:38+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-31T11:50:20+08:00",
+      "updated_at": "2026-05-31T17:07:49+08:00",
+      "tags": [
+        "影像",
+        "数码"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/957/739.htm",
+          "title": "韦布望远镜观测远古小红点星系，证实黑洞早于星系诞生",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 51,
+      "radar_level": "C",
+      "radar_section": "background",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 1.2,
+      "push_reason": "仅适合沉淀为背景知识",
+      "score_parts": {
+        "relevance": 16,
+        "trend": 2,
+        "freshness": 15,
+        "change": 1,
+        "credibility": 10,
+        "scarcity": 7
+      },
+      "caps": []
+    },
+    {
+      "id": "evt_83c8a37789f21a824adc",
+      "title": "20260529【i-dle】宋雨琦 - OPPO Reno16 系列🎬影像故事 4K",
+      "summary": "数码行业出现值得入库的信号：20260529【i-dle】宋雨琦 - OPPO Reno16 系列🎬影像故事 4K。它涉及 OPPO，系统识别到 影像、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "目前公开信息主要来自标题和来源元数据。 来源为 bilibili，发布时间标记为 05/29 11:11。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 OPPO 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：20260529【i-dle】宋雨琦 - OP…",
+      "category": "digital",
+      "importance_score": 57,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-29T11:11:20+08:00",
+      "last_seen_at": "2026-05-29T23:34:38+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-29T22:24:09+08:00",
+      "updated_at": "2026-05-29T23:34:49+08:00",
+      "tags": [
+        "影像",
+        "数码"
+      ],
+      "entities": [
+        {
+          "name": "OPPO",
+          "type": "brand",
+          "aliases": [
+            "ColorOS",
+            "Find"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV1KPV86FEJv",
+          "title": "20260529【i-dle】宋雨琦 - OPPO Reno16 系列🎬影像故事 4K",
+          "author": "聪明的奶味蓝刷刷"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 51,
+      "radar_level": "C",
+      "radar_section": "background",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 3.2,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+      "score_parts": {
+        "relevance": 18,
+        "trend": 8,
+        "freshness": 11,
+        "change": 1,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶"
       ]
     },
     {
@@ -10723,7 +10688,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.5,
+      "freshness_days": 2.2,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 19,
@@ -10775,7 +10740,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.5,
+      "freshness_days": 2.3,
       "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
       "score_parts": {
         "relevance": 19,
@@ -10788,104 +10753,6 @@
       "caps": [
         "评测/体验稿默认不做头条"
       ]
-    },
-    {
-      "id": "evt_19de4af080f5492bfda5",
-      "title": "Strengthening societal resilience with Rosalind Biodefense",
-      "summary": "数码行业出现值得入库的信号：Strengthening societal resilience with Rosalind Biodefense。它涉及 相关主体，系统识别到 数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：OpenAI launches Rosalind Biodefense, expanding trusted access to GPT-Rosalind for vetted developers and U.S. government partners advancing … 来源为 openai-blog，发布时间标记为 05/29 11:00。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 openai-blog，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
-      "cover_angle": "这条消息别只看标题：Strengthening societal …",
-      "category": "digital",
-      "importance_score": 52,
-      "worth_following": 0,
-      "first_seen_at": "2026-05-29T11:00:00+08:00",
-      "last_seen_at": "2026-05-29T23:34:38+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-29T23:28:07+08:00",
-      "updated_at": "2026-05-29T23:34:49+08:00",
-      "tags": [
-        "数码"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "openai-blog",
-          "url": "https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense",
-          "title": "Strengthening societal resilience with Rosalind Biodefense",
-          "author": "OpenAI Blog"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 50,
-      "radar_level": "C",
-      "radar_section": "background",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "recent",
-      "freshness_days": 2.5,
-      "push_reason": "仅适合沉淀为背景知识",
-      "score_parts": {
-        "relevance": 16,
-        "trend": 7,
-        "freshness": 15,
-        "change": 1,
-        "credibility": 4,
-        "scarcity": 7
-      },
-      "caps": []
-    },
-    {
-      "id": "evt_452836b863fbcc46e0bc",
-      "title": "20 亿美元机器人独角兽将民宿当实验室：多套 Airbnb 房源受损，房东发起诉讼",
-      "summary": "行业出现值得入库的信号：20 亿美元机器人独角兽将民宿当实验室：多套 Airbnb 房源受损，房东发起诉讼。它涉及 相关主体，系统识别到 争议 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：IT之家 5 月 31 日消息，旧金山一家估值 20 亿美元的初创企业“The Bot Company（机器人公司）”，疑似利用短租房源秘密开展机器人测试工作。多名爱彼迎（Airbnb）房东反映，自家房屋遭到严重损毁，且该区域内多处房源出现特征相似的破损情况。房东肖恩 · 多诺… 来源为 ithome，发布时间标记为 05/31 10:44。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 ithome，后续需要看是否有官方、垂媒或更多独立来源补强。",
-      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
-      "content_angle": "争议拆解：20 亿美元机器人独角兽将民宿当实验室：多套 Airbnb 房源受损，房东发起诉讼，普通用户到底该怎么看？",
-      "cover_angle": "这条消息别只看标题：20 亿美元机器人独角兽将民宿当实验室：多套 …",
-      "category": "unknown",
-      "importance_score": 50,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-31T10:44:57+08:00",
-      "last_seen_at": "2026-05-31T17:07:38+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-31T11:50:20+08:00",
-      "updated_at": "2026-05-31T17:07:49+08:00",
-      "tags": [
-        "争议"
-      ],
-      "entities": [],
-      "sources": [
-        {
-          "source": "ithome",
-          "url": "https://www.ithome.com/0/957/734.htm",
-          "title": "20 亿美元机器人独角兽将民宿当实验室：多套 Airbnb 房源受损，房东发起诉讼",
-          "author": "IT之家"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 49,
-      "radar_level": "C",
-      "radar_section": "developing",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.5,
-      "push_reason": "近期新出现",
-      "score_parts": {
-        "relevance": 2,
-        "trend": 6,
-        "freshness": 18,
-        "change": 3,
-        "credibility": 10,
-        "scarcity": 8
-      },
-      "caps": []
     },
     {
       "id": "evt_919268ad9e4a092ca1b6",
@@ -10924,7 +10791,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.5,
+      "freshness_days": 2.3,
       "push_reason": "仅适合沉淀为背景知识",
       "score_parts": {
         "relevance": 14,
@@ -10973,7 +10840,7 @@
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 1.5,
+      "freshness_days": 2.3,
       "push_reason": "仅适合沉淀为背景知识",
       "score_parts": {
         "relevance": 3,
@@ -10984,6 +10851,220 @@
         "scarcity": 7
       },
       "caps": []
+    },
+    {
+      "id": "evt_4d5c9084dd2f5390e2ac",
+      "title": "体验特朗普访华第一人称视角，世界瞩目的北京！",
+      "summary": "汽车行业出现值得入库的信号：体验特朗普访华第一人称视角，世界瞩目的北京！。它涉及 相关主体，系统识别到 汽车 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：今天，我准备带大家一起直奔北京，完整复刻一下特朗普访华的全套官方同款机位，我会带上我的雷鸟V4眼镜和雷鸟GTMax，用超沉浸的第一视角带大家打卡，让我的超全能旅行搭子，陪我们一起解锁新奇的旅行体验！这一次我下了血本，自费4000元带屏幕前的各位总统大使们一起入住特朗普同款的四季… 来源为 bilibili，发布时间标记为 05/31 12:00。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "汽车行业动作通常会持续发酵到价格、智驾、补能和用户口碑，具备多期内容延展空间。适合先入库观察，不急着按单条新闻下结论。",
+      "creator_impact": "适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。优先找车主反馈、实测画面和同级竞品对照，避免只复述厂商话术。",
+      "content_angle": "把车企动作翻译成消费者能听懂的购车/用车影响。",
+      "cover_angle": "车企新动作，谁最受影响",
+      "category": "auto",
+      "importance_score": 44,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-31T12:00:00+08:00",
+      "last_seen_at": "2026-05-31T23:21:22+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-31T23:14:17+08:00",
+      "updated_at": "2026-05-31T23:21:33+08:00",
+      "tags": [
+        "汽车"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "bilibili",
+          "url": "https://www.bilibili.com/video/BV17wVJ6DEKT",
+          "title": "体验特朗普访华第一人称视角，世界瞩目的北京！",
+          "author": "-欣小萌-"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 46,
+      "radar_level": "C",
+      "radar_section": "background",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 1.2,
+      "push_reason": "仅适合沉淀为背景知识",
+      "score_parts": {
+        "relevance": 16,
+        "trend": 9,
+        "freshness": 15,
+        "change": 1,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "单一弱来源封顶",
+        "评测/体验稿默认不做头条"
+      ]
+    },
+    {
+      "id": "evt_452836b863fbcc46e0bc",
+      "title": "20 亿美元机器人独角兽将民宿当实验室：多套 Airbnb 房源受损，房东发起诉讼",
+      "summary": "行业出现值得入库的信号：20 亿美元机器人独角兽将民宿当实验室：多套 Airbnb 房源受损，房东发起诉讼。它涉及 相关主体，系统识别到 争议 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：IT之家 5 月 31 日消息，旧金山一家估值 20 亿美元的初创企业“The Bot Company（机器人公司）”，疑似利用短租房源秘密开展机器人测试工作。多名爱彼迎（Airbnb）房东反映，自家房屋遭到严重损毁，且该区域内多处房源出现特征相似的破损情况。房东肖恩 · 多诺… 来源为 ithome，发布时间标记为 05/31 10:44。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 ithome，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "争议拆解：20 亿美元机器人独角兽将民宿当实验室：多套 Airbnb 房源受损，房东发起诉讼，普通用户到底该怎么看？",
+      "cover_angle": "这条消息别只看标题：20 亿美元机器人独角兽将民宿当实验室：多套 …",
+      "category": "unknown",
+      "importance_score": 50,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-31T10:44:57+08:00",
+      "last_seen_at": "2026-05-31T17:07:38+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-31T11:50:20+08:00",
+      "updated_at": "2026-05-31T17:07:49+08:00",
+      "tags": [
+        "争议"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "ithome",
+          "url": "https://www.ithome.com/0/957/734.htm",
+          "title": "20 亿美元机器人独角兽将民宿当实验室：多套 Airbnb 房源受损，房东发起诉讼",
+          "author": "IT之家"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 46,
+      "radar_level": "C",
+      "radar_section": "developing",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 1.3,
+      "push_reason": "仅适合沉淀为背景知识",
+      "score_parts": {
+        "relevance": 2,
+        "trend": 6,
+        "freshness": 15,
+        "change": 3,
+        "credibility": 10,
+        "scarcity": 8
+      },
+      "caps": []
+    },
+    {
+      "id": "evt_19de4af080f5492bfda5",
+      "title": "Strengthening societal resilience with Rosalind Biodefense",
+      "summary": "数码行业出现值得入库的信号：Strengthening societal resilience with Rosalind Biodefense。它涉及 相关主体，系统识别到 数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：OpenAI launches Rosalind Biodefense, expanding trusted access to GPT-Rosalind for vetted developers and U.S. government partners advancing … 来源为 openai-blog，发布时间标记为 05/29 11:00。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 openai-blog，后续需要看是否有官方、垂媒或更多独立来源补强。",
+      "creator_impact": "适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。",
+      "content_angle": "用一条短视频讲清楚：这件事为什么值得普通用户关注。",
+      "cover_angle": "这条消息别只看标题：Strengthening societal …",
+      "category": "digital",
+      "importance_score": 52,
+      "worth_following": 0,
+      "first_seen_at": "2026-05-29T11:00:00+08:00",
+      "last_seen_at": "2026-05-29T23:34:38+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-29T23:28:07+08:00",
+      "updated_at": "2026-05-29T23:34:49+08:00",
+      "tags": [
+        "数码"
+      ],
+      "entities": [],
+      "sources": [
+        {
+          "source": "openai-blog",
+          "url": "https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense",
+          "title": "Strengthening societal resilience with Rosalind Biodefense",
+          "author": "OpenAI Blog"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 46,
+      "radar_level": "C",
+      "radar_section": "background",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 3.3,
+      "push_reason": "仅适合沉淀为背景知识",
+      "score_parts": {
+        "relevance": 16,
+        "trend": 7,
+        "freshness": 11,
+        "change": 1,
+        "credibility": 4,
+        "scarcity": 7
+      },
+      "caps": []
+    },
+    {
+      "id": "evt_6304baeff5e11f2c1b65",
+      "title": "B站创作激励和流量规则变化，普通 UP 主应该怎么应对？",
+      "summary": "自媒体/平台生态出现值得入库的信号：B站创作激励和流量规则变化，普通 UP 主应该怎么应对？。它涉及 B站，系统识别到 平台规则、自媒体、选题机会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
+      "what_happened": "公开摘要提到：讨论集中在创作激励、推荐机制、起量难度和中腰部 UP 主内容策略。 来源为 zhihu，发布时间标记为 05/31 11:03。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
+      "why_it_matters": "平台流量、创作激励或推荐机制变化会直接影响选题节奏、标题策略和内容分发效率。它的价值不只在于“有没有热搜”，而在于是否会改变创作者接下来一两周的发布策略、内容结构和复盘指标。",
+      "creator_impact": "可以转化为创作者避坑、平台规则解读、流量变化观察和内容策略调整。拍摄时不要只讲“规则变了”，更应该拆成影响对象、变化证据、应对动作和风险边界。",
+      "content_angle": "平台规则变化会影响哪些创作者？用 3 个例子讲清楚。",
+      "cover_angle": "流量规则变了？创作者先看这 3 点",
+      "category": "media",
+      "importance_score": 45,
+      "worth_following": 1,
+      "first_seen_at": "2026-05-29T11:03:00+08:00",
+      "last_seen_at": "2026-05-31T11:03:00+08:00",
+      "status": "active",
+      "source_count": 1,
+      "created_at": "2026-05-29T22:55:58+08:00",
+      "updated_at": "2026-05-31T23:21:21+08:00",
+      "tags": [
+        "平台规则",
+        "自媒体",
+        "选题机会"
+      ],
+      "entities": [
+        {
+          "name": "B站",
+          "type": "platform",
+          "aliases": [
+            "哔哩哔哩",
+            "Bilibili",
+            "UP主"
+          ]
+        }
+      ],
+      "sources": [
+        {
+          "source": "zhihu",
+          "url": "https://www.zhihu.com/question/mock-bilibili-traffic",
+          "title": "B站创作激励和流量规则变化，普通 UP 主应该怎么应对？",
+          "author": "知乎热榜样例"
+        }
+      ],
+      "feedback": [],
+      "radar_score": 45,
+      "radar_level": "C",
+      "radar_section": "developing",
+      "video_potential": 1,
+      "confidence": "low",
+      "freshness_label": "recent",
+      "freshness_days": 3.3,
+      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+      "score_parts": {
+        "relevance": 21,
+        "trend": 13,
+        "freshness": 11,
+        "change": 5,
+        "credibility": 6,
+        "scarcity": 7
+      },
+      "caps": [
+        "Mock/示例数据封顶",
+        "单一弱来源封顶"
+      ]
     },
     {
       "id": "evt_c5ff0dbbdc41a0f9d997",
@@ -11016,87 +11097,23 @@
         }
       ],
       "feedback": [],
-      "radar_score": 46,
-      "radar_level": "C",
-      "radar_section": "developing",
-      "video_potential": 1,
-      "confidence": "low",
-      "freshness_label": "new",
-      "freshness_days": 0.5,
-      "push_reason": "近期新出现",
-      "score_parts": {
-        "relevance": 0,
-        "trend": 4,
-        "freshness": 18,
-        "change": 4,
-        "credibility": 10,
-        "scarcity": 8
-      },
-      "caps": []
-    },
-    {
-      "id": "evt_6304baeff5e11f2c1b65",
-      "title": "B站创作激励和流量规则变化，普通 UP 主应该怎么应对？",
-      "summary": "自媒体/平台生态出现值得入库的信号：B站创作激励和流量规则变化，普通 UP 主应该怎么应对？。它涉及 B站，系统识别到 平台规则、自媒体、选题机会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。",
-      "what_happened": "公开摘要提到：讨论集中在创作激励、推荐机制、起量难度和中腰部 UP 主内容策略。 来源为 zhihu，发布时间标记为 05/31 11:03。 这不是只看标题的普通新闻条目，系统会把它与同一主体、同类标签和相近时间窗口里的来源合并，判断它是新事件、持续发酵，还是旧闻复现。",
-      "why_it_matters": "平台流量、创作激励或推荐机制变化会直接影响选题节奏、标题策略和内容分发效率。它的价值不只在于“有没有热搜”，而在于是否会改变创作者接下来一两周的发布策略、内容结构和复盘指标。",
-      "creator_impact": "可以转化为创作者避坑、平台规则解读、流量变化观察和内容策略调整。拍摄时不要只讲“规则变了”，更应该拆成影响对象、变化证据、应对动作和风险边界。",
-      "content_angle": "平台规则变化会影响哪些创作者？用 3 个例子讲清楚。",
-      "cover_angle": "流量规则变了？创作者先看这 3 点",
-      "category": "media",
-      "importance_score": 45,
-      "worth_following": 1,
-      "first_seen_at": "2026-05-29T11:03:00+08:00",
-      "last_seen_at": "2026-05-31T11:03:00+08:00",
-      "status": "active",
-      "source_count": 1,
-      "created_at": "2026-05-29T22:55:58+08:00",
-      "updated_at": "2026-05-31T22:00:59+08:00",
-      "tags": [
-        "平台规则",
-        "自媒体",
-        "选题机会"
-      ],
-      "entities": [
-        {
-          "name": "B站",
-          "type": "platform",
-          "aliases": [
-            "哔哩哔哩",
-            "Bilibili",
-            "UP主"
-          ]
-        }
-      ],
-      "sources": [
-        {
-          "source": "zhihu",
-          "url": "https://www.zhihu.com/question/mock-bilibili-traffic",
-          "title": "B站创作激励和流量规则变化，普通 UP 主应该怎么应对？",
-          "author": "知乎热榜样例"
-        }
-      ],
-      "feedback": [],
-      "radar_score": 45,
+      "radar_score": 43,
       "radar_level": "C",
       "radar_section": "developing",
       "video_potential": 1,
       "confidence": "low",
       "freshness_label": "recent",
-      "freshness_days": 2.5,
-      "push_reason": "与你关注的数码/AI/汽车/平台生态高度相关",
+      "freshness_days": 1.3,
+      "push_reason": "仅适合沉淀为背景知识",
       "score_parts": {
-        "relevance": 21,
-        "trend": 13,
+        "relevance": 0,
+        "trend": 4,
         "freshness": 15,
-        "change": 5,
-        "credibility": 6,
-        "scarcity": 7
+        "change": 4,
+        "credibility": 10,
+        "scarcity": 8
       },
-      "caps": [
-        "Mock/示例数据封顶",
-        "单一弱来源封顶"
-      ]
+      "caps": []
     }
   ]
 }
