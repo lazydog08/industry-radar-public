@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-02T17:10:15+08:00",
+  "generatedAt": "2026-06-03T17:10:39+08:00",
   "timezone": "Asia/Shanghai",
   "exporter": "industry-radar-static-export",
   "output": {
@@ -16,20 +16,20 @@
   "source": {
     "databaseFile": "industry-radar.sqlite",
     "databaseExistedBeforeExport": true,
-    "databaseSizeBytesBeforeExport": 3555328,
+    "databaseSizeBytesBeforeExport": 3665920,
     "reportDirectory": "情报日报"
   },
   "counts": {
-    "events": 158,
-    "knowledgeCards": 158,
-    "reports": 6,
+    "events": 167,
+    "knowledgeCards": 167,
+    "reports": 7,
     "todayEvents": 0
   },
   "empty": false,
   "notes": [],
   "latestHorizonReport": {
-    "markdown": "reports/horizon-2026-06-02-zh.md",
-    "html": "reports/horizon-2026-06-02-zh.html",
-    "created_at": "2026-06-02T17:09:56+08:00"
+    "markdown": "reports/horizon-2026-06-03-zh.md",
+    "html": "reports/horizon-2026-06-03-zh.html",
+    "created_at": "2026-06-03T17:10:27+08:00"
   }
 }
