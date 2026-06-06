@@ -1,9 +1,57 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-03T17:10:39+08:00",
+  "generatedAt": "2026-06-06T17:07:45+08:00",
   "timezone": "Asia/Shanghai",
-  "total": 7,
+  "total": 9,
   "reports": [
+    {
+      "id": "horizon-2026-06-06-zh",
+      "report_type": "horizon",
+      "window_start": "2026-06-06T00:00:00+08:00",
+      "window_end": "2026-06-06T23:59:59+08:00",
+      "event_count": 26,
+      "created_at": "2026-06-06T17:07:34+08:00",
+      "html_url": "reports/horizon-2026-06-06-zh.html",
+      "markdown_url": "reports/horizon-2026-06-06-zh.md",
+      "files": {
+        "html": {
+          "name": "horizon-2026-06-06-zh.html",
+          "url": "reports/horizon-2026-06-06-zh.html",
+          "copied": true,
+          "available": true
+        },
+        "markdown": {
+          "name": "horizon-2026-06-06-zh.md",
+          "url": "reports/horizon-2026-06-06-zh.md",
+          "copied": true,
+          "available": true
+        }
+      }
+    },
+    {
+      "id": "report_86cd72d5ebd5f7baf82d",
+      "report_type": "noon",
+      "window_start": "2026-06-03T10:00:00+08:00",
+      "window_end": "2026-06-03T12:00:00+08:00",
+      "event_count": 27,
+      "created_at": "2026-06-03T17:11:10+08:00",
+      "html_url": "reports/2026-06-03-noon.html",
+      "markdown_url": "reports/2026-06-03-noon.md",
+      "files": {
+        "html": {
+          "name": "2026-06-03-noon.html",
+          "url": "reports/2026-06-03-noon.html",
+          "copied": true,
+          "available": true
+        },
+        "markdown": {
+          "name": "2026-06-03-noon.md",
+          "url": "reports/2026-06-03-noon.md",
+          "copied": true,
+          "available": true
+        }
+      }
+    },
     {
       "id": "horizon-2026-06-03-zh",
       "report_type": "horizon",
