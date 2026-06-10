@@ -1,0 +1,447 @@
+# Horizon 每日速递 - 2026-06-10
+
+> 从 81 条内容中筛选出 35 条重要资讯。
+
+---
+
+1. [Claude Fable 5](#item-1) ⭐️ 9.0/10
+2. [AI Epistemic Risks: Emerging Mechanisms & Evidence (R)](#item-2) ⭐️ 9.0/10
+3. [macOS Container Machines](#item-3) ⭐️ 8.0/10
+4. [Upcoming breaking changes for npm v12](#item-4) ⭐️ 8.0/10
+5. [German ruling declares Google liable for false answers in AI Overviews](#item-5) ⭐️ 8.0/10
+6. [Sutton 呼吁全面自动化 AI 创造力](#item-6) ⭐️ 8.0/10
+7. [Ultrafast machine learning on FPGAs via Kolmogorov-Arnold Networks](#item-7) ⭐️ 8.0/10
+8. [Google Chrome is killing all uBlock Origin bypasses, Edge, Opera to follow](#item-8) ⭐️ 8.0/10
+9. [Show HN: Gravity – Interactive solar-system simulator, from Newton to Einstein](#item-9) ⭐️ 8.0/10
+10. [FCC wants to kill burner phones by forcing telecoms to get all customers' IDs](#item-10) ⭐️ 8.0/10
+11. [苹果在 AI 时代的 iPhone 战略](#item-11) ⭐️ 8.0/10
+12. [Apple decided not to roll out Siri in EU after denied request for exemption](#item-12) ⭐️ 8.0/10
+13. [Releasing Apodex-1.0 Smol Models (0.8B, 2B, 4B Open-Weights) optimized for Agentic Verification + AgentHarness Evals](#item-13) ⭐️ 8.0/10
+14. [People are making single-slot, half height pcie v100 with nvlink in China](#item-14) ⭐️ 8.0/10
+15. [zai-org/SCAIL-2 · Hugging Face](#item-15) ⭐️ 8.0/10
+16. [iOS 27 Siri is using WaveRNN and FastSpeech2 (D)](#item-16) ⭐️ 8.0/10
+17. [RIP software hackathons. Long live the hardware hackathon](#item-17) ⭐️ 7.0/10
+18. [What it feels like to work with Mythos](#item-18) ⭐️ 7.0/10
+19. [Surprise, Pay $1000](#item-19) ⭐️ 7.0/10
+20. [AI 取代员工？那是糟糕的 CEO](#item-20) ⭐️ 7.0/10
+21. [Test-case reducers are underappreciated debugging tools](#item-21) ⭐️ 7.0/10
+22. [Grit: Rewriting Git in Rust with agents](#item-22) ⭐️ 7.0/10
+23. [Making Graphics Like it's 1993](#item-23) ⭐️ 7.0/10
+24. [苹果折叠屏 iPhone Ultra 传闻将在 WWDC 2026 亮相](#item-24) ⭐️ 7.0/10
+25. [Exif Smuggling (2025)](#item-25) ⭐️ 7.0/10
+26. [Is Grep All You Need? How Agent Harnesses Reshape Agentic Search](#item-26) ⭐️ 7.0/10
+27. [Anyone gotten Gemma 4 12B (unified audio) to actually attend to speech with a large system prompt?](#item-27) ⭐️ 7.0/10
+28. [Unsloth Gemma 4 QAT MTP assistant models now available](#item-28) ⭐️ 7.0/10
+29. [What will be the next breakthrough in ASR? (D)](#item-29) ⭐️ 7.0/10
+30. [Are privacy-preserving techniques actually being used in production ML systems? (D)](#item-30) ⭐️ 7.0/10
+31. [How engineers at Nextdoor use Codex to build without limits](#item-31) ⭐️ 6.0/10
+32. [What Codex unlocks for Notion](#item-32) ⭐️ 6.0/10
+33. [需要开放 LLM 竞争来遏制闭源贪婪](#item-33) ⭐️ 6.0/10
+34. [Since when the RTX 6000 PRO is priced at 13250USD on the official NVIDIA Page?](#item-34) ⭐️ 6.0/10
+35. [What's up on CPU inference these days?](#item-35) ⭐️ 6.0/10
+
+---
+
+<a id="item-1"></a>
+## [Claude Fable 5](https://www.anthropic.com/news/claude-fable-5-mythos-5) ⭐️ 9.0/10
+
+Anthropic releases Claude Fable 5, a new flagship model with substantial improvements in coding, agentic tasks, and frontend design, though with increased pricing concerns.
+
+hackernews · Philpax · 6月9日 16:58 · [社区讨论](https://news.ycombinator.com/item?id=48463808)
+
+**标签**: `#AI`, `#LLM`, `#Anthropic`, `#Claude`, `#coding`
+
+---
+
+<a id="item-2"></a>
+## [AI Epistemic Risks: Emerging Mechanisms & Evidence (R)](https://www.reddit.com/r/MachineLearning/comments/1u1ew6q/ai_epistemic_risks_emerging_mechanisms_evidence_r/) ⭐️ 9.0/10
+
+A new paper co-authored by 30 experts systematically examines how AI threatens human cognition, belief formation, and information integrity through persuasion, cognitive offloading, and feedback loops.
+
+reddit · r/MachineLearning · /u/KellinPelrine · 6月9日 19:18
+
+**标签**: `#AI safety`, `#epistemic risks`, `#cognitive offloading`, `#AI ethics`, `#information integrity`
+
+---
+
+<a id="item-3"></a>
+## [macOS Container Machines](https://github.com/apple/container/blob/main/docs/container-machine.md) ⭐️ 8.0/10
+
+Apple introduces container machines for macOS, offering lightweight Linux environments with persistence and filesystem mounting, distinct from OCI containers.
+
+hackernews · timsneath · 6月10日 00:29 · [社区讨论](https://news.ycombinator.com/item?id=48469658)
+
+**标签**: `#macOS`, `#containers`, `#Apple`, `#developer tools`, `#virtualization`
+
+---
+
+<a id="item-4"></a>
+## [Upcoming breaking changes for npm v12](https://github.blog/changelog/2026-06-09-upcoming-breaking-changes-for-npm-v12/) ⭐️ 8.0/10
+
+npm v12 will introduce breaking changes including removal of postinstall scripts by default and new security features to combat supply chain attacks.
+
+hackernews · plasma · 6月9日 21:01 · [社区讨论](https://news.ycombinator.com/item?id=48467705)
+
+**标签**: `#npm`, `#security`, `#supply chain`, `#breaking changes`, `#javascript`
+
+---
+
+<a id="item-5"></a>
+## [German ruling declares Google liable for false answers in AI Overviews](https://the-decoder.com/landmark-german-ruling-declares-googles-ai-overviews-are-googles-own-words-and-makes-it-liable-for-false-answers/) ⭐️ 8.0/10
+
+A German court rules Google liable for false AI Overviews, treating them as Google's own statements rather than third-party content.
+
+hackernews · ahlCVA · 6月10日 01:44 · [社区讨论](https://news.ycombinator.com/item?id=48470248)
+
+**标签**: `#AI regulation`, `#legal liability`, `#Google`, `#search`, `#defamation`
+
+---
+
+<a id="item-6"></a>
+## [Sutton 呼吁全面自动化 AI 创造力](https://twitter.com/RichardSSutton/status/2061216087744946656) ⭐️ 8.0/10
+
+Rich Sutton 主张，AI 系统应被赋予目标，并允许其自主生成、评估和选择想法，超越纯粹的生成，通过迭代评估和选择实现真正的创造力和发现。 这一观点挑战当前 AI 研究关注智能体循环和强化学习，通过完全自动化创造过程，可能加速科学发现和创新。 Sutton 强调创造力需要评估和保留最佳结果，而不仅仅是生成；他呼吁与 AI 共享目标，使其充分参与实现目标。
+
+hackernews · yimby · 6月10日 02:25 · [社区讨论](https://news.ycombinator.com/item?id=48470581)
+
+**背景**: 当前的生成式 AI 模型（如 LLM）能产生输出，但缺乏内置评估和迭代优化。Sutton 的呼吁与智能体 AI 趋势一致，即系统使用反馈循环（如带可验证奖励的强化学习）进行改进，模仿科学方法。
+
+**社区讨论**: 评论者大多同意 Sutton 的观点，指出编码等成功应用使用了智能体循环（生成-测试-优化）。一些人失望地认为这一呼吁不够突破性，而另一些人质疑自动化创造力是否可取。
+
+**标签**: `#AI`, `#creativity`, `#discovery`, `#reinforcement learning`, `#agentic systems`
+
+---
+
+<a id="item-7"></a>
+## [Ultrafast machine learning on FPGAs via Kolmogorov-Arnold Networks](https://aarushgupta.io/posts/kan-fpga/) ⭐️ 8.0/10
+
+Explores implementing Kolmogorov-Arnold Networks on FPGAs to achieve sub-microsecond inference latency for small models.
+
+hackernews · ag2718 · 6月9日 19:21 · [社区讨论](https://news.ycombinator.com/item?id=48466277)
+
+**标签**: `#KAN`, `#FPGA`, `#machine learning`, `#hardware acceleration`, `#low-latency inference`
+
+---
+
+<a id="item-8"></a>
+## [Google Chrome is killing all uBlock Origin bypasses, Edge, Opera to follow](https://www.neowin.net/news/google-chrome-is-killing-all-ublock-origin-bypasses-microsoft-edge-opera-to-follow/) ⭐️ 8.0/10
+
+Google Chrome is blocking uBlock Origin bypasses, with Edge and Opera expected to follow, sparking community debate about ad-blocking and browser freedom.
+
+hackernews · d3Xt3r · 6月10日 05:50 · [社区讨论](https://news.ycombinator.com/item?id=48471970)
+
+**标签**: `#browsers`, `#ad-blocking`, `#privacy`, `#chrome`, `#ublock-origin`
+
+---
+
+<a id="item-9"></a>
+## [Show HN: Gravity – Interactive solar-system simulator, from Newton to Einstein](https://qunabu.github.io/Gravity/) ⭐️ 8.0/10
+
+An interactive solar-system simulator that teaches orbital mechanics from Newtonian gravity to Einstein's relativity, using real planetary data.
+
+hackernews · qunabu · 6月9日 11:46 · [社区讨论](https://news.ycombinator.com/item?id=48459837)
+
+**标签**: `#physics`, `#simulation`, `#education`, `#astronomy`, `#interactive`
+
+---
+
+<a id="item-10"></a>
+## [FCC wants to kill burner phones by forcing telecoms to get all customers' IDs](https://www.404media.co/fcc-wants-to-kill-burner-phones-by-forcing-telecoms-to-get-all-customers-ids/) ⭐️ 8.0/10
+
+FCC proposes requiring telecoms to collect IDs for all customers, aiming to eliminate burner phones but sparking privacy and security concerns.
+
+hackernews · berlianta · 6月9日 15:21 · [社区讨论](https://news.ycombinator.com/item?id=48462308)
+
+**标签**: `#privacy`, `#regulation`, `#telecom`, `#civil liberties`, `#FCC`
+
+---
+
+<a id="item-11"></a>
+## [苹果在 AI 时代的 iPhone 战略](https://stratechery.com/2026/the-iphones-last-stand/) ⭐️ 8.0/10
+
+一项分析认为，苹果专注于隐私和本地 AI 处理，而非云端 AI，这可能是一种竞争优势，尽管外界认为苹果在 AI 方面落后。 这很重要，因为它挑战了苹果在 AI 竞赛中落后的普遍看法，强调了其软硬件集成方法和隐私优先设计如何在一个日益关注数据安全的市场中脱颖而出。 分析指出，苹果的本地 AI 架构，包括 MLX 和私有云中继，比竞争对手依赖云的方法更先进，并且苹果并非试图构建大型 AI 模型，而是优化设备端推理。
+
+hackernews · swolpers · 6月9日 10:08 · [社区讨论](https://news.ycombinator.com/item?id=48459001)
+
+**背景**: 苹果历来强调用户隐私和设备端处理。2024 年，苹果推出了 Apple Intelligence，它在设备本地执行许多 AI 任务，仅在复杂请求时回退到云端。这与微软和谷歌等严重依赖云端 AI 的竞争对手形成对比。
+
+**社区讨论**: 社区评论对信任公司愿景表示怀疑，一些人指出苹果的本地 AI 架构比基于云的替代方案更先进。其他人则对云端 AI 的隐私影响表示担忧，而一位评论者认为苹果的 AI 推出是一场胜利，因为大多数用户不希望 AI 被强制集成到操作系统层面。
+
+**标签**: `#Apple`, `#AI`, `#iPhone`, `#privacy`, `#hardware`
+
+---
+
+<a id="item-12"></a>
+## [Apple decided not to roll out Siri in EU after denied request for exemption](https://www.reuters.com/business/apple-failed-make-its-ai-tool-comply-eu-regulations-eu-commission-says-2026-06-09/) ⭐️ 8.0/10
+
+Apple declines to launch Siri in the EU after the EU Commission denies its request for an exemption from digital regulations.
+
+hackernews · flanged · 6月9日 16:13 · [社区讨论](https://news.ycombinator.com/item?id=48463024)
+
+**标签**: `#Apple`, `#EU regulation`, `#AI`, `#privacy`, `#Siri`
+
+---
+
+<a id="item-13"></a>
+## [Releasing Apodex-1.0 Smol Models (0.8B, 2B, 4B Open-Weights) optimized for Agentic Verification + AgentHarness Evals](https://www.reddit.com/r/LocalLLaMA/comments/1u1p2me/releasing_apodex10_smol_models_08b_2b_4b/) ⭐️ 8.0/10
+
+Apodex releases open-weight small models (0.8B-4B) optimized for agentic verification tasks like fact-checking and tool-grounded synthesis, along with an evaluation harness.
+
+reddit · r/LocalLLaMA · /u/wuqiao · 6月10日 02:11
+
+**标签**: `#LLM`, `#open-source`, `#agentic AI`, `#small models`, `#verification`
+
+---
+
+<a id="item-14"></a>
+## [People are making single-slot, half height pcie v100 with nvlink in China](https://www.reddit.com/r/LocalLLaMA/comments/1u16eyk/people_are_making_singleslot_half_height_pcie/) ⭐️ 8.0/10
+
+Chinese makers are creating custom single-slot, half-height PCIe V100 GPUs with NVLINK, retaining full performance and supporting up to 300W.
+
+reddit · r/LocalLLaMA · /u/OwnMathematician2620 · 6月9日 14:22
+
+**标签**: `#GPU`, `#hardware modding`, `#AI inference`, `#NVIDIA V100`, `#NVLINK`
+
+---
+
+<a id="item-15"></a>
+## [zai-org/SCAIL-2 · Hugging Face](https://www.reddit.com/r/LocalLLaMA/comments/1u1dw38/zaiorgscail2_hugging_face/) ⭐️ 8.0/10
+
+SCAIL-2 is an open-source model for end-to-end controlled character animation that eliminates intermediate pose representations, supporting driving video, character replacement, and multi-character scenarios.
+
+reddit · r/LocalLLaMA · /u/pmttyji · 6月9日 18:43
+
+**标签**: `#character animation`, `#video generation`, `#open-source`, `#AI`, `#computer vision`
+
+---
+
+<a id="item-16"></a>
+## [iOS 27 Siri is using WaveRNN and FastSpeech2 (D)](https://www.reddit.com/r/MachineLearning/comments/1u1ht5x/ios_27_siri_is_using_wavernn_and_fastspeech2_d/) ⭐️ 8.0/10
+
+iOS 27 Siri's TTS uses WaveRNN and FastSpeech2, discovered in simulator files, with additional CoreML models for concert ranking.
+
+reddit · r/MachineLearning · /u/Actual_L0Ki · 6月9日 21:04
+
+**标签**: `#TTS`, `#iOS`, `#Apple`, `#WaveRNN`, `#FastSpeech2`
+
+---
+
+<a id="item-17"></a>
+## [RIP software hackathons. Long live the hardware hackathon](https://blog.oscars.dev/posts/rip-software-hackathons-long-live-the-hardware-hackathon/) ⭐️ 7.0/10
+
+Argues that software hackathons have become obsolete due to vibecoding, advocating for hardware hackathons as the new frontier.
+
+hackernews · ozcap · 6月9日 22:35 · [社区讨论](https://news.ycombinator.com/item?id=48468766)
+
+**标签**: `#hackathons`, `#vibecoding`, `#hardware`, `#software development`, `#community`
+
+---
+
+<a id="item-18"></a>
+## [What it feels like to work with Mythos](https://www.oneusefulthing.org/p/what-it-feels-like-to-work-with-mythos) ⭐️ 7.0/10
+
+An article exploring the experience of using Mythos, an AI coding tool, with community discussion focusing on code quality, security, and the evolving role of engineers.
+
+hackernews · swolpers · 6月9日 17:17 · [社区讨论](https://news.ycombinator.com/item?id=48464140)
+
+**标签**: `#AI-assisted coding`, `#software engineering`, `#code quality`, `#Mythos`, `#developer tools`
+
+---
+
+<a id="item-19"></a>
+## [Surprise, Pay $1000](https://forestwalk.ai/blog/surprise-blacksmith-costs/) ⭐️ 7.0/10
+
+A blog post detailing how a cloud service (Forestwalk) sent a surprise $1000 invoice after a trial without requiring a credit card, sparking debate on billing ethics and engineering complexity.
+
+hackernews · apike · 6月9日 22:01 · [社区讨论](https://news.ycombinator.com/item?id=48468370)
+
+**标签**: `#billing`, `#cloud services`, `#user trust`, `#engineering`, `#anti-pattern`
+
+---
+
+<a id="item-20"></a>
+## [AI 取代员工？那是糟糕的 CEO](https://www.techdirt.com/2026/06/09/ceos-who-think-ai-replaces-their-employees-are-just-bad-ceos/) ⭐️ 7.0/10
+
+一篇评论文章指出，认为 AI 可以取代员工的 CEO 误解了 AI 的局限性和人类员工的价值，引发了社区讨论，获得了超过 600 分和 233 条评论。 这篇文章挑战了当前 AI 采用讨论中的常见说法，强调有效的 AI 整合应增强人类工作而非取代，这对管理实践和生产力指标具有启示意义。 文章强调了“助手测试”——建议 CEO 在取代他人之前先用 AI 取代自己的助手——并批评基于 token 的生产力指标是适得其反的。
+
+hackernews · speckx · 6月9日 18:45 · [社区讨论](https://news.ycombinator.com/item?id=48465675)
+
+**背景**: 随着 ChatGPT 等生成式 AI 工具的兴起，关于 AI 取代工作的争论愈演愈烈。许多 CEO 和公司正在探索自动化以削减成本，但批评者认为 AI 在复杂、依赖上下文的任务上常常失败，人类监督仍然至关重要。
+
+**社区讨论**: 社区评论强化了文章的立场，用户分享了关于产品交付的困难以及人类助手价值的轶事。一位评论者提出了“助手测试”作为 CEO 的试金石，另一位则指出基于 token 的生产力指标是适得其反的。
+
+**标签**: `#AI`, `#management`, `#productivity`, `#leadership`
+
+---
+
+<a id="item-21"></a>
+## [Test-case reducers are underappreciated debugging tools](https://tratt.net/laurie/blog/2026/test_case_reducers_are_underappreciated_debugging_tools.html) ⭐️ 7.0/10
+
+Test-case reducers are powerful but overlooked debugging tools that automatically minimize failing test cases to isolate bugs.
+
+hackernews · ltratt · 6月9日 11:27 · [社区讨论](https://news.ycombinator.com/item?id=48459659)
+
+**标签**: `#debugging`, `#testing`, `#tools`, `#software engineering`
+
+---
+
+<a id="item-22"></a>
+## [Grit: Rewriting Git in Rust with agents](https://blog.gitbutler.com/true-grit) ⭐️ 7.0/10
+
+GitButler announces Grit, a Rust rewrite of Git using LLM agents, sparking debate over GPL license compliance and the ethics of AI-generated code.
+
+hackernews · cbrewster · 6月9日 19:58 · [社区讨论](https://news.ycombinator.com/item?id=48466812)
+
+**标签**: `#git`, `#rust`, `#llm`, `#license`, `#rewrite`
+
+---
+
+<a id="item-23"></a>
+## [Making Graphics Like it's 1993](https://staniks.github.io/articles/catlantean-3d-blog-1/) ⭐️ 7.0/10
+
+A technical deep-dive into recreating a 1993-style 3D game engine with palette-based rendering and raycasting, inspired by Wolfenstein 3D and Doom.
+
+hackernews · sklopec · 6月9日 10:46 · [社区讨论](https://news.ycombinator.com/item?id=48459294)
+
+**标签**: `#game development`, `#retro computing`, `#3D rendering`, `#raycasting`, `#software engineering`
+
+---
+
+<a id="item-24"></a>
+## [苹果折叠屏 iPhone Ultra 传闻将在 WWDC 2026 亮相](https://cupertinolens.com/2026/06/09/wwdc-2026-apple-is-folding/) ⭐️ 7.0/10
+
+一篇推测性文章称苹果将在 WWDC 2026 上发布折叠屏 iPhone Ultra，配备 7.7 至 7.8 英寸内屏和 5.3 至 5.5 英寸外屏。 苹果进入折叠屏手机市场可能验证这一形态并推动主流采用，同时提高应用兼容性和用户体验的标准。 该设备被描述为书本式折叠屏，展开后比例为 4:3，类似 iPad mini。文章为推测性质，并非基于官方信息。
+
+hackernews · brandonb · 6月9日 13:56 · [社区讨论](https://news.ycombinator.com/item?id=48461226)
+
+**背景**: 折叠屏手机已由安卓厂商推出多年，但苹果尚未发布此类产品。iPhone Ultra 据传是苹果首款折叠屏手机，可能于 2026 年推出。
+
+**社区讨论**: 评论者意见不一：有人欢迎苹果入局，认为能提升阅读体验；也有人嘲笑过早炒作，并指出安卓折叠屏多年来一直面临应用兼容性问题。
+
+**标签**: `#Apple`, `#foldable phones`, `#WWDC`, `#mobile hardware`, `#tech speculation`
+
+---
+
+<a id="item-25"></a>
+## [Exif Smuggling (2025)](https://github.com/signalblur/exifsmugglingpoc) ⭐️ 7.0/10
+
+A proof-of-concept for hiding and executing malicious code via Exif metadata, leveraging browser cache to avoid direct network calls.
+
+hackernews · rolph · 6月9日 21:06 · [社区讨论](https://news.ycombinator.com/item?id=48467759)
+
+**标签**: `#security`, `#exif`, `#web`, `#exploit`, `#steganography`
+
+---
+
+<a id="item-26"></a>
+## [Is Grep All You Need? How Agent Harnesses Reshape Agentic Search](https://arxiv.org/abs/2605.15184) ⭐️ 7.0/10
+
+A paper and discussion explore whether grep-based agentic search is sufficient or if more sophisticated methods are needed, with findings on token consumption and relevance trade-offs.
+
+hackernews · Anon84 · 6月9日 13:27 · [社区讨论](https://news.ycombinator.com/item?id=48460863)
+
+**标签**: `#agentic search`, `#grep`, `#semantic search`, `#LLM agents`, `#information retrieval`
+
+---
+
+<a id="item-27"></a>
+## [Anyone gotten Gemma 4 12B (unified audio) to actually attend to speech with a large system prompt?](https://www.reddit.com/r/LocalLLaMA/comments/1u1uk3a/anyone_gotten_gemma_4_12b_unified_audio_to/) ⭐️ 7.0/10
+
+User reports that Gemma 4 12B unified model fails to attend to audio when system prompt is large (~21k tokens), suggesting an inherent attention saturation issue.
+
+reddit · r/LocalLLaMA · /u/Think_Illustrator188 · 6月10日 06:51
+
+**标签**: `#Gemma 4`, `#multimodal`, `#voice assistant`, `#attention mechanism`, `#local LLM`
+
+---
+
+<a id="item-28"></a>
+## [Unsloth Gemma 4 QAT MTP assistant models now available](https://www.reddit.com/r/LocalLLaMA/comments/1u19k2h/unsloth_gemma_4_qat_mtp_assistant_models_now/) ⭐️ 7.0/10
+
+Unsloth releases Gemma 4 QAT MTP assistant models as GGUF files for local inference.
+
+reddit · r/LocalLLaMA · /u/ParadigmComplex · 6月9日 16:12
+
+**标签**: `#LLM`, `#GGUF`, `#Gemma 4`, `#quantization`, `#local inference`
+
+---
+
+<a id="item-29"></a>
+## [What will be the next breakthrough in ASR? (D)](https://www.reddit.com/r/MachineLearning/comments/1u1cklt/what_will_be_the_next_breakthrough_in_asr_d/) ⭐️ 7.0/10
+
+A discussion on the next breakthrough in ASR, comparing recent models like Whisper and Parakeet, and debating the role of data scale vs architecture.
+
+reddit · r/MachineLearning · /u/ComprehensiveTop3297 · 6月9日 17:57
+
+**标签**: `#ASR`, `#speech recognition`, `#deep learning`, `#Whisper`, `#Parakeet`
+
+---
+
+<a id="item-30"></a>
+## [Are privacy-preserving techniques actually being used in production ML systems? (D)](https://www.reddit.com/r/MachineLearning/comments/1u12bpa/are_privacypreserving_techniques_actually_being/) ⭐️ 7.0/10
+
+A Reddit user asks about the production adoption of privacy-preserving ML techniques like differential privacy and federated learning, seeking real-world engineering challenges and tradeoffs.
+
+reddit · r/MachineLearning · /u/Electrical_Mine1912 · 6月9日 11:30
+
+**标签**: `#privacy-preserving ML`, `#differential privacy`, `#federated learning`, `#production ML`, `#on-device inference`
+
+---
+
+<a id="item-31"></a>
+## [How engineers at Nextdoor use Codex to build without limits](https://openai.com/index/nextdoor) ⭐️ 6.0/10
+
+Nextdoor engineers use OpenAI's Codex with GPT-5.5 to debug, build cross-platform, and improve productivity.
+
+rss · OpenAI Blog · 6月9日 12:00
+
+**标签**: `#AI-assisted development`, `#Codex`, `#GPT-5.5`, `#software engineering`
+
+---
+
+<a id="item-32"></a>
+## [What Codex unlocks for Notion](https://openai.com/index/notion) ⭐️ 6.0/10
+
+Notion leverages OpenAI's Codex to automate spec generation, build AI voice input, and boost engineering productivity for small teams.
+
+rss · OpenAI Blog · 6月9日 10:00
+
+**标签**: `#AI`, `#Codex`, `#Notion`, `#productivity`, `#software engineering`
+
+---
+
+<a id="item-33"></a>
+## [需要开放 LLM 竞争来遏制闭源贪婪](https://www.reddit.com/r/LocalLLaMA/comments/1u1p3k5/without_open_llm_competition_closed_source_llm/) ⭐️ 6.0/10
+
+一篇 Reddit 帖子认为，如果没有开源 LLM 的竞争，像 Anthropic 这样的闭源公司会剥削客户，并引用了每月 200 美元的订阅费和潜在的虐待行为。 这凸显了开源 LLM 在维持 AI 行业公平定价和道德行为中的关键作用，影响着依赖 LLM 服务的开发者和企业。 该帖子引用了一张特定图片（不可用），并表达了对闭源提供商在没有开放替代方案的情况下可能变得贪得无厌的担忧。该论点以观点为主，缺乏技术深度。
+
+reddit · r/LocalLLaMA · /u/Chair-Short · 6月10日 02:12
+
+**背景**: 大型语言模型（LLM）是生成类人文本的 AI 系统。开源 LLM 可公开修改和使用，而闭源 LLM 是专有的，由 Anthropic 等公司控制。开源模型的竞争可以迫使闭源提供商提供更好的定价和条款。
+
+**标签**: `#open-source`, `#LLM`, `#competition`, `#AI ethics`
+
+---
+
+<a id="item-34"></a>
+## [Since when the RTX 6000 PRO is priced at 13250USD on the official NVIDIA Page?](https://www.reddit.com/r/LocalLLaMA/comments/1u1eul0/since_when_the_rtx_6000_pro_is_priced_at_13250usd/) ⭐️ 6.0/10
+
+NVIDIA's RTX 6000 PRO workstation GPU is listed at $13,250 on the official marketplace, sparking discussion on pricing.
+
+reddit · r/LocalLLaMA · /u/panchovix · 6月9日 19:17
+
+**标签**: `#NVIDIA`, `#GPU`, `#pricing`, `#workstation`, `#AI hardware`
+
+---
+
+<a id="item-35"></a>
+## [What's up on CPU inference these days?](https://www.reddit.com/r/LocalLLaMA/comments/1u1sj9d/whats_up_on_cpu_inference_these_days/) ⭐️ 6.0/10
+
+A user asks for the best models, quants, and llama.cpp versions for CPU inference on an Intel Core Ultra 7 with 64GB RAM, reporting ~10 tps with Qwen3.6 35B A3B Q4_K_M.
+
+reddit · r/LocalLLaMA · /u/ramendik · 6月10日 05:01
+
+**标签**: `#CPU inference`, `#llama.cpp`, `#quantization`, `#LocalLLaMA`, `#MoE`
+
+---
+
