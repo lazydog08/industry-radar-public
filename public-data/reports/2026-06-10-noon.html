@@ -1,0 +1,549 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>行业情报雷达 - 中午报告</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f5f7;
+      --surface: #ffffff;
+      --surface-soft: #fbfbfd;
+      --text: #1d1d1f;
+      --muted: #6e6e73;
+      --line: #e5e5ea;
+      --accent: #0066cc;
+      --good: #1f7a4d;
+      --bad: #b42318;
+    }
+    * { box-sizing: border-box; }
+    html {
+      min-height: 100%;
+      overflow-x: clip;
+      overflow-y: auto;
+      overscroll-behavior-y: contain;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      min-height: 100dvh;
+      overflow-x: clip;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      letter-spacing: 0;
+    }
+    .page { width: min(1120px, calc(100vw - 28px)); min-height: 100dvh; margin: 0 auto; padding: 28px 0 56px; }
+    .masthead { display: grid; gap: 18px; padding: 10px 0 18px; }
+    .eyebrow { color: var(--muted); font-size: 14px; line-height: 1.5; }
+    h1 { margin: 0; font-size: clamp(30px, 4vw, 44px); line-height: 1.1; font-weight: 720; }
+    h2 { margin: 0 0 12px; font-size: 22px; line-height: 1.25; }
+    h3 { margin: 0; font-size: 18px; line-height: 1.38; overflow-wrap: anywhere; }
+    p { margin: 0; line-height: 1.65; }
+    a { color: var(--accent); text-decoration: none; overflow-wrap: anywhere; }
+    a:hover { text-decoration: underline; }
+    .summary-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+    .metric, .status-strip, .mainline, .event-card, .empty, .idea-list, .source-note {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+    }
+    .metric { padding: 13px 14px; min-width: 0; }
+    .metric b { display: block; font-size: 22px; line-height: 1.15; }
+    .metric span { display: block; margin-top: 3px; color: var(--muted); font-size: 12px; }
+    .status-strip { display: flex; flex-wrap: wrap; gap: 8px; padding: 12px; }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      max-width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 8px;
+      color: var(--muted);
+      background: var(--surface-soft);
+      font-size: 12px;
+      line-height: 1.35;
+      overflow-wrap: anywhere;
+    }
+    .status-ok { color: var(--good); }
+    .status-bad { color: var(--bad); }
+    section { margin-top: 28px; }
+    .mainline { padding: 18px; }
+    .mainline ul, .idea-list ol { margin: 0; padding-left: 20px; line-height: 1.75; }
+    .event-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .top-list { grid-template-columns: 1fr; }
+    .event-card { padding: 16px; display: grid; gap: 10px; min-width: 0; }
+    .event-card.top { border-color: #d2d2d7; }
+    .card-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: start; min-width: 0; }
+    .card-head:has(.rank) { grid-template-columns: auto minmax(0, 1fr) auto; }
+    .card-head h3 { min-width: 0; }
+    .rank {
+      width: 28px;
+      height: 28px;
+      display: inline-grid;
+      place-items: center;
+      border-radius: 50%;
+      background: #1d1d1f;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+      flex: 0 0 auto;
+    }
+    .score { color: var(--accent); font-weight: 700; white-space: nowrap; justify-self: end; }
+    .summary { color: #303033; }
+    .why { color: var(--text); }
+    .creator { color: #3d3d40; }
+    .label { color: var(--muted); font-size: 12px; font-weight: 650; margin-right: 4px; }
+    .meta, .sources { display: flex; flex-wrap: wrap; gap: 7px; align-items: center; }
+    .sources { padding-top: 2px; }
+    .sources a {
+      display: inline-grid;
+      gap: 2px;
+      max-width: 100%;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 6px 8px;
+      background: var(--surface-soft);
+    }
+    .sources code {
+      color: var(--muted);
+      font-size: 11px;
+      white-space: normal;
+      overflow-wrap: anywhere;
+    }
+    .empty { padding: 16px; color: var(--muted); }
+    .idea-list { padding: 16px 18px; }
+    .source-note { padding: 14px 16px; margin-bottom: 10px; }
+    @media (max-width: 860px) {
+      .summary-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .event-list { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 560px) {
+      .page { width: min(100vw - 20px, 1120px); padding-top: 18px; }
+      .summary-grid { grid-template-columns: 1fr; }
+      .card-head, .card-head:has(.rank) { grid-template-columns: auto minmax(0, 1fr); }
+      .score { grid-column: 2; justify-self: start; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <div>
+        <div class="eyebrow">2026-06-10 · 中午报告 · 2026-06-10 10:00:00 - 2026-06-10 12:00:00 UTC+8</div>
+        <h1>行业情报雷达</h1>
+      </div>
+      <div class="summary-grid">
+        <div class="metric"><b>2026-06-10</b><span>日期</span></div>
+        <div class="metric"><b>中午报告</b><span>报告类型</span></div>
+        <div class="metric"><b>13</b><span>新增事件</span></div>
+        <div class="metric"><b>1</b><span>重要事件</span></div>
+        <div class="metric"><b>6/9</b><span>数据源可用</span></div>
+      </div>
+      <div class="status-strip" aria-label="数据源状态"><span class="pill status-ok">OK ithome 10 · 42 条不在报告时间窗口内，已排除</span><span class="pill status-ok">OK bilibili 2 · 科技分区排行: Bilibili API -352: -352；搜索 华为 韬定律: HTTP 412 Precondition Failed；搜索 麒麟 芯片: HTTP 412 Precondition Failed；98 条不在报告时间窗口内，已排除</span><span class="pill status-ok">OK official 2 · 58 条不在报告时间窗口内，已排除</span><span class="pill status-ok">OK github 0 · 40 条不在报告时间窗口内，已排除</span><span class="pill status-ok">OK hackernews 3 · 37 条不在报告时间窗口内，已排除</span><span class="pill status-bad">异常 reddit 0 · r/LocalLLaMA: HTTP 403 Blocked；r/MachineLearning: HTTP 403 Blocked；r/technology: HTTP 403 Blocked；r/electricvehicles: HTTP 403 Blocked</span><span class="pill status-ok">OK rss 0 · 100 条不在报告时间窗口内，已排除</span><span class="pill status-bad">异常 zhihu 0</span><span class="pill status-bad">异常 weibo 0 · 微博 ajax 热搜不可用：HTTP 403 Forbidden；微博公开搜索降级失败：公开搜索页返回访客/风控页面</span></div>
+    </header>
+    
+    <section><h2>今日必看</h2><div class="event-list top-list"><article class="event-card top">
+    <div class="card-head">
+      <span class="rank">1</span>
+      <h3>微博回应禁言追觅科技 CEO 俞浩：账号被某企业投诉，以“喊话”等形式发布质疑、拉踩企业的违规内容</h3>
+      <span class="score">A 72</span>
+    </div>
+    <p class="summary"><span class="label">推荐理由</span>与你关注的数码/AI/汽车/平台生态高度相关；近期新出现</p>
+    <p class="summary"><span class="label">一句话</span>自媒体/平台生态出现值得入库的信号：微博回应禁言追觅科技 CEO 俞浩：账号被某企业投诉，以“喊话”等形式发布质疑、拉踩企业的违规内容。它涉及 微博、抖音、小红书，系统识别到 自媒体、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。</p>
+    <p class="why"><span class="label">为什么重要</span>微博、抖音、小红书 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。</p>
+    <p class="creator"><span class="label">内容关系</span>可以转化为创作者避坑、平台规则解读、流量变化观察和内容策略调整。拍摄时不要只讲“规则变了”，更应该拆成影响对象、变化证据、应对动作和风险边界。</p>
+    <p><span class="label">内容切入</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">低置信</span>
+      <span class="pill">自媒体 / 平台生态</span>
+      <span class="pill">发布会</span><span class="pill">自媒体</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/962/310.htm" target="_blank" rel="noreferrer"><span>ithome</span><code>https://www.ithome.com/0/962/310.htm</code></a></div>
+  </article><article class="event-card top">
+    <div class="card-head">
+      <span class="rank">2</span>
+      <h3>每隔 3 个月插拔 1 次：网友反馈其 RTX 5090 显卡线缆熔毁</h3>
+      <span class="score">B 68</span>
+    </div>
+    <p class="summary"><span class="label">推荐理由</span>与你关注的数码/AI/汽车/平台生态高度相关；近期新出现</p>
+    <p class="summary"><span class="label">一句话</span>数码行业出现值得入库的信号：每隔 3 个月插拔 1 次：网友反馈其 RTX 5090 显卡线缆熔毁。它涉及 相关主体，系统识别到 数码、发布会、争议 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。</p>
+    <p class="why"><span class="label">为什么重要</span>相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。</p>
+    <p><span class="label">内容切入</span>争议拆解：每隔 3 个月插拔 1 次：网友反馈其 RTX 5090 显卡线缆熔毁，普通用户到底该怎么看？</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">低置信</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">争议</span><span class="pill">发布会</span><span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/962/311.htm" target="_blank" rel="noreferrer"><span>ithome</span><code>https://www.ithome.com/0/962/311.htm</code></a></div>
+  </article><article class="event-card top">
+    <div class="card-head">
+      <span class="rank">3</span>
+      <h3>联想拯救者 Y900 平板 11 英寸版本首销：144Hz 面板、天玑 9500s 处理器，2999 元起</h3>
+      <span class="score">B 65</span>
+    </div>
+    <p class="summary"><span class="label">推荐理由</span>与你关注的数码/AI/汽车/平台生态高度相关；近期新出现</p>
+    <p class="summary"><span class="label">一句话</span>数码行业出现值得入库的信号：联想拯救者 Y900 平板 11 英寸版本首销：144Hz 面板、天玑 9500s 处理器，2999 元起。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。</p>
+    <p class="why"><span class="label">为什么重要</span>相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。</p>
+    <p><span class="label">内容切入</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">低置信</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">发布会</span><span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/962/297.htm" target="_blank" rel="noreferrer"><span>ithome</span><code>https://www.ithome.com/0/962/297.htm</code></a></div>
+  </article><article class="event-card top">
+    <div class="card-head">
+      <span class="rank">4</span>
+      <h3>全球经历有记录以来第二热的 5 月，欧盟机构预计未来数月内形成的厄尔尼诺现象可能引发极端天气</h3>
+      <span class="score">B 63</span>
+    </div>
+    <p class="summary"><span class="label">推荐理由</span>与你关注的数码/AI/汽车/平台生态高度相关；近期新出现</p>
+    <p class="summary"><span class="label">一句话</span>数码行业出现值得入库的信号：全球经历有记录以来第二热的 5 月，欧盟机构预计未来数月内形成的厄尔尼诺现象可能引发极端天气。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。</p>
+    <p class="why"><span class="label">为什么重要</span>相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。</p>
+    <p><span class="label">内容切入</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">低置信</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">发布会</span><span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/962/305.htm" target="_blank" rel="noreferrer"><span>ithome</span><code>https://www.ithome.com/0/962/305.htm</code></a></div>
+  </article><article class="event-card top">
+    <div class="card-head">
+      <span class="rank">5</span>
+      <h3>微软 Xbox 新 CEO 夏尔马宠粉：向发布会现场观众赠送 25 周年限定版 Series X 主机</h3>
+      <span class="score">B 63</span>
+    </div>
+    <p class="summary"><span class="label">推荐理由</span>与你关注的数码/AI/汽车/平台生态高度相关；近期新出现</p>
+    <p class="summary"><span class="label">一句话</span>数码行业出现值得入库的信号：微软 Xbox 新 CEO 夏尔马宠粉：向发布会现场观众赠送 25 周年限定版 Series X 主机。它涉及 相关主体，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。</p>
+    <p class="why"><span class="label">为什么重要</span>相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。</p>
+    <p><span class="label">内容切入</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">低置信</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">发布会</span><span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/962/288.htm" target="_blank" rel="noreferrer"><span>ithome</span><code>https://www.ithome.com/0/962/288.htm</code></a></div>
+  </article></div></section>
+    <section>
+      <h2>今日主线判断</h2>
+      <div class="mainline"><ul><li>数码行业是本窗口的主要信号，集中在 抖音、微博、小红书、小米，关键词是 数码、发布会、智驾、汽车、自媒体。</li><li>Top 事件优先关注“为什么重要”和“内容创作影响”，它们比单条标题更适合直接转成选题。</li><li>有 4 个事件出现新增来源或持续发酵，适合进入持续跟踪列表，避免被同一话题的二次传播带偏。</li><li>本次有 3 个数据源异常，结论更适合当作雷达提示，而不是最终行业定论。</li></ul></div>
+    </section>
+    <section><h2>数码行业</h2><div class="event-list "><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>Rich Sutton on AI creativity and discovery</h3>
+      <span class="score">B 55</span>
+    </div>
+    <p class="summary"><span class="label">推荐理由</span>与你关注的数码/AI/汽车/平台生态高度相关；近期新出现</p>
+    <p class="summary"><span class="label">一句话</span>数码行业出现值得入库的信号：Rich Sutton on AI creativity and discovery。它涉及 相关主体，系统识别到 数码、智驾 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。</p>
+    <p class="why"><span class="label">为什么重要</span>智能驾驶相关变化容易引发用户安全感、体验差异和车企技术路线讨论。对视频创作者来说，真正值得盯的是功能覆盖、接管体验、用户口碑和车企路线，而不是单纯复述一次 OTA 或发布节点。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。优先找车主反馈、实测画面和同级竞品对照，避免只复述厂商话术。</p>
+    <p><span class="label">内容切入</span>智驾更新看起来很强，但普通车主真正关心哪 3 件事？</p>
+    <p><span class="label">标题/封面</span>智驾升级，不只看城市数量</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">低置信</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">数码</span><span class="pill">智驾</span>
+    </div>
+    <div class="sources"><a href="https://twitter.com/RichardSSutton/status/2061216087744946656" target="_blank" rel="noreferrer"><span>hackernews</span><code>https://twitter.com/RichardSSutton/status/2061216087744946656</code></a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>Vibe coding my way to a healthy family: Introducing Gamow Labs</h3>
+      <span class="score">C 54</span>
+    </div>
+    <p class="summary"><span class="label">推荐理由</span>与你关注的数码/AI/汽车/平台生态高度相关；近期新出现</p>
+    <p class="summary"><span class="label">一句话</span>数码行业出现值得入库的信号：Vibe coding my way to a healthy family: Introducing Gamow Labs。它涉及 相关主体，系统识别到 数码、智驾 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。</p>
+    <p class="why"><span class="label">为什么重要</span>智能驾驶相关变化容易引发用户安全感、体验差异和车企技术路线讨论。对视频创作者来说，真正值得盯的是功能覆盖、接管体验、用户口碑和车企路线，而不是单纯复述一次 OTA 或发布节点。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。优先找车主反馈、实测画面和同级竞品对照，避免只复述厂商话术。</p>
+    <p><span class="label">内容切入</span>智驾更新看起来很强，但普通车主真正关心哪 3 件事？</p>
+    <p><span class="label">标题/封面</span>智驾升级，不只看城市数量</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">低置信</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">数码</span><span class="pill">智驾</span>
+    </div>
+    <div class="sources"><a href="https://www.ddmckinnon.com/2026/06/09/vibe-coding-my-way-to-a-healthy-family-introducing-gamow-labs/" target="_blank" rel="noreferrer"><span>hackernews</span><code>https://www.ddmckinnon.com/2026/06/09/vibe-coding-my-way-to-a-healthy-family-introducing-gamow-labs/</code></a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>The Evolution of 'More Like This'</h3>
+      <span class="score">C 53</span>
+    </div>
+    <p class="summary"><span class="label">推荐理由</span>与你关注的数码/AI/汽车/平台生态高度相关；近期新出现</p>
+    <p class="summary"><span class="label">一句话</span>数码行业出现值得入库的信号：The Evolution of 'More Like This'。它涉及 相关主体，系统识别到 数码、智驾 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。</p>
+    <p class="why"><span class="label">为什么重要</span>智能驾驶相关变化容易引发用户安全感、体验差异和车企技术路线讨论。对视频创作者来说，真正值得盯的是功能覆盖、接管体验、用户口碑和车企路线，而不是单纯复述一次 OTA 或发布节点。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。优先找车主反馈、实测画面和同级竞品对照，避免只复述厂商话术。</p>
+    <p><span class="label">内容切入</span>智驾更新看起来很强，但普通车主真正关心哪 3 件事？</p>
+    <p><span class="label">标题/封面</span>智驾升级，不只看城市数量</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">低置信</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">数码</span><span class="pill">智驾</span>
+    </div>
+    <div class="sources"><a href="https://manticoresearch.com/blog/the-evolution-of-more-like-this/" target="_blank" rel="noreferrer"><span>hackernews</span><code>https://manticoresearch.com/blog/the-evolution-of-more-like-this/</code></a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>只要0.2个W！这台4K高刷平板，能知道你在看什么？</h3>
+      <span class="score">C 53</span>
+    </div>
+    <p class="summary"><span class="label">推荐理由</span>近期新出现</p>
+    <p class="summary"><span class="label">一句话</span>数码行业出现值得入库的信号：只要0.2个W！这台4K高刷平板，能知道你在看什么？。它涉及 相关主体，系统识别到 数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。</p>
+    <p class="why"><span class="label">为什么重要</span>该事件可能影响用户认知、品牌节奏或行业叙事，适合进入知识库等待后续交叉验证。当前来源是 bilibili，后续需要看是否有官方、垂媒或更多独立来源补强。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 相关主体 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。</p>
+    <p><span class="label">内容切入</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>这条消息别只看标题：只要0.2个W！这台4K高刷平板，能知道你在看…</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">低置信</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.bilibili.com/video/BV1fGEm65EKU" target="_blank" rel="noreferrer"><span>bilibili</span><code>https://www.bilibili.com/video/BV1fGEm65EKU</code></a></div>
+  </article></div></section>
+    <section><h2>自媒体 / 平台生态</h2><div class="event-list "><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>微软 XBOX CEO 夏尔马：上任不到四个月存储器已涨价 50%</h3>
+      <span class="score">B 58</span>
+    </div>
+    <p class="summary"><span class="label">推荐理由</span>近期新出现</p>
+    <p class="summary"><span class="label">一句话</span>自媒体/平台生态出现值得入库的信号：微软 XBOX CEO 夏尔马：上任不到四个月存储器已涨价 50%。它涉及 相关主体，系统识别到 自媒体 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。</p>
+    <p class="why"><span class="label">为什么重要</span>创作者生态变化会影响内容生产、分发和变现，需要转化成可执行的方法论。尤其要区分平台真实规则变化、个体经验分享和情绪化讨论。</p>
+    <p class="creator"><span class="label">内容关系</span>可以转化为创作者避坑、平台规则解读、流量变化观察和内容策略调整。拍摄时不要只讲“规则变了”，更应该拆成影响对象、变化证据、应对动作和风险边界。</p>
+    <p><span class="label">内容切入</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>这条消息别只看标题：微软 XBOX CEO 夏尔马：上任不到四个月…</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">低置信</span>
+      <span class="pill">自媒体 / 平台生态</span>
+      <span class="pill">自媒体</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/962/334.htm" target="_blank" rel="noreferrer"><span>ithome</span><code>https://www.ithome.com/0/962/334.htm</code></a></div>
+  </article></div></section>
+    <section><h2>汽车行业</h2><div class="event-list "><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>零百加速 2.6 秒，奥迪 Nuvolari 超跑纽博格林路试</h3>
+      <span class="score">B 55</span>
+    </div>
+    <p class="summary"><span class="label">推荐理由</span>与你关注的数码/AI/汽车/平台生态高度相关；近期新出现</p>
+    <p class="summary"><span class="label">一句话</span>汽车行业出现值得入库的信号：零百加速 2.6 秒，奥迪 Nuvolari 超跑纽博格林路试。它涉及 相关主体，系统识别到 汽车、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。</p>
+    <p class="why"><span class="label">为什么重要</span>相关主体 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。优先找车主反馈、实测画面和同级竞品对照，避免只复述厂商话术。</p>
+    <p><span class="label">内容切入</span>把车企动作翻译成消费者能听懂的购车/用车影响。</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">低置信</span>
+      <span class="pill">汽车行业</span>
+      <span class="pill">发布会</span><span class="pill">汽车</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/962/324.htm" target="_blank" rel="noreferrer"><span>ithome</span><code>https://www.ithome.com/0/962/324.htm</code></a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>尚界 Z7 宣布 6 月 11 日全网首拆，五大板块边拆边讲</h3>
+      <span class="score">C 46</span>
+    </div>
+    <p class="summary"><span class="label">推荐理由</span>近期新出现</p>
+    <p class="summary"><span class="label">一句话</span>汽车行业出现值得入库的信号：尚界 Z7 宣布 6 月 11 日全网首拆，五大板块边拆边讲。它涉及 相关主体，系统识别到 汽车 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。</p>
+    <p class="why"><span class="label">为什么重要</span>汽车行业动作通常会持续发酵到价格、智驾、补能和用户口碑，具备多期内容延展空间。适合先入库观察，不急着按单条新闻下结论。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。优先找车主反馈、实测画面和同级竞品对照，避免只复述厂商话术。</p>
+    <p><span class="label">内容切入</span>把车企动作翻译成消费者能听懂的购车/用车影响。</p>
+    <p><span class="label">标题/封面</span>车企新动作，谁最受影响</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">低置信</span>
+      <span class="pill">汽车行业</span>
+      <span class="pill">汽车</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/962/318.htm" target="_blank" rel="noreferrer"><span>ithome</span><code>https://www.ithome.com/0/962/318.htm</code></a></div>
+  </article></div></section>
+    <section><h2>品牌 / 高管 / 博主动态</h2><div class="event-list "><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>小米机器人给自家手机打工接活了，6月8日，小米 17T 发布会由小米机器人担任产品模特，不用人辅助，机器人自己精确识别音量键和快门位置，变焦、拍照。</h3>
+      <span class="score">B 60</span>
+    </div>
+    <p class="summary"><span class="label">推荐理由</span>与你关注的数码/AI/汽车/平台生态高度相关；近期新出现</p>
+    <p class="summary"><span class="label">一句话</span>数码行业出现值得入库的信号：小米机器人给自家手机打工接活了，6月8日，小米 17T 发布会由小米机器人担任产品模特，不用人辅助，机器人自己精确识别音量键和快门位置，变焦、…。它涉及 小米，系统识别到 数码、AI手机、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。</p>
+    <p class="why"><span class="label">为什么重要</span>AI 手机正在从营销概念转向真实功能竞争，关系到换机理由、发布会卖点和用户痛点表达。需要重点分辨它是品牌预热、真实功能落地，还是媒体二次搬运。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 小米 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。</p>
+    <p><span class="label">内容切入</span>AI 手机这次是不是噱头？从真实使用场景做判断。</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">低置信</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">AI手机</span><span class="pill">发布会</span><span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.bilibili.com/video/BV18EEX61E6x" target="_blank" rel="noreferrer"><span>bilibili</span><code>https://www.bilibili.com/video/BV18EEX61E6x</code></a></div>
+  </article></div></section>
+    <section><h2>持续发酵 / 有更新</h2><div class="event-list "><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>华为为什么要公布韬定律，公开了那不是西方厂商也可以叠加做了？</h3>
+      <span class="score">S 93</span>
+    </div>
+    <p class="summary"><span class="label">推荐理由</span>与你关注的数码/AI/汽车/平台生态高度相关；热度和扩散信号较强，适合优先判断是否跟进；包含明确变化信号</p>
+    <p class="summary"><span class="label">一句话</span>数码行业出现值得入库的信号：【Bloomberg 附文稿】韩国股市暴跌！三星海力士铠侠芯片股被抛售 华为&amp;quot;韬定律&amp;quot;及长鑫存储助力中国芯片股坚挺 [中英…。它涉及 苹果、Google、小米、vivo，系统识别到 争议、半导体突破、发布会、影像、数码 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。</p>
+    <p class="why"><span class="label">为什么重要</span>智能驾驶相关变化容易引发用户安全感、体验差异和车企技术路线讨论。对视频创作者来说，真正值得盯的是功能覆盖、接管体验、用户口碑和车企路线，而不是单纯复述一次 OTA 或发布节点。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做体验对比、用户痛点拆解、车企路线变化和真实使用场景解释。优先找车主反馈、实测画面和同级竞品对照，避免只复述厂商话术。</p>
+    <p><span class="label">内容切入</span>争议拆解：用户反馈苹果 macOS 27 大幅提升流畅度，“像是换了台 Mac”，普通用户到底该怎么看？</p>
+    <p><span class="label">标题/封面</span>更新后最该试的 3 个功能</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">高置信</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">争议</span><span class="pill">半导体突破</span><span class="pill">发布会</span><span class="pill">影像</span><span class="pill">数码</span><span class="pill">智驾</span><span class="pill">汽车</span>
+    </div>
+    <div class="sources"><a href="https://www.bilibili.com/video/BV1heV86BEbj" target="_blank" rel="noreferrer"><span>bilibili 1</span><code>https://www.bilibili.com/video/BV1heV86BEbj</code></a><a href="https://www.bilibili.com/video/BV1kDV86oEMB" target="_blank" rel="noreferrer"><span>bilibili 2</span><code>https://www.bilibili.com/video/BV1kDV86oEMB</code></a><a href="https://www.ithome.com/0/957/400.htm" target="_blank" rel="noreferrer"><span>ithome 1</span><code>https://www.ithome.com/0/957/400.htm</code></a><a href="https://www.bilibili.com/video/BV19aVa6mEk4" target="_blank" rel="noreferrer"><span>bilibili 3</span><code>https://www.bilibili.com/video/BV19aVa6mEk4</code></a><a href="https://www.bilibili.com/video/BV16BVM6xEcN" target="_blank" rel="noreferrer"><span>bilibili 4</span><code>https://www.bilibili.com/video/BV16BVM6xEcN</code></a><a href="https://www.bilibili.com/video/BV13qVa6LETG" target="_blank" rel="noreferrer"><span>bilibili 5</span><code>https://www.bilibili.com/video/BV13qVa6LETG</code></a><a href="https://www.ithome.com/0/957/450.htm" target="_blank" rel="noreferrer"><span>ithome 2</span><code>https://www.ithome.com/0/957/450.htm</code></a><a href="https://www.bilibili.com/video/BV1dKVM67EFr" target="_blank" rel="noreferrer"><span>bilibili 6</span><code>https://www.bilibili.com/video/BV1dKVM67EFr</code></a><a href="https://www.bilibili.com/video/BV1p5V36zE2S" target="_blank" rel="noreferrer"><span>bilibili 7</span><code>https://www.bilibili.com/video/BV1p5V36zE2S</code></a><a href="https://www.bilibili.com/video/BV1KXVV6HEjJ" target="_blank" rel="noreferrer"><span>bilibili 8</span><code>https://www.bilibili.com/video/BV1KXVV6HEjJ</code></a><a href="https://www.bilibili.com/video/BV1FGVj6jEF1" target="_blank" rel="noreferrer"><span>bilibili 9</span><code>https://www.bilibili.com/video/BV1FGVj6jEF1</code></a><a href="https://www.bilibili.com/video/BV1YfVG6tEHr" target="_blank" rel="noreferrer"><span>bilibili 10</span><code>https://www.bilibili.com/video/BV1YfVG6tEHr</code></a><a href="https://www.ithome.com/0/957/738.htm" target="_blank" rel="noreferrer"><span>ithome 3</span><code>https://www.ithome.com/0/957/738.htm</code></a><a href="https://www.ithome.com/0/957/725.htm" target="_blank" rel="noreferrer"><span>ithome 4</span><code>https://www.ithome.com/0/957/725.htm</code></a><a href="https://www.ithome.com/0/957/702.htm" target="_blank" rel="noreferrer"><span>ithome 5</span><code>https://www.ithome.com/0/957/702.htm</code></a><a href="https://www.bilibili.com/video/BV17zV762E3q" target="_blank" rel="noreferrer"><span>bilibili 11</span><code>https://www.bilibili.com/video/BV17zV762E3q</code></a><a href="https://www.bilibili.com/video/BV1N9VV6DE4w" target="_blank" rel="noreferrer"><span>bilibili 12</span><code>https://www.bilibili.com/video/BV1N9VV6DE4w</code></a><a href="https://www.bilibili.com/video/BV1X8VE6rEpP" target="_blank" rel="noreferrer"><span>bilibili 13</span><code>https://www.bilibili.com/video/BV1X8VE6rEpP</code></a><a href="https://www.bilibili.com/video/BV1qqVS6ME9h" target="_blank" rel="noreferrer"><span>bilibili 14</span><code>https://www.bilibili.com/video/BV1qqVS6ME9h</code></a><a href="https://www.bilibili.com/video/BV1jBVS6qEDH" target="_blank" rel="noreferrer"><span>bilibili 15</span><code>https://www.bilibili.com/video/BV1jBVS6qEDH</code></a><a href="https://www.bilibili.com/video/BV1DSVS6FE2c" target="_blank" rel="noreferrer"><span>bilibili 16</span><code>https://www.bilibili.com/video/BV1DSVS6FE2c</code></a><a href="https://www.bilibili.com/video/BV1B6V96QEx9" target="_blank" rel="noreferrer"><span>bilibili 17</span><code>https://www.bilibili.com/video/BV1B6V96QEx9</code></a><a href="https://www.bilibili.com/video/BV1go7Z6wEZ6" target="_blank" rel="noreferrer"><span>bilibili 18</span><code>https://www.bilibili.com/video/BV1go7Z6wEZ6</code></a><a href="https://www.bilibili.com/video/BV1on7C68EQ1" target="_blank" rel="noreferrer"><span>bilibili 19</span><code>https://www.bilibili.com/video/BV1on7C68EQ1</code></a><a href="https://www.bilibili.com/video/BV1gBEJ69E8X" target="_blank" rel="noreferrer"><span>bilibili 20</span><code>https://www.bilibili.com/video/BV1gBEJ69E8X</code></a><a href="https://www.ithome.com/0/962/325.htm" target="_blank" rel="noreferrer"><span>ithome 6</span><code>https://www.ithome.com/0/962/325.htm</code></a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>华为发布教育及医疗伙伴联盟2.0——“蒲公英计划”，构建行业合作共赢新生态</h3>
+      <span class="score">A 72</span>
+    </div>
+    <p class="summary"><span class="label">推荐理由</span>与你关注的数码/AI/汽车/平台生态高度相关；近期新出现</p>
+    <p class="summary"><span class="label">一句话</span>数码行业出现值得入库的信号：华为发布教育及医疗伙伴联盟2.0——“蒲公英计划”，构建行业合作共赢新生态。它涉及 华为，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。</p>
+    <p class="why"><span class="label">为什么重要</span>华为 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。</p>
+    <p><span class="label">内容切入</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">低置信</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">发布会</span><span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.huawei.com/cn/news/2026/6/ahead-program" target="_blank" rel="noreferrer"><span>huawei-news</span><code>https://www.huawei.com/cn/news/2026/6/ahead-program</code></a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>华为云发布Agentic AI系列新品 打造智能时代“硅基黑土地”</h3>
+      <span class="score">B 69</span>
+    </div>
+    <p class="summary"><span class="label">推荐理由</span>与你关注的数码/AI/汽车/平台生态高度相关</p>
+    <p class="summary"><span class="label">一句话</span>数码行业出现值得入库的信号：华为云发布Agentic AI系列新品 打造智能时代“硅基黑土地”。它涉及 华为，系统识别到 数码、发布会 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。</p>
+    <p class="why"><span class="label">为什么重要</span>华为 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 华为 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。</p>
+    <p><span class="label">内容切入</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">低置信</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">发布会</span><span class="pill">数码</span>
+    </div>
+    <div class="sources"><a href="https://www.huawei.com/cn/news/2026/6/inspire-agenticera-agenticinfra" target="_blank" rel="noreferrer"><span>huawei-news</span><code>https://www.huawei.com/cn/news/2026/6/inspire-agenticera-agenticinfra</code></a></div>
+  </article><article class="event-card ">
+    <div class="card-head">
+      
+      <h3>球星亚马尔预热 Beats Studio Pro 2 耳机：全新设计，粉色配色</h3>
+      <span class="score">C 48</span>
+    </div>
+    <p class="summary"><span class="label">推荐理由</span>与你关注的数码/AI/汽车/平台生态高度相关；包含明确变化信号</p>
+    <p class="summary"><span class="label">一句话</span>数码行业出现值得入库的信号：初探苹果 iOS 27 版 AI 擦除工具 Clean Up ：减少人脸失真。它涉及 苹果，系统识别到 发布会、数码、系统更新 等信号。这条信息会先进入雷达评分，再按新鲜度、趋势扩散和可信度决定是否推到首页。</p>
+    <p class="why"><span class="label">为什么重要</span>苹果 的节点型动作会集中释放产品信息，适合做前瞻、解读、对比和购买建议。若后续出现官方口径、实测内容或多家独立来源互证，这条信息的可信度和视频价值会继续上升。</p>
+    <p class="creator"><span class="label">内容关系</span>适合做新品解读、参数背后的用户价值、品牌路线对比和购买建议。若围绕 苹果 做内容，可以把“发生了什么”转成“用户为什么要关心、值不值得等、和竞品有什么差别”。</p>
+    <p><span class="label">内容切入</span>用一条短视频讲清楚：这件事为什么值得普通用户关注。</p>
+    <p><span class="label">标题/封面</span>发布会定档 + 最大悬念 + 你该等吗</p>
+    <div class="meta">
+      <span class="pill">已入库</span>
+      <span class="pill">低置信</span>
+      <span class="pill">数码行业</span>
+      <span class="pill">发布会</span><span class="pill">数码</span><span class="pill">系统更新</span>
+    </div>
+    <div class="sources"><a href="https://www.ithome.com/0/957/728.htm" target="_blank" rel="noreferrer"><span>ithome 1</span><code>https://www.ithome.com/0/957/728.htm</code></a><a href="https://www.ithome.com/0/962/307.htm" target="_blank" rel="noreferrer"><span>ithome 2</span><code>https://www.ithome.com/0/962/307.htm</code></a></div>
+  </article></div></section>
+    <section>
+      <h2>数据源异常与限制</h2>
+      <div class="source-note"><strong>ithome</strong><p>42 条不在报告时间窗口内，已排除</p></div><div class="source-note"><strong>bilibili</strong><p>科技分区排行: Bilibili API -352: -352；搜索 华为 韬定律: HTTP 412 Precondition Failed；搜索 麒麟 芯片: HTTP 412 Precondition Failed；98 条不在报告时间窗口内，已排除</p></div><div class="source-note"><strong>official</strong><p>58 条不在报告时间窗口内，已排除</p></div><div class="source-note"><strong>github</strong><p>40 条不在报告时间窗口内，已排除</p></div><div class="source-note"><strong>hackernews</strong><p>37 条不在报告时间窗口内，已排除</p></div><div class="source-note"><strong>reddit</strong><p>r/LocalLLaMA: HTTP 403 Blocked; r/MachineLearning: HTTP 403 Blocked; r/technology: HTTP 403 Blocked; r/electricvehicles: HTTP 403 Blocked</p></div><div class="source-note"><strong>rss</strong><p>100 条不在报告时间窗口内，已排除</p></div><div class="source-note"><strong>zhihu</strong><p>公开热榜访问失败：HTTP 401 Authorization Required</p></div><div class="source-note"><strong>weibo</strong><p>微博源暂不可用；未使用登录、Cookie 或验证码绕过。</p></div>
+    </section>
+  </main>
+  <script>
+    (() => {
+      function isPageScrollable() {
+        const root = document.scrollingElement || document.documentElement;
+        return root.scrollHeight > root.clientHeight + 1;
+      }
+      function normalizedWheelDelta(event) {
+        const unit = event.deltaMode === 1 ? 40 : event.deltaMode === 2 ? window.innerHeight : 1;
+        return { x: event.deltaX * unit, y: event.deltaY * unit };
+      }
+      function isInteractiveTarget(target) {
+        return target instanceof Element && Boolean(target.closest("a, button, input, select, textarea, [contenteditable='true'], [tabindex]:not([tabindex='-1'])"));
+      }
+      function hasScrollableAncestor(target, deltaY) {
+        for (let node = target instanceof Element ? target : target?.parentElement; node && node !== document.body; node = node.parentElement) {
+          const style = window.getComputedStyle(node);
+          if (!/(auto|scroll)/.test(style.overflowY)) continue;
+          const canScrollDown = deltaY > 0 && node.scrollTop + node.clientHeight < node.scrollHeight - 1;
+          const canScrollUp = deltaY < 0 && node.scrollTop > 1;
+          if (canScrollDown || canScrollUp) return true;
+        }
+        return false;
+      }
+      function keyScrollDelta(event) {
+        const viewportStep = Math.max(240, Math.floor(window.innerHeight * 0.85));
+        if (event.key === " ") return event.shiftKey ? -viewportStep : viewportStep;
+        return {
+          ArrowDown: 80,
+          ArrowUp: -80,
+          PageDown: viewportStep,
+          PageUp: -viewportStep,
+          Home: "home",
+          End: "end"
+        }[event.key];
+      }
+      window.addEventListener("wheel", (event) => {
+        const delta = normalizedWheelDelta(event);
+        if (event.defaultPrevented || event.ctrlKey || Math.abs(delta.y) <= Math.abs(delta.x)) return;
+        if (!isPageScrollable() || hasScrollableAncestor(event.target, delta.y)) return;
+        const previousY = window.scrollY;
+        window.requestAnimationFrame(() => {
+          if (window.scrollY === previousY) {
+            window.scrollBy({ top: delta.y, left: 0, behavior: "auto" });
+          }
+        });
+      }, { capture: true, passive: true });
+      window.addEventListener("keydown", (event) => {
+        if (event.defaultPrevented || event.altKey || event.ctrlKey || event.metaKey) return;
+        if (!isPageScrollable() || isInteractiveTarget(event.target)) return;
+        const delta = keyScrollDelta(event);
+        if (!delta) return;
+        event.preventDefault();
+        if (delta === "home") {
+          window.scrollTo({ top: 0, behavior: "auto" });
+        } else if (delta === "end") {
+          const root = document.scrollingElement || document.documentElement;
+          window.scrollTo({ top: root.scrollHeight, behavior: "auto" });
+        } else {
+          window.scrollBy({ top: delta, left: 0, behavior: "auto" });
+        }
+      }, { capture: true });
+    })();
+  </script>
+</body>
+</html>
