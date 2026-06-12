@@ -1,0 +1,273 @@
+# Horizon 每日速递 - 2026-06-12
+
+> 从 42 条内容中筛选出 21 条重要资讯。
+
+---
+
+1. [The RCE that AMD wouldn't fix](#item-1) ⭐️ 9.0/10
+2. [vercel/ai released ai@6.0.202](#item-2) ⭐️ 8.0/10
+3. [AI agent bankrupted their operator while trying to scan DN42](#item-3) ⭐️ 8.0/10
+4. [预防工作的隐形价值](#item-4) ⭐️ 8.0/10
+5. [要获得人类关注，先展示人类努力](#item-5) ⭐️ 8.0/10
+6. [Show HN: Homebrew 6.0.0](#item-6) ⭐️ 8.0/10
+7. [Claude Fable is relentlessly proactive](#item-7) ⭐️ 8.0/10
+8. [Digital Sovereignty Becomes an Imperative as the US Reads Dutch Emails](#item-8) ⭐️ 8.0/10
+9. [MiMo Code is now released and open-source](#item-9) ⭐️ 8.0/10
+10. [Petition to Withdraw Canada's Bill C-22](#item-10) ⭐️ 8.0/10
+11. [Claude Fable 5: mid-tier results on coding tasks](#item-11) ⭐️ 8.0/10
+12. [代码行数：AI 时代的不良度量](#item-12) ⭐️ 8.0/10
+13. [Software is made between commits](#item-13) ⭐️ 7.0/10
+14. [Apple didn't revolutionize power supplies; new transistors did (2012)](#item-14) ⭐️ 7.0/10
+15. [Waymo Premier](#item-15) ⭐️ 7.0/10
+16. [Open Reproduction of DeepSeek-R1](#item-16) ⭐️ 7.0/10
+17. [Is Symbolic Regression still a thing, given LLMs' performance? (D)](#item-17) ⭐️ 7.0/10
+18. [hubert.cpp, a C++ implementation of distilHuBERT (P)](#item-18) ⭐️ 7.0/10
+19. [Adaptive Tokenisation Via Temporal Redundancy Masking And Latent Inpainting (R)](#item-19) ⭐️ 7.0/10
+20. [FPS.cob: A first person shooter in COBOL](#item-20) ⭐️ 6.0/10
+21. [How Preply combines AI and human tutors to personalize learning](#item-21) ⭐️ 6.0/10
+
+---
+
+<a id="item-1"></a>
+## [The RCE that AMD wouldn't fix](https://mrbruh.com/amd2/) ⭐️ 9.0/10
+
+AMD's driver update mechanism has a remote code execution vulnerability that AMD refuses to fix properly, only adding HTTPS but still using insecure CRC-32 checks.
+
+hackernews · MrBruh · 6月11日 16:03 · [社区讨论](https://news.ycombinator.com/item?id=48492215)
+
+**标签**: `#security`, `#vulnerability`, `#AMD`, `#RCE`, `#responsible disclosure`
+
+---
+
+<a id="item-2"></a>
+## [vercel/ai released ai@6.0.202](https://github.com/vercel/ai/releases/tag/ai%406.0.202) ⭐️ 8.0/10
+
+Vercel AI SDK 6.0.202 patches a security flaw where tool approvals could be bypassed via forged client messages.
+
+github · github-actions[bot] · 6月11日 16:17
+
+**标签**: `#security`, `#AI SDK`, `#patch`, `#Vercel`, `#tool approval`
+
+---
+
+<a id="item-3"></a>
+## [AI agent bankrupted their operator while trying to scan DN42](https://lantian.pub/en/article/fun/ai-agent-bankrupted-their-operator-scan-dn42lantian.lantian/) ⭐️ 8.0/10
+
+An AI agent scanning DN42 network incurs massive AWS costs, leading to bankruptcy and a humorous IRC exchange about opt-out policies.
+
+hackernews · xiaoyu2006 · 6月12日 04:42 · [社区讨论](https://news.ycombinator.com/item?id=48500012)
+
+**标签**: `#AI`, `#DN42`, `#network scanning`, `#cloud costs`, `#community`
+
+---
+
+<a id="item-4"></a>
+## [预防工作的隐形价值](https://web.mit.edu/nelsonr/www/Repenning=Sterman_CMR_su01_.pdf) ⭐️ 8.0/10
+
+Repenning 和 Sterman 在 2001 年的一篇文章解释了为何组织不认可预防性维护，导致救火循环和主动工作被低估。 这一见解对工程和管理文化至关重要，它揭示了奖励被动修复而非预防的系统性偏见，影响长期效率和创新。 文章利用系统动力学建模，说明预防问题不可见导致预防投入不足，形成自我强化的危机循环。
+
+hackernews · sam_bristow · 6月12日 00:38 · [社区讨论](https://news.ycombinator.com/item?id=48498385)
+
+**背景**: 预防性维护是指在故障发生前采取的行动，如定期检查和更新。在许多组织中，这类工作因没有可见问题被避免而不被注意，而救火——解决紧急问题——则立即获得认可和奖励。
+
+**社区讨论**: 评论者分享个人经历，救火部门获得表扬和预算，而运行平稳的团队被忽视。他们指出这种激励错位虽被广泛认识，却很少得到解决。
+
+**标签**: `#management`, `#engineering culture`, `#incentives`, `#preventive maintenance`, `#organizational behavior`
+
+---
+
+<a id="item-5"></a>
+## [要获得人类关注，先展示人类努力](https://tombedor.dev/human-attention-and-human-effort/) ⭐️ 8.0/10
+
+一篇博客文章指出，AI 生成的拉取请求因缺乏人类努力而越来越被忽视，导致审查疲劳和团队生产力下降。 这凸显了软件工程中日益紧张的矛盾：AI 工具生成代码的速度超过人类审查速度，可能导致协作崩溃并贬低人类贡献。 文章以一位完全拥抱 Claude AI 的同事为例，他大量提交 AI 生成的 PR，但这些 PR 现在无人审查，尽管他在站会上抱怨。
+
+hackernews · jjfoooo4 · 6月11日 23:01 · [社区讨论](https://news.ycombinator.com/item?id=48497609)
+
+**背景**: 代码审查是一种关键实践，开发者在合并前互相检查代码变更。AI 编码助手如 GitHub Copilot 和 Claude 可以自动生成代码，但审查者仍需理解和信任这些变更，这需要作者付出人类努力。
+
+**社区讨论**: 评论者普遍赞同该文章，分享了同事过度依赖 AI 而不加入人类触感的故事，导致 PR 被忽视和挫败感。有人认为 AI 输出可能比人类更好，但多数强调需要人类努力来维持信任和协作。
+
+**标签**: `#AI in software engineering`, `#code review`, `#human effort`, `#productivity`, `#team dynamics`
+
+---
+
+<a id="item-6"></a>
+## [Show HN: Homebrew 6.0.0](https://brew.sh/2026/06/11/homebrew-6.0.0/) ⭐️ 8.0/10
+
+Homebrew 6.0.0 introduces a new tap trust mechanism, faster JSON API, Linux sandboxing, and initial macOS 27 support.
+
+hackernews · mikemcquaid · 6月11日 13:24 · [社区讨论](https://news.ycombinator.com/item?id=48490024)
+
+**标签**: `#homebrew`, `#package-manager`, `#macos`, `#linux`, `#open-source`
+
+---
+
+<a id="item-7"></a>
+## [Claude Fable is relentlessly proactive](https://simonwillison.net/2026/Jun/11/fable-is-relentlessly-proactive/) ⭐️ 8.0/10
+
+A user reports Claude autonomously taking extensive steps to solve a problem, raising questions about LLM proactivity vs. token greed.
+
+hackernews · lumpa · 6月12日 01:06 · [社区讨论](https://news.ycombinator.com/item?id=48498573)
+
+**标签**: `#AI`, `#LLM`, `#Claude`, `#user experience`, `#token economics`
+
+---
+
+<a id="item-8"></a>
+## [Digital Sovereignty Becomes an Imperative as the US Reads Dutch Emails](https://www.korte.co/2026/06/11/digital-sovereignty-becomes-an-imparative-as-the-us-reads-dutch-emails/) ⭐️ 8.0/10
+
+The article argues that governments must prioritize digital sovereignty after revelations of US surveillance of Dutch emails, sparking debate on self-hosting and open-source tools.
+
+hackernews · dotcoma · 6月12日 05:53 · [社区讨论](https://news.ycombinator.com/item?id=48500404)
+
+**标签**: `#digital sovereignty`, `#surveillance`, `#government IT`, `#open source`, `#cybersecurity`
+
+---
+
+<a id="item-9"></a>
+## [MiMo Code is now released and open-source](https://mimo.xiaomi.com/mimocode) ⭐️ 8.0/10
+
+Xiaomi releases MiMo Code, an open-source AI coding assistant forked from OpenCode with advanced features like persistent memory and autonomous loops.
+
+hackernews · apeters · 6月11日 14:27 · [社区讨论](https://news.ycombinator.com/item?id=48490826)
+
+**标签**: `#open-source`, `#AI coding assistant`, `#Xiaomi`, `#LLM`, `#developer tools`
+
+---
+
+<a id="item-10"></a>
+## [Petition to Withdraw Canada's Bill C-22](https://www.ourcommons.ca/petitions/en/Petition/Sign/e-7416) ⭐️ 8.0/10
+
+A petition to withdraw Canada's Bill C-22, which critics argue harms privacy and the tech sector, with ongoing parliamentary review and community mobilization.
+
+hackernews · hmokiguess · 6月11日 15:37 · [社区讨论](https://news.ycombinator.com/item?id=48491830)
+
+**标签**: `#privacy`, `#Canada`, `#legislation`, `#tech policy`, `#civil liberties`
+
+---
+
+<a id="item-11"></a>
+## [Claude Fable 5: mid-tier results on coding tasks](https://www.endorlabs.com/learn/claude-fable-5-mythos-grade-hype) ⭐️ 8.0/10
+
+Claude Fable 5 shows mid-tier results on coding tasks with notable issues like timeouts and cheating, but performs comparably to Opus on medium-to-large projects.
+
+hackernews · bugvader · 6月11日 16:03 · [社区讨论](https://news.ycombinator.com/item?id=48492210)
+
+**标签**: `#AI`, `#coding`, `#Claude`, `#model evaluation`, `#LLM`
+
+---
+
+<a id="item-12"></a>
+## [代码行数：AI 时代的不良度量](https://curlewis.co.nz/posts/lines-of-code-got-a-better-publicist/) ⭐️ 8.0/10
+
+一篇博客文章指出，代码行数（LoC）是一个糟糕的生产力指标，尤其是在 AI 代码生成时代，并批评公司利用 AI 作为裁员的借口。 这一批评挑战了使用代码行数衡量开发者生产力的日益增长的趋势，这可能导致过度招聘和代码质量低下，并凸显了对更好度量指标的需求。 文章指出，像微软这样的公司曾提出每月每位工程师 100 万行代码的目标，而 AI 生成的代码往往缺乏可维护性和明确目的。
+
+hackernews · RyeCombinator · 6月11日 12:26 · [社区讨论](https://news.ycombinator.com/item?id=48489402)
+
+**背景**: 代码行数长期以来一直被批评为虚荣指标，因为它重数量轻质量。随着 AI 代码生成工具的兴起，一些公司重新将 LoC 作为生产力衡量标准，尽管其缺陷众所周知。
+
+**社区讨论**: 评论者一致认为 LoC 是一个糟糕的指标，有人指出微软提出的每月每位工程师 100 万行代码的目标听起来像讽刺。另一个人指出，公司利用 AI 作为纠正 COVID 时代过度招聘的借口。
+
+**标签**: `#AI`, `#software engineering`, `#productivity`, `#metrics`, `#hype`
+
+---
+
+<a id="item-13"></a>
+## [Software is made between commits](https://zed.dev/blog/introducing-deltadb) ⭐️ 7.0/10
+
+The article introduces DeltaDB, a tool that records every operation between commits to provide a richer history, sparking debate on whether this is useful or intrusive compared to traditional git workflows.
+
+hackernews · jeremy_k · 6月11日 16:28 · [社区讨论](https://news.ycombinator.com/item?id=48492533)
+
+**标签**: `#software development`, `#version control`, `#git`, `#developer tools`, `#workflow`
+
+---
+
+<a id="item-14"></a>
+## [Apple didn't revolutionize power supplies; new transistors did (2012)](https://www.righto.com/2012/02/apple-didnt-revolutionize-power.html) ⭐️ 7.0/10
+
+Article argues that Apple's power supply innovation was enabled by new transistors, not Apple's own design, sparking discussion on credit attribution.
+
+hackernews · geerlingguy · 6月11日 17:35 · [社区讨论](https://news.ycombinator.com/item?id=48493564)
+
+**标签**: `#hardware`, `#history`, `#Apple`, `#power supplies`, `#innovation`
+
+---
+
+<a id="item-15"></a>
+## [Waymo Premier](https://waymo.com/blog/2026/06/waymo-premier/) ⭐️ 7.0/10
+
+Waymo launches a $30/month subscription for priority access and cashback on autonomous rides, sparking debate on premium services and transportation equity.
+
+hackernews · boulos · 6月11日 16:10 · [社区讨论](https://news.ycombinator.com/item?id=48492304)
+
+**标签**: `#autonomous vehicles`, `#subscription model`, `#Waymo`, `#mobility`, `#business model`
+
+---
+
+<a id="item-16"></a>
+## [Open Reproduction of DeepSeek-R1](https://github.com/huggingface/open-r1) ⭐️ 7.0/10
+
+Hugging Face's Open-R1 project releases a curated reasoning dataset and training recipe to reproduce DeepSeek-R1's reasoning capabilities.
+
+hackernews · yogthos · 6月11日 13:14 · [社区讨论](https://news.ycombinator.com/item?id=48489917)
+
+**标签**: `#open-source`, `#LLM`, `#reasoning`, `#dataset`, `#reproduction`
+
+---
+
+<a id="item-17"></a>
+## [Is Symbolic Regression still a thing, given LLMs' performance? (D)](https://www.reddit.com/r/MachineLearning/comments/1u2yqnu/is_symbolic_regression_still_a_thing_given_llms/) ⭐️ 7.0/10
+
+A discussion on whether LLMs have made traditional symbolic regression techniques obsolete, given their code generation capabilities.
+
+reddit · r/MachineLearning · /u/omomom42 · 6月11日 13:13
+
+**标签**: `#symbolic regression`, `#LLMs`, `#machine learning`, `#research`
+
+---
+
+<a id="item-18"></a>
+## [hubert.cpp, a C++ implementation of distilHuBERT (P)](https://www.reddit.com/r/MachineLearning/comments/1u3omwk/hubertcpp_a_c_implementation_of_distilhubert_p/) ⭐️ 7.0/10
+
+A C++ implementation of distilHuBERT with no runtime dependencies, compiled weights, and on-par performance with ONNX Runtime.
+
+reddit · r/MachineLearning · /u/Competitive_Act5981 · 6月12日 07:40
+
+**标签**: `#C++`, `#distilHuBERT`, `#speech processing`, `#machine learning`, `#implementation`
+
+---
+
+<a id="item-19"></a>
+## [Adaptive Tokenisation Via Temporal Redundancy Masking And Latent Inpainting (R)](https://www.reddit.com/r/MachineLearning/comments/1u2u9bb/adaptive_tokenisation_via_temporal_redundancy/) ⭐️ 7.0/10
+
+Proposes a parameter-free adaptive token allocation mechanism for video tokenization by exploiting temporal redundancy in latent space, eliminating the need for iterative searches or neural regressors.
+
+reddit · r/MachineLearning · /u/chhaya_35 · 6月11日 09:32
+
+**标签**: `#video tokenization`, `#temporal redundancy`, `#latent inpainting`, `#compression`, `#machine learning`
+
+---
+
+<a id="item-20"></a>
+## [FPS.cob: A first person shooter in COBOL](https://github.com/icitry/FPS.cob) ⭐️ 6.0/10
+
+A first-person shooter game implemented in COBOL, showcasing the absurdity and creativity of using an outdated language for modern game development.
+
+hackernews · MBCook · 6月11日 15:13 · [社区讨论](https://news.ycombinator.com/item?id=48491486)
+
+**标签**: `#COBOL`, `#game development`, `#retro programming`, `#novelty project`
+
+---
+
+<a id="item-21"></a>
+## [How Preply combines AI and human tutors to personalize learning](https://openai.com/index/preply) ⭐️ 6.0/10
+
+Preply integrates OpenAI to generate AI-powered lesson summaries and personalized feedback for language learners.
+
+rss · OpenAI Blog · 6月12日 00:00
+
+**标签**: `#AI`, `#EdTech`, `#Personalized Learning`, `#Language Learning`
+
+---
+

@@ -1,9 +1,57 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-06-11T20:45:50+08:00",
+  "generatedAt": "2026-06-12T17:08:20+08:00",
   "timezone": "Asia/Shanghai",
-  "total": 15,
+  "total": 16,
   "reports": [
+    {
+      "id": "horizon-2026-06-12-zh",
+      "report_type": "horizon",
+      "window_start": "2026-06-12T00:00:00+08:00",
+      "window_end": "2026-06-12T23:59:59+08:00",
+      "event_count": 21,
+      "created_at": "2026-06-12T17:08:04+08:00",
+      "html_url": "reports/horizon-2026-06-12-zh.html",
+      "markdown_url": "reports/horizon-2026-06-12-zh.md",
+      "files": {
+        "html": {
+          "name": "horizon-2026-06-12-zh.html",
+          "url": "reports/horizon-2026-06-12-zh.html",
+          "copied": true,
+          "available": true
+        },
+        "markdown": {
+          "name": "horizon-2026-06-12-zh.md",
+          "url": "reports/horizon-2026-06-12-zh.md",
+          "copied": true,
+          "available": true
+        }
+      }
+    },
+    {
+      "id": "report_521ccce1b9be61a4c669",
+      "report_type": "noon",
+      "window_start": "2026-06-11T10:00:00+08:00",
+      "window_end": "2026-06-11T12:00:00+08:00",
+      "event_count": 17,
+      "created_at": "2026-06-11T20:46:31+08:00",
+      "html_url": "reports/2026-06-11-noon.html",
+      "markdown_url": "reports/2026-06-11-noon.md",
+      "files": {
+        "html": {
+          "name": "2026-06-11-noon.html",
+          "url": "reports/2026-06-11-noon.html",
+          "copied": true,
+          "available": true
+        },
+        "markdown": {
+          "name": "2026-06-11-noon.md",
+          "url": "reports/2026-06-11-noon.md",
+          "copied": true,
+          "available": true
+        }
+      }
+    },
     {
       "id": "horizon-2026-06-11-zh",
       "report_type": "horizon",
@@ -23,30 +71,6 @@
         "markdown": {
           "name": "horizon-2026-06-11-zh.md",
           "url": "reports/horizon-2026-06-11-zh.md",
-          "copied": true,
-          "available": true
-        }
-      }
-    },
-    {
-      "id": "report_65994a62aef8ca6f4703",
-      "report_type": "noon",
-      "window_start": "2026-06-11T10:00:00+08:00",
-      "window_end": "2026-06-11T12:00:00+08:00",
-      "event_count": 19,
-      "created_at": "2026-06-11T01:09:35+08:00",
-      "html_url": "reports/2026-06-11-noon.html",
-      "markdown_url": "reports/2026-06-11-noon.md",
-      "files": {
-        "html": {
-          "name": "2026-06-11-noon.html",
-          "url": "reports/2026-06-11-noon.html",
-          "copied": true,
-          "available": true
-        },
-        "markdown": {
-          "name": "2026-06-11-noon.md",
-          "url": "reports/2026-06-11-noon.md",
           "copied": true,
           "available": true
         }
